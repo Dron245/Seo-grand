@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Exo2_semibold';
+    src: url('Exo2-SemiBold.eot');
+    src: url('./Exo2-semibold/Exo2-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('./Exo2-semibold/Exo2-SemiBold.woff2') format('woff2'),
+        url('./Exo2-semibold/Exo2-SemiBold.woff') format('woff'),
+        url('./Exo2-semibold/Exo2-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo2_extrabold';
+    src: url('./Exo2-extrabold/Exo2-ExtraBold.eot');
+    src: url('./Exo2-extrabold/Exo2-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('./Exo2-extrabold/Exo2-ExtraBold.woff2') format('woff2'),
+        url('./Exo2-extrabold/Exo2-ExtraBold.woff') format('woff'),
+        url('./Exo2-extrabold/Exo2-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo2_bold';
+    src: url('./Exo2-bold/Exo2-Bold.eot');
+    src: url('./Exo2-bold/Exo2-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./Exo2-bold/Exo2-Bold.woff2') format('woff2'),
+        url('./Exo2-bold/Exo2-Bold.woff') format('woff'),
+        url('./Exo2-bold/Exo2-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo2_light';
+    src: url('./Exo2-light/Exo2-Light.eot');
+    src: url('./Exo2-light/Exo2-Light.eot?#iefix') format('embedded-opentype'),
+        url('./Exo2-light/Exo2-Light.woff2') format('woff2'),
+        url('./Exo2-light/Exo2-Light.woff') format('woff'),
+        url('./Exo2-light/Exo2-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo2_medium';
+    src: url('./Exo2-medium/Exo2-Medium.eot');
+    src: url('./Exo2-medium/Exo2-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./Exo2-medium/Exo2-Medium.woff2') format('woff2'),
+        url('./Exo2-medium/Exo2-Medium.woff') format('woff'),
+        url('./Exo2-medium/Exo2-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo2_regular';
+    src: url('./Exo2-regular/Exo2-Regular.eot');
+    src: url('./Exo2-regular/Exo2-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./Exo2-regular/Exo2-Regular.woff2') format('woff2'),
+        url('./Exo2-regular/Exo2-Regular.woff') format('woff'),
+        url('./Exo2-regular/Exo2-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo2_extralight';
+    src: url('./Exo2-extralight/Exo2-ExtraLight.eot');
+    src: url('./Exo2-extralight/Exo2-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('./Exo2-extralight/Exo2-ExtraLight.woff2') format('woff2'),
+        url('./Exo2-extralight/Exo2-ExtraLight.woff') format('woff'),
+        url('./Exo2-extralight/Exo2-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo2_black';
+    src: url('./Exo2-black/Exo2-Black.eot');
+    src: url('./Exo2-black/Exo2-Black.eot?#iefix') format('embedded-opentype'),
+        url('./Exo2-black/Exo2-Black.woff2') format('woff2'),
+        url('./Exo2-black/Exo2-Black.woff') format('woff'),
+        url('./Exo2-black/Exo2-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./FontAwesome/fontawesome-webfont.eot?v=4.7.0');
+  src: url('./FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+       url('./FontAwesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+       url('./FontAwesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+       url('./FontAwesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+       url('./FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

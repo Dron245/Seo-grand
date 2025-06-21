@@ -1,0 +1,16 @@
+<section id="manager">
+	<div class="container-fluid">
+		<div class="manager-wrap">
+			<?php 
+			$formTitle = "";
+			$formDesk = "";
+			$formName = "Ваше имя";
+			$formEmail = "Ваша почта";
+			$formTextarea = "Комментарий";
+			$formFile = "Прикрепить файл";
+			$formBtn = "Получить расчёт";
+			include (locate_template('blocks/block-form.php'));
+			?>
+		</div>
+	</div>
+</section>

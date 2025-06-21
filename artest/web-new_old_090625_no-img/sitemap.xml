@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://artest.rest/</loc>
+	<lastmod>2023-08-01T13:51:14+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://artest.rest/menu</loc>
+	<lastmod>2023-08-01T13:51:14+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://artest.rest/contacts</loc>
+	<lastmod>2023-08-01T13:51:14+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://artest.rest/rules</loc>
+	<lastmod>2023-08-01T13:51:21+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://artest.rest/chefs-table</loc>
+	<lastmod>2023-08-01T13:51:21+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://artest.rest/fireplace</loc>
+	<lastmod>2023-08-01T13:51:22+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://artest.rest/terrace</loc>
+	<lastmod>2023-08-01T13:51:22+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>

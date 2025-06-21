@@ -1,0 +1,53 @@
+User-agent:*
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: *?
+Disallow: /menu2
+
+User-agent: Googlebot
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: *?
+Disallow: *kopiya
+Disallow: /menu2
+
+User-agent: Yandex
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: *kopiya
+Disallow: /menu2
+Clean-param: etext
+Clean-param: addphrasestext
+Clean-param: block
+Clean-param: device_type
+Clean-param: region_name
+Clean-param: retargeting_id
+Clean-param: yandex-source
+Clean-param: utm_referrer
+Clean-param: utm
+Clean-param: yqilp
+Clean-param: _sm_vck
+Clean-param: _ym_debug
+Clean-param: _RSSID_
+Clean-param: _sm_nck
+Clean-param: yprqee
+Clean-param: ved
+Clean-param: clckid
+Clean-param: theme
+Clean-param: from
+Clean-param: yqppel
+Clean-param: ypppil
+Clean-param: disableGlobalInfoCollect
+Clean-param: yqilp
+Clean-param: ykilt
+Clean-param: yycleed
+Clean-param: ycliid
+Clean-param: page
+Clean-param: yclyyd
+Clean-param: gcmes
+Clean-param: gcmlg
+
+Sitemap: https://artest.rest/sitemap.xml

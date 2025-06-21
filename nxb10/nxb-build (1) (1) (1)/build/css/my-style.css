@@ -1,0 +1,223 @@
+.article {
+  color: #000000;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.article p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Exo2_regular";
+}
+.article p span {
+  display: block;
+  font-family: "Exo2_semibold";
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.article a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Exo2_bold";
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.article a:hover {
+  color: #263BA0;
+}
+.article a:active {
+  color: #263BA0;
+}
+.article ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  list-style: none;
+}
+.article ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 28px;
+}
+.article ul li::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  background-color: #058F99;
+}
+.article ol {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  list-style: none;
+  counter-reset: program;
+}
+.article ol li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 28px;
+  counter-increment: program;
+}
+.article ol li::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #058F99;
+}
+.article ol li::after {
+  content: counter(program);
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.article__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 39px;
+  font-family: "Exo2_semibold";
+}
+
+.article__wrap {
+  margin-bottom: 40px;
+}
+
+.article__block-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-family: "Exo2_semibold";
+}
+
+.article__tgl {
+  position: relative;
+  display: block;
+  padding: 18px 30px 18px 58px;
+  background-color: #2D45B4;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Exo2_semibold";
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.article__tgl:hover {
+  background-color: #263BA0;
+}
+.article__tgl:active {
+  background-color: #263BA0;
+}
+.article__tgl::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icon-dotts.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (max-width: 1245px) {
+  .article {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .article__block-title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 991px) {
+  .article {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .article p {
+    font-size: 15px;
+  }
+  .article p span {
+    font-size: 16px;
+  }
+  .article ul {
+    margin-top: 0;
+  }
+  .article ul li {
+    margin-bottom: 20px;
+  }
+  .article ol {
+    margin-top: 0;
+  }
+  .article ol li {
+    margin-bottom: 20px;
+  }
+  .article__wrap {
+    margin-bottom: 40px;
+  }
+  .article__title {
+    font-size: 32px;
+  }
+  .article__block-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .article {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .article__title {
+    margin-bottom: 10px;
+  }
+  .article__block-title {
+    margin-bottom: 10px;
+  }
+  .article__wrap {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .article {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .article__title {
+    font-size: 28px;
+  }
+  .article__block-title {
+    font-size: 24px;
+  }
+  .article__tgl {
+    width: 100%;
+    padding: 18px 20px 18px 50px;
+  }
+  .article__tgl::before {
+    left: calc(50% - 60px);
+  }
+}

@@ -1,0 +1,56 @@
+.hall__item-popup {
+  border: 1px solid black;
+  max-width: 95%;
+  position: fixed;
+  top: 20%;
+  visibility: hidden;
+  z-index: 999999999999999999;
+  left: 15%;
+  margin-right: 15%;
+}
+
+.open {
+  visibility: visible;
+  animation: 1s show ease;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bx {
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.hall__item-popup__wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.popup__open {
+  background: black;
+  opacity: 0.8;
+  visibility: unset;
+}
+
+.no_scroll {
+  overflow: hidden;
+}
+
+.hall__item-popup {
+  height: calc(100vh - 20%);
+  overflow: auto;
+}
