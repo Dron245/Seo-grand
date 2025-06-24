@@ -12,7 +12,7 @@ export const pathtofiles = {
 		html: `${buildFolder}/`,
 		js: `${buildFolder}/js/`,
 		css: `${buildFolder}/css/`,
-		images: `${buildFolder}/assets/img/`,
+		images: `${buildFolder}/img/`,
 		fonts: `${buildFolder}/fonts/`,
 		files: `${buildFolder}/files/`
 	},

@@ -54,7 +54,7 @@ const config = {
 		port: 'auto',
 		hot: true,
 		host: 'local-ip', // localhost
-		//В режиме разработчика папка
+		//В режиме разработчика папка 
 		// результатом (dist) будет создаваться на диске)
 		//devMiddleware: {
 		//	writeToDisk: true,
@@ -96,14 +96,12 @@ const config = {
 								},
 							},
 						},
-					},
-					'postcss-loader',
-					{
+					}, {
 						loader: 'sass-loader',
 						options: {
 							sourceMap: true,
 						}
-					},
+					}
 				],
 			}, {
 				test: /\.pug$/,

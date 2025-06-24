@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"Блоги" })
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<section class="form-add form-add__sites container">
+					<div class="form-add__inner form-callback">
+						<div class="form-add__wrap">
+							<h2 class="form-add__title">Готовы <span>занять 1 место</span> в поиске?</h2>
+							<p class="form-add__description">
+								Оставьте заявку и мы свяжемся с Вами в течении часа.
+							</p>
+							<form class="form-add__form" action="#">
+								<input type="hidden" name="formName" value="1 место" />
+								<div class="form-add__section form-add__section--name">
+									<label class="form-add__label visually-hidden" for="name_field3">Имя</label>
+									<input
+										class="form-add__text form-add__user form-add__text--name"
+										type="text"
+										name="name"
+										id="name_field3"
+										placeholder="Имя"
+										required="" />
+								</div>
+								<div class="form-add__section form-add__section--tel">
+									<label class="form-add__label visually-hidden" for="phone_field3">Телефон</label>
+									<input
+										class="form-add__text form-add__user form-add__text--tel"
+										type="tel"
+										name="phone"
+										id="phone_field3"
+										placeholder="Телефон"
+										required="" />
+								</div>
+								<div class="form-add__section form-add__section--site">
+									<label class="form-add__label visually-hidden" for="site_field"
+										>Ссылка на сайт.ру</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__text--site"
+										name="site"
+										id="site_field"
+										placeholder="Ссылка на сайт.ру...*"
+										required="" />
+								</div>
+								<div class="form-add__section form-add__section--checkbox">
+									<input
+										class="form-add__checkbox"
+										id="checkbox-tariff-field"
+										type="checkbox"
+										name="agreement"
+										required="" />
+									<label
+										class="form-add__label form-add__label--checkbox"
+										for="checkbox-tariff-field">
+										Нажимая кнопку, вы даете согласие на
+										<a href="#">обработку ваших персональных данных</a>
+									</label>
+								</div>
+								<button class="form-add__send button" type="submit">Проконсультироваться</button>
+							</form>
+						</div>
+						<section class="callback-form">
+							<div class="callback-form__wrap">
+								<div>
+									<p class="callback-form__title">Заявка <span>успешно отправлена!</span></p>
+									<p>
+										Наши специалисты свяжутся с Вами в течении 30 минут! Спасибо, что выбрали нас!
+									</p>
+								</div>
+								<button class="callback-form__close-btn" type="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+										<use href="/assets/img/sprite.svg#icon-cross-modal"></use>
+									</svg>
+								</button>
+							</div>
+						</section>
+					</div>
+				</section>
+			</main>
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
