@@ -1,0 +1,293 @@
+.modal1 {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 60px;
+    border-radius: 18px;
+    background-color: #fff;
+    transition: .3s;
+    z-index: 3000;
+}
+
+.modal {
+    position: absolute;
+    //top: 50%;
+    //transform: translateY(-50%);
+    z-index: 3000;
+    right: -100vw;
+    width: calc(100% - 40px);    
+    height: auto;
+    //max-height: 100vh;
+    transition: right .6s;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.modal1.active {
+    opacity: 1;
+    visibility: unset;
+}
+
+.modal.active {
+    right: 20px;
+    transition: right .6s;
+}
+
+.modal.modal-department {    
+    padding: 30px 30px 0 30px;
+}
+
+.modal__cross {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 7px;
+    right: 11px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    z-index: 100;
+
+    svg {
+        fill: #7BA193;
+    }
+}
+
+.modal__cross:hover {
+    svg {
+        fill: #017E5E;
+    }
+}
+
+.modal__cross:active {
+    svg {
+        fill: "#017E5E";
+    }
+}
+
+.modal.modal-form {
+    padding: 20px;
+}
+
+.modal .form-add {
+    margin-bottom: 0;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modal .form-add__wrap {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.modal .form-add__description {
+    line-height: 1.8;
+}
+
+.modal .form-add__title {
+    text-align: left;
+    font-size: 20px;
+}
+
+.modal .form-add__description {
+    text-align: left;
+}
+
+.modal .form-add__inner::before {
+    height: 0;
+}    
+
+.modal .form-add__text {
+    height: 64px;
+}    
+
+.modal .form-add__send.button {
+    margin-bottom: 0;
+}
+
+.modal .callback-form__close-btn {
+    display: none;
+}
+
+.modal .callback-opened .callback-form {
+    background: none;
+    background-color: #ffffff;
+}
+
+@media (min-width: 576px) {
+    .modal {
+        //top: 60px;
+        width: calc(100% - 66px);
+    }
+
+    .modal.active {
+        right: 33px;
+    }
+
+    .modal__cross {
+        top: 28px;
+        right: 30px;
+    }
+
+    .modal.modal-form {
+        padding: 30px;
+    }
+
+    .modal .form-add__title {
+        font-size: 24px;
+    }
+
+    .modal .form-add__description {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .modal .form-add__form {
+        display: block;
+    }
+
+    .modal .form-add__section {
+        margin-bottom: 30px;
+    }
+
+    .modal.modal-department {
+        padding: 40px 40px 0 40px;
+    }
+}    
+
+@media (min-width: $tablet-width) {
+    .modal {
+        //top: 80px;
+        width: calc(100% - 198px);
+    }
+
+    .modal.active {
+        right: 99px;
+    }
+
+    .modal.modal-form {
+        padding: 55px;
+    }
+
+    .modal .form-add__wrap {
+        padding: 0;
+    }
+
+    .modal.modal-department {
+        padding: 60px 60px 0;
+    }
+
+}    
+
+@media (min-width: 992px) {
+    .modal {
+       width: calc(100% - 382px);
+    }
+
+    .modal.active {
+        right: 191px;
+    }
+}    
+
+@media (min-width: $desktop-width) {  
+    .modal {
+        height: 100vh;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal.active {
+        right: 0;
+        transition: right .6s;
+    }
+
+    .modal__cross {
+        top: 28px;
+        right: 54px;
+    }
+
+    .modal .form-add {
+        //max-height: none;
+    }    
+
+    .modal.modal-form {
+        width: 570px;
+        padding: 75px 65px;        
+    }
+
+    .modal .form-add__description {
+        margin-bottom: 50px;
+    }    
+
+    .modal.modal-department {
+        width: 620px;
+        padding: 40px 40px 0;
+
+        .modal__cross {
+            top: 40px;
+            right: 100px;
+        }
+    }    
+
+    .modal.modal--team {
+        width: 620px;
+        padding: 50px 40px 0 100px;
+
+        .modal__cross {
+            top: 34px;
+            right: 93px;
+        }
+    }
+
+    .modal.modal--case {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+    }
+}    
+
+
+
+//////
+
+html .modal .form-add {
+    scrollbar-width: thin;
+    scrollbar-color: #01A572 #E4EEEA;
+ }
+
+ .modal .form-add::-webkit-scrollbar
+{
+    background-color: transparent;
+    width: 5px;
+    overflow: hidden;
+    //margin-right: 20px;
+    border-left: 4px #E4EEEA solid;
+    border-radius: 0;
+}
+
+.modal .form-add::-webkit-scrollbar-thumb
+{
+    background-color: transparent;
+    border-left: 4px #01A572 solid;
+    border-radius: 0;
+}
+
+.modal .form-add {
+    scrollbar-color: #01A572; 
+} 

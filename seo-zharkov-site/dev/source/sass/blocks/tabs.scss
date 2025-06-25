@@ -1,0 +1,23 @@
+/*.tabs__list li.active {
+    color: #fff;
+    background: linear-gradient(132.81deg, rgb(1, 165, 114) 17.575%,rgb(1, 126, 94) 84.837%);  
+    cursor: none;
+    
+    svg {
+        stroke: #B2E9D5;
+    }
+}*/
+
+.tabs__panel .tabs__element {
+    display: none;
+    //opacity: 0;
+    //height: 0;
+    //overflow: hidden;
+}
+
+.tabs__panel .tabs__element.active {
+    display: block;
+    //opacity: 1;
+    //height: auto;
+    //overflow: hidden;
+}

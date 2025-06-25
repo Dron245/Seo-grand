@@ -1,0 +1,77 @@
+.breadcrump {
+    margin-bottom: 30px;
+}
+
+.breadcrump__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+
+    li {
+        font-family: "IBM";
+        font-size: 13px;        
+        line-height: 1.4;
+        margin-right: 5px;
+        background-color: #F2F7F5;
+        border-radius: 4px;
+
+        &:last-child {
+            margin-right: 0;            
+        }
+        
+    }
+}
+
+.breadcrump-link {
+    display: block;
+    padding: 4px 10px;
+    color: #5C6361;
+
+    &:hover {
+        color: #017E5E;
+    }
+
+    &:active {
+        color: #017E5E;
+    }
+}
+
+.breadcrump__list li:last-child {
+    color: #ffffff;
+    background-color: #01A572;
+    padding: 4px 10px;
+}
+
+@media (min-width: 576px) {
+    .breadcrump {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 43px;
+    }
+}   
+
+@media (min-width: $tablet-width) {
+    .breadcrump {
+        display: block;
+    }
+}    
+
+@media (min-width: 992px) {
+    .breadcrump {
+        margin-bottom: 55px;
+    }
+}    
+
+@media (min-width: $desktop-width) {
+    .breadcrump {
+        margin-bottom: 37px;
+    }
+}    
+
+@media (min-width: $big-desktop-width) {  
+    .breadcrump {
+        margin-bottom: 20px;
+    }
+}    
+

@@ -1,0 +1,144 @@
+.callback-block__list {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    list-style: none;
+}
+
+.callback-block__item {
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.callback-block__link {  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 25px;
+    border-radius: 8px;
+    font-family: "Manrope-semibold";
+    font-size: 14px;
+    color: #ffffff;
+    
+    span {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            width: 24px;
+            height: 24px;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.callback-block__link--telegram {
+    background-color: #0088CC;
+    transition: all 0.3s ease-in-out;
+
+    span::before {
+        background-image: url("../img/icon-telegram.svg");
+    }
+
+    &:hover {
+        background-color: #0AA1EC;
+    }
+
+    &:active {
+        background-color: #0AA1EC;
+    }
+}
+
+.callback-block__link--whatsapp {
+    background-color: #48C95F;
+    transition: all 0.3s ease-in-out;
+
+    span::before {
+        background-image: url("../img/icon-whatsapp.svg");
+    }
+
+    &:hover {
+        background-color: #63E77A;
+    }
+
+    &:active {
+        background-color: #63E77A;
+    }
+}
+
+.callback-block__link--vk {
+    background-color: #1976D2;
+    transition: all 0.3s ease-in-out;
+
+    span::before {
+        background-image: url("../img/icon-vk.svg");
+    }
+
+    &:hover {
+        background-color: #3392EF;
+    }
+
+    &:active {
+        background-color: #3392EF;
+    }
+}
+
+@media (min-width: 576px) {
+    .callback-block__list {
+        margin-bottom: 64px;
+    }   
+}    
+
+@media (min-width: $tablet-width) {   
+    .callback-block__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .callback-block__item {
+        margin-bottom: 0;
+    }
+
+    .callback-block__link span:first-child::before {
+        left: -35px;
+    }   
+
+    .callback-block__link {
+        padding: 18px 18px 18px 85px;
+    }   
+}    
+
+@media (min-width: 992px) {
+    .callback-block__link {
+        padding: 18px 18px 18px 51px;
+    }
+
+    .callback-block__list {
+        margin-bottom: 75px;
+    }    
+}    
+
+@media (min-width: $desktop-width) {
+    .callback-block__list {
+        margin-bottom: 90px;
+    }
+}    
+
+@media (min-width: $big-desktop-width) {
+    .callback-block__list {
+        margin-bottom: 105px;
+    }
+}    
+
+

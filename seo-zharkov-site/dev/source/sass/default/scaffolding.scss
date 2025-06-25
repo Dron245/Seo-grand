@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 280px;
+  font-family: "Manrope1", "Arial", sans-serif;
+  color: #5C6361;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/*body {
+  overflow: auto;
+  overflow-x: hidden;
+}*/
+
+body.no-scroll {
+  //overflow: hidden;
+}
+
+body.no-scroll .main {
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 992px) {
+  body.no-scroll {
+    margin-right: 17px;  
+    overflow: hidden;
+  }
+}  

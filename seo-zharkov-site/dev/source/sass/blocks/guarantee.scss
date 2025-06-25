@@ -1,0 +1,111 @@
+.guarantee .form-add {
+    margin-bottom: 40px;
+}
+
+
+.guarantee .form-add__title {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 5px;
+}
+
+@media (min-width: 576px) {
+    .guarantee .form-add__title {
+        font-size: 18px;
+    }
+
+    .guarantee .form-add__wrap {
+        padding-top: 32px;
+    }   
+}    
+
+@media (min-width: 992px) {
+    .guarantee .form-add__title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    .guarantee .form-add {
+        margin-bottom: 67px;
+    }
+}    
+
+@media (min-width: $desktop-width) {
+    .guarantee .form-add__wrap {
+        padding-left: 30px;
+        padding-right: 30px;
+    }   
+}    
+
+@media (min-width: $desktop-width) {
+    .guarantee {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        align-items: stretch;
+        margin-bottom: 80px;
+        padding-top: 25px;
+    }
+
+    .guarantee .form-add {
+        margin-bottom: 0;
+    }
+
+    .guarantee .form-add__wrap {
+        padding-top: 30px;
+    }
+    
+}    
+
+@media (min-width: $big-desktop-width) {  
+    .guarantee {
+        grid-template-columns: 1fr 375px;     
+        margin-bottom: 110px;   
+        padding-top: 5px;
+    }
+
+    .guarantee .form-add__inner::before {
+        bottom: -7px;
+    }   
+
+    .guarantee .form-add__title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .guarantee .form-add__wrap {
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-bottom: 25px;
+    }
+
+    .guarantee .form-add__form {
+        grid-template-columns: 1fr 1fr 410px;
+    }    
+
+    .guarantee .form-add__description {
+        margin-bottom: 40px;
+        line-height: 1.7;
+    }    
+
+    .guarantee .form-add__section--name {
+        grid-column: 1/2;
+    }
+
+    .guarantee .form-add__section--tel {
+        grid-column: 2/3;
+    }
+
+    .guarantee .form-add__section--site {
+        grid-column: 3/4;
+    }
+
+    .guarantee .form-add__section--checkbox {
+        grid-column: 1/3;
+    }
+
+    .guarantee .form-add__send.button {
+        grid-column: 3/4;
+    }
+}    

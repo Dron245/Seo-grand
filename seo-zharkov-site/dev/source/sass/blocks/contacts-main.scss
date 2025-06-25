@@ -1,0 +1,71 @@
+@media (min-width: $desktop-width) {
+    .contacts-main {
+        padding-left: 95px;
+        padding-right: 95px;
+        margin-bottom: 85px;
+        display: grid;
+        grid-template-columns: 1fr 270px;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "content sidebar"
+            "callback sidebar"
+            "requisites sidebar"
+            "form sidebar"
+            "add sidebar";
+        column-gap: 30px; 
+        align-items: flex-start;
+    }   
+
+    .contacts-main .contacts {
+        grid-area: content;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+    }
+
+    .contacts-main .callback-block {
+        grid-area: callback;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+    }
+
+    .contacts-main .requisites {
+        grid-area: requisites;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+    }
+
+    .contacts-main .form-add {
+        grid-area: form;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+    }
+
+    .contacts-main .callback-help {
+        grid-area: sidebar;
+
+        .callback-help__wrap {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (min-width: $big-desktop-width) {  
+    .contacts-main {           
+      margin: 0 auto;
+      margin-bottom: 110px;
+      max-width: 1460px;
+      box-sizing: content-box;
+      grid-template-columns: 1fr 335px;
+      column-gap: 40px;
+    }
+
+    .contacts-main .callback-help .callback-help__wrap {
+        margin-bottom: 55px;
+    }
+}  

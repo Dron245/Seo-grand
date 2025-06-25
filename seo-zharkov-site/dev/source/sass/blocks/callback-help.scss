@@ -1,0 +1,140 @@
+.callback-help {
+    margin-bottom: 30px;
+}
+
+.callback-help__wrap {
+    margin-bottom: 35px;
+
+    p {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+}
+
+.callback-help__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "Unbounded-medium";
+    color: #0C0E0D;
+    font-size: 22px;
+}
+
+.callback-help__slider {
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.callback-help .swiper-slide {
+    width: 287px;
+}
+
+.callback-help .callback__img-wrap {
+    margin-right: 20px;
+}    
+
+@media (min-width: 576px) {
+
+    .callback-help {
+        margin-bottom: 40px;
+    }
+
+    .callback-help__title {
+        font-size: 24px;
+    }
+
+    .callback-help__slider {
+        margin-left: 33px;
+    }
+
+    .callback-help .swiper-slide {
+        width: 340px;
+    }
+
+    .callback-help__wrap {
+        margin-bottom: 43px;
+    }
+}    
+
+@media (min-width: 768px) {    
+
+    .callback-help__slider {
+        margin-left: 39px;
+        margin-right: 39px;        
+    }
+
+    .callback-help .swiper-slide {
+        width: auto;
+    }
+
+    .callback-help .callback__list {
+        gap: 20px;
+    }
+}    
+
+@media (min-width: 992px) {  
+    .callback-help__slider {
+        margin-left: 31px;
+        margin-right: 31px; 
+    }
+
+    .callback-help {
+        margin-bottom: 50px;
+    }
+
+    .callback-help .callback__wrap {
+        display: block;
+    }
+
+    .callback-help__wrap {
+        margin-bottom: 50px;
+    }
+
+    .callback-help .callback__text {
+        margin-bottom: 20px;
+    }
+}    
+
+@media (min-width: $desktop-width) {    
+
+    .callback-help__slider {
+        margin-left: 0;
+        margin-right: 0; 
+    }
+
+    .callback-help__slider .swiper-wrapper {
+        display: block;
+    }
+
+    .callback-help .swiper-slide {
+        margin-bottom: 40px;
+    }
+
+    .callback-help .callback__text {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .callback-help .callback__img-wrap {
+        margin-bottom: 15px;
+    }
+
+    .callback-help .callback__text p:first-child {
+        margin-bottom: 3px;
+    }    
+
+    .callback-help__wrap p {
+        font-size: 16px;
+    }
+     
+}    
+
+@media (min-width: $big-desktop-width) {  
+    .callback-help .callback__text {
+        display: flex;
+    }
+
+    .callback-help .callback__img-wrap {
+        margin-bottom: 0;
+    }
+}    

@@ -1,0 +1,246 @@
+.tariffs {
+    padding-top: 50px;
+}
+
+.tariffs__card {
+    width: 320px;
+}
+
+
+.tariffs__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Unbounded-semibold";
+    font-size: 24px;
+    text-align: center;
+    color: #0C0E0D;
+    
+    span {        
+        background: linear-gradient(132.81deg, #01a572 17.575%, #017e5e 84.837%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;        
+    }
+}
+
+.tariffs__title-wrap {
+    margin-bottom: 30px;
+
+    p {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.8;
+    }
+}
+
+.tariffs__panels {
+    padding-left: 20px;
+}
+
+.tariffs__slider, .tariffs__slider2 {    
+    padding-top: 20px;
+    padding-bottom: 45px;
+}
+
+@media (min-width: 576px) {
+    .tariffs {
+        padding-top: 63px;
+    }
+
+    .tariffs__title {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .tariffs__panels {
+        margin: 0 auto;
+        padding-left: 33px;
+        padding-right: 33px;  
+    }       
+
+    .tariffs__wrapper {
+        display: block;
+    }
+
+    .tariffs__card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .tariffs__slider, .tariffs__slider2 {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .tariffs__wrapper.swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tariffs__card--hot {
+        //order: 2;
+    }
+}    
+
+@media (min-width: 768px) {
+    .tariffs__title {
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .tariffs__title-wrap p {
+        font-size: 15px;
+    }   
+
+    .tariffs__slider, .tariffs__slider2 {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .tariffs__wrapper.swiper-wrapper  {
+        //display: grid;
+        //grid-template-columns: 1fr 1fr;
+        //column-gap: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .tariffs__panels {
+        padding-left: 39px;
+        padding-right: 39px;  
+    }
+
+    .tariffs__card {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 0;
+    }
+}    
+
+@media (min-width: 992px) {
+    .tariffs {
+        padding-top: 70px;
+    }
+
+    .tariffs__title {
+        text-align: left;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .tariffs__slider, .tariffs__slider2 {
+        padding-bottom: 70px;
+    }
+
+    .tariffs__title-wrap p {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .tariffs__panels {
+      padding-left: 30px;
+      padding-right: 30px; 
+    }
+
+    .tariffs__card--premium {
+        order: 3;
+    }
+}  
+
+@media (min-width: $desktop-width) {     
+    
+    .tariffs {
+        position: relative;
+        padding-top: 82px;
+    }
+
+    .tariffs__slider, .tariffs__slider2  {
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .tariffs__options {
+        position: absolute;
+        top: 160px;
+        right: 95px;
+    }
+
+    .tariffs__panels {    
+      padding-left: 95px;
+      padding-right: 95px;
+    }
+
+    .tariffs__title-wrap {
+        margin-bottom: 30px;
+    }    
+
+    .tariffs__title-wrap p {
+        padding-right: 610px;
+    }
+
+    .tariffs__slider, .tariffs__slider2 {
+        padding-top: 28px;
+        padding-bottom: 80px;
+    }
+
+    .tariffs__card--premium .card__title-wrap {
+        max-width: none;
+    }
+  }
+  
+@media (min-width: $big-desktop-width) {  
+    .tariffs {
+        padding-top: 100px;
+    }
+
+    .tariffs__title  {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .tariffs__panels {       
+        margin: 0 auto;
+        max-width: 1650px;
+    }
+
+    .tariffs__title-wrap {
+        margin-bottom: 40px;
+    }   
+
+    .tariffs__title-wrap p {
+        padding-right: 0;
+        font-size: 16px;
+        max-width: 760px;
+    }   
+
+    .tariffs__options {
+        top: 170px;
+        right: calc((100% - 1460px) / 2);
+    }    
+
+    .tariffs__slider, .tariffs__slider2 {
+        padding-bottom: 100px;
+    }
+
+    .tariffs__wrapper.swiper-wrapper {
+        gap: 40px;
+    }   
+
+    .tariffs__card {
+        width: calc((100% - 120px)/4);
+        margin-bottom: 0;
+    }
+
+    .tariffs__wrapper.swiper-wrapper  {
+        //display: grid;
+        //grid-template-columns: repeat(4, 1fr);
+        //column-gap: 40px;
+    }
+}  
+
+  

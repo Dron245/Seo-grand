@@ -1,0 +1,51 @@
+.socials {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials__item {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: #F2F7F5;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+    
+    svg {
+        fill: #01A572;
+    }
+
+    &:hover {
+        svg {
+            fill: #ffffff;
+        }
+    }
+}
+
+.socials__link--telegram:hover {
+    background-color: #0AA1EC;    
+}
+
+.socials__link--whatsapp:hover {
+    background-color: #63E77A;    
+}
+
+.socials__link--vk:hover {
+    background-color: #3392EF;    
+}

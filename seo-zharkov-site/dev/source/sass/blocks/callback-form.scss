@@ -1,0 +1,285 @@
+.form-callback {
+    position: relative;
+}
+
+.callback-form {  
+    opacity: 0;  
+    height: 0;
+    font-size: 0;
+    right: 0;
+    background-color: #ffffff;    
+    transition: none;
+}
+
+.callback-opened .callback-form {    
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 1;
+    height: 101%;
+    z-index: 20;  
+    background: linear-gradient(132.81deg, #01a572 17.694%, #017e5e 82.846%);
+    border-radius: 16px;
+    transition: all .4s;
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 1.8;
+    }    
+}
+
+.callback-opened .callback-form .callback-form__title {
+    color: #0C0E0D;
+    font-family: "Unbounded-medium";
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    span {
+        background: linear-gradient(132.81deg, #01a572 17.575%, #017e5e 84.837%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;   
+    }
+}
+
+.callback-opened .callback-form__wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.callback-form__close-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 15px;
+    top: 15px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: #ffffff;
+
+    svg {
+        fill: #7BA193;
+    }
+}
+
+.callback-form__close-btn:hover {
+    svg {
+        fill: #017E5E;
+    }
+}
+
+.notice .callback-opened .callback-form {    
+    border-radius: 8px;
+    //background: linear-gradient(140.44deg, #01A587, #036654);
+    background: none;
+    background-color: transparent;
+    height: 101%;
+     
+
+    .callback-form__title {
+        color: #ffffff;
+         
+        span {
+            background: linear-gradient(104.57deg, rgb(196, 247, 86) 16.769%,rgb(158, 212, 42) 99.419%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+        }
+    }
+    
+    p {
+        color: #ffffff;
+    }
+
+    .callback-form__close-btn {
+        background-color: transparent;
+
+        svg {
+            fill: #B2E9D5;
+        }
+    }
+}    
+
+.modal.form-callback {
+    position: absolute;
+}
+
+.modal .callback-opened .callback-form {    
+    bottom: 0;
+    height: 100%;
+}   
+
+@media (min-width: 576px) {
+    .callback-opened .callback-form__wrap {
+        padding: 60px;
+    }   
+
+    .callback-opened .callback-form {         
+
+        p {
+            font-size: 16px;
+        }
+    }    
+
+    .callback-opened .callback-form .callback-form__title {
+        font-size: 24px;
+    }
+}    
+
+@media (min-width: 992px) {
+    .callback-opened .callback-form__wrap {
+
+       p {
+        max-width: 460px;
+       }
+    } 
+
+    .callback-form__close-btn {
+        top: 65px;
+        right: auto;
+        left: calc((100% - 460px) / 2);
+    }  
+    
+    .form-add__sites .callback-form__wrap {
+        justify-content: flex-start;
+        padding-left: 80px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            right: -30px;
+            width: 421px;
+            height: 416px;
+            background-image: url("../img/boy.svg");            
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .callback-form__close-btn {
+            left: 80px;
+        }   
+    }    
+
+    .form-add__tariffs .callback-form__wrap {
+        justify-content: flex-start;
+        padding-left: 80px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 192px;
+            height: 723px;
+            background-image: url("../img/girl.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .callback-form__close-btn {
+            left: 80px;
+        }   
+    }    
+
+    .notice .callback-opened .callback-form {  
+        height: calc(100% - 40px);
+        bottom: 40px;
+
+        .callback-form__close-btn {
+            top: 15px;
+            right: 15px;
+            left: auto;
+        }   
+    }    
+}    
+
+
+@media (min-width: $desktop-width) {
+    .notice .callback-opened .callback-form {  
+        height: calc(100% - 75px);
+        bottom: 75px;
+    }
+
+    .form-add__tariffs .callback-form__wrap {
+
+        &::before {
+            right: 115px;
+        }
+    }       
+
+    .form-add__sites .callback-form__wrap {
+        &::before {
+            right: -65px;
+        }
+    }       
+
+    .modal .callback-form__wrap {    
+        .callback-form__close-btn {
+            left: 65px;
+        }   
+    }   
+
+      
+    .callback-opened .callback-form__wrap .callback-form__title {
+        margin-bottom: 20px;
+    }    
+    
+}    
+
+@media (min-width: $big-desktop-width) {
+    .notice .callback-opened .callback-form {  
+        height: calc(100% - 113px);
+        bottom: 114px;
+    }
+
+    .form-add__tariffs .callback-form__wrap {
+        padding-left: 240px;
+
+        &::before {
+            width: 227px;
+            height: 372px;
+            right: 65px;
+        }
+
+        .callback-form__close-btn {
+            left: 240px;
+        }   
+    }  
+    
+    .form-add__sites .callback-form__wrap {
+        padding-left: 240px;
+
+        &::before {
+            width: 440px;
+            height: 416px;
+            top: -50px;
+            right: -65px;
+            background-image: url("../img/boy-desktop.svg");
+        }
+
+        .callback-form__close-btn {
+            left: 240px;
+        }   
+    }   
+
+    .answers__form .callback-form__close-btn {
+        left: calc((100% - 308px) / 2);
+    }   
+    
+}    
