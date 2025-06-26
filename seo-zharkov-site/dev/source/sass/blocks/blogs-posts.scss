@@ -1,92 +1,266 @@
 .blogs {
 
 	&__posts {
+		margin-top: 60px;
+		margin-bottom: 100px;
 	}
 }
+
 .posts {
 
-	&__post {
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 40px;
+
+		@media (max-width: 1360px) {
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
+		}
+
+		@media (max-width: 576px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
+	&__post {}
+
 	&__pagination {
+		margin-top: 60px;
 	}
 
 	&__pagination-list {
+		display: flex;
+		gap: 15px;
 	}
 
 	&__pagination-item {
+		display: grid;
+		place-items: center;
+		background: $color-belyy;
+		border: 1px solid $color-seryy-01-1;
+		border-radius: 8px;
+		cursor: pointer;
+		width: 56px;
+		aspect-ratio: 1/1;
+		transition: background .3s;
+		position: relative;
+		overflow: hidden;
+		&::after{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(105deg, #c4f756 16.45%, #9ed42a 100%);
+			z-index: 1;
+			opacity: 0;
+			transition: opacity .5s;
+		}
+
+		&_more {
+			display: flex;
+		align-items: center;
+		gap: 15px;
+		width: auto;
+		aspect-ratio: initial;
+		padding-inline: 30px;
+		}
+		&:not(.posts__pagination-item_active):hover:after {
+			// background: linear-gradient(105deg, #c4f756 16.45%, #9ed42a 100%);
+			opacity: 1;
+		}
+
+		&_active {
+			.posts__pagination-link[class] {
+				color: $color-zelenyy-03;
+				font-size: 18px;
+			}
+
+			background: linear-gradient(132deg, #01a572 0%, #017e5e 99.06%);
+		}
 	}
 
-	&__pagination-item--left {
+	&__pagination-item--left {}
+
+	&__pagination-link[class] {
+		font-family: 'Manrope-medium';
+		font-size: 14px;
+		line-height: 160%;
+		text-align: center;
+		color: $color-seryy-00;
+		z-index: 2;
 	}
 
-	&__pagination-link {
+	&__pagination-item:has(img) a {
+		display: flex;
+		align-items: center;
 	}
 
-	&__pagination-link--active {
-	}
+
 
 	&__pagination-item--right {
+		a {
+			transform: rotate(180deg);
+		}
 	}
 
-	&__pagination-item--more {
-	}
+	
 }
-.container {
-}
+
+.container {}
+
 .post {
+	background: $color-belyy;
+	border: 1px solid $color-seryy-01-1;
+	border-radius: 12px;
+	padding: 30px;
 
 	&__header {
+		margin-bottom: 25px;
+		display: flex;
+		align-items: flex-start;
+		column-gap: 20px;
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
 	}
 
 	&__profile-icon {
+		flex: 0 0 64px;
 	}
 
 	&__user-info {
+		display: grid;
+		row-gap: 4px;
 	}
 
 	&__username {
+		font-family: "Manrope-bold";
+		color: $color-zagolovki;
+		transition: color .3s linear;
+
+		&:hover {
+			color: $color-zelenyy-hover;
+		}
 	}
 
 	&__role {
+		font-size: 14px;
+		color: $color-seryy-00;
 	}
 
 	&__content {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__category-list {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		flex-wrap: wrap;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__category-item {
+		border-radius: 4px;
+		padding: 4px 8px;
+		background: $color-seryy-01-2;
 	}
 
-	&__category-link {
+	&__category-link[class] {
+		font-size: 12px;
+		font-family: 'Manrope-medium';
+		letter-spacing: 0.02em;
+		color: $color-seryy-01;
 	}
 
 	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		font-family: 'Manrope-bold';
+		color: $color-zagolovki;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__text {
+		font-size: 15px;
+		line-height: 160%;
+		color: $color-kontent;
+		display: -webkit-box;
+  -webkit-line-clamp: 4;       /* Максимум 3 строки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 	}
 
 	&__footer {
+		display: flex;
+		gap: 30px;
+		align-items: center
 	}
 
 	&__avatar-mini {
+		display: flex;
+		height: 44px;
 	}
 
 	&__avatar-link {
+		@for $i from 1 through 10 {
+			&:nth-child(#{$i}) {
+				transform: translateX(#{($i - 1) * -22}px);
+			}
+
+			&:nth-child(n+4) {
+				display: none;
+			}
+		}
 	}
 
 	&__avatar-icon {
+		height: 100%;
 	}
 
 	&__reaction-counts {
+		display: flex;
+		gap: 20px;
+		align-items: center;
 	}
 
-	&__likes {
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		span {
+			font-size: 14px;
+			font-family: 'Manrope-medium';
+			color: $color-seryy-01;
+		}
 	}
 
-	&__views {
+	&__button {
+		display: flex;
+		align-items: center;
+
+		& svg path {
+			transition: stroke .3s;
+		}
+
+		&:hover {
+			& svg path {
+				stroke: $color-zelenyy-hover;
+			}
+		}
 	}
 }

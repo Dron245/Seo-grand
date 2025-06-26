@@ -28,7 +28,7 @@
 @font-face {
   font-family: "Manrope-semibold";
 //   src: url("../fonts/Manrope-SemiBold.ttf") format('truetype');
-  src: url("../fonts/Manrope-Semibold1.woff2") format("woff2"),
+  src: url("../fonts/Manrope-Semibold1.woff2") format("woff2"), //600
   url("../fonts/Manrope-Semibold1.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -38,7 +38,7 @@
 @font-face {
   font-family: "Manrope-bold";
   //src: url("../fonts/Manrope-Bold.ttf") format('truetype');
-  src: url("../fonts/Manrope-Bold.woff2") format("woff2"),
+  src: url("../fonts/Manrope-Bold.woff2") format("woff2"), //700
   url("../fonts/Manrope-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -48,7 +48,7 @@
 @font-face {
   font-family: "Manrope-medium";
   //src: url("../fonts/Manrope-Medium.ttf") format('truetype');
-  src: url("../fonts/Manrope-Medium.woff2") format("woff2");
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"); //500
   //  url("../fonts/Manrope-Medium1.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -57,7 +57,7 @@
 
 @font-face {
   font-family: "Unbounded-semibold";
-  src: url("../fonts/Unbounded-Semibold.woff2") format("woff2"),
+  src: url("../fonts/Unbounded-Semibold.woff2") format("woff2"), //600
     url("../fonts/Unbounded-Semibold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -65,7 +65,7 @@
 }
 
 @font-face {
-  font-family: "Unbounded-regular";
+  font-family: "Unbounded-regular";//400
   src: url("../fonts/Unbounded-Regular.woff2") format("woff2"),
     url("../fonts/Unbounded-Regular.woff") format("woff");
   font-weight: normal;
@@ -75,7 +75,7 @@
 
 @font-face {
   font-family: "Unbounded-medium";
-  src: url("../fonts/Unbounded-Medium.woff2") format("woff2"),
+  src: url("../fonts/Unbounded-Medium.woff2") format("woff2"), //500
     url("../fonts/Unbounded-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -84,7 +84,7 @@
 
 @font-face {
   font-family: "Unbounded-bold";
-  src: url("../fonts/Unbounded-Bold.woff2") format("woff2"),
+  src: url("../fonts/Unbounded-Bold.woff2") format("woff2"), //700
     url("../fonts/Unbounded-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
