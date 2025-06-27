@@ -8,6 +8,7 @@
     "browser-sync": "^3.0.4",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-cheerio": "^1.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-dart-sass": "^1.0.2",
     "gulp-htmlmin": "^5.0.1",

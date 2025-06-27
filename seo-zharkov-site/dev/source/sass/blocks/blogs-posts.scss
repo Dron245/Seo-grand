@@ -5,7 +5,31 @@
 		margin-bottom: 100px;
 	}
 }
+.like {
+	stroke: $color-zelenyy-01;
+	width: 20px;
+	height: 20px;
+	transition: stroke 0.3s;
 
+	&:hover {
+		stroke: $color-zelenyy-02;
+	}
+ }
+ .arrow-svg {
+	width: 24px;
+	height: 24px;
+	stroke: $color-seryy-01;
+	fill: transparent;
+	transition: stroke 0.3s;
+ }
+ .dots {
+	stroke: $color-zelenyy-01;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	transition: stroke 0.3s;
+	z-index: 2;
+ }
 .posts {
 
 	&__list {
@@ -13,7 +37,7 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 40px;
 
-		@media (max-width: 1360px) {
+		@media (max-width: $desktop-width) {
 			grid-template-columns: 1fr 1fr;
 			gap: 30px;
 		}
@@ -46,6 +70,10 @@
 		transition: background .3s;
 		position: relative;
 		overflow: hidden;
+		&:has(a) a {
+			display: flex;
+			align-items: center;
+		}
 		&::after{
 			content:'';
 			position: absolute;
@@ -66,12 +94,22 @@
 		width: auto;
 		aspect-ratio: initial;
 		padding-inline: 30px;
+		&:hover{
+			& .dots {
+				stroke: $color-zagolovki;
 		}
+		}}
 		&:not(.posts__pagination-item_active):hover:after {
-			// background: linear-gradient(105deg, #c4f756 16.45%, #9ed42a 100%);
 			opacity: 1;
 		}
-
+		&:hover{
+			& .posts__pagination-link {
+				color: $color-zagolovki;
+			}
+			& .arrow-svg {
+				stroke: $color-zagolovki;
+			}
+		}
 		&_active {
 			.posts__pagination-link[class] {
 				color: $color-zelenyy-03;
@@ -82,7 +120,9 @@
 		}
 	}
 
-	&__pagination-item--left {}
+	&__pagination-item--left {
+		
+	}
 
 	&__pagination-link[class] {
 		font-family: 'Manrope-medium';
@@ -93,19 +133,11 @@
 		z-index: 2;
 	}
 
-	&__pagination-item:has(img) a {
-		display: flex;
-		align-items: center;
-	}
-
-
-
 	&__pagination-item--right {
-		a {
+		 a {
 			transform: rotate(180deg);
 		}
 	}
-
 	
 }
 

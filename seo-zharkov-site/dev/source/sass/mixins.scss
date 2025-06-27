@@ -1,0 +1,66 @@
+@function toRem($px) {
+	@return #{$px / 16}rem;
+ }
+ @function toEm($px) {
+	@return #{$px / 16}em;
+ }
+
+@mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+	// Защита от нулей
+	@if ($startSize == 0) {
+	  $startSize: 0.000001;
+	}
+	@if ($minSize == 0) {
+	  $minSize: 0.000001;
+	}
+ 
+	// Для calc()
+	$addSize: ($startSize - $minSize) / 16;
+ 
+	// Если $widthFrom не задан, подставляем $maxWidth (если он есть)
+	@if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
+	  $widthFrom: $maxWidth;
+	}
+ 
+	// Брейкпоинты в em
+	$widthFromMedia: toEm($widthFrom);
+	$widthToMedia: toEm($widthTo);
+ 
+	// Вычисление коэффициентов
+	$slope: ($startSize - $minSize) / ($widthFrom - $widthTo);
+	$yIntersection: -$widthTo * $slope + $minSize;
+ 
+	@if ($yIntersection == 0) {
+	  $yIntersection: 0.000001;
+	}
+ 
+	$flyValue: #{toRem($yIntersection)} + " + " + #{$slope * 100} + "vw";
+ 
+	// Формирование clamp()
+	$propertyValue: #{"clamp(" + toRem($minSize) + "," + $flyValue + "," + toRem($startSize) + ")"};
+ 
+	// Если наоборот — min больше max
+	@if ($minSize > $startSize) {
+	  $propertyValue: #{"clamp(" + toRem($startSize) + "," + $flyValue + "," + toRem($minSize) + ")"};
+	}
+ 
+	// Стартовое значение (если нужно)
+	@if $keepSize != 1 and $keepSize != 3 {
+	  @media (min-width: $widthFromMedia) {
+		 #{$property}: toRem($startSize);
+	  }
+	}
+ 
+	// Переходная зона
+	@media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+	  #{$property}: $propertyValue;
+	}
+ 
+	// Конечное значение (если нужно)
+	@if $keepSize != 1 and $keepSize != 2 {
+	  @media (max-width: $widthToMedia) {
+		 #{$property}: toRem($minSize);
+	  }
+	}
+ }
+ 
