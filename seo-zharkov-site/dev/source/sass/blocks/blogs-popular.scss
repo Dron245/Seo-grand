@@ -1,8 +1,23 @@
 .blogs {
 
 	&__popular {
-		margin-top: 70px;
+		@include adaptiveValue("margin-top", 100, 80,0,1920,1360);
 		margin-bottom: 100px;
+		@media (max-width: toEm(700)){
+			  padding-right: 0;
+		}
+		@media (max-width:$pc){
+			 margin-bottom: 80px; 
+		}
+		@media (max-width:$tablet){
+			 margin-bottom: 70px;
+		}
+		@media (max-width:$mobile){
+			 margin-bottom: 60px;
+		}
+		@media (max-width:$mobileSmall){
+			 margin-bottom: 50px; 
+		}
 	}
 }
 
@@ -12,12 +27,39 @@
 		justify-content: space-between;
 		align-items: center;
 			margin-bottom: 70px;
-		
+		@media (max-width:$pc){
+			 margin-bottom: 60px; 
+		}
+		@media (max-width:$mobile){
+			 margin-bottom: 40px;
+			 justify-content: center;
+		}
+		@media (max-width:$mobileSmall){
+			 margin-bottom: 30px; 
+		}
 	}
-
+	.posts__list {
+		@media (max-width:$pc){
+			 grid-template-columns: 1fr 1fr; 
+		}
+		@media (max-width: toEm(700)){
+			  grid-template-columns: initial;
+			  display: flex;
+			  overflow-x: auto;
+			  &::-webkit-scrollbar {
+				  display: none;
+			  }
+		}
+		@media (max-width:$mobileSmall){
+			 column-gap: toRem(10); 
+		}
+	}
 	&__control {
 		display: flex;
 		column-gap: 20px;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 	&__title {
 		
@@ -32,7 +74,11 @@
 
 .posts {
 
-	&__post {}
+	&__post {
+		@media (max-width: toEm(700)){
+			  flex: 0 0 330px;
+		}
+	}
 }
 
 .post {
@@ -69,7 +115,7 @@
 
 	&__content {}
 
-	&__title {
+	&__title-link {
 		.popular & {
 			font-size: 16px;
 
@@ -98,12 +144,15 @@
 
 	&__avatar-mini {
 		.popular & {
+			width: 62px;
 			height: 34px;
 		}
 	}
 
 	&__avatar-link {
-		
+		.popular & {
+			width: 34px;
+		}
 	}
 
 	&__avatar-icon {}
