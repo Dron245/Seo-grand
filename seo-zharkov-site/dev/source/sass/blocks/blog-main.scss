@@ -3,29 +3,29 @@
 	}
 }
 .main-blog {
-	margin-top: 60px;
-	margin-bottom: 60px;
+	margin-top: 3.75rem;
+	margin-bottom: 3.75rem;
 	display: flex;
-	gap: 40px;
+	gap: 2.5rem;
 	@media (max-width: $pc) {
-		gap: 30px;
+		gap: 1.875rem;
 	}
 	@media (max-width:$tablet){
 		flex-direction: column;
 	}
 	@media (max-width:$mobile){
-		 margin-top: 40px; 
+		 margin-top: 2.5rem; 
 	}
 	@media (max-width:$mobileSmall){
-		 margin-top: 30px; 
+		 margin-top: 1.875rem; 
 	}
 	&__baner {
 		flex: 0 0 calc(1085 / 1460 * 100%);
 		
 		background: url("../img/blog/main.jpg") center / cover no-repeat;
 		background-position: center;
-		border-radius: 12px;
-		padding: 40px;
+		border-radius: 0.75rem;
+		padding: 2.5rem;
 		display: flex;
 		align-items: flex-end;
 		position: relative;
@@ -40,10 +40,10 @@
 		@media (max-width:$tablet){
 		}
 		@media (max-width:$mobile){
-			 padding: 30px; 
+			 padding: 1.875rem; 
 		}
 		@media (max-width:$mobileSmall){
-			 padding: 20px; 
+			 padding: 1.25rem; 
 		}
 		&::after {
 			content: "";
@@ -61,9 +61,9 @@
 
 	&__title {
 		font-weight: 500;
-		font-size: 28px;
+		font-size: 1.75rem;
 		font-family: "Unbounded-regular";
-		// line-height: 42px;
+		// line-height: 2.625rem;
 		line-height: 150%;
 		color: $color-belyy;
 		&:not(:last-child) {
@@ -90,7 +90,7 @@
 	}
 
 	&__aside {
-		// padding: 30px;
+		// padding: 1.875rem;
 		& .post__img {
 			@media (max-width:$mobileSmall){
 				 width: toRem(44);
@@ -112,7 +112,7 @@
 
 	&__title-link {
 		.blog & {
-			margin-bottom: 15px;
+			margin-bottom: 0.9375rem;
 			@media (max-width:$tablet){
 				font-size: toRem(16);
 			}
@@ -133,22 +133,22 @@
 .form-add {
 	&__inner {
 		.blog & {
-			padding: 15px;
+			padding: 0.9375rem;
 		}
 	}
 
 	&__wrap {
 		.blog & {
-			padding: 30px;
+			padding: 1.875rem;
 			@media (max-width:$mobile){
-				 padding: 20px; 
+				 padding: 1.25rem; 
 			}
 		}
 	}
 
 	&__description {
 		.blog & {
-			margin-bottom: 53px;
+			margin-bottom: 3.3125rem;
 			font-size: toRem(15);
 			@media (max-width:$tablet){
 				text-align: left;
