@@ -15,6 +15,9 @@ button {
 .blogs {
 	&__top {
 		margin-top: 1.5rem;
+		@media (max-width:$pc){
+			 margin-top: toRem(30); 
+		}
 		@media (max-width: toEm(576)){
 			  padding-right: 0;
 		}
@@ -25,6 +28,9 @@ button {
 		column-gap: 0.3125rem;
 		align-items: center;
 		margin-bottom: 2.5rem;
+		@media (max-width:$mobile){
+			 justify-content: center; 
+		}
 	}
 
 	&__title {

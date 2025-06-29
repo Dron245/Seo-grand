@@ -1,0 +1,159 @@
+.blog {
+	&__main {
+	}
+}
+.main-blog {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	display: flex;
+	gap: 40px;
+	@media (max-width: $pc) {
+		gap: 30px;
+	}
+	@media (max-width:$tablet){
+		flex-direction: column;
+	}
+	@media (max-width:$mobile){
+		 margin-top: 40px; 
+	}
+	@media (max-width:$mobileSmall){
+		 margin-top: 30px; 
+	}
+	&__baner {
+		flex: 0 0 calc(1085 / 1460 * 100%);
+		
+		background: url("../img/blog/main.jpg") center / cover no-repeat;
+		background-position: center;
+		border-radius: 12px;
+		padding: 40px;
+		display: flex;
+		align-items: flex-end;
+		position: relative;
+		overflow: hidden;
+		svg {
+				stroke: $color-zelenyy;
+			}
+		@media (max-width: $pc) {
+			flex: 0 0 calc(770 / 1170 * 100%);
+		}
+		@include adaptiveValue("min-height", 400, 380,0,992,768);
+		@media (max-width:$tablet){
+		}
+		@media (max-width:$mobile){
+			 padding: 30px; 
+		}
+		@media (max-width:$mobileSmall){
+			 padding: 20px; 
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(180deg, rgba(54, 78, 69, 0.5) 0%, #364e45 100%);
+			
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 28px;
+		font-family: "Unbounded-regular";
+		// line-height: 42px;
+		line-height: 150%;
+		color: $color-belyy;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+		@media (max-width:$mobileSmall){
+			 font-size: toRem(24);
+			 line-height: 1.4;
+		}
+	}
+
+	&__text {
+		color: $color-belyy;
+		&:not(:last-child) {
+			margin-bottom: toRem(40);
+		}
+		@media (max-width:$mobileSmall){
+			 font-size: toRem(15);
+			 &:not(:last-child) {margin-bottom: toRem(20);}
+		}
+	}
+
+	&__actions {
+	}
+
+	&__aside {
+		// padding: 30px;
+		& .post__img {
+			@media (max-width:$mobileSmall){
+				 width: toRem(44);
+			}
+		}
+	}
+}
+.container {
+}
+.post {
+	&__reaction-counts {
+	}
+
+	&__actions {
+	}
+
+	&__button {
+	}
+
+	&__title-link {
+		.blog & {
+			margin-bottom: 15px;
+			@media (max-width:$tablet){
+				font-size: toRem(16);
+			}
+		}
+	}
+
+	&__user-info {
+	}
+
+	&__username {
+	}
+
+	&__role {
+	}
+}
+.icon-w20 {
+}
+.form-add {
+	&__inner {
+		.blog & {
+			padding: 15px;
+		}
+	}
+
+	&__wrap {
+		.blog & {
+			padding: 30px;
+			@media (max-width:$mobile){
+				 padding: 20px; 
+			}
+		}
+	}
+
+	&__description {
+		.blog & {
+			margin-bottom: 53px;
+			font-size: toRem(15);
+			@media (max-width:$tablet){
+				text-align: left;
+				margin-bottom: toRem(20);
+			}
+		}
+	}
+}

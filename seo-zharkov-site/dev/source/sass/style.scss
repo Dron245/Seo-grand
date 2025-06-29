@@ -46,8 +46,14 @@
 @import "blocks/modal-link.scss";
 
 @import "mixins";
-
 @import "variables-anpia.scss";
+@import "common.scss";
+
+//Список блогов
 @import "blocks/blogs-top.scss";
 @import "blocks/blogs-posts.scss";
 @import "blocks/blogs-popular.scss";
+
+//Блог
+@import "blocks/blog-top.scss";
+@import "blocks/blog-main.scss";

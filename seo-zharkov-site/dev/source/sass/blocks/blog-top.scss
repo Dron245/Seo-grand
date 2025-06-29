@@ -1,0 +1,97 @@
+.blog {
+	&__top {
+		margin-top: 1.5rem;
+		@media (max-width: $pc) {
+			margin-top: toRem(30);
+		}
+		@media (max-width: toEm(576)){
+			 & .post__header:not(:first-child){
+				  .post__user-info {
+						display: none;
+					}
+			  }
+		}
+		
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 40px;
+		@media (max-width: $pc) {
+			margin-top: toRem(50);
+		}
+
+		@media (max-width: toEm(900)) {
+			flex-direction: column;
+			align-items: initial;
+			row-gap: toRem(20);
+		}
+		
+	}
+	&__autors {
+		display: flex;
+		column-gap: 100px;
+		@include adaptiveValue("column-gap", 100, 30, 0, 1360, 992);
+		@media (max-width: toEm(576)) {
+			justify-content: flex-end;
+			flex-direction: row-reverse;
+			position: relative;
+			gap: 0;
+			.post__header {
+  @for $i from 2 through 7 {
+    &:nth-last-child(#{$i}) {
+      transform: translateX(#{($i - 1) * -2.5}rem);
+    }
+  }
+}
+		}
+	}
+	.container {
+	}
+	.blogs {
+		&__page {
+		}
+	}
+	.page-top {
+		&__item {
+			&_active {
+			}
+		}
+	}
+	.post {
+		&__header {
+			margin-bottom: 0;
+			&:not(:first-child) {
+				@media (max-width: toEm(576)){
+					
+				}
+			}
+		}
+
+		&__img {
+		}
+
+		&__profile-icon {
+		}
+
+		&__user-info {
+		}
+
+		&__username {
+		}
+
+		&__role {
+		}
+
+		&__category-list {
+		}
+
+		&__category-item {
+		}
+
+		&__category-link {
+		}
+	}
+}
