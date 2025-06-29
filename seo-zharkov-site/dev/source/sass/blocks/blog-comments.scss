@@ -1,65 +1,87 @@
 .blog {
-
-		&__comments {
+	&__comments {
+		.form-add__form {
+			grid-template-columns: repeat(3, 1fr);
+			.form-add__section--textarea {
+				grid-column: 1/4;
+			}
 		}
+		.form-add__wrap {
+			padding: 40px;
+		}
+		.form-add__section--checkbox {
+			margin-top: toRem(30);
+			grid-column: 1/2;
+		}
+		.form-add__label--checkbox {
+			margin-bottom: toRem(0);
+		}
+		.form-add__send.button {
+			grid-column: 3/4;
+			margin-bottom: toRem(0);
+			margin-top: toRem(30);
+		}
+	}
+}
+.form-add__text--email {
+			background-image: url(../img/icon-email-two.svg)
+
 }
 .comments-blog {
-
-		&__title {
-		}
+	&__title {
+	}
 }
 .form-add {
+	&__inner {
+	}
 
-		&__inner {
-		}
+	&__wrap {
+	}
 
-		&__wrap {
-		}
+	&__form {
+	}
 
-		&__form {
-		}
+	&__section {
+	}
 
-		&__section {
-		}
+	&__section--name {
+	}
 
-		&__section--name {
-		}
+	&__label {
+	}
 
-		&__label {
-		}
+	&__text {
+	}
 
-		&__text {
-		}
+	&__user {
+	}
 
-		&__user {
-		}
+	&__text--name {
+	}
 
-		&__text--name {
-		}
+	&__section--tel {
+	}
 
-		&__section--tel {
-		}
+	&__text--tel {
+	}
 
-		&__text--tel {
-		}
+	&__section--textarea {
+	}
 
-		&__section--textarea {
-		}
+	&__comment {
+	}
 
-		&__comment {
-		}
+	&__section--checkbox {
+	}
 
-		&__section--checkbox {
-		}
+	&__checkbox {
+	}
 
-		&__checkbox {
-		}
+	&__label--checkbox {
+	}
 
-		&__label--checkbox {
-		}
-
-		&__send {
-		}
+	&__send {
+	}
 }
 .form-callback {
 }
@@ -68,13 +90,12 @@
 .button {
 }
 .callback-form {
+	&__wrap {
+	}
 
-		&__wrap {
-		}
+	&__title {
+	}
 
-		&__title {
-		}
-
-		&__close-btn {
-		}
+	&__close-btn {
+	}
 }

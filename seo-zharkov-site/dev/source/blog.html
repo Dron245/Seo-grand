@@ -500,8 +500,9 @@
 								В обратной ситуации, когда времени у вас много, а бюджета наоборот нет, то есть
 								смысл обратиться к бюджетным методикам. В качестве первой из них можно назвать SEO.
 								И под словом бюджетная не скрывается отсутствие эффективности.
-							</p></div>
-							<div class="article-blog__part">
+							</p>
+						</div>
+						<div class="article-blog__part">
 							<h2 class="article-blog__subtitle">Что такое seo простыми словами</h2>
 							<p class="article-blog__text">
 								SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие
@@ -563,43 +564,43 @@
 								</div>
 								<div class="table-article__row">
 									<div class="table-article__cell">
-										Название услуги в две или три строки, , но не более
+										Название услуги в две или три строки, но не более
 									</div>
 									<div class="table-article__cell">
 										Постоянную работу по отслеживанию обновлений алгоритмов ранжирования в
 										поисковиках и подстраиванию под них.
 									</div>
-									<div class="table-article__cell">12 590 <br><span>руб./мес.</span> </div>
+									<div class="table-article__cell">12 590 <br /><span>руб./мес.</span></div>
 								</div>
 								<div class="table-article__row">
 									<div class="table-article__cell">
-										Название услуги в две или три строки, , но не более
+										Название услуги в две или три строки, но не более
 									</div>
 									<div class="table-article__cell">
 										Постоянную работу по отслеживанию обновлений алгоритмов ранжирования в
 										поисковиках и подстраиванию под них.
 									</div>
-									<div class="table-article__cell">12 590 <br><span>руб./мес.</span> </div>
+									<div class="table-article__cell">12 590 <br /><span>руб./мес.</span></div>
 								</div>
 								<div class="table-article__row">
 									<div class="table-article__cell">
-										Название услуги в две или три строки, , но не более
+										Название услуги в две или три строки, но не более
 									</div>
 									<div class="table-article__cell">
 										Постоянную работу по отслеживанию обновлений алгоритмов ранжирования в
 										поисковиках и подстраиванию под них.
 									</div>
-									<div class="table-article__cell">12 590 <br><span>руб./мес.</span> </div>
+									<div class="table-article__cell">12 590 <br /><span>руб./мес.</span></div>
 								</div>
 								<div class="table-article__row">
 									<div class="table-article__cell">
-										Название услуги в две или три строки, , но не более
+										Название услуги в две или три строки, но не более
 									</div>
 									<div class="table-article__cell">
 										Постоянную работу по отслеживанию обновлений алгоритмов ранжирования в
 										поисковиках и подстраиванию под них.
 									</div>
-									<div class="table-article__cell">12 590 <br><span>руб./мес.</span> </div>
+									<div class="table-article__cell">12 590 <br /><span>руб./мес.</span></div>
 								</div>
 							</div>
 						</div>
@@ -624,20 +625,23 @@
 								<div class="form-add__section form-add__section--tel">
 									<label class="form-add__label visually-hidden" for="phone_field4">Телефон</label>
 									<input
+										
 										class="form-add__text form-add__user form-add__text--tel"
 										type="tel"
 										name="phone"
 										id="phone_field4"
 										placeholder="Телефон"
-										required="" />
+										required
+										pattern="^\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}$"
+										title="Введите номер в формате +7 (999) 123-45-67" />
 								</div>
-								<div class="form-add__section form-add__section--tel">
-									<label class="form-add__label visually-hidden" for="phone_field5">Почта</label>
+								<div class="form-add__section form-add__section--email">
+									<label class="form-add__label visually-hidden" for="email_field5">Почта</label>
 									<input
-										class="form-add__text form-add__user form-add__text--tel"
+										class="form-add__text form-add__user form-add__text--email"
 										type="email"
 										name="e-mail"
-										id="phone_field5"
+										id="email_field5"
 										placeholder="Почта"
 										required="" />
 								</div>
@@ -646,7 +650,7 @@
 										maxlength="2400"
 										class="form-add__comment"
 										id="comment_field"
-										placeholder="Сообщение"></textarea>
+										placeholder="Комментарий"></textarea>
 									<label class="visually-hidden" for="comment_field">Комментарий</label>
 								</div>
 								<div class="form-add__section form-add__section--checkbox">
@@ -662,7 +666,7 @@
 										><a href="#">обработку ваших персональных данных</a>
 									</label>
 								</div>
-								<button class="form-add__send button" type="submit">Перезвонить мне</button>
+								<button class="form-add__send button" type="submit">Комментировать</button>
 							</form>
 						</div>
 						<section class="callback-form">
@@ -821,6 +825,7 @@
 			</div>
 		</footer>
 
+		<script src="https://unpkg.com/imask"></script>
 		<script src="js/main.min.js"></script>
 	</body>
 </html>

@@ -911,3 +911,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
 })();
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	//Маска телефона
+	const element = document.getElementById("phone_field4");
+
+	const maskOptions = {
+		mask: '+{7} (000) 000-00-00'
+	};
+
+	IMask(element, maskOptions);
+});
