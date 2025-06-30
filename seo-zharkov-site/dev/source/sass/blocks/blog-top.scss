@@ -11,7 +11,9 @@
 					}
 			  }
 		}
-		
+		.blog__autors .post__header {
+			margin-bottom: 0;
+		}
 	}
 
 	&__bottom {
@@ -62,7 +64,7 @@
 	}
 	.post {
 		&__header {
-			margin-bottom: 0;
+			
 			&:not(:first-child) {
 				@media (max-width: toEm(576)){
 					

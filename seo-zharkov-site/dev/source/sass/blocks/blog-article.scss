@@ -3,6 +3,7 @@
 		display: grid;
 		grid-template-columns: auto 335px;
 		gap: toRem(40);
+		margin-bottom: toRem(110);
 		@media (max-width:$pc){
 			 grid-template-columns: 1fr; 
 		}
@@ -14,19 +15,11 @@
 	&__comments {
 		grid-row: 2/3;
 	}
-
-	&__other {
-		outline: 1px solid red;
-		@media (max-width:$pc){
-			 display: none; 
-		}
-	}
+	
 }
 .container {
 }
-* {
-	// outline: 1px solid red;
-}
+
 .article-blog {
 	&__part {
 		margin-bottom: toRem(50);

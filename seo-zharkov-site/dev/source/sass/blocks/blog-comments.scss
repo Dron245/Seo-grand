@@ -1,6 +1,5 @@
 .blog {
 	&__comments {
-		
 		.form-add__form {
 			grid-template-columns: repeat(3, 1fr);
 			.form-add__section--textarea {
@@ -25,8 +24,7 @@
 	}
 }
 .form-add__text--email {
-			background-image: url(../img/icon-email-two.svg)
-
+	background-image: url(../img/icon-email-two.svg);
 }
 .comments-blog {
 	&__title {
@@ -40,97 +38,79 @@
 	}
 }
 
-.form-add {
-
-	&__inner {
+.comments-blog {
+	&__list {
+		
 	}
 
-	&__wrap {
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: toRem(40);
+		}
 	}
 
-	&__form {
-	}
-
-	&__section {
-	}
-
-	&__section--name {
-	}
-
-	&__label {
-	}
-
-	&__text {
-	}
-
-	&__user {
-	}
-
-	&__text--name {
-	}
-
-	&__section--tel {
-	}
-
-	&__text--tel {
-	}
-
-	&__section--email {
-	}
-
-	&__text--email {
-	}
-
-	&__section--textarea {
-	}
-
-	&__comment {
-	}
-
-	&__section--checkbox {
-	}
-
-	&__checkbox {
-	}
-
-	&__label--checkbox {
-	}
-
-	&__send {
-	}
-}
-.form-callback {
-}
-.visually-hidden {
-}
-.button {
-}
-.callback-form {
-
-	&__wrap {
-	}
-
-	&__title {
-	}
-
-	&__close-btn {
+	&__actions {
+		margin-top: toRem(53);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		button.form-add__send[class] {
+			margin-top: 0;
+			height: auto;
+			width: auto;
+			line-height: 1.4;
+			padding: 18px 30px;
+		}
 	}
 }
 .item-comments {
-
 	&__comment {
 	}
 
+	&__arrow {
+		width: toRem(25);
+		height: toRem(25);
+		stroke: $color-seryy-01;
+	}
 	&__answer {
+		display: flex;
+		margin-left: toRem(30);
+		margin-top: toRem(30);
+		gap: toRem(30);
 	}
 }
 .posts {
-
 	&__post {
+		.comments-blog & {
+				border: 1px dashed $color-seryy-01-1;
+				&:hover{
+					box-shadow: initial;
+				}
+			}
 	}
 
 	&__pagination-item {
-
+		.comments-blog & {
+			border: 1px solid $color-seryy-01-1;
+			border-radius: 8px;
+			padding: 14px 20px;
+			background: $color-belyy;
+			font-size: 13px;
+			font-family: "Manrope-medium";
+			line-height: 140%;
+			letter-spacing: 0.02em;
+			color: $color-zelenyy-01;
+			span {
+				transition: color 0.3s;
+			}
+			&:hover{
+				span {
+				color: $color-zagolovki;
+				position: relative;
+				z-index: 2;
+				}	
+			}
+		}
 		&_more {
 		}
 	}
@@ -139,8 +119,10 @@
 	}
 }
 .post {
-
 	&__header {
+		.item-comments__comment & {
+			margin-bottom: toRem(20);
+		}
 	}
 
 	&__img {
@@ -155,19 +137,31 @@
 	&__username {
 	}
 
+	&__data {
+	}
 	&__role {
 	}
 
 	&__date {
+		margin-right: 20px;
 	}
 
 	&__content {
 	}
 
 	&__text {
+		.item-comments__comment & {
+			padding-bottom: toRem(20);
+			border-bottom: 1px dashed $color-seryy-01-1;
+		}
 	}
 
 	&__footer {
+		.comments-blog & {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 
 	&__reaction-counts {
@@ -182,4 +176,10 @@
 .icon-w20 {
 }
 .dots {
+}
+.form-add {
+	&__send {
+	}
+}
+.button {
 }
