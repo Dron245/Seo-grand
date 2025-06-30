@@ -325,9 +325,16 @@
 }
 
 .table-article__cell:nth-child(2) {
-	flex: 0 0 610px;
+	// flex: 0 0 610px;
 	@media (max-width:$pc){
-		 flex: 0 0 59.401709%; /* 695/1170 */
+		//  flex: 0 0 59.401709%; /* 695/1170 */
+	}
+}
+
+.table-article__cell:nth-child(3) {
+	flex: 0 0 160px;
+	@media (max-width:$pc){
+		//  flex: 0 0 26.923077%; /* 315/1170 */
 	}
 }
 

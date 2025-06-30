@@ -53,7 +53,6 @@
   "type": "module",
   "dependencies": {
     "gulp-imagemin": "^9.1.0",
-    "gulp-webp": "^5.0.0",
-    "imask": "^7.6.1"
+    "gulp-webp": "^5.0.0"
   }
 }

@@ -1,5 +1,6 @@
 .blog {
 	&__comments {
+		
 		.form-add__form {
 			grid-template-columns: repeat(3, 1fr);
 			.form-add__section--textarea {
@@ -33,6 +34,15 @@
 }
 .form-add {
 	&__inner {
+		.comments-blog & {
+			margin-bottom: 85px;
+		}
+	}
+}
+
+.form-add {
+
+	&__inner {
 	}
 
 	&__wrap {
@@ -65,6 +75,12 @@
 	&__text--tel {
 	}
 
+	&__section--email {
+	}
+
+	&__text--email {
+	}
+
 	&__section--textarea {
 	}
 
@@ -90,6 +106,7 @@
 .button {
 }
 .callback-form {
+
 	&__wrap {
 	}
 
@@ -98,4 +115,71 @@
 
 	&__close-btn {
 	}
+}
+.item-comments {
+
+	&__comment {
+	}
+
+	&__answer {
+	}
+}
+.posts {
+
+	&__post {
+	}
+
+	&__pagination-item {
+
+		&_more {
+		}
+	}
+
+	&__pagination-link {
+	}
+}
+.post {
+
+	&__header {
+	}
+
+	&__img {
+	}
+
+	&__profile-icon {
+	}
+
+	&__user-info {
+	}
+
+	&__username {
+	}
+
+	&__role {
+	}
+
+	&__date {
+	}
+
+	&__content {
+	}
+
+	&__text {
+	}
+
+	&__footer {
+	}
+
+	&__reaction-counts {
+	}
+
+	&__actions {
+	}
+
+	&__button {
+	}
+}
+.icon-w20 {
+}
+.dots {
 }
