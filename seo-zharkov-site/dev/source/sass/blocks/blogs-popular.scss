@@ -1,22 +1,33 @@
 .blogs {
 
 	&__popular {
-		@include adaptiveValue("margin-top", 100, 80,0,1920,1360);
-		margin-bottom: 100px;
-		@media (max-width: toEm(768)){
-			  padding-right: 0;
+		@media (min-width:$pc) {
+			@include adaptiveValue("margin-top", 100, 80, 0, 1920, 1360);
 		}
-		@media (max-width:$pc){
-			 margin-bottom: 80px; 
+
+		@media (max-width: toEm(768)) {
+			padding-right: 0;
 		}
-		@media (max-width:$tablet){
-			 margin-bottom: 70px;
+
+		@media (max-width:$pc) {
+			margin-bottom: 5rem;
 		}
-		@media (max-width:$mobile){
-			 margin-bottom: 60px;
+
+		@media (max-width:$tablet) {
+			margin-bottom: 4.375rem;
 		}
-		@media (max-width:$mobileSmall){
-			 margin-bottom: 50px; 
+
+		@media (max-width:$mobile) {
+			margin-bottom: 3.75rem;
+		}
+
+		@media (max-width:$mobileSmall) {
+			margin-bottom: 3.125rem;
+			margin-top: toRem(60);
+		}
+
+		@media (max-width: toEm(380)) {
+			margin-top: toRem(50);
 		}
 	}
 }
@@ -26,18 +37,22 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-			margin-bottom: 70px;
-		@media (max-width:$pc){
-			 margin-bottom: 60px; 
+		margin-bottom: 70px;
+
+		@media (max-width:$pc) {
+			margin-bottom: 60px;
 		}
-		@media (max-width:$mobile){
-			 margin-bottom: 40px;
-			 justify-content: center;
+
+		@media (max-width:$mobile) {
+			margin-bottom: 40px;
+			justify-content: center;
 		}
-		@media (max-width:$mobileSmall){
-			 margin-bottom: 30px; 
+
+		@media (max-width:$mobileSmall) {
+			margin-bottom: 30px;
 		}
 	}
+
 	// .posts__list {
 	// 	@media (max-width:$pc){
 	// 		 grid-template-columns: 1fr 1fr; 
@@ -53,26 +68,28 @@
 	&__control {
 		display: flex;
 		column-gap: 20px;
-		@media (max-width:$mobile){
-			 display: none; 
+
+		@media (max-width:$mobile) {
+			display: none;
 		}
 	}
-	&__title {
-		
-	}
+
+	&__title {}
 
 	&__list {}
 }
+
 .popular .blogs__title {
 	margin-bottom: 0;
 }
+
 .container {}
 
 .posts {
 
 	&__post {
-		@media (max-width: toEm(700)){
-			  flex: 0 0 330px;
+		@media (max-width: toEm(700)) {
+			flex: 0 0 330px;
 		}
 	}
 }
@@ -134,7 +151,9 @@
 
 	&__footer {
 		.popular & {
-			&:not(:last-child) {margin-bottom: 20px;}
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
 		}
 	}
 
@@ -153,9 +172,7 @@
 
 	&__avatar-icon {}
 
-	&__reaction-counts {
-		
-	}
+	&__reaction-counts {}
 
 	&__likes {}
 
@@ -169,13 +186,17 @@
 .comments-post {
 	&__item {
 		border: 1px dashed $color-seryy-01-1;
-	border-radius: 8px;
-	padding: 15px;
-	&:not(:last-child) {margin-bottom: 20px;}
+		border-radius: 8px;
+		padding: 15px;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
 
 		.post__img {
 			width: 34px;
 		}
+
 		.post__header {
 			column-gap: 15px;
 			align-items: center;

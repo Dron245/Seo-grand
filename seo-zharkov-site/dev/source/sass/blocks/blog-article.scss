@@ -1,28 +1,4 @@
-.blog {
-	&__content {
-		@media (min-width:$pc){
-			display: grid;
-			grid-template-columns: auto 335px;
-			gap: toRem(40);
-			  
-		}
-		margin-bottom: toRem(110);
-		@media (max-width:$pc){
-			& > *:not(:last-child) {
-				margin-bottom: toRem(80);
-			}
-			//  grid-template-columns: 1fr;
-		}
-	}
 
-	&__article {
-	}
-
-	&__comments {
-		grid-row: 2/3;
-	}
-	
-}
 .container {
 }
 

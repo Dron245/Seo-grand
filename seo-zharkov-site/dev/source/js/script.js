@@ -589,14 +589,14 @@ document.querySelectorAll('.swiper-container').forEach(function(i) {
 
 	function onCallbackBtnClicked(evt) {
 		const formSection = evt.target.closest('.form-add');
-		const formBtnAnswer = formSection.querySelector(
+		const formBtnAnswer = formSection ? formSection.querySelector(
 			'.callback-form__close-btn'
-		);
-		const inputName = formSection.querySelector('.form-add__text--name');
-		const inputPhone = formSection.querySelector('.form-add__text--tel');
-		const inputAgree = formSection.querySelector('.form-add__checkbox');
+		) : null;
+		const inputName = formSection ? formSection.querySelector('.form-add__text--name') : null;
+		const inputPhone = formSection ? formSection.querySelector('.form-add__text--tel') : null;
+		const inputAgree = formSection ? formSection.querySelector('.form-add__checkbox') : null;
 
-		if (!inputName.value || !inputPhone.value || !inputAgree.checked) {
+		if (formSection && (!inputName.value || !inputPhone.value || !inputAgree.checked)) {
 			evt.preventDefault();
 			if (!inputName.value) {
 				inputName.classList.add('form-add__input--error');
@@ -612,21 +612,23 @@ document.querySelectorAll('.swiper-container').forEach(function(i) {
 			}
 		} else {
 			evt.preventDefault();
+			if (formSection) {
+				$.ajax({
+					url: '/ajax/send.php',
+					method: 'post',
+					dataType: 'html',
+					data: $(formSection).find('form').serialize(),
+					success: function (data) {
+						let response = data;
+					},
+				});
+			}
+			
 
-			$.ajax({
-				url: '/ajax/send.php',
-				method: 'post',
-				dataType: 'html',
-				data: $(formSection).find('form').serialize(),
-				success: function (data) {
-					let response = data;
-				},
-			});
-
-			formSection.classList.add('callback-opened');
-			formBtnAnswer.addEventListener('click', function () {
+			formSection ? formSection.classList.add('callback-opened'): null;
+			formSection ? formBtnAnswer.addEventListener('click', function () {
 				formSection.classList.remove('callback-opened');
-			});
+			}) : null;
 		}
 	}
 
@@ -938,16 +940,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		const maskOptions = {
 			mask: '+{7} (000) 000-00-00',
 		};
-	
+
 		IMask(element, maskOptions);
 	}
 
 	//Слайдер на странице "Блоги"
 
-	if (document.querySelector(".posts__slider")) {
+	if (document.querySelector('.posts__slider')) {
 		//Указываем класс нужного слайдера
 		//Создаем слайдер
-		new Swiper(".posts__slider", {
+		new Swiper('.posts__slider', {
 			observer: true,
 			observeParents: true,
 			spaceBetween: 0,
@@ -956,7 +958,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				prevEl: '.posts__pagination-item--left',
 				nextEl: '.posts__pagination-item--right',
 			},
-			
+
 			// Брейкпоинты
 			breakpoints: {
 				250: {
@@ -977,17 +979,15 @@ document.addEventListener('DOMContentLoaded', function () {
 					slidesPerView: 3,
 					spaceBetween: 30,
 				},
-				
 			},
-			
+
 			// События
 			on: {},
 		});
 	}
 
-	//Слайдер на странице "Блог"
+	// Слайдер на странице "Блог"
 	let asideblogSwiper = null;
-
 	function initAsideblogSwiper() {
 		const slider = document.querySelector('.asideblog__slider');
 
@@ -1026,19 +1026,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		}
 
-		// Удаляем слайдер на ширине больше 1360
 		if (window.innerWidth > 1360 && asideblogSwiper) {
 			asideblogSwiper.destroy(true, true);
 			asideblogSwiper = null;
 		}
 	}
 
-	// Инициализировать при загрузке
-	document.addEventListener('DOMContentLoaded', initAsideblogSwiper);
+	// 👇 Инициализация при загрузке
+	initAsideblogSwiper();
 
-	// И пересчитывать при изменении размера окна
+	// 👇 И обработка изменения ширины
 	window.addEventListener('resize', () => {
-		// Немного задержки, чтобы избежать спама при быстром ресайзе
 		setTimeout(initAsideblogSwiper, 200);
 	});
 });

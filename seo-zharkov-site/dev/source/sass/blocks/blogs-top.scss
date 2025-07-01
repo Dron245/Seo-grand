@@ -31,6 +31,9 @@ button {
 		@media (max-width:$mobile){
 			 justify-content: center; 
 		}
+		@media (max-width:$mobileSmall){
+			 margin-bottom: 1.875rem; 
+		}
 	}
 
 	&__title {
@@ -86,16 +89,16 @@ button {
 	&__category-item {
 		cursor: pointer;
 		border-radius: 0.5rem;
-		padding: 0.9375rem 1.5rem;
+		padding: 0.8rem 1.5rem;
 		background-color: $color-seryy-01-2;
 		transition: background 0.3s;
 		position: relative;
 		overflow: hidden;
 		@media (max-width:$tablet){
-			padding: 0.75rem 1.25rem;
+			padding: 0.5625rem 1.25rem;
 		}
 		@media (max-width:$mobile){
-			padding: 0.625rem 1rem; 
+			padding: 0.4375rem 1rem; 
 		}
 		@media (max-width: toEm(576)){
 			  overflow: initial;
