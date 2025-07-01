@@ -3,7 +3,7 @@
 	&__popular {
 		@include adaptiveValue("margin-top", 100, 80,0,1920,1360);
 		margin-bottom: 100px;
-		@media (max-width: toEm(700)){
+		@media (max-width: toEm(768)){
 			  padding-right: 0;
 		}
 		@media (max-width:$pc){
@@ -38,22 +38,18 @@
 			 margin-bottom: 30px; 
 		}
 	}
-	.posts__list {
-		@media (max-width:$pc){
-			 grid-template-columns: 1fr 1fr; 
-		}
-		@media (max-width: toEm(700)){
-			  grid-template-columns: initial;
-			  display: flex;
-			  overflow-x: auto;
-			  &::-webkit-scrollbar {
-				  display: none;
-			  }
-		}
-		@media (max-width:$mobileSmall){
-			 column-gap: toRem(10); 
-		}
-	}
+	// .posts__list {
+	// 	@media (max-width:$pc){
+	// 		 grid-template-columns: 1fr 1fr; 
+	// 	}
+	// 	@media (max-width: toEm(700)){
+	// 		  grid-template-columns: initial;
+	// 		  display: flex;
+	// 	}
+	// 	@media (max-width:$mobileSmall){
+	// 		 column-gap: toRem(10); 
+	// 	}
+	// }
 	&__control {
 		display: flex;
 		column-gap: 20px;

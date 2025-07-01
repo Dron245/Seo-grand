@@ -1,11 +1,17 @@
 .blog {
 	&__content {
-		display: grid;
-		grid-template-columns: auto 335px;
-		gap: toRem(40);
+		@media (min-width:$pc){
+			display: grid;
+			grid-template-columns: auto 335px;
+			gap: toRem(40);
+			  
+		}
 		margin-bottom: toRem(110);
 		@media (max-width:$pc){
-			 grid-template-columns: 1fr; 
+			& > *:not(:last-child) {
+				margin-bottom: toRem(80);
+			}
+			//  grid-template-columns: 1fr;
 		}
 	}
 

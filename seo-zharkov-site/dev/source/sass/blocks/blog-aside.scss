@@ -5,11 +5,13 @@
 		}
 	}
 }
+
 .asideblog {
 	&__part {
 		&:not(:last-child) {
 			margin-bottom: toRem(60);
 		}
+
 		&_cases {
 			@media (max-width: $pc) {
 				display: none;
@@ -17,7 +19,39 @@
 		}
 	}
 
-	&__list {
+	&__top {
+		@media (max-width:$pc){
+			margin-bottom: toRem(60);
+			 display: flex; 
+			 align-items: center;
+			//  justify-content: space-between;
+			 gap: toRem(40);
+			 .article-blog__subtitle {
+				 margin-bottom: toRem(0);
+			 }
+		}
+		a.clients__show-all,
+		& .popular__control {
+			@media (min-width:$pc) {
+				display: none;
+			}
+		}
+		.clients__show-all {
+			position: static;
+			max-width: initial;
+			width: auto;
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+	&__slider {
+		// width: 100%;
+	// max-width: 100%;
+	}
+	&__list[class] {
+		@media (min-width:$pc){
+			 display: block; 
+		}
 	}
 
 	&__item {
@@ -26,144 +60,121 @@
 				display: none;
 			}
 		}
+
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
 		}
 	}
 }
+
 .article-blog {
 	&__subtitle {
 		.asideblog & {
-			margin-bottom: toRem(40);
+			@media (min-width:$pc){
+				  
+				margin-bottom: toRem(40);
+			}
 		}
 	}
 }
+
 .posts {
-	&__post {
-	}
+	&__post {}
 }
+
 .post {
-	&__header {
-	}
+	&__header {}
 
-	&__img {
-	}
+	&__img {}
 
-	&__profile-icon {
-	}
+	&__profile-icon {}
 
-	&__user-info {
-	}
+	&__user-info {}
 
-	&__username {
-	}
+	&__username {}
 
-	&__role {
-	}
+	&__role {}
 
-	&__content {
-	}
+	&__content {}
 
-	&__category-list {
-	}
+	&__category-list {}
 
-	&__category-item {
-	}
+	&__category-item {}
 
-	&__category-link {
-	}
+	&__category-link {}
 
-	&__title-link {
-	}
+	&__title-link {}
 
-	&__text {
-	}
+	&__text {}
 
-	&__footer {
-	}
+	&__footer {}
 
-	&__avatar-mini {
-	}
+	&__avatar-mini {}
 
-	&__avatar-link {
-	}
+	&__avatar-link {}
 
-	&__avatar-icon {
-	}
+	&__avatar-icon {}
 
-	&__reaction-counts {
-	}
+	&__reaction-counts {}
 
-	&__actions {
-	}
+	&__actions {}
 
-	&__button {
-	}
+	&__button {}
 }
-.icon-w20 {
-}
+
+.icon-w20 {}
+
 .case {
 	.asideblog & {
 		border: none;
 		outline: 1px solid $color-seryy-01-1;
+
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
 		}
 	}
-	&__wrap {
-	}
 
-	&__client-info {
-	}
+	&__wrap {}
 
-	&__img-wrap {
-	}
+	&__client-info {}
 
-	&__img {
-	}
+	&__img-wrap {}
 
-	&__link {
-	}
+	&__img {}
 
-	&__list {
-	}
+	&__link {}
 
-	&__item {
-	}
+	&__list {}
 
-	&__item--yandex {
-	}
+	&__item {}
 
-	&__orders {
-	}
+	&__item--yandex {}
 
-	&__overlay {
-	}
+	&__orders {}
 
-	&__overlay-wrap {
-	}
+	&__overlay {}
 
-	&__overlay-wrap--goggle {
-	}
+	&__overlay-wrap {}
 
-	&__overlay-link {
-	}
+	&__overlay-wrap--goggle {}
 
-	&__overlay-wrap--yandex {
-	}
+	&__overlay-link {}
 
-	&__overlay-link--yandex {
-	}
+	&__overlay-wrap--yandex {}
+
+	&__overlay-link--yandex {}
 }
-.button {
-}
-.js-open-modal {
-}
+
+.button {}
+
+.js-open-modal {}
+
 .clients {
 	&__show-all {
 		.asideblog__part_cases & {
 			position: static;
 			max-width: initial;
+
 			& span::before {
 				display: none;
 			}

@@ -31,8 +31,14 @@
 		@media (max-width: 43.75rem) {
 			grid-template-columns: 1fr;
 		}
+		.posts__slider & {
+			display: flex;
+			gap: toRem(0);
+		}
 	}
 
+	&__slider {
+	}
 	&__post {}
 
 	&__pagination {
@@ -164,10 +170,11 @@
 		text-align: center;
 		color: $color-seryy-00;
 		z-index: 2;
+		display: flex;
 	}
 
 	&__pagination-item--right {
-		 a {
+		 .posts__pagination-link {
 			transform: rotate(180deg);
 		}
 	}
