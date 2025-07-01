@@ -3,22 +3,42 @@
 }
 
 .article-blog {
+	// margin-bottom: toRem(80);
 	&__part {
-		margin-bottom: toRem(50);
+		@include adaptiveValue("margin-bottom", 50, 30, 0,1360,992);
+		@media (max-width: toEm(380)){
+			  margin-bottom: toRem(20);
+		}
 		&_ol {
 			ol {
 				counter-reset: my-counter;
 			}
 			margin-top: toRem(60);
 			padding: 40px;
+			@media (max-width:$mobile){
+				padding: 30px; 
+			}
+			@media (max-width:$tablet){
+				margin-top: toRem(50);
+			}
+			@media (max-width:$mobile){
+				margin-top: toRem(40); 
+			}
 			.article-blog__subsubtitle {
 				margin-bottom: toRem(30);
 			}
 		}
 		&_table {
 			margin-top: toRem(100);
+			@include adaptiveValue("margin-top", 100, 60,0,1360,768);
+			@media (max-width:23.75rem){
+				 margin-bottom: toRem(50); 
+			}
 			.blogs__title {
 				margin-bottom: toRem(60);
+				@media (max-width:$mobile){
+					margin-bottom: toRem(50); 
+				}
 			}
 		}
 	}
@@ -50,9 +70,16 @@
 
 	&__img {
 		flex: 0 0 160px;
+		position: relative;
 	}
 
 	&__footnote-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	&__note {
@@ -60,6 +87,13 @@
 
 	&__quote {
 		margin-block: toRem(70);
+		@media (max-width:$pc){
+			 margin-block: toRem(60); 
+		}
+		@include adaptiveValue("margin-block", 40, 30,0,992,380);
+		.post__header {
+			margin-bottom: toRem(0);
+		}
 		.form-add__description {
 			margin-bottom: toRem(20);
 		}
@@ -88,7 +122,9 @@
 	&__list {
 		column-count: 2;
 		column-gap: toRem(60);
-
+		@media (max-width: toEm(870)){
+			  column-count: 1;
+		}
 		&_ol {
 			column-gap: toRem(80);
 		}
@@ -106,8 +142,8 @@
 		ul &::before {
 			content: "";
 			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
+			top: 11px;
+			// transform: translateY(-50%);
 			left: 12px;
 			width: toRem(6);
 			height: toRem(6);
@@ -138,83 +174,6 @@
 	&__table {
 	}
 }
-.article-subsubtitle {
-}
-.form-add {
-	&__inner {
-	}
-
-	&__wrap {
-	}
-
-	&__description {
-	}
-
-	&__form {
-	}
-
-	&__section {
-	}
-
-	&__section--name {
-	}
-
-	&__label {
-	}
-
-	&__text {
-	}
-
-	&__user {
-	}
-
-	&__text--name {
-	}
-
-	&__section--tel {
-	}
-
-	&__text--tel {
-	}
-
-	&__section--textarea {
-	}
-
-	&__comment {
-	}
-
-	&__section--checkbox {
-	}
-
-	&__checkbox {
-	}
-
-	&__label--checkbox {
-	}
-
-	&__send {
-	}
-}
-.post {
-	&__header {
-	}
-
-	&__img {
-	}
-
-	&__profile-icon {
-	}
-
-	&__user-info {
-	}
-
-	&__username {
-	}
-
-	&__role {
-	}
-}
-
 .article-blog__table {
 	width: 100%;
 	border-collapse: collapse;
@@ -295,7 +254,7 @@
 .table-article__cell:first-child {
 	flex: 0 0 315px;
 	@media (max-width:$pc){
-		 flex: 0 0 26.923077%; /* 315/1170 */
+		//  flex: 0 0 26.923077%; /* 315/1170 */
 	}
 }
 

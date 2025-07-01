@@ -589,12 +589,12 @@ document.querySelectorAll('.swiper-container').forEach(function(i) {
 
 	function onCallbackBtnClicked(evt) {
 		const formSection = evt.target.closest('.form-add');
-		const formBtnAnswer = formSection ? formSection.querySelector(
+		const formBtnAnswer = formSection.querySelector(
 			'.callback-form__close-btn'
-		) : null;
-		const inputName = formSection ? formSection.querySelector('.form-add__text--name') : null;
-		const inputPhone = formSection ? formSection.querySelector('.form-add__text--tel') : null;
-		const inputAgree = formSection ? formSection.querySelector('.form-add__checkbox') : null;
+		) ;
+		const inputName = formSection.querySelector('.form-add__text--name') ;
+		const inputPhone = formSection.querySelector('.form-add__text--tel') ;
+		const inputAgree = formSection.querySelector('.form-add__checkbox') ;
 
 		if (formSection && (!inputName.value || !inputPhone.value || !inputAgree.checked)) {
 			evt.preventDefault();
@@ -612,7 +612,7 @@ document.querySelectorAll('.swiper-container').forEach(function(i) {
 			}
 		} else {
 			evt.preventDefault();
-			if (formSection) {
+			// if (formSection) {
 				$.ajax({
 					url: '/ajax/send.php',
 					method: 'post',
@@ -622,13 +622,13 @@ document.querySelectorAll('.swiper-container').forEach(function(i) {
 						let response = data;
 					},
 				});
-			}
+			// }
 			
 
-			formSection ? formSection.classList.add('callback-opened'): null;
-			formSection ? formBtnAnswer.addEventListener('click', function () {
+			formSection.classList.add('callback-opened');
+			formBtnAnswer.addEventListener('click', function () {
 				formSection.classList.remove('callback-opened');
-			}) : null;
+			}) ;
 		}
 	}
 
@@ -1017,8 +1017,14 @@ document.addEventListener('DOMContentLoaded', function () {
 					768: {
 						slidesPerView: 2,
 						spaceBetween: 20,
+						autoHeight: true,
 					},
-					992: {
+					800: {
+						slidesPerView: 2.5,
+						spaceBetween: 20,
+						autoHeight: true,
+					},
+					993: {
 						slidesPerView: 3,
 						spaceBetween: 20,
 					},

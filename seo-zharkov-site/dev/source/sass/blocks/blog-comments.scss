@@ -11,7 +11,8 @@
 		}
 		.form-add__section--checkbox {
 			margin-top: toRem(30);
-			grid-column: 1/2;
+			margin-bottom: toRem(0);
+			grid-column: 1/3;
 		}
 		.form-add__label--checkbox {
 			margin-bottom: toRem(0);
@@ -54,6 +55,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		.posts__pagination-item {
+			@media (max-width:$tablet){
+				width: auto;
+			}
+		}
 		button.form-add__send[class] {
 			margin-top: 0;
 			height: auto;
@@ -64,12 +70,18 @@
 	}
 }
 .item-comments {
+	.posts__pagination-item {
+		@media (max-width:$tablet){
+			width: auto;
+		}
+	}
 	&__comment {
 	}
 
 	&__arrow {
+		flex: 0 0 25px;
 		width: toRem(25);
-		height: toRem(25);
+		height: toRem(26);
 		stroke: $color-seryy-01;
 	}
 	&__answer {

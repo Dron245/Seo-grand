@@ -7,13 +7,29 @@
 }
 
 .asideblog {
+
+	@media (max-width:$tablet){
+		margin-right: -39px;
+	}
 	&__part {
+		@media (max-width:$pc){
+			 &:not(.asideblog__part_cases)[class] {
+				 margin-bottom: toRem(0);
+			 }
+		}
 		.clients__show-all {
 			position: static;
 			max-width: initial;
 			width: auto;
 			margin-left: auto;
 			margin-right: 0;
+			span {
+				margin-left: initial;
+				padding-right: 30px;
+				&::before {
+					right: 0;
+				}
+			}
 			&:not(.clients__show-all_mobile) {
 				@media (max-width:$mobile){
 					 display: none; 
@@ -50,6 +66,14 @@
 				 margin-bottom: toRem(0);
 			 }
 		}
+		@media (max-width:$tablet) and (min-width:$mobile){
+			margin-right: toRem(39);
+		}
+		@media (max-width:$mobile){
+			 margin-bottom: toRem(40);
+			justify-content: center;
+			margin-right: 0;
+		}
 		a.clients__show-all,
 		& .popular__control {
 			@media (min-width:$pc) {
@@ -73,6 +97,7 @@
 	}
 
 	&__item {
+		height: auto;
 		@media (min-width: $pc) {
 			&:nth-child(n + 4) {
 				display: none;
@@ -80,7 +105,10 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: toRem(40);
+			@media (min-width:$pc){
+				  
+				margin-bottom: toRem(40);
+			}
 		}
 	}
 }

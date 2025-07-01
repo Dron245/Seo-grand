@@ -12,6 +12,7 @@
 	}
 	@media (max-width:$tablet){
 		flex-direction: column;
+		margin-bottom: toRem(40);
 	}
 	@media (max-width:$mobile){
 		 margin-top: 2.5rem; 
