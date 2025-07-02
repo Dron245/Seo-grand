@@ -1,0 +1,13 @@
+.woodmart-icon {
+  font-family: 'woodmart-font';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart::before { content: "\f130"; }
