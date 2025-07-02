@@ -64,7 +64,7 @@
 	}
 	.post {
 		&__header {
-			
+			margin-bottom: toRem(0);
 			&:not(:first-child) {
 				@media (max-width: toEm(576)){
 					

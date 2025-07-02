@@ -9,7 +9,10 @@
 .asideblog {
 
 	@media (max-width:$tablet){
-		margin-right: -39px;
+		margin-right: -2.0625rem;
+	}
+	@media (max-width: toEm(576)){
+		//   margin-right: -2.0625rem;
 	}
 	&__part {
 		@media (max-width:$pc){
@@ -25,7 +28,7 @@
 			margin-right: 0;
 			span {
 				margin-left: initial;
-				padding-right: 30px;
+				padding-right: 1.875rem;
 				&::before {
 					right: 0;
 				}
@@ -37,10 +40,24 @@
 			}
 			&_mobile {
 				margin-top: toRem(40);
-				width: 220px;
-				margin-inline: auto;
+				display: inline-block;
+				@media (min-width:toEm(700)){
+					width: initial;
+					position: relative;
+					left: 50%;
+					transform: translateX(-50%);
+					  
+				}
 				@media (min-width:$mobile){
 					 display: none; 
+				}
+				@media (max-width: toEm(700)){
+					  width: calc(100% - 2.0625rem);
+
+				}
+				@media (max-width: toEm(576)){
+					//   width: calc(100% - 2.0625rem);
+					//   margin-right: 2.0625rem;
 				}
 			}
 		}
@@ -67,12 +84,15 @@
 			 }
 		}
 		@media (max-width:$tablet) and (min-width:$mobile){
-			margin-right: toRem(39);
+			margin-right: toRem(33);
 		}
 		@media (max-width:$mobile){
 			 margin-bottom: toRem(40);
 			justify-content: center;
 			margin-right: 0;
+		}
+		@media (max-width:$mobileSmall){
+			 margin-bottom: toRem(30); 
 		}
 		a.clients__show-all,
 		& .popular__control {
@@ -97,7 +117,10 @@
 	}
 
 	&__item {
-		height: auto;
+		// height: auto;
+		.post__header {
+			margin-bottom: toRem(20);
+		}
 		@media (min-width: $pc) {
 			&:nth-child(n + 4) {
 				display: none;
@@ -133,7 +156,7 @@
 .case {
 	.asideblog & {
 		border: none;
-		outline: 1px solid $color-seryy-01-1;
+		outline: 0.0625rem solid $color-seryy-01-1;
 
 		&:not(:last-child) {
 			margin-bottom: toRem(40);

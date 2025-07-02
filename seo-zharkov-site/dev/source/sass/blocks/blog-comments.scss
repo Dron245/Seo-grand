@@ -2,12 +2,41 @@
 	&__comments {
 		.form-add__form {
 			grid-template-columns: repeat(3, 1fr);
+			@media (max-width: toEm(767)){
+				  grid-template-columns: 1fr;
+			}
 			.form-add__section--textarea {
 				grid-column: 1/4;
 			}
+			@media (max-width: toEm(767)){
+				.form-add__section--name {
+					grid-column: 1/2;
+				}
+				.form-add__section--tel {
+					grid-column: 1/2;
+				}
+				.form-add__section--email {
+					grid-column: 1/2;
+				}
+				.form-add__section--checkbox {
+					grid-column: 1/2;
+				}
+				.form-add__send.button {
+					grid-column: 1/2;
+				}
+				.form-add__section--textarea {
+					grid-column: 1/2;
+				}
+			}
 		}
 		.form-add__wrap {
-			padding: 40px;
+			padding: 2.5rem;
+			@media (max-width: toEm(576)){
+				  padding: 1.875rem;
+			}
+			@media (max-width:$mobileSmall){
+				  padding: 1.25rem; 
+			}
 		}
 		.form-add__section--checkbox {
 			margin-top: toRem(30);
@@ -34,7 +63,8 @@
 .form-add {
 	&__inner {
 		.comments-blog & {
-			margin-bottom: 85px;
+			margin-bottom: 4.375rem;
+			@include adaptiveValue("margin-bottom", 55, 40,0,768,380);
 		}
 	}
 }
@@ -47,6 +77,12 @@
 	&__item {
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
+			@media (max-width:$mobile){
+				 margin-bottom: toRem(30); 
+			}
+			@media (max-width:$mobileSmall){
+				 margin-bottom: toRem(20); 
+			}
 		}
 	}
 
@@ -55,9 +91,18 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: toEm(700)){
+			  flex-direction: column;
+			  row-gap: toRem(20);
+		}
 		.posts__pagination-item {
 			@media (max-width:$tablet){
 				width: auto;
+			}
+			@media (max-width: toEm(700)){
+				display: flex;
+					 height: 3.5rem;
+					 width: 100%;
 			}
 		}
 		button.form-add__send[class] {
@@ -65,7 +110,10 @@
 			height: auto;
 			width: auto;
 			line-height: 1.4;
-			padding: 18px 30px;
+			padding: 1.125rem 1.875rem;
+			@media (max-width: toEm(700)){
+				  width: 100%;
+			}
 		}
 	}
 }
@@ -76,25 +124,48 @@
 		}
 	}
 	&__comment {
+		position: relative;
 	}
 
 	&__arrow {
-		flex: 0 0 25px;
+		flex: 0 0 1.5625rem;
 		width: toRem(25);
 		height: toRem(26);
 		stroke: $color-seryy-01;
+		@media (max-width:$mobileSmall){
+			position: absolute;
+		}
 	}
 	&__answer {
 		display: flex;
 		margin-left: toRem(30);
 		margin-top: toRem(30);
 		gap: toRem(30);
+		@media (max-width: toEm(576)){
+			margin-left: toRem(15);
+			  gap: toRem(15);
+		}
+		@media (max-width:$mobileSmall){
+			 margin-left: 0;
+			 margin-top: toRem(20);
+		}
+		.post {
+			@media (max-width: toEm(700)){
+				  flex:1 0 89.215686%; /* 455/510 */
+			}
+			@media (max-width:$mobileSmall){
+				flex: 1 0 100%; 
+			}
+		}
+		.post__header {
+			margin-bottom: toRem(20);
+		}
 	}
 }
 .posts {
 	&__post {
 		.comments-blog & {
-				border: 1px dashed $color-seryy-01-1;
+				border: 0.0625rem dashed $color-seryy-01-1;
 				&:hover{
 					box-shadow: initial;
 				}
@@ -103,11 +174,11 @@
 
 	&__pagination-item {
 		.comments-blog & {
-			border: 1px solid $color-seryy-01-1;
-			border-radius: 8px;
-			padding: 14px 20px;
+			border: 0.0625rem solid $color-seryy-01-1;
+			border-radius: 0.5rem;
+			padding: 0.875rem 1.25rem;
 			background: $color-belyy;
-			font-size: 13px;
+			font-size: 0.8125rem;
 			font-family: "Manrope-medium";
 			line-height: 140%;
 			letter-spacing: 0.02em;
@@ -155,7 +226,7 @@
 	}
 
 	&__date {
-		margin-right: 20px;
+		margin-right: 1.25rem;
 	}
 
 	&__content {
@@ -164,7 +235,7 @@
 	&__text {
 		.item-comments__comment & {
 			padding-bottom: toRem(20);
-			border-bottom: 1px dashed $color-seryy-01-1;
+			border-bottom: 0.0625rem dashed $color-seryy-01-1;
 		}
 	}
 
