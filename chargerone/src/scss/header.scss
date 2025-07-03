@@ -1,9 +1,28 @@
+main {
+	background-color: rgb(228, 226, 226);
+	transition:
+		backdrop-filter 0.3s ease 0s,
+		background 0.3s;
+	.menu-open & {
+		position: relative;
+		z-index: 2;
+		backdrop-filter: blur(15px);
+		background: rgba(30, 30, 30, 0.6);
+	}
+}
 .header {
+	.menu-open & {
+		position: relative;
+		z-index: 3;
+	}
+	&__container {
+	}
 
-	&__container {}
-
-	&__top {}
-
+	&__top[class] {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
 }
 
 .topheader {
@@ -15,7 +34,7 @@
 	position: relative;
 
 	&::after {
-		content: '';
+		content: "";
 		position: absolute;
 		bottom: -1px;
 		left: -9999px;
@@ -24,7 +43,7 @@
 		background-color: #ececec;
 	}
 
-	@media (max-width:$tablet) {
+	@media (max-width: $tablet) {
 		padding-block: 4px;
 	}
 
@@ -35,6 +54,9 @@
 
 		@media (max-width: toEm(960)) and (min-width: toEm(768)) {
 			gap: toRem(8);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(20);
 		}
 	}
 
@@ -50,7 +72,7 @@
 		width: toRem(38);
 		height: toRem(38);
 		border-radius: 50%;
-		transition: background-color .3s ease-in-out;
+		transition: background-color 0.3s ease-in-out;
 
 		&_whatsapp {
 			background-color: #2cb742;
@@ -82,7 +104,7 @@
 		align-items: center;
 		gap: toRem(10);
 
-		@media (max-width:$tablet) {
+		@media (max-width: $tablet) {
 			display: none;
 		}
 
@@ -91,11 +113,13 @@
 
 	&__contakts {
 		margin-left: auto;
-
 		@media (max-width: toEm(960)) {
 			display: flex;
 			flex-direction: column;
 			gap: toRem(10);
+		}
+		@media (max-width: $mobile) {
+			margin-left: 0;
 		}
 
 		span {
@@ -118,12 +142,14 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(6);
-		border: 1.50px solid #34ef34;
+		border: 1.5px solid #34ef34;
 		border-radius: 100px;
 		padding: 10px toRem(16);
-
 		@media (max-width: toEm(960)) {
 			margin-left: 15px;
+		}
+		@media (max-width: $mobile) {
+			margin-left: 0;
 		}
 
 		span {
@@ -136,56 +162,66 @@
 	}
 }
 
-
-
 .bottomheader {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-block: 20px;
-
+	@media (max-width: $mobile) {
+		padding-block: 4px;
+	}
 	&__left {
 		display: none;
 
-		@media (max-width:$mobile) {
-			display: block;
+		@media (max-width: $mobile) {
+			position: relative;
+			z-index: 6;
+			display: flex;
+			gap: toRem(20);
 		}
 	}
 
 	.left-bottomheader {
-
-		&__link {}
+		&__link {
+		}
 	}
 
-	.burger {}
+	.burger {
+	}
 
 	&__logo {
 		flex: 0 0 220px;
 		padding-bottom: toRem(20);
-		@include adaptiveValue("flex-basis", 220, 190,0,1290,992);
+		@include adaptiveValue("flex-basis", 220, 190, 0, 1290, 992);
+		@media (max-width: $mobile) {
+			padding-bottom: 0;
+		}
 		&:not(.bottomheader__logo_mini) {
-			@media (max-width:$tablet) {
+			@media (max-width: $tablet) {
 				display: none;
 			}
 		}
 
 		&_mini {
-			@media (min-width:992.5px) {
+			@media (min-width: 992.5px) {
 				display: none;
 			}
 
-			@media (max-width:$tablet) {
+			@media (max-width: $tablet) {
 				width: 192px;
+				position: relative;
+				z-index: 6;
 			}
 		}
 
 		img {
 			width: 100%;
-			height: auto
+			height: auto;
 		}
 	}
 
-	&__menu {}
+	&__menu {
+	}
 
 	&__actions {
 		display: flex;
@@ -193,28 +229,37 @@
 }
 
 .menu {
+	&__icon {
+	}
 
-	&__icon {}
-
-	&__body {}
+	&__body {
+	}
 
 	&__list {
 		display: flex;
 		align-items: center;
 		// gap: toRem(70);
 		flex-wrap: wrap;
+		@media (max-width: $mobile) {
+			align-items: flex-start;
+		}
 	}
 
 	&__item {
 		cursor: pointer;
 		position: relative;
 		padding-bottom: 20px;
+		@media (max-width: $mobile) {
+			width: 100%;
+			margin-right: 0;
+			//  padding-top: 20px;
+		}
 		&:not(:last-child) {
 			&:not(.menu__item_catalog) {
-				@include adaptiveValue("margin-right", 70, 8,0,1290,992);
-				@media (max-width:$tablet){
-					margin-right: toRem(70);
-					
+				@include adaptiveValue("margin-right", 70, 8, 0, 1290, 992);
+				@media (max-width: $tablet) and (min-width: 768.02) {
+					// margin-right: toRem(70);
+					@include adaptiveValue("margin-right", 70, 12, 0, 992, 768);
 				}
 			}
 		}
@@ -223,24 +268,25 @@
 				opacity: 1;
 				visibility: visible;
 				top: 100%;
+				z-index: 4;
 			}
 			.menu__submenu-title:not(.main-catalog) {
 				color: $hover;
-				&+svg  {
+				& + svg {
 					rotate: 180deg;
 					path {
 						fill: $menu;
 					}
 				}
 			}
-
 		}
 
 		&_catalog {
 			// padding-right: toRem(64);
-			@include adaptiveValue("margin-right", 64, 10,0,1290,992);
-			@media (max-width:$tablet){
-				margin-right: toRem(64);
+			@include adaptiveValue("margin-right", 64, 10, 0, 1290, 992);
+			@media (max-width: $tablet) {
+				// margin-right: toRem(64);
+				@include adaptiveValue("margin-right", 64, 20, 0, 992, 768);
 			}
 			letter-spacing: 0.04em;
 			color: #333;
@@ -271,9 +317,14 @@
 		transition: background-color 0.3s;
 
 		.menu__item_catalog & {
-			border: 1.50px solid #34ef34;
+			border: 1.5px solid #34ef34;
 			border-radius: 100px;
 			padding: 12px 24px 12px 24px;
+			@media (max-width: $mobile) {
+				padding: initial;
+				border: none;
+				border-radius: initial;
+			}
 		}
 	}
 
@@ -282,6 +333,9 @@
 		align-items: center;
 		gap: toRem(6);
 		font-weight: 600;
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 
 	&__submenu-icon {
@@ -295,7 +349,7 @@
 		font-size: 15px;
 		color: $menu;
 		transition: color 0.3s;
-		&+svg {
+		& + svg {
 			transition: rotate 0.3s;
 			path {
 				transition: fill 0.3s;
@@ -303,13 +357,13 @@
 		}
 		&_mobile {
 			display: none;
-			@media (max-width:$mobile) {
+			@media (max-width: $tablet) {
 				display: block;
 			}
 		}
 
 		&_desktop {
-			@media (max-width:$mobile) {
+			@media (max-width: $tablet) {
 				display: none;
 			}
 		}
@@ -328,12 +382,17 @@
 		visibility: hidden;
 		border-radius: 1rem;
 		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-		transition: opacity 0.3s, visibility 0.3s, top 0.3s;
+		transition:opacity 0.3s,visibility 0.3s, top 0.3s;
+		@media (max-width:$mobile){
+			 opacity: 1;
+			 visibility: visible; 
+		}
 	}
 
 	&__submenu-item {
 		&:hover {
-			.subsubmenu__title, .menu__submenu-link {
+			.subsubmenu__title,
+			.menu__submenu-link {
 				color: $hover;
 			}
 
@@ -351,7 +410,8 @@
 		transition: color 0.3s;
 	}
 
-	&__submenu-subsubmenu-wrap {}
+	&__submenu-subsubmenu-wrap {
+	}
 
 	&__link {
 		font-weight: 600;
@@ -360,9 +420,13 @@
 	}
 }
 
-.icon-menu {}
+.icon-menu {
+}
 
 .subsubmenu {
+	@media (max-width:$mobile){
+		 display: none; 
+	}
 	&__top {
 		display: flex;
 		align-items: center;
@@ -375,21 +439,21 @@
 
 	&__title {
 		transition: color 0.3s;
-		
-		&+svg {
+
+		& + svg {
 			flex: 0 0 16px;
 		}
 	}
 
-	&__icon {}
+	&__icon {
+	}
 
-	
 	&__list {
 		// padding-top: toRem(20);
 		position: absolute;
 		padding: toRem(24) toRem(30);
 		top: 24px;
-		min-width: 250px;
+		min-width: 150px;
 		left: 102%;
 		background-color: #fff;
 		z-index: 3;
@@ -397,20 +461,26 @@
 		visibility: hidden;
 		border-radius: 1rem;
 		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-		transition: opacity 0.3s, visibility 0.3s, left 0.3s;
-		&._sub-sub-menu-active{
+		transition:
+			opacity 0.3s,
+			visibility 0.3s,
+			left 0.3s;
+		&._sub-sub-menu-active {
 			opacity: 1;
 			visibility: visible;
 			left: 100%;
+			pointer-events: auto;
 		}
-		
 	}
 
 	&__item {
-		&:not(:last-child) {margin-bottom: toRem(20);}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
 	}
 
-	&__link {}
+	&__link {
+	}
 }
 
 .actions {
@@ -418,19 +488,31 @@
 	align-items: center;
 	gap: toRem(20);
 	padding-bottom: toRem(20);
+	@media (max-width: $mobile) {
+		padding-bottom: 0;
+		position: relative;
+		z-index: 6;
+	}
 	&__icon {
 		position: relative;
 		width: 20px;
 		height: 20px;
-		&::before{
-			content:'';
+		@media (max-width: $mobile) {
+			width: 24px;
+			height: 24px;
+		}
+		&::before {
+			content: "";
 			font-size: toRem(20);
+			@media (max-width: $mobile) {
+				font-size: toRem(24);
+			}
 			color: $menu;
 			position: absolute;
 			font-family: "woodmart-font";
 		}
-		&:not(.actions__icon_search)::after{
-			content:'1';
+		&:not(.actions__icon_search)::after {
+			content: "1";
 			position: absolute;
 			width: 15px;
 			height: toRem(15);
@@ -443,36 +525,39 @@
 			background-color: $hover;
 		}
 		&_search {
-			&::before{
+			&::before {
 				content: "\f130";
 			}
 		}
 
 		&_compire {
-			&::before{
+			&::before {
 				content: "\f128";
 			}
 		}
 
 		&_favorite {
-			&::before{
+			&::before {
 				content: "\f106";
 			}
 		}
 
 		&_cart {
-			&::before{
+			&::before {
 				content: "\f105";
 			}
 		}
 	}
 }
 
-.wd-tools-text {}
+.wd-tools-text {
+}
 
-.wd-cart-subtotal {}
+.wd-cart-subtotal {
+}
 
-.woocommerce-Price-amount {}
+.woocommerce-Price-amount {
+}
 
 .amount {
 	font-weight: 600;
@@ -480,5 +565,4 @@
 }
 
 .woocommerce-Price-currencySymbol {
-	
 }
