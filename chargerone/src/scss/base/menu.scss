@@ -4,6 +4,7 @@
 	}
 	// .menu__body
 	&__body {
+		
 		@media (max-width: $mobile) {
 			position: fixed;
 			width: 100%;
@@ -33,6 +34,7 @@
 	}
 	// .menu__list
 	&__list {
+		
 		@media (max-width: $mobile) {
 		}
 	}

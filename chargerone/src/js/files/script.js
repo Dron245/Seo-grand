@@ -8,5 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	function documentActions(e) {
 		const targetElement = e.target;
 		console.log(targetElement);
+		if(targetElement.closest('.subsubmenu__top')) {
+			targetElement.closest('.subsubmenu__top').nextElementSibling.classList.toggle('_sub-sub-menu-active');
+		}
 	}
 })
