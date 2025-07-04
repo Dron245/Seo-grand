@@ -417,9 +417,9 @@ export function tabs() {
 }
 // Модуль работы с меню (бургер) =========================================== ================================================== ================================================== ================================================== ======================
 export function menuInit() {
-	if (document.querySelector(".burger")) {
+	if (document.querySelector(".burger") || document.querySelector(".header__close-menu-mob-icon")) {
 		document.addEventListener("click", function (e) {
-			if (bodyLockStatus && e.target.closest('.burger')) {
+			if (bodyLockStatus && e.target.closest('.burger') || (bodyLockStatus && e.target.closest('.header__close-menu-mob-icon'))) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
 			}

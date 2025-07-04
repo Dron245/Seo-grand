@@ -3,6 +3,7 @@ main {
 	transition:
 		backdrop-filter 0.3s ease 0s,
 		background 0.3s;
+
 	.menu-open & {
 		position: relative;
 		z-index: 2;
@@ -10,17 +11,42 @@ main {
 		background: rgba(30, 30, 30, 0.6);
 	}
 }
+
 .header {
 	.menu-open & {
 		position: relative;
 		z-index: 3;
 	}
-	&__container {
-	}
+
+	&__container {}
 
 	&__top[class] {
 		@media (max-width: $mobile) {
 			display: none;
+		}
+	}
+
+	&__close-menu-mob {
+		@media (min-width:toEm(576.02)) {
+			display: none;
+		}
+
+		background-color: #fff;
+		top: -100%;
+		text-align: center;
+		position: fixed;
+		z-index: 2;
+		padding-block: 20px;
+		transition: top 0.3s;
+		left: 0;
+		right: 0;
+
+		.menu-open & {
+			top: 56px;
+
+			@media (max-width:$mobileXSmall) {
+				top: 44px;
+			}
 		}
 	}
 }
@@ -55,8 +81,10 @@ main {
 		@media (max-width: toEm(960)) and (min-width: toEm(768)) {
 			gap: toRem(8);
 		}
+
 		@media (max-width: $mobile) {
 			gap: toRem(20);
+			// margin-bottom: toRem(20);
 		}
 	}
 
@@ -108,18 +136,26 @@ main {
 			display: none;
 		}
 
+		@media (max-width:$mobile) {
+			//  gap: toRem(0); 
+		}
+
 		@include adaptiveValue("margin-right", 224, 20, 0, 1290, 992);
 	}
 
 	&__contakts {
 		margin-left: auto;
+
 		@media (max-width: toEm(960)) {
 			display: flex;
 			flex-direction: column;
 			gap: toRem(10);
 		}
+
 		@media (max-width: $mobile) {
 			margin-left: 0;
+			gap: 8px;
+			margin-block: 20px;
 		}
 
 		span {
@@ -145,11 +181,14 @@ main {
 		border: 1.5px solid #34ef34;
 		border-radius: 100px;
 		padding: 10px toRem(16);
+
 		@media (max-width: toEm(960)) {
 			margin-left: 15px;
 		}
+
 		@media (max-width: $mobile) {
 			margin-left: 0;
+			margin-bottom: 20px;
 		}
 
 		span {
@@ -166,10 +205,12 @@ main {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-block: 20px;
+	padding-top: 20px;
+
 	@media (max-width: $mobile) {
 		padding-block: 4px;
 	}
+
 	&__left {
 		display: none;
 
@@ -179,26 +220,71 @@ main {
 			display: flex;
 			gap: toRem(20);
 		}
+
+		@media (max-width: toEm(650)) {
+			order: 2;
+		}
+
+		@media (max-width:$mobileSmall) {
+			gap: 0.625rem;
+			margin-left: auto;
+			justify-content: initial;
+		}
 	}
 
 	.left-bottomheader {
 		&__link {
+			@media (max-width: toEm(650)) {
+				&_icon {
+					order: 1;
+				}
+
+				&.burger {
+					order: 2;
+				}
+			}
 		}
 	}
 
-	.burger {
-	}
+	.burger {}
 
 	&__logo {
 		flex: 0 0 220px;
 		padding-bottom: toRem(20);
-		@include adaptiveValue("flex-basis", 220, 190, 0, 1290, 992);
+
+		@media (max-width: toEm(992.02)) {
+
+			@include adaptiveValue("flex-basis", 220, 190, 0, 1290, 992);
+		}
+
 		@media (max-width: $mobile) {
 			padding-bottom: 0;
 		}
+
+		@media (max-width:$tablet) {
+			.header__top & {
+				padding-bottom: 0;
+			}
+		}
+
+		@media (max-width: toEm(650)) {
+			order: 0;
+		}
+
+		@media (max-width:$mobileSmall) {
+			@include adaptiveValue("flex-basis", 190, 144, 0, 567, 380);
+
+		}
+
 		&:not(.bottomheader__logo_mini) {
 			@media (max-width: $tablet) {
 				display: none;
+			}
+
+			@media (max-width:$mobile) {
+				display: block;
+				position: relative;
+				z-index: 6;
 			}
 		}
 
@@ -220,8 +306,7 @@ main {
 		}
 	}
 
-	&__menu {
-	}
+	&__menu {}
 
 	&__actions {
 		display: flex;
@@ -229,17 +314,16 @@ main {
 }
 
 .menu {
-	&__icon {
-	}
+	&__icon {}
 
-	&__body {
-	}
+	&__body {}
 
 	&__list {
 		display: flex;
 		align-items: center;
 		// gap: toRem(70);
 		flex-wrap: wrap;
+
 		@media (max-width: $mobile) {
 			align-items: flex-start;
 		}
@@ -249,20 +333,34 @@ main {
 		cursor: pointer;
 		position: relative;
 		padding-bottom: 20px;
+
 		@media (max-width: $mobile) {
 			width: 100%;
 			margin-right: 0;
-			//  padding-top: 20px;
-		}
-		&:not(:last-child) {
-			&:not(.menu__item_catalog) {
-				@include adaptiveValue("margin-right", 70, 8, 0, 1290, 992);
-				@media (max-width: $tablet) and (min-width: 768.02) {
-					// margin-right: toRem(70);
-					@include adaptiveValue("margin-right", 70, 12, 0, 992, 768);
-				}
+			margin-bottom: 0;
+			padding-top: 20px;
+			border-bottom: 1px solid #ececec;
+
+			&._submenu-active {
+				padding-bottom: toRem(0);
 			}
 		}
+
+		&:not(:last-child) {
+
+			// &:not(.menu__item_catalog) {
+			@media (min-width:toEm(992)) {
+				@include adaptiveValue("margin-right", 70, 8, 0, 1290, 992);
+			}
+
+			@media (max-width: $tablet) and (min-width: 768.02px) {
+				// margin-right: toRem(70);
+				@include adaptiveValue("margin-right", 70, 12, 0, 992, 768);
+			}
+
+			// }
+		}
+
 		&:hover {
 			.menu__submenu-list {
 				opacity: 1;
@@ -270,12 +368,17 @@ main {
 				top: 100%;
 				z-index: 4;
 			}
+
 			.menu__submenu-title:not(.main-catalog) {
-				color: $hover;
-				& + svg {
-					rotate: 180deg;
-					path {
-						fill: $menu;
+				@media (min-width:toEm(768.02)) {
+					color: $hover;
+
+					&+svg {
+						rotate: 180deg;
+
+						path {
+							fill: $menu;
+						}
 					}
 				}
 			}
@@ -284,23 +387,45 @@ main {
 		&_catalog {
 			// padding-right: toRem(64);
 			@include adaptiveValue("margin-right", 64, 10, 0, 1290, 992);
+
 			@media (max-width: $tablet) {
 				// margin-right: toRem(64);
 				@include adaptiveValue("margin-right", 64, 20, 0, 992, 768);
 			}
+
+			@media (max-width:$mobile) {
+				padding-top: 0;
+
+				&:has(.menu__submenu-wrap) {
+					padding-bottom: 0;
+				}
+
+				.menu__submenu-top {
+					display: none;
+				}
+
+				.menu__submenu-item:last-child {
+					border-bottom: none;
+				}
+			}
+
 			letter-spacing: 0.04em;
 			color: #333;
 			transition: background-color 0.3s;
+
 			.menu__submenu-title {
 				font-size: toRem(14);
 			}
+
 			.menu__submenu-top {
+
 				span,
 				a {
 					translate: 0 2px;
 					text-transform: uppercase;
 				}
 			}
+
 			&:hover {
 				.menu__submenu-wrap {
 					background-color: #34ef34;
@@ -311,15 +436,91 @@ main {
 				}
 			}
 		}
+
+		&_about {
+			@media (max-width:$mobile) {
+				.menu__submenu-list {
+					height: 0;
+					overflow: hidden;
+					transition: height 0.3s ease;
+				}
+
+				margin-top: toRem(56);
+			}
+		}
+
+		&_form {
+			@media (min-width: toEm(768.02)) {
+				display: none;
+			}
+
+			position: fixed;
+			left: -100%;
+			z-index: 40;
+			background-color: white;
+			width: 310px;
+			padding-inline: 39px;
+			top: 56px;
+			transition: left 0.3s,
+			top 0.3s;
+
+			@media (max-width:$mobileSmall) {
+				padding-inline: 33px;
+				width: 100%;
+				left: 0;
+				top: -100%;
+			}
+
+			.menu-open & {
+				left: 0;
+
+				@media (max-width:$mobileSmall) {
+					top: 117px;
+				}
+
+				@media (max-width:$mobileXSmall) {
+					top: 105px;
+				}
+			}
+
+			.searchform {
+				display: flex;
+				align-items: center;
+				gap: toRem(10);
+				justify-content: space-between;
+			}
+
+			.searchsubmit {
+				width: 20px;
+				height: 20px;
+				position: relative;
+
+				&::before {
+					content: "\f130";
+					font-size: toRem(20);
+					color: $menu;
+					top: 0;
+					left: 0;
+					position: absolute;
+					font-family: "woodmart-font";
+				}
+			}
+		}
 	}
 
 	&__submenu-wrap {
 		transition: background-color 0.3s;
 
+		@media (max-width:$mobile) {
+			//  display: none;
+
+		}
+
 		.menu__item_catalog & {
 			border: 1.5px solid #34ef34;
 			border-radius: 100px;
 			padding: 12px 24px 12px 24px;
+
 			@media (max-width: $mobile) {
 				padding: initial;
 				border: none;
@@ -333,8 +534,10 @@ main {
 		align-items: center;
 		gap: toRem(6);
 		font-weight: 600;
+
 		@media (max-width: $mobile) {
-			display: none;
+			// display: none;
+			justify-content: space-between;
 		}
 	}
 
@@ -349,16 +552,30 @@ main {
 		font-size: 15px;
 		color: $menu;
 		transition: color 0.3s;
-		& + svg {
+
+		&+svg {
 			transition: rotate 0.3s;
+
+			@media (max-width:$mobile) {
+				rotate: -90deg;
+			}
+
 			path {
 				transition: fill 0.3s;
 			}
 		}
+
 		&_mobile {
 			display: none;
+
 			@media (max-width: $tablet) {
 				display: block;
+			}
+
+			@media (max-width:$mobile) {
+				._submenu-active & {
+					color: $hover;
+				}
 			}
 		}
 
@@ -367,6 +584,19 @@ main {
 				display: none;
 			}
 		}
+	}
+
+	&__submenu-arrow {
+		transition: rotate 0.3s;
+
+		._submenu-active & {
+			rotate: 0deg;
+
+			path {
+				fill: $menu;
+			}
+		}
+
 	}
 
 	&__submenu-list {
@@ -382,27 +612,62 @@ main {
 		visibility: hidden;
 		border-radius: 1rem;
 		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-		transition:opacity 0.3s,visibility 0.3s, top 0.3s;
-		@media (max-width:$mobile){
-			 opacity: 1;
-			 visibility: visible; 
+		transition: opacity 0.3s, visibility 0.3s, top 0.3s;
+
+		@media (max-width:$mobile) {
+			opacity: 1;
+			visibility: visible;
+			position: relative;
+			padding: 0;
+			top: 63px;
+			left: initial;
+			border-radius: initial;
+			box-shadow: initial;
+			min-width: initial;
+		}
+		@media (max-width:$mobileSmall){
+			 left: -1px;
+			 width: calc(100% + 2px); 
 		}
 	}
 
 	&__submenu-item {
-		&:hover {
-			.subsubmenu__title,
-			.menu__submenu-link {
-				color: $hover;
-			}
+		@media (min-width:toEm(768.02)) {
+			&:hover {
 
-			.subsubmenu__top svg path {
-				fill: $menu;
+				.subsubmenu__title,
+				.menu__submenu-link {
+					color: $hover;
+				}
+
+				.subsubmenu__top svg path {
+					fill: $menu;
+				}
+			}
+		}
+
+		@media (max-width:$mobile) {
+			._submenu-active & {
+				border-bottom: none;
+				padding-bottom: 0;
 			}
 		}
 
 		&:not(:last-child) {
 			margin-bottom: toRem(18);
+
+			@media (max-width:$mobile) {
+				margin-bottom: 0;
+			}
+		}
+
+		@media (max-width:$mobile) {
+			padding-block: toRem(20);
+			border-bottom: 1px solid #ececec;
+
+			._sub-sub-active & {
+				border-bottom: none;
+			}
 		}
 	}
 
@@ -410,8 +675,7 @@ main {
 		transition: color 0.3s;
 	}
 
-	&__submenu-subsubmenu-wrap {
-	}
+	&__submenu-subsubmenu-wrap {}
 
 	&__link {
 		font-weight: 600;
@@ -420,18 +684,19 @@ main {
 	}
 }
 
-.icon-menu {
-}
+.icon-menu {}
 
 .subsubmenu {
-	@media (max-width:$mobile){
-		 display: none; 
+	@media (max-width:$mobile) {
+		//  display: none; 
 	}
+
 	&__top {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: toRem(6);
+
 		svg path {
 			transition: fill 0.3s;
 		}
@@ -440,12 +705,29 @@ main {
 	&__title {
 		transition: color 0.3s;
 
-		& + svg {
+		@media (max-width:$mobile) {
+			line-height: 1.6;
+
+			._sub-sub-active & {
+				color: $hover;
+			}
+		}
+
+		&+svg {
 			flex: 0 0 16px;
 		}
 	}
 
 	&__icon {
+		transition: rotate 0.3s;
+
+		._sub-sub-active & {
+			rotate: 90deg;
+
+			path {
+				fill: $menu;
+			}
+		}
 	}
 
 	&__list {
@@ -465,11 +747,37 @@ main {
 			opacity 0.3s,
 			visibility 0.3s,
 			left 0.3s;
-		&._sub-sub-menu-active {
+		@media (min-width:toEm(768.02)) {
+			 width: max-content; 
+		}
+		@media (max-width:$mobile) {
 			opacity: 1;
 			visibility: visible;
-			left: 100%;
-			pointer-events: auto;
+			position: relative;
+			padding: 0;
+			top: initial;
+			left: initial;
+			border-radius: initial;
+			box-shadow: initial;
+			min-width: initial;
+			height: 0;
+			overflow: hidden;
+			transition: height 0.3s ease;
+		}
+
+		&._sub-sub-menu-active {
+			@media (min-width:toEm(768.02)) {
+				opacity: 1;
+				visibility: visible;
+				left: 100%;
+				pointer-events: auto;
+			}
+
+			@media (max-width:$mobile) {
+				margin-top: toRem(20);
+				padding: toRem(20);
+				background: #f6f6f6;
+			}
 		}
 	}
 
@@ -479,8 +787,7 @@ main {
 		}
 	}
 
-	&__link {
-	}
+	&__link {}
 }
 
 .actions {
@@ -488,29 +795,50 @@ main {
 	align-items: center;
 	gap: toRem(20);
 	padding-bottom: toRem(20);
+
 	@media (max-width: $mobile) {
 		padding-bottom: 0;
 		position: relative;
 		z-index: 6;
 	}
+
+	@media (max-width: toEm(650)) {
+		order: 1;
+	}
+
+	@media (max-width:$mobileXSmall) {
+		margin-inline: auto;
+	}
+
 	&__icon {
 		position: relative;
 		width: 20px;
 		height: 20px;
+
 		@media (max-width: $mobile) {
 			width: 24px;
 			height: 24px;
 		}
+
+		@media (max-width: toEm(650)) {
+			&:not(.actions__icon_cart) {
+				display: none;
+			}
+		}
+
 		&::before {
 			content: "";
 			font-size: toRem(20);
+
 			@media (max-width: $mobile) {
 				font-size: toRem(24);
 			}
+
 			color: $menu;
 			position: absolute;
 			font-family: "woodmart-font";
 		}
+
 		&:not(.actions__icon_search)::after {
 			content: "1";
 			position: absolute;
@@ -524,6 +852,7 @@ main {
 			top: -5px;
 			background-color: $hover;
 		}
+
 		&_search {
 			&::before {
 				content: "\f130";
@@ -551,18 +880,18 @@ main {
 }
 
 .wd-tools-text {
+	@media (max-width: toEm(410)) {
+		display: none;
+	}
 }
 
-.wd-cart-subtotal {
-}
+.wd-cart-subtotal {}
 
-.woocommerce-Price-amount {
-}
+.woocommerce-Price-amount {}
 
 .amount {
 	font-weight: 600;
 	color: $menu;
 }
 
-.woocommerce-Price-currencySymbol {
-}
+.woocommerce-Price-currencySymbol {}
