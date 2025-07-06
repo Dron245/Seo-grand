@@ -9,12 +9,12 @@
 		@media (max-width: $mobile) {
 			background-color: #fff;
 			position: fixed;
-			width: 310px;
+			width: 19.375rem;
 			height: 100%;
 			left: -100%;
-			top: 0;
+			top: 63px;
 			overflow: auto;
-			padding: toRem(61) toRem(39) toRem(15) toRem(39);
+			padding: toRem(56) toRem(39) toRem(15) toRem(39);
 			transition: left 0.3s, top 0.3s;
 			&::-webkit-scrollbar {
 				width: 0;
@@ -22,7 +22,7 @@
 			}
 			@media (max-width:$mobileSmall){
 				padding-top: toRem(117);
-				padding-inline: 33px;
+				padding-inline: 2.0625rem;
 				width: 100%;
 				left: 0;
 				top: -100%;

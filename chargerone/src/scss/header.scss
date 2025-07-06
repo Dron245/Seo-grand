@@ -7,7 +7,7 @@ main {
 	.menu-open & {
 		position: relative;
 		z-index: 2;
-		backdrop-filter: blur(15px);
+		backdrop-filter: blur(0.9375rem);
 		background: rgba(30, 30, 30, 0.6);
 	}
 }
@@ -18,7 +18,8 @@ main {
 		z-index: 3;
 	}
 
-	&__container {}
+	&__container {
+	}
 
 	&__top[class] {
 		@media (max-width: $mobile) {
@@ -27,7 +28,7 @@ main {
 	}
 
 	&__close-menu-mob {
-		@media (min-width:toEm(576.02)) {
+		@media (min-width: toEm(576.02)) {
 			display: none;
 		}
 
@@ -36,16 +37,16 @@ main {
 		text-align: center;
 		position: fixed;
 		z-index: 2;
-		padding-block: 20px;
+		padding-block: 1.25rem;
 		transition: top 0.3s;
 		left: 0;
 		right: 0;
 
 		.menu-open & {
-			top: 56px;
+			top: 3.5rem;
 
-			@media (max-width:$mobileXSmall) {
-				top: 44px;
+			@media (max-width: $mobileXSmall) {
+				top: 2.75rem;
 			}
 		}
 	}
@@ -55,22 +56,22 @@ main {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-block: 11px;
-	border-bottom: 1px solid #ececec;
+	padding-block: 0.6875rem;
+	border-bottom: 0.0625rem solid #ececec;
 	position: relative;
 
 	&::after {
 		content: "";
 		position: absolute;
-		bottom: -1px;
-		left: -9999px;
-		width: 999999px;
-		height: 1px;
+		bottom: -0.0625rem;
+		left: -624.9375rem;
+		width: 62499.9375rem;
+		height: 0.0625rem;
 		background-color: #ececec;
 	}
 
 	@media (max-width: $tablet) {
-		padding-block: 4px;
+		padding-block: 0.25rem;
 	}
 
 	&__social {
@@ -136,8 +137,8 @@ main {
 			display: none;
 		}
 
-		@media (max-width:$mobile) {
-			//  gap: toRem(0); 
+		@media (max-width: $mobile) {
+			//  gap: toRem(0);
 		}
 
 		@include adaptiveValue("margin-right", 224, 20, 0, 1290, 992);
@@ -154,8 +155,8 @@ main {
 
 		@media (max-width: $mobile) {
 			margin-left: 0;
-			gap: 8px;
-			margin-block: 20px;
+			gap: 0.5rem;
+			margin-block: 1.25rem;
 		}
 
 		span {
@@ -169,31 +170,31 @@ main {
 
 	&__phone {
 		font-weight: 600;
-		font-size: 16px;
+		font-size: 1rem;
 		color: #000;
 	}
 
 	&__button {
-		margin-left: 30px;
+		margin-left: 1.875rem;
 		display: flex;
 		align-items: center;
 		gap: toRem(6);
-		border: 1.5px solid #34ef34;
-		border-radius: 100px;
-		padding: 10px toRem(16);
+		border: 0.0938rem solid #34ef34;
+		border-radius: 6.25rem;
+		padding: 0.625rem toRem(16);
 
 		@media (max-width: toEm(960)) {
-			margin-left: 15px;
+			margin-left: 0.9375rem;
 		}
 
 		@media (max-width: $mobile) {
 			margin-left: 0;
-			margin-bottom: 20px;
+			margin-bottom: 1.25rem;
 		}
 
 		span {
 			font-weight: 600;
-			font-size: 12px;
+			font-size: 0.75rem;
 			letter-spacing: 0.04em;
 			text-transform: uppercase;
 			color: #333;
@@ -205,10 +206,10 @@ main {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 20px;
+	padding-top: 1.25rem;
 
 	@media (max-width: $mobile) {
-		padding-block: 4px;
+		padding-block: 0.25rem;
 	}
 
 	&__left {
@@ -225,7 +226,7 @@ main {
 			order: 2;
 		}
 
-		@media (max-width:$mobileSmall) {
+		@media (max-width: $mobileSmall) {
 			gap: 0.625rem;
 			margin-left: auto;
 			justify-content: initial;
@@ -246,14 +247,21 @@ main {
 		}
 	}
 
-	.burger {}
+	.burger,
+	.left-bottomheader__link_call,
+	.header__close-menu-mob-icon {
+		&:active path {
+			fill: $hover;
+		}
+	}
 
 	&__logo {
-		flex: 0 0 220px;
+		flex: 0 0 13.75rem;
 		padding-bottom: toRem(20);
-
+		@media (min-width:toEm(992.02)) {
+			  margin-right: toRem(10);
+		}
 		@media (max-width: toEm(992.02)) {
-
 			@include adaptiveValue("flex-basis", 220, 190, 0, 1290, 992);
 		}
 
@@ -261,7 +269,7 @@ main {
 			padding-bottom: 0;
 		}
 
-		@media (max-width:$tablet) {
+		@media (max-width: $tablet) {
 			.header__top & {
 				padding-bottom: 0;
 			}
@@ -271,9 +279,8 @@ main {
 			order: 0;
 		}
 
-		@media (max-width:$mobileSmall) {
+		@media (max-width: $mobileSmall) {
 			@include adaptiveValue("flex-basis", 190, 144, 0, 567, 380);
-
 		}
 
 		&:not(.bottomheader__logo_mini) {
@@ -281,7 +288,7 @@ main {
 				display: none;
 			}
 
-			@media (max-width:$mobile) {
+			@media (max-width: $mobile) {
 				display: block;
 				position: relative;
 				z-index: 6;
@@ -289,12 +296,12 @@ main {
 		}
 
 		&_mini {
-			@media (min-width: 992.5px) {
+			@media (min-width: 62.0313rem) {
 				display: none;
 			}
 
 			@media (max-width: $tablet) {
-				width: 192px;
+				width: 12rem;
 				position: relative;
 				z-index: 6;
 			}
@@ -306,7 +313,8 @@ main {
 		}
 	}
 
-	&__menu {}
+	&__menu {
+	}
 
 	&__actions {
 		display: flex;
@@ -314,9 +322,11 @@ main {
 }
 
 .menu {
-	&__icon {}
+	&__icon {
+	}
 
-	&__body {}
+	&__body {
+	}
 
 	&__list {
 		display: flex;
@@ -332,14 +342,14 @@ main {
 	&__item {
 		cursor: pointer;
 		position: relative;
-		padding-bottom: 20px;
+		padding-bottom: 1.25rem;
 
 		@media (max-width: $mobile) {
 			width: 100%;
 			margin-right: 0;
 			margin-bottom: 0;
-			padding-top: 20px;
-			border-bottom: 1px solid #ececec;
+			padding-top: 1.25rem;
+			border-bottom: 0.0625rem solid #ececec;
 
 			&._submenu-active {
 				padding-bottom: toRem(0);
@@ -347,13 +357,12 @@ main {
 		}
 
 		&:not(:last-child) {
-
 			// &:not(.menu__item_catalog) {
-			@media (min-width:toEm(992)) {
+			@media (min-width: toEm(992)) {
 				@include adaptiveValue("margin-right", 70, 8, 0, 1290, 992);
 			}
 
-			@media (max-width: $tablet) and (min-width: 768.02px) {
+			@media (max-width: $tablet) and (min-width: 48.0012rem) {
 				// margin-right: toRem(70);
 				@include adaptiveValue("margin-right", 70, 12, 0, 992, 768);
 			}
@@ -370,10 +379,10 @@ main {
 			}
 
 			.menu__submenu-title:not(.main-catalog) {
-				@media (min-width:toEm(768.02)) {
+				@media (min-width: toEm(768.02)) {
 					color: $hover;
 
-					&+svg {
+					& + svg {
 						rotate: 180deg;
 
 						path {
@@ -393,9 +402,9 @@ main {
 				@include adaptiveValue("margin-right", 64, 20, 0, 992, 768);
 			}
 
-			@media (max-width:$mobile) {
+			@media (max-width: $mobile) {
 				padding-top: 0;
-
+				margin-right: 0;
 				&:has(.menu__submenu-wrap) {
 					padding-bottom: 0;
 				}
@@ -418,10 +427,9 @@ main {
 			}
 
 			.menu__submenu-top {
-
 				span,
 				a {
-					translate: 0 2px;
+					translate: 0 0.125rem;
 					text-transform: uppercase;
 				}
 			}
@@ -438,14 +446,14 @@ main {
 		}
 
 		&_about {
-			@media (max-width:$mobile) {
+			@media (max-width: $mobile) {
 				.menu__submenu-list {
 					height: 0;
 					overflow: hidden;
 					transition: height 0.3s ease;
 				}
 
-				margin-top: toRem(56);
+				// margin-top: toRem(56);
 			}
 		}
 
@@ -458,14 +466,15 @@ main {
 			left: -100%;
 			z-index: 40;
 			background-color: white;
-			width: 310px;
-			padding-inline: 39px;
-			top: 56px;
-			transition: left 0.3s,
-			top 0.3s;
+			width: 19.375rem;
+			padding-inline: 2.4375rem;
+			top: 3.5rem;
+			transition:
+				left 0.3s,
+				top 0.3s;
 
-			@media (max-width:$mobileSmall) {
-				padding-inline: 33px;
+			@media (max-width: $mobileSmall) {
+				padding-inline: 2.0625rem;
 				width: 100%;
 				left: 0;
 				top: -100%;
@@ -474,12 +483,12 @@ main {
 			.menu-open & {
 				left: 0;
 
-				@media (max-width:$mobileSmall) {
-					top: 117px;
+				@media (max-width: $mobileSmall) {
+					top: 7.3125rem;
 				}
 
-				@media (max-width:$mobileXSmall) {
-					top: 105px;
+				@media (max-width: $mobileXSmall) {
+					top: 6.5625rem;
 				}
 			}
 
@@ -491,8 +500,8 @@ main {
 			}
 
 			.searchsubmit {
-				width: 20px;
-				height: 20px;
+				width: 1.25rem;
+				height: 1.25rem;
 				position: relative;
 
 				&::before {
@@ -511,15 +520,14 @@ main {
 	&__submenu-wrap {
 		transition: background-color 0.3s;
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			//  display: none;
-
 		}
 
 		.menu__item_catalog & {
-			border: 1.5px solid #34ef34;
-			border-radius: 100px;
-			padding: 12px 24px 12px 24px;
+			border: 0.0938rem solid #34ef34;
+			border-radius: 6.25rem;
+			padding: 0.75rem 1.5rem 0.75rem 1.5rem;
 
 			@media (max-width: $mobile) {
 				padding: initial;
@@ -549,14 +557,14 @@ main {
 
 	&__submenu-title {
 		font-weight: 600;
-		font-size: 15px;
+		font-size: 0.9375rem;
 		color: $menu;
 		transition: color 0.3s;
 
-		&+svg {
+		& + svg {
 			transition: rotate 0.3s;
 
-			@media (max-width:$mobile) {
+			@media (max-width: $mobile) {
 				rotate: -90deg;
 			}
 
@@ -569,10 +577,10 @@ main {
 			display: none;
 
 			@media (max-width: $tablet) {
-				display: block;
+				// display: block;
 			}
 
-			@media (max-width:$mobile) {
+			@media (max-width: $mobile) {
 				._submenu-active & {
 					color: $hover;
 				}
@@ -581,7 +589,21 @@ main {
 
 		&_desktop {
 			@media (max-width: $tablet) {
+				// display: none;
+			}
+		}
+		.touch & {
+			&_mobile {
+				display: block;
+			}
+
+			&_desktop {
 				display: none;
+			}
+		}
+		html:not(.touch) & {
+			&_desktop {
+				display: block;
 			}
 		}
 	}
@@ -596,7 +618,6 @@ main {
 				fill: $menu;
 			}
 		}
-
 	}
 
 	&__submenu-list {
@@ -604,37 +625,42 @@ main {
 		position: absolute;
 		padding: toRem(24) toRem(30);
 		top: 110%;
-		min-width: 250px;
+		min-width: 15.625rem;
 		left: 0;
 		background-color: #fff;
 		z-index: 2;
 		opacity: 0;
 		visibility: hidden;
 		border-radius: 1rem;
-		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-		transition: opacity 0.3s, visibility 0.3s, top 0.3s;
+		box-shadow: 0 0 0.9375rem 0 rgba(0, 0, 0, 0.1);
+		transition:
+			opacity 0.3s,
+			visibility 0.3s,
+			top 0.3s;
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			opacity: 1;
 			visibility: visible;
 			position: relative;
 			padding: 0;
-			top: 63px;
+			// top: 63px;
+			top: 0;
 			left: initial;
 			border-radius: initial;
 			box-shadow: initial;
 			min-width: initial;
 		}
-		@media (max-width:$mobileSmall){
-			 left: -1px;
-			 width: calc(100% + 2px); 
+		@media (max-width: $mobileSmall) {
+			left: -0.0625rem;
+			width: calc(100% + 0.125rem);
 		}
 	}
 
 	&__submenu-item {
-		@media (min-width:toEm(768.02)) {
-			&:hover {
-
+		@media (min-width: toEm(768.02)) {
+			position: relative;
+			&:hover,
+			&._sub-sub-active {
 				.subsubmenu__title,
 				.menu__submenu-link {
 					color: $hover;
@@ -646,7 +672,7 @@ main {
 			}
 		}
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			._submenu-active & {
 				border-bottom: none;
 				padding-bottom: 0;
@@ -656,14 +682,14 @@ main {
 		&:not(:last-child) {
 			margin-bottom: toRem(18);
 
-			@media (max-width:$mobile) {
+			@media (max-width: $mobile) {
 				margin-bottom: 0;
 			}
 		}
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			padding-block: toRem(20);
-			border-bottom: 1px solid #ececec;
+			border-bottom: 0.0625rem solid #ececec;
 
 			._sub-sub-active & {
 				border-bottom: none;
@@ -675,20 +701,22 @@ main {
 		transition: color 0.3s;
 	}
 
-	&__submenu-subsubmenu-wrap {}
+	&__submenu-subsubmenu-wrap {
+	}
 
 	&__link {
 		font-weight: 600;
-		font-size: 15px;
+		font-size: 0.9375rem;
 		color: $menu;
 	}
 }
 
-.icon-menu {}
+.icon-menu {
+}
 
 .subsubmenu {
-	@media (max-width:$mobile) {
-		//  display: none; 
+	@media (max-width: $mobile) {
+		//  display: none;
 	}
 
 	&__top {
@@ -705,7 +733,7 @@ main {
 	&__title {
 		transition: color 0.3s;
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			line-height: 1.6;
 
 			._sub-sub-active & {
@@ -713,8 +741,8 @@ main {
 			}
 		}
 
-		&+svg {
-			flex: 0 0 16px;
+		& + svg {
+			flex: 0 0 1rem;
 		}
 	}
 
@@ -734,23 +762,24 @@ main {
 		// padding-top: toRem(20);
 		position: absolute;
 		padding: toRem(24) toRem(30);
-		top: 24px;
-		min-width: 150px;
+		top: -1.25rem;
+		min-width: 9.375rem;
 		left: 102%;
 		background-color: #fff;
 		z-index: 3;
 		opacity: 0;
 		visibility: hidden;
 		border-radius: 1rem;
-		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0 0.9375rem 0 rgba(0, 0, 0, 0.1);
 		transition:
 			opacity 0.3s,
 			visibility 0.3s,
 			left 0.3s;
-		@media (min-width:toEm(768.02)) {
-			 width: max-content; 
+		@media (min-width: toEm(768.02)) {
+			width: max-content;
+			max-width: 18.75rem;
 		}
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			opacity: 1;
 			visibility: visible;
 			position: relative;
@@ -766,14 +795,14 @@ main {
 		}
 
 		&._sub-sub-menu-active {
-			@media (min-width:toEm(768.02)) {
+			@media (min-width: toEm(768.02)) {
 				opacity: 1;
 				visibility: visible;
-				left: 100%;
+				left: calc(100% + 1.25rem);
 				pointer-events: auto;
 			}
 
-			@media (max-width:$mobile) {
+			@media (max-width: $mobile) {
 				margin-top: toRem(20);
 				padding: toRem(20);
 				background: #f6f6f6;
@@ -787,7 +816,8 @@ main {
 		}
 	}
 
-	&__link {}
+	&__link {
+	}
 }
 
 .actions {
@@ -806,18 +836,18 @@ main {
 		order: 1;
 	}
 
-	@media (max-width:$mobileXSmall) {
+	@media (max-width: $mobileXSmall) {
 		margin-inline: auto;
 	}
 
 	&__icon {
 		position: relative;
-		width: 20px;
-		height: 20px;
+		width: 1.25rem;
+		height: 1.25rem;
 
 		@media (max-width: $mobile) {
-			width: 24px;
-			height: 24px;
+			width: 1.5rem;
+			height: 1.5rem;
 		}
 
 		@media (max-width: toEm(650)) {
@@ -842,14 +872,14 @@ main {
 		&:not(.actions__icon_search)::after {
 			content: "1";
 			position: absolute;
-			width: 15px;
+			width: 0.9375rem;
 			height: toRem(15);
 			border-radius: 50%;
 			display: grid;
 			place-items: center;
 			font-size: toRem(9);
-			right: -9px;
-			top: -5px;
+			right: -0.5625rem;
+			top: -0.3125rem;
 			background-color: $hover;
 		}
 
@@ -885,13 +915,16 @@ main {
 	}
 }
 
-.wd-cart-subtotal {}
+.wd-cart-subtotal {
+}
 
-.woocommerce-Price-amount {}
+.woocommerce-Price-amount {
+}
 
 .amount {
 	font-weight: 600;
 	color: $menu;
 }
 
-.woocommerce-Price-currencySymbol {}
+.woocommerce-Price-currencySymbol {
+}

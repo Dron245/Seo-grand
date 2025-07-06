@@ -22,7 +22,9 @@ export let isMobile = { Android: function () { return navigator.userAgent.match(
 /* Добавление класса touch для HTML, если мобильный браузер */
 export function addTouchClass() {
 	// Добавление класса _touch для HTML, если мобильный браузер
-	if (isMobile.any()) document.documentElement.classList.add('touch');
+	if (isMobile.any()) {document.documentElement.classList.add('touch')} else {
+		document.documentElement.classList.remove('touch');
+	};
 }
 // Добавление loaded для HTML после полной загрузки страницы
 export function addLoadedClass() {
