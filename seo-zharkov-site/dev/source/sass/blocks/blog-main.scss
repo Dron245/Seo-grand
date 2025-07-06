@@ -119,11 +119,17 @@
 				font-size: toRem(16);
 			}
 			@media (max-width:$mobile){
-				white-space: nowrap;
-				overflow: hidden;
-				/* max-width: -webkit-fill-available; */
-				text-overflow: ellipsis;
-				width: 100%; 
+				.slider {
+
+					white-space: nowrap;
+					overflow: hidden;
+					/* max-width: -webkit-fill-available; */
+					text-overflow: ellipsis;
+					width: 100%; 
+				}
+			}
+			@media (max-width:$mobileSmall){
+				 margin-bottom: toRem(10);
 			}
 		}
 	}

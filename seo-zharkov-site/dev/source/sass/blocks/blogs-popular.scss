@@ -1,10 +1,8 @@
 .blogs {
 
 	&__popular {
-		@media (min-width:$pc) {
-			@include adaptiveValue("margin-top", 100, 80, 0, 1920, 1360);
-		}
-
+		@include adaptiveValue("margin-top", 100, 80, 0, 1920, 1360);
+		
 		@media (max-width: toEm(768)) {
 			padding-right: 0;
 		}
@@ -21,12 +19,12 @@
 			margin-bottom: 3.75rem;
 		}
 
-		@media (max-width:$mobileSmall) {
+		@media (max-width:36rem) {
 			margin-bottom: 3.125rem;
 			margin-top: toRem(60);
 		}
 
-		@media (max-width: toEm(380)) {
+		@media (max-width: toEm($mobileSmall)) {
 			margin-top: toRem(50);
 		}
 	}
