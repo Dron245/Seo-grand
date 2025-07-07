@@ -21,7 +21,9 @@
 			margin-bottom: toRem(40);
 		}
 	}
-
+	.blogs__category {
+		margin-right: -33px;
+	}
 	.form-add__contacts {
 		grid-row: 3/4;
 		grid-column: 1/2;
@@ -32,6 +34,9 @@
 		grid-row: 1 / span 3;
 		@media (max-width:$tablet){
 			margin-bottom: toRem(70);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("margin-block", 60, 50,0,768,380); 
 		}
 	}
 
@@ -49,10 +54,18 @@
 	&__item {
 		border: 1px solid $color-seryy-01-1;
 		border-radius: 12px;
-		padding: toRem(40) toRem(30);
-
+		padding: toRem(30) toRem(40);
+		@media (max-width:$mobile){
+			 padding: 30px;
+		}
+		@media (max-width:$mobileSmall){
+			 padding: 20px; 
+		}
 		&:not(:last-child) {
 			margin-bottom: toRem(50);
+			@media (max-width:$mobileSmall){
+				 margin-bottom: toRem(30); 
+			}
 		}
 	}
 }
@@ -63,21 +76,48 @@
 		display: grid;
 		align-items: center;
 		grid-template-columns: 1fr 303px auto;
-		padding-bottom: toRem(30);
+		@include adaptiveValue("padding-bottom", 30, 20,0,768,576);
 		border-bottom: 1px dashed $color-seryy-01-1;
-
+		@media (max-width: toEm(950)){
+			row-gap: toRem(20);
+			grid-template-columns: 1fr auto;
+			  grid-template-rows: auto auto;
+		}
 		.article-blog__subtitle {
 			margin-bottom: toRem(0);
+			@media (max-width:$mobileSmall){
+				 order: 1; 
+			}
+		}
+		@media (max-width:$mobileSmall){
+			 display: flex;
+			 flex-direction: column;
+			 align-items: flex-start; 
+		}
+		@media (max-width:$mobileXSmall){
+			 align-items: center;
+		}
+		
+	}
+
+	&__salary {
+		@media (max-width: toEm(950)){
+			  grid-row: 2/3;
+			  grid-column: 1/2;
 		}
 	}
 
-	&__salary {}
-
-	&__tag {
+	&__tag[class] {
 		font-family: 'IBM';
 		padding-inline: 16px;
 		padding-block: 8px;
+		border-radius: 6px;
+		line-height: 1.6;
 		margin-left: toRem(80);
+		padding: 8px toRem(16);
+		@media (max-width: toEm(950)){
+			  margin-left: 0;
+		}
 	}
 
 	&__main {
@@ -87,15 +127,42 @@
 	}
 
 	&__table {
-		margin-block: toRem(30);
-
+		@include adaptiveValue("margin-block", 30, 20,0,768,576);
+		overflow: initial;
+		.table-article__row .table-article__cell:first-child {
+			padding-right: toRem(5);
+			border-right: none;
+			flex: 0 0 auto;
+			min-width: 200px;
+			color: $color-kontent;
+		}
+		.table-article__cell {
+			padding-block: toRem(14);
+		}
 		.table-article__row .table-article__cell:first-child {
 			font-family: "Manrope";
+			@media (max-width: toEm(700)){
+				  padding-bottom: 0;
+			}
 		}
 
-		.table-article__row .table-article__cell:last-child {
+		.table-article__row .table-article__cell:nth-child(2) {
 			font-family: "Manrope-bold";
 			text-align: right;
+			@media (max-width:$mobile){
+				 flex: 1 1; 
+			}
+			@media (max-width: toEm(700)){
+				  padding-top: toRem(4);
+			}
+			@media (max-width: toEm(700)){
+				  text-align: left;
+			}
+		}
+		.table-article__row {
+			@media (max-width: toEm(700)){
+				  flex-direction: column;
+			}
 		}
 	}
 
@@ -103,6 +170,8 @@
 		.article-blog__list {
 			column-count: 1;
 			column-gap: 0;
+			border-bottom: 1px dashed $color-seryy-01-1;
+				 @include adaptiveValue("padding-bottom", 25, 20,0,768,576) ; 
 		}
 
 		.article-blog__text {
@@ -115,8 +184,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: toRem(30);
-
+		@include adaptiveValue("margin-top", 30, 20, 0, 768, 380);
+		button {
+			height: auto;
+			padding-block: toRem(14);
+			line-height: 1.4;
+			&.vacancy__button {
+				padding-block: 16px;
+			}
+		}
 		.posts__pagination-item_more {
 			@media (max-width:$tablet) {
 				width: auto;
@@ -143,7 +219,12 @@
 	display: flex;
 	align-items: center;
 	gap: toRem(40);
-
+	@media (max-width:$mobileSmall){
+		 order: 2; 
+	}
+	max-width:$mobileXSmall{
+		 margin-top: -10px; 
+	}
 	.cost-cell {
 		display: grid;
 		align-items: start;

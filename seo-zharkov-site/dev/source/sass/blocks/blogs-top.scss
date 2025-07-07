@@ -74,7 +74,7 @@ button {
 		gap: 0.625rem;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		@media (min-width:toEm(576)) and (max-width:$mobile) {
+		@media (min-width:toEm(576.02)) and (max-width:$mobile) {
 			justify-content: center;
 		}
 		@media (max-width: toEm(576)){
