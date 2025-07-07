@@ -1,0 +1,159 @@
+.career {
+
+	.blog__content {
+		@media (min-width:toEm(1200.02)) {
+			  display: grid;
+		}
+		@media (max-width:$pc) {
+			grid-template-columns: auto 270px;
+			column-gap: toRem(30);
+		}
+
+		@media (max-width:$tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.blogs__top {
+		margin-bottom: toRem(20);
+
+		@media (max-width:$pc) {
+			margin-bottom: toRem(40);
+		}
+	}
+
+	.form-add__contacts {
+		grid-row: 3/4;
+		grid-column: 1/2;
+	}
+
+	.blog__aside {
+		grid-column: 2/3;
+		grid-row: 1 / span 3;
+		@media (max-width:$tablet){
+			margin-bottom: toRem(70);
+		}
+	}
+
+	&__body[class] {
+		@media (min-width:toEm(1200.02)) {
+			grid-row: 2/3;
+			grid-column: 1/2;
+		}
+
+		@media (max-width:$tablet) {
+			@include adaptiveValue("margin-bottom", 70, 50,0,992,380) ;
+		}
+	}
+
+	&__item {
+		border: 1px solid $color-seryy-01-1;
+		border-radius: 12px;
+		padding: toRem(40) toRem(30);
+
+		&:not(:last-child) {
+			margin-bottom: toRem(50);
+		}
+	}
+}
+
+.vacancy {
+
+	&__header {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 303px auto;
+		padding-bottom: toRem(30);
+		border-bottom: 1px dashed $color-seryy-01-1;
+
+		.article-blog__subtitle {
+			margin-bottom: toRem(0);
+		}
+	}
+
+	&__salary {}
+
+	&__tag {
+		font-family: 'IBM';
+		padding-inline: 16px;
+		padding-block: 8px;
+		margin-left: toRem(80);
+	}
+
+	&__main {
+		.table-article__cell {
+			font-size: toRem(14);
+		}
+	}
+
+	&__table {
+		margin-block: toRem(30);
+
+		.table-article__row .table-article__cell:first-child {
+			font-family: "Manrope";
+		}
+
+		.table-article__row .table-article__cell:last-child {
+			font-family: "Manrope-bold";
+			text-align: right;
+		}
+	}
+
+	&__duties {
+		.article-blog__list {
+			column-count: 1;
+			column-gap: 0;
+		}
+
+		.article-blog__text {
+			font-size: 14px;
+			line-height: 160%;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: toRem(30);
+
+		.posts__pagination-item_more {
+			@media (max-width:$tablet) {
+				width: auto;
+			}
+		}
+	}
+
+	&__button {}
+}
+
+.article-blog {
+	&__item {
+		.vacancy__duties & {
+			&::before {
+				content: '';
+				top: 7px;
+			}
+		}
+	}
+
+}
+
+.salary {
+	display: flex;
+	align-items: center;
+	gap: toRem(40);
+
+	.cost-cell {
+		display: grid;
+		align-items: start;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+	}
+
+	&__text {}
+}

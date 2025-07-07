@@ -988,6 +988,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Слайдер на странице "Блог"
 	let asideblogSwiper = null;
+	let careerAsideSwiper = null;
 	function initAsideblogSwiper() {
 		const slider = document.querySelector('.asideblog__slider');
 
@@ -1039,11 +1040,54 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+
+	function initCareerAsideSwiper() {
+		const slider = document.querySelector('.career-aside__slider');
+	
+		if (window.innerWidth <= 1200 && slider && !careerAsideSwiper) {
+			careerAsideSwiper = new Swiper('.career-aside__slider', {
+				observer: true,
+				observeParents: true,
+				// spaceBetween: 20,
+				speed: 800,
+				breakpoints: {
+					0: {
+						slidesPerView: 1.2,
+					},
+					380: {
+						slidesPerView: 1.2,
+					},
+					576: {
+						slidesPerView: 1.6,
+					},
+					768: {
+						slidesPerView: 2,
+					},
+					880: {
+						slidesPerView: 2.5,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+				},
+			});
+		}
+	
+		if (window.innerWidth > 1200 && careerAsideSwiper) {
+			careerAsideSwiper.destroy(true, true);
+			careerAsideSwiper = null;
+		}
+	}
+	
 	// 👇 Инициализация при загрузке
 	initAsideblogSwiper();
-
+	initCareerAsideSwiper();
 	// 👇 И обработка изменения ширины
 	window.addEventListener('resize', () => {
-		setTimeout(initAsideblogSwiper, 200);
+		setTimeout(() => {
+			initAsideblogSwiper();
+			initCareerAsideSwiper();
+		}, 200);
 	});
 });
