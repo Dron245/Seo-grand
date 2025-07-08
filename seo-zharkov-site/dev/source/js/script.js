@@ -591,12 +591,15 @@ document.querySelectorAll('.swiper-container').forEach(function(i) {
 		const formSection = evt.target.closest('.form-add');
 		const formBtnAnswer = formSection.querySelector(
 			'.callback-form__close-btn'
-		) ;
-		const inputName = formSection.querySelector('.form-add__text--name') ;
-		const inputPhone = formSection.querySelector('.form-add__text--tel') ;
-		const inputAgree = formSection.querySelector('.form-add__checkbox') ;
+		);
+		const inputName = formSection.querySelector('.form-add__text--name');
+		const inputPhone = formSection.querySelector('.form-add__text--tel');
+		const inputAgree = formSection.querySelector('.form-add__checkbox');
 
-		if (formSection && (!inputName.value || !inputPhone.value || !inputAgree.checked)) {
+		if (
+			formSection &&
+			(!inputName.value || !inputPhone.value || !inputAgree.checked)
+		) {
 			evt.preventDefault();
 			if (!inputName.value) {
 				inputName.classList.add('form-add__input--error');
@@ -613,22 +616,21 @@ document.querySelectorAll('.swiper-container').forEach(function(i) {
 		} else {
 			evt.preventDefault();
 			// if (formSection) {
-				$.ajax({
-					url: '/ajax/send.php',
-					method: 'post',
-					dataType: 'html',
-					data: $(formSection).find('form').serialize(),
-					success: function (data) {
-						let response = data;
-					},
-				});
+			$.ajax({
+				url: '/ajax/send.php',
+				method: 'post',
+				dataType: 'html',
+				data: $(formSection).find('form').serialize(),
+				success: function (data) {
+					let response = data;
+				},
+			});
 			// }
-			
 
 			formSection.classList.add('callback-opened');
 			formBtnAnswer.addEventListener('click', function () {
 				formSection.classList.remove('callback-opened');
-			}) ;
+			});
 		}
 	}
 
@@ -1015,7 +1017,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						spaceBetween: 20,
 						autoHeight: true,
 					},
-					
+
 					768: {
 						slidesPerView: 2.1,
 						spaceBetween: 20,
@@ -1040,10 +1042,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-
 	function initCareerAsideSwiper() {
 		const slider = document.querySelector('.career-aside__slider');
-	
+
 		if (window.innerWidth <= 1200 && slider && !careerAsideSwiper) {
 			careerAsideSwiper = new Swiper('.career-aside__slider', {
 				observer: true,
@@ -1055,7 +1056,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						slidesPerView: 1.2,
 						spaceBetween: 20,
 					},
-					
+
 					576: {
 						slidesPerView: 1.6,
 						spaceBetween: 20,
@@ -1064,7 +1065,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						slidesPerView: 2,
 						spaceBetween: 20,
 					},
-					
+
 					992: {
 						slidesPerView: 3,
 						spaceBetween: 30,
@@ -1072,13 +1073,13 @@ document.addEventListener('DOMContentLoaded', function () {
 				},
 			});
 		}
-	
+
 		if (window.innerWidth > 1200 && careerAsideSwiper) {
 			careerAsideSwiper.destroy(true, true);
 			careerAsideSwiper = null;
 		}
 	}
-	
+
 	// 👇 Инициализация при загрузке
 	initAsideblogSwiper();
 	initCareerAsideSwiper();
@@ -1089,4 +1090,66 @@ document.addEventListener('DOMContentLoaded', function () {
 			initCareerAsideSwiper();
 		}, 200);
 	});
+
+	document.addEventListener('click', documentActions);
+
+	// Функция расчёта высоты блока текста
+	function toggleText(block, isOpen) {
+		if (isOpen) {
+			// Сначала явно задаём текущую высоту, чтобы анимация сработала
+			block.style.maxHeight = block.scrollHeight + 'px';
+
+			// А потом сбрасываем max-height
+			requestAnimationFrame(() => {
+				block.style.maxHeight = null;
+			});
+		} else {
+			block.style.maxHeight = block.scrollHeight + 'px';
+
+			// Принудительно обновляем layout, чтобы transition сработал
+			block.offsetHeight;
+
+			block.style.maxHeight = block.scrollHeight + 'px';
+		}
+	}
+
+	function documentActions(e) {
+		const targetElement = e.target;
+
+		//страница "Карьера" открыть/закрыть текст вакансии
+		if (targetElement.closest('.vacancy__footer .posts__pagination-item')) {
+			const descriptionBlock = document.querySelector('.vacancy__description');
+			const openBtn = document.querySelector('.posts__pagination-link_open');
+			const closeBtn = document.querySelector('.posts__pagination-link_close');
+
+			const isOpen = descriptionBlock.classList.contains('_description-active');
+
+			toggleText(descriptionBlock, isOpen);
+			descriptionBlock.classList.toggle('_description-active');
+
+			openBtn.style.display = isOpen ? 'inline-block' : 'none';
+			closeBtn.style.display = isOpen ? 'none' : 'inline-block';
+		}
+
+		// Открытие модального окна "Заполните резюме"
+		if (targetElement.closest('.vacancy__popup')) {
+			const modal = document.querySelector('.resume-modal__wrap');
+			if (modal) {
+				modal.style.scale = '1';
+				document.body.classList.add('modal-open'); // 🔒 блокируем прокрутку
+			}
+		}
+
+		// Закрытие модального окна по кнопке "×"
+		if (
+			targetElement.closest('.resume-modal__close') ||
+			targetElement.closest('.resume-modal__overlay')
+		) {
+			const modal = document.querySelector('.resume-modal__wrap');
+			if (modal) {
+				modal.style.scale = '0';
+				document.body.classList.remove('modal-open'); // 🔓 возвращаем прокрутку
+			}
+		}
+	}
 });

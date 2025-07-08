@@ -418,6 +418,24 @@
 								</ul>
 							</div>
 						</div>
+						<div class="vacancy__description">
+							<h3 class="article-blog__subsubtitle">Какой то текст</h3>
+							<p class="vacancy__description-text js-vacancy-text">
+								SEO (Search Engine Optimization, поисковая оптимизация) – это
+								всестороннее развитие и продвижение сайта с целью попадания
+								наверх в результатах поисковой выдачи (SERPs). Существует и
+								другое определение: СЕО - канал привлечения трафика на сайт и
+								инструмент влияния на поисковых роботов, для достижения
+								наивысшей позиции в поисковой выдаче. Почему так важно для вас
+								должно быть попадание в верхние строчки выдачи поиска? Дело в
+								том, что статистика поисковых систем по коммерческим запросам
+								(запросы, в которых контекст говорит о желании купить что-либо)
+								примерно 95% трафика оседает на первой странице выдачи, а 60-80%
+								в первых трех строчках. И этот кусок пирога является лакомым и
+								желанным для любого предпринимателя, поэтому так важно уделить
+								время попаданию в топ поисковой выдачи.
+							</p>
+						</div>
 						<div class="vacancy__footer">
 							<button
 								type="button"
@@ -426,11 +444,18 @@
 								<svg class="dots">
 									<use href="img/sprite.svg#dots"></use>
 								</svg>
-								<a href="#" class="posts__pagination-link"
-									><span>Развернуть</span></a
+								<span class="posts__pagination-link posts__pagination-link_open"
+									><span>Развернуть</span></span
+								>
+								<span
+									class="posts__pagination-link posts__pagination-link_close"
+									><span>Свернуть</span></span
 								>
 							</button>
-							<button type="button" class="vacancy__button button">
+							<button
+								type="button"
+								class="vacancy__button vacancy__popup button"
+							>
 								Хочу тут работать
 							</button>
 						</div>
@@ -1039,5 +1064,258 @@
 
 		<script src="https://unpkg.com/imask"></script>
 		<script src="js/main.min.js"></script>
+		<!-- Модальное окно резюме -->
+		<div class="resume-modal container">
+			<div class="resume-modal__overlay"></div>
+			<div class="resume-modal__wrap">
+				<div class="resume-modal__content">
+					<button class="resume-modal__close" type="button">
+						<svg class="icon-w20">
+							<use href="img/sprite.svg#icon-close"></use>
+						</svg>
+					</button>
+					<h2 class="article-blog__subtitle">Заполните резюме</h2>
+					<p class="resume-modal__desc">
+						Чем подробнее вы заполните резюме, тем больше вероятность, что Ваша
+						вакансия нас заинтересует
+					</p>
+	
+					<form class="resume-form" action="#">
+						<div class="resume-form__group">
+							<h3 class="resume-form__title">Контакты</h3>
+							<input type="hidden" name="formName" value="Контакты" />
+							<div class="resume-form__wrap">
+								<div class="form-add__section form-add__section--name">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-1"
+										>Имя</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__text--name"
+										autocomplete="name"
+										type="text"
+										name="name"
+										id="resume-field-1"
+										placeholder="Имя*"
+										required=""
+									/>
+								</div>
+								<div class="form-add__section form-add__section--tel">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-2"
+										>Телефон</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__text--tel"
+										autocomplete="tel"
+										type="tel"
+										name="phone"
+										id="resume-field-2"
+										placeholder="Телефон*"
+										required
+										pattern="^\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}$"
+										title="Введите номер в формате +7 (999) 123-45-67"
+									/>
+								</div>
+								<div class="form-add__section form-add__section--email">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-3"
+										>Почта</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__text--email"
+										type="email"
+										name="e-mail"
+										id="resume-field-3"
+										placeholder="Почта*"
+										required=""
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="resume-form__group">
+							<h3 class="resume-form__title">Способ связи</h3>
+							<input type="hidden" name="formName" value="Контакты" />
+							<div class="resume-form__wrap">
+								<div class="form-add__section">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-4"
+										>WhatsApp</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__section--whatsapp"
+										autocomplete="name"
+										type="text"
+										name="name"
+										id="resume-field-4"
+										placeholder="WhatsApp"
+									/>
+								</div>
+								<div class="form-add__section">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-5"
+										>Телеграм</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__section--telegramm"
+										type="text"
+										name="tg"
+										id="resume-field-5"
+										placeholder="Телеграм"
+									/>
+								</div>
+								<div class="form-add__section">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-6"
+										>Вконтакте</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__section--vk"
+										type="text"
+										name="vk"
+										id="resume-field-6"
+										placeholder="Вконтакте"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="resume-form__group">
+							<h3 class="resume-form__title">Портфолио</h3>
+							<input type="hidden" name="formName" value="Контакты" />
+							<div class="resume-form__wrap">
+								<div class="form-add__section">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-7"
+										>Behance</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__section--behance"
+										autocomplete="name"
+										type="text"
+										name="behance"
+										id="resume-field-7"
+										placeholder="Behance"
+									/>
+								</div>
+								<div class="form-add__section">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-8"
+										>Ссылка на сайт</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__section--link"
+										type="text"
+										name="link-resume"
+										id="resume-field-8"
+										placeholder="Ссылка на сайт"
+									/>
+								</div>
+								<div class="form-add__section">
+									<label
+										class="form-add__label visually-hidden"
+										for="resume-field-9"
+										>Вконтакте</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__section--yadisk"
+										autocomplete="name"
+										type="text"
+										name="link-yadisk"
+										id="resume-field-9"
+										placeholder="Ссылка на Яндекс диск"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="resume-form__group">
+							<h3 class="resume-form__title">Ваши положительные качества</h3>
+							<textarea
+								maxlength="2400"
+								class="form-add__comment"
+								id="resume-textarea-1"
+								placeholder="Например: Стрессоустойчивость, наблюдательность..."
+								name="plus-side"
+							></textarea>
+						</div>
+						<div class="resume-form__group">
+							<h3 class="resume-form__title">Ваши отрицательные качества</h3>
+							<textarea
+								maxlength="2400"
+								class="form-add__comment"
+								id="resume-textarea-2"
+								placeholder="Например: Агрессивность, лень..."
+								name="minus-side"
+							></textarea>
+						</div>
+						<div class="resume-form__group">
+							<h3 class="resume-form__title">Какими программа владеете</h3>
+							<textarea
+								maxlength="2400"
+								class="form-add__comment"
+								id="resume-textarea-3"
+								placeholder="Например: Photoshop, Figma..."
+								name="programm-add"
+							></textarea>
+						</div>
+						<div class="resume-form__group resume-form__group_action">
+							<div class="form-add__section form-add__section--checkbox">
+								<input
+									class="form-add__checkbox"
+									id="checkbox-resume"
+									type="checkbox"
+									name="agreement"
+								/>
+								<label
+									class="form-add__label form-add__label--checkbox"
+									for="checkbox-resume"
+								>
+									<span>Нажимая кнопку, вы даете согласие на <br></span
+									><a href="#">обработку ваших персональных данных</a>
+								</label>
+							</div>
+							<div class="form-add__section form-add__section_file01">
+								<label
+									class="resume-form__file"
+									for="resume-field-10"
+									><p>Добавить портфолио</p> <p>rar, zip, pdf</p></label>
+								<input
+									style="display: none;"
+									class="form-add__text form-add__user form-add__section--addfile"
+									type="file"
+									accept=".rar,.zip,.pdf"
+									name="add-file-1"
+									id="resume-field-10"
+								/>
+							</div>
+							<div class="form-add__section form-add__section_file02">
+								<label
+									class="resume-form__file"
+									for="resume-field-11"
+									><p>Добавить резюме</p> <p>pdf, doc, docx, rtf</p></label>
+								<input
+									style="display: none;"
+									class="form-add__text form-add__user form-add__section--addfile"
+									type="file"
+									accept=".pdf,.doc,.docx,.rtf"
+									name="add-file-1"
+									id="resume-field-11"
+								/>
+							</div>
+							<button class="form-add__send button" type="submit">
+								Готов к тестовому заданию
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
