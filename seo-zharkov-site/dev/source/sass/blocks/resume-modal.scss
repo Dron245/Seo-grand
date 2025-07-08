@@ -5,11 +5,21 @@ body.modal-open {
 .modal-open .resume-modal {
 	position: fixed;
 	inset: 0;
-	z-index: 1000;
-
+	z-index: 2001;
+	display: flex;
+    justify-content: center;
+	 opacity: 1;
+	 visibility: visible;
+	 max-height: initial;
+   //  align-items: center;
 }
 
-.resume-modal {}
+.resume-modal {
+	opacity: 0;
+	visibility: hidden;
+	max-height: 0;
+	
+}
 
 .resume-modal__overlay {
 	position: absolute;
@@ -26,25 +36,32 @@ body.modal-open {
 	border-radius: 12px;
 	overflow: hidden;
 	top: 50%;
-	translate: 0 -50%;
+	translate: 0% -50%;
 	position: relative;
-	margin-block: 50px;
+	margin-block: 0px;
+	scale: 0;
 	transition: scale 0.4s;
+
+	.modal-open & {
+		margin-block: 50px;
+	}
 }
 
 .resume-modal__content {
 	position: relative;
 	border: 15px solid white;
-	// max-width: 700px;
-	// margin: 50px auto;
+	max-width: 1280px;
+	// margin-inline: auto;
 	background: #fff;
-	// border-radius: 12px;
+	border-radius: 12px;
 	padding: 40px;
 	z-index: 1001;
 	overflow-y: auto;
 	max-height: calc(100vh - 150px);
-
-
+	@media (max-width:$mobileSmall){
+		 @include adaptiveValue("padding-inline", 40, 25,0,576,380);
+		 border-width: 7px;
+	}
 }
 
 .resume-modal__close {
@@ -58,6 +75,7 @@ body.modal-open {
 }
 
 .resume-form {
+	
 	margin-top: toRem(30);
 
 	.form-add__section {

@@ -156,7 +156,7 @@ const server = (done) => {
 	browser.init({
 		server: {
 			baseDir: 'build',
-			index: 'career.html',
+			index: 'cases.html',
 		},
 		cors: true,
 		notify: false,

@@ -131,6 +131,9 @@
 		line-height: 1.6;
 		margin-left: toRem(80);
 		padding: 0.5rem toRem(16);
+		&:hover{
+			background: linear-gradient(132.81deg, #0dbd86 17.574%, #099a75 84.858%);;
+		}
 		@media (max-width: toEm(950)){
 			  margin-left: 0;
 		}

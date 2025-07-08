@@ -1115,12 +1115,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	function documentActions(e) {
 		const targetElement = e.target;
-
+		console.log(targetElement);
+		
 		//страница "Карьера" открыть/закрыть текст вакансии
 		if (targetElement.closest('.vacancy__footer .posts__pagination-item')) {
-			const descriptionBlock = document.querySelector('.vacancy__description');
-			const openBtn = document.querySelector('.posts__pagination-link_open');
-			const closeBtn = document.querySelector('.posts__pagination-link_close');
+			const descriptionBlock = targetElement.closest('.vacancy').querySelector('.vacancy__description');
+			const openBtn = targetElement.closest('.vacancy').querySelector('.posts__pagination-link_open');
+			const closeBtn = targetElement.closest('.vacancy').querySelector('.posts__pagination-link_close');
 
 			const isOpen = descriptionBlock.classList.contains('_description-active');
 
