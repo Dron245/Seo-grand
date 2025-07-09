@@ -1,0 +1,394 @@
+.case2 {
+	padding: 20px 30px 30px;
+	display: grid;
+	grid-template-columns: 400px 1fr;
+	column-gap: 30px
+}
+
+.case2__wrap {
+	grid-column: 1/3;
+	display: grid;
+	grid-template-columns: auto auto;
+	column-gap: 60px;
+	align-items: center;
+	margin-bottom: 20px
+}
+
+.case2__wrap p {
+	padding: 0;
+	margin: 0;
+	color: #0c0e0d;
+	font-size: 15px;
+	line-height: 1.6
+}
+
+.case2__wrap img {
+	display: block;
+	height: 60px;
+	width: 219px;
+	object-fit: contain;
+	object-position: left center
+}
+
+.case2__client-link {
+	position: relative;
+	display: inline-block;
+	padding: 8px 16px 8px 40px;
+	color: #548271;
+	font-size: 14px;
+	background-color: #f2f7f5;
+	border-radius: 8px;
+	transition: all .3s ease-in-out
+}
+
+.case2__client-link::before,.company-case__text-wrap a::before,.reviews__client-info a.reviews__link::before {
+	left: 17px;
+	width: 16px;
+	height: 16px;
+	background-image: url(//seo-zharkov.ru/assets/img/icon-link.svg)
+}
+
+.case2__client-link:active,.case2__client-link:hover {
+	color: #017e5e
+}
+
+.case2__img-wrap {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	overflow: hidden;
+	
+}
+
+.case2__img-wrap img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform .3s;
+	cursor: pointer
+}
+
+.case2__img-wrap a {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 50%;
+	left: 50%;
+	width: 52px;
+	height: 52px;
+	transform: translate(-50%,-50%);
+	background-color: #f2f7f5;
+	z-index: 10;
+	opacity: 0;
+	border-radius: 50%;
+	transition: all .3s
+}
+
+.case2__img-wrap a:active,.case2__img-wrap a:hover {
+	background: linear-gradient(107.65deg,#d3ff74 28.081%,#ade33b 92.635%)
+}
+
+.case2__tabs .tabs {
+	display: flex;
+	flex-direction: column-reverse
+}
+
+.case2__tabs .tabs__panel {
+	margin-bottom: 40px
+}
+
+.case2__tabs .options__item {
+	position: relative;
+	padding: 16px 16px 16px 45px;
+	font-size: 14px
+}
+
+.case2__client-link::before,.case2__tabs .options__item::before,.clients__show-all span::before,.company-case__text-wrap a::before,.reviews__client-info a.reviews__link::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.case2__tabs .options__item::before {
+	left: 15px;
+	width: 20px;
+	height: 20px;
+	z-index: 10
+}
+
+.case2__tabs .options__item.active,.case2__tabs .options__item:active,.case2__tabs .options__item:hover {
+	background-color: #f2f7f5;
+	color: #01a572;
+	background-image: none
+}
+
+.case2__tabs .options__item--google::before {
+	background-image: url(//seo-zharkov.ru/assets/img/icon-google2.svg)
+}
+
+.case2__tabs .options__item--yandex::before {
+	background-image: url(//seo-zharkov.ru/assets/img/icon-yandex2.svg)
+}
+
+.case2__tabs .options__item--traffic::before {
+	background-image: url(//seo-zharkov.ru/assets/img/icon-traffic.png)
+}
+
+.case2__info {
+	padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start
+}
+
+.case2__link.button {
+	padding: 19px 24px;
+	font-size: 13px;
+	margin-top: auto;
+	cursor: pointer
+}
+
+.tabs__btns {
+	opacity: 0
+}
+
+.tabs__btns:hover,.tabs__panel:hover~.tabs__btns {
+	opacity: 1
+}
+
+.tabs__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 44px;
+	height: 44px;
+	background-color: #f2f7f5;
+	border-radius: 8px;
+	z-index: 100;
+	transition: all .4s ease-in-out;
+	cursor: pointer
+}
+
+.tabs__btn:active,.tabs__btn:hover {
+	background: linear-gradient(107.65deg,#d3ff74 28.643%,#ade33b 92.14%)
+}
+
+.case2__img-wrap a:active svg,.case2__img-wrap a:hover svg,.tabs__btn:active svg,.tabs__btn:hover svg {
+	stroke: #0c0e0d
+}
+
+.case2__img-wrap a svg,.tabs__btn svg {
+	stroke: #7ba193
+}
+
+.tabs__btn.back {
+	position: absolute;
+	top: 130px;
+	left: 0
+}
+
+.tabs__btn.forward {
+	position: absolute;
+	top: 130px;
+	right: 0
+}
+
+.case2__tabs .tabs {
+	position: relative
+}
+
+@media (min-width: 1650px) {
+	.letters__slider {
+		 padding-bottom:60px
+	}
+}
+
+.tabs__btn.forward {
+	right: 15px;
+}
+
+.tabs__btn.back {
+	left: 15px;
+}
+
+.cases-page .forward {
+	rotate: 180deg;
+}
+
+.cases-page {
+	
+	&__content {
+	}
+
+	&__full {
+		margin-bottom: toRem(70);
+		.cases-page__body {
+			margin-bottom: toRem(54);
+		}
+	}
+	&__body {
+		margin-top: toRem(60);
+	margin-bottom: toRem(70);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: toRem(40);
+		@media (max-width: toEm(1630)){
+			  grid-template-columns: repeat(auto-fill, minmax(toRem(330), 1fr));
+		}
+		@media (max-width:$tablet){
+			 gap: toRem(30); 
+		}
+		@media (max-width:$mobile){
+			grid-template-columns: repeat(auto-fill, minmax(toRem(240), 1fr));
+		}
+	}
+}
+.case2 {
+	.cases-page & {
+		@media (max-width: toEm(1630)){
+			grid-template-columns: 1fr;
+		}
+	}
+	&__wrap {
+		.cases-page & {
+			p {
+				@media (max-width: toEm(1630)){
+					  display: none;
+				}
+			}
+		}
+	}
+
+	&__client-link {
+	}
+
+	&__tabs {
+		.cases-page & {
+			@media (max-width: toEm(1630)){
+				  display: none;
+			}
+		}
+	}
+
+	&__img-wrap {
+		.cases-page & {
+			transition: scale .3s;
+			&:hover{
+				scale: 1.1;
+			}
+			@media (max-width: toEm(1630)){
+				  display: none;
+			}
+		}
+	}
+}
+.tabs {
+	.cases-page & {
+		height: 100%;
+		justify-content: space-between;
+	}
+	
+}
+.options {
+	.cases-page & {
+		@media (max-width: toEm(1630)){
+			  display: none;
+		}
+	}
+}
+
+.main-blog {
+
+	&__aside {
+	}
+}
+.form-add {
+	
+	&__inner {
+		.cases-page & {
+			margin-bottom: toRem(70);
+		}
+	}
+
+	&__wrap {
+		.cases-page & {
+			padding: 30px;
+		}
+	}
+
+	&__description {
+		.cases-page & {
+			margin-bottom: toRem(20);
+		}
+	}
+}
+.post {
+
+	&__header {
+		.cases-page & {
+			margin-bottom: toRem(0);
+		}
+	}
+
+	&__img {
+	}
+
+	&__profile-icon {
+	}
+
+	&__user-info {
+	}
+
+	&__username {
+	}
+
+	&__role {
+	}
+}
+
+
+.posts {
+
+	&__pagination {
+		.cases-page & {
+			margin-top: toRem(0);
+			margin-bottom: toRem(60);
+		}
+	}
+
+	&__pagination-list {
+	}
+
+	&__pagination-item {
+
+		&_active {
+		}
+
+		&_more {
+		}
+	}
+
+	&__pagination-item--left {
+	}
+
+	&__pagination-link {
+	}
+
+	&__pagination-item--right {
+	}
+}
+.arrow-svg {
+}
+.dots {
+}
