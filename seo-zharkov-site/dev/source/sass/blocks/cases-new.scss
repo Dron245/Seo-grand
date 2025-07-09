@@ -2,7 +2,7 @@
 	padding: 20px 30px 30px;
 	display: grid;
 	grid-template-columns: 400px 1fr;
-	column-gap: 30px
+	column-gap: 30px;
 }
 
 .case2__wrap {
@@ -11,7 +11,7 @@
 	grid-template-columns: auto auto;
 	column-gap: 60px;
 	align-items: center;
-	margin-bottom: 20px
+	margin-bottom: 20px;
 }
 
 .case2__wrap p {
@@ -19,7 +19,7 @@
 	margin: 0;
 	color: #0c0e0d;
 	font-size: 15px;
-	line-height: 1.6
+	line-height: 1.6;
 }
 
 .case2__wrap img {
@@ -27,7 +27,7 @@
 	height: 60px;
 	width: 219px;
 	object-fit: contain;
-	object-position: left center
+	object-position: left center;
 }
 
 .case2__client-link {
@@ -38,18 +38,21 @@
 	font-size: 14px;
 	background-color: #f2f7f5;
 	border-radius: 8px;
-	transition: all .3s ease-in-out
+	transition: all 0.3s ease-in-out;
 }
 
-.case2__client-link::before,.company-case__text-wrap a::before,.reviews__client-info a.reviews__link::before {
+.case2__client-link::before,
+.company-case__text-wrap a::before,
+.reviews__client-info a.reviews__link::before {
 	left: 17px;
 	width: 16px;
 	height: 16px;
-	background-image: url(//seo-zharkov.ru/assets/img/icon-link.svg)
+	background-image: url(//seo-zharkov.ru/assets/img/icon-link.svg);
 }
 
-.case2__client-link:active,.case2__client-link:hover {
-	color: #017e5e
+.case2__client-link:active,
+.case2__client-link:hover {
+	color: #017e5e;
 }
 
 .case2__img-wrap {
@@ -60,7 +63,6 @@
 	background-color: #f9f9f9;
 	border-radius: 8px;
 	overflow: hidden;
-	
 }
 
 .case2__img-wrap img {
@@ -70,8 +72,8 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transition: transform .3s;
-	cursor: pointer
+	transition: transform 0.3s;
+	cursor: pointer;
 }
 
 .case2__img-wrap a {
@@ -83,87 +85,134 @@
 	left: 50%;
 	width: 52px;
 	height: 52px;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	background-color: #f2f7f5;
 	z-index: 10;
 	opacity: 0;
 	border-radius: 50%;
-	transition: all .3s
+	transition: all 0.3s;
 }
 
-.case2__img-wrap a:active,.case2__img-wrap a:hover {
-	background: linear-gradient(107.65deg,#d3ff74 28.081%,#ade33b 92.635%)
+.case2__img-wrap a:active,
+.case2__img-wrap a:hover {
+	background: linear-gradient(107.65deg, #d3ff74 28.081%, #ade33b 92.635%);
 }
 
 .case2__tabs .tabs {
 	display: flex;
-	flex-direction: column-reverse
+	flex-direction: column-reverse;
 }
 
 .case2__tabs .tabs__panel {
-	margin-bottom: 40px
+	margin-bottom: 40px;
+	.cases-page & {
+		position: relative;
+	}
 }
 
 .case2__tabs .options__item {
 	position: relative;
 	padding: 16px 16px 16px 45px;
-	font-size: 14px
+	font-size: 14px;
 }
 
-.case2__client-link::before,.case2__tabs .options__item::before,.clients__show-all span::before,.company-case__text-wrap a::before,.reviews__client-info a.reviews__link::before {
+.case2__client-link::before,
+.case2__tabs .options__item::before,
+.clients__show-all span::before,
+.company-case__text-wrap a::before,
+.reviews__client-info a.reviews__link::before {
 	content: "";
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	background-size: cover;
-	background-repeat: no-repeat
+	background-repeat: no-repeat;
 }
-
+.tabs__dots {
+	position: absolute;
+	padding: 10px;
+	border-radius: 16px;
+	background-color: $color-belyy;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	gap: toRem(10);
+	z-index: 10;
+	pointer-events: none;
+	opacity: 0;
+	margin-inline: auto;
+	transition: opacity 0.3s ease-in-out;
+	.tabs:hover & {
+		pointer-events: auto;
+		opacity: 1;
+	}
+}
+.tabs__dot {
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+	background-color: $color-seryy-01-1;
+	border-radius: 50%;
+	transition: background-color 0.3s ease-in-out;
+	&.active {
+		background-color: $color-zelenyy-02;
+	}
+}
 .case2__tabs .options__item::before {
 	left: 15px;
 	width: 20px;
 	height: 20px;
-	z-index: 10
+	z-index: 10;
 }
 
-.case2__tabs .options__item.active,.case2__tabs .options__item:active,.case2__tabs .options__item:hover {
+.case2__tabs .options__item.active,
+.case2__tabs .options__item:active,
+.case2__tabs .options__item:hover {
 	background-color: #f2f7f5;
 	color: #01a572;
-	background-image: none
+	background-image: none;
 }
 
 .case2__tabs .options__item--google::before {
-	background-image: url(//seo-zharkov.ru/assets/img/icon-google2.svg)
+	background-image: url(//seo-zharkov.ru/assets/img/icon-google2.svg);
 }
 
 .case2__tabs .options__item--yandex::before {
-	background-image: url(//seo-zharkov.ru/assets/img/icon-yandex2.svg)
+	background-image: url(//seo-zharkov.ru/assets/img/icon-yandex2.svg);
 }
 
 .case2__tabs .options__item--traffic::before {
-	background-image: url(//seo-zharkov.ru/assets/img/icon-traffic.png)
+	background-image: url(//seo-zharkov.ru/assets/img/icon-traffic.png);
 }
 
 .case2__info {
 	padding-top: 10px;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start
+	align-items: flex-start;
 }
 
 .case2__link.button {
 	padding: 19px 24px;
 	font-size: 13px;
 	margin-top: auto;
-	cursor: pointer
+	cursor: pointer;
+	.cases-page & {
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
 }
 
 .tabs__btns {
-	opacity: 0
+	opacity: 0;
 }
 
-.tabs__btns:hover,.tabs__panel:hover~.tabs__btns {
-	opacity: 1
+.tabs__btns:hover,
+.tabs__panel:hover ~ .tabs__btns {
+	opacity: 1;
 }
 
 .tabs__btn {
@@ -176,41 +225,46 @@
 	background-color: #f2f7f5;
 	border-radius: 8px;
 	z-index: 100;
-	transition: all .4s ease-in-out;
-	cursor: pointer
+	transition: all 0.4s ease-in-out;
+	cursor: pointer;
 }
 
-.tabs__btn:active,.tabs__btn:hover {
-	background: linear-gradient(107.65deg,#d3ff74 28.643%,#ade33b 92.14%)
+.tabs__btn:active,
+.tabs__btn:hover {
+	background: linear-gradient(107.65deg, #d3ff74 28.643%, #ade33b 92.14%);
 }
 
-.case2__img-wrap a:active svg,.case2__img-wrap a:hover svg,.tabs__btn:active svg,.tabs__btn:hover svg {
-	stroke: #0c0e0d
+.case2__img-wrap a:active svg,
+.case2__img-wrap a:hover svg,
+.tabs__btn:active svg,
+.tabs__btn:hover svg {
+	stroke: #0c0e0d;
 }
 
-.case2__img-wrap a svg,.tabs__btn svg {
-	stroke: #7ba193
+.case2__img-wrap a svg,
+.tabs__btn svg {
+	stroke: #7ba193;
 }
 
 .tabs__btn.back {
 	position: absolute;
 	top: 130px;
-	left: 0
+	left: 0;
 }
 
 .tabs__btn.forward {
 	position: absolute;
 	top: 130px;
-	right: 0
+	right: 0;
 }
 
 .case2__tabs .tabs {
-	position: relative
+	position: relative;
 }
 
 @media (min-width: 1650px) {
 	.letters__slider {
-		 padding-bottom:60px
+		padding-bottom: 60px;
 	}
 }
 
@@ -227,44 +281,88 @@
 }
 
 .cases-page {
-	
 	&__content {
 	}
 
+	.blogs__category {
+		@media (max-width: $mobileSmall) {
+			margin-right: -31px;
+		}
+	}
+	.form-add__description {
+		text-align: left;
+	}
 	&__full {
-		margin-bottom: toRem(70);
+		margin-bottom: toRem(80);
+		@media (max-width:$pc){
+			  
+			margin-bottom: toRem(70);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("margin-bottom", 60, 40,0,768,380); 
+		}
 		.cases-page__body {
 			margin-bottom: toRem(54);
+			@media (max-width:$mobile){
+				 @include adaptiveValue("margin-bottom", 40, 30,0,768,380); 
+			}
 		}
 	}
 	&__body {
-		margin-top: toRem(60);
-	margin-bottom: toRem(70);
+		@media (min-width: toEm(1360.02px)) {
+			margin-top: toRem(60);
+		}
+		@media (max-width: $pc) {
+			@include adaptiveValue("margin-top", 50, 40, 0, 1360, 576);
+		}
+		@media (max-width: $mobileXSmall) {
+			margin-top: 30px;
+		}
+		margin-bottom: toRem(70);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: toRem(40);
-		@media (max-width: toEm(1630)){
-			  grid-template-columns: repeat(auto-fill, minmax(toRem(330), 1fr));
+		@media (max-width: toEm(1630)) {
+			grid-template-columns: repeat(auto-fill, minmax(toRem(330), 1fr));
 		}
-		@media (max-width:$tablet){
-			 gap: toRem(30); 
+		@media (max-width: $tablet) {
+			gap: toRem(30);
+			margin-bottom: toRem(50);
+			@media (max-width:$mobileSmall){
+				 gap: toRem(20); 
+			}
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
+			margin-bottom: toRem(40);
 			grid-template-columns: repeat(auto-fill, minmax(toRem(240), 1fr));
 		}
+		@media (max-width: $mobileSmall) {
+			margin-bottom: toRem(30);
+		}
+	}
+}
+
+.cases {
+	&__item {
+		border: 1px solid #e4eeea;
+		border-radius: 12px;
 	}
 }
 .case2 {
 	.cases-page & {
-		@media (max-width: toEm(1630)){
+		@media (max-width: toEm(1630)) {
 			grid-template-columns: 1fr;
+			column-gap: toRem(0);
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 20px;
 		}
 	}
 	&__wrap {
 		.cases-page & {
 			p {
-				@media (max-width: toEm(1630)){
-					  display: none;
+				@media (max-width: toEm(1630)) {
+					display: none;
 				}
 			}
 		}
@@ -275,20 +373,20 @@
 
 	&__tabs {
 		.cases-page & {
-			@media (max-width: toEm(1630)){
-				  display: none;
+			@media (max-width: toEm(1630)) {
+				display: none;
 			}
 		}
 	}
 
 	&__img-wrap {
 		.cases-page & {
-			transition: scale .3s;
-			&:hover{
+			transition: scale 0.3s;
+			&:hover {
 				scale: 1.1;
 			}
-			@media (max-width: toEm(1630)){
-				  display: none;
+			@media (max-width: toEm(1630)) {
+				display: none;
 			}
 		}
 	}
@@ -298,26 +396,29 @@
 		height: 100%;
 		justify-content: space-between;
 	}
-	
 }
 .options {
 	.cases-page & {
-		@media (max-width: toEm(1630)){
-			  display: none;
+		@media (max-width: toEm(1630)) {
+			display: none;
 		}
 	}
 }
 
 .main-blog {
-
 	&__aside {
 	}
 }
 .form-add {
-	
 	&__inner {
 		.cases-page & {
 			margin-bottom: toRem(70);
+			@media (max-width:$tablet){
+				margin-bottom: toRem(50);
+			}
+			@media (max-width: $mobileSmall) {
+				@include adaptiveValue("margin-bottom", 40, 30, 0, 576, 380);
+			}
 		}
 	}
 
@@ -334,7 +435,6 @@
 	}
 }
 .post {
-
 	&__header {
 		.cases-page & {
 			margin-bottom: toRem(0);
@@ -357,9 +457,7 @@
 	}
 }
 
-
 .posts {
-
 	&__pagination {
 		.cases-page & {
 			margin-top: toRem(0);
@@ -371,7 +469,6 @@
 	}
 
 	&__pagination-item {
-
 		&_active {
 		}
 

@@ -1113,6 +1113,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+
 	function documentActions(e) {
 		const targetElement = e.target;
 		console.log(targetElement);
@@ -1153,4 +1154,54 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		}
 	}
+
+	//Кейсы. Работа с табами
+	const tabs = document.querySelectorAll('.tabs__element.tab2');
+	const dotsContainer = document.querySelector('.tabs__dots');
+	let dots = [];
+
+	// Генерация точек в зависимости от количества вкладок
+	if (tabs.length && dotsContainer) {
+		dotsContainer.innerHTML = ''; // очищаем старые
+		tabs.forEach((_, i) => {
+			const dot = document.createElement('div');
+			dot.classList.add('tabs__dot');
+			if (tabs[i].classList.contains('active')) {
+				dot.classList.add('active');
+			}
+			dotsContainer.appendChild(dot);
+		});
+	}
+	// Обновляем список точек
+	dots = dotsContainer.querySelectorAll('.tabs__dot');
+	const nextBtn = document.querySelector('.tabs__next');
+	const prevBtn = document.querySelector('.tabs__prev');
+
+	let currentIndex = [...tabs].findIndex(tab => tab.classList.contains('active'));
+
+	function updateTabs(index) {
+		tabs.forEach((tab, i) => {
+			tab.classList.toggle('active', i === index);
+		});
+		dots.forEach((dot, i) => {
+			dot.classList.toggle('active', i === index);
+		});
+		currentIndex = index;
+	}
+
+	nextBtn?.addEventListener('click', () => {
+		let nextIndex = (currentIndex + 1) % tabs.length;
+		updateTabs(nextIndex);
+	});
+
+	prevBtn?.addEventListener('click', () => {
+		let prevIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+		updateTabs(prevIndex);
+	});
+	// Добавляем обработку клика по точкам
+	dots.forEach((dot, index) => {
+		dot.addEventListener('click', () => {
+			updateTabs(index);
+		});
+	});
 });

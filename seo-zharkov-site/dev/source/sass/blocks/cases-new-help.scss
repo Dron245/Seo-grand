@@ -4,7 +4,16 @@
 	}
 }
 .help-cases {
-
+	margin-bottom: toRem(100);
+	@media (max-width:$pc){
+		 margin-bottom: toRem(80); 
+	}
+	@media (max-width:$tablet){
+		 margin-bottom: toRem(60); 
+	}
+	@media (max-width:$mobile){
+		 @include adaptiveValue("margin-bottom", 60,50,0,768,380); 
+	}
 	&__pcnote {
 	}
 
@@ -31,6 +40,18 @@
 .career-aside {
 
 	&__list {
+		margin-top: toRem(70);
+		display: flex;
+		gap: toRem(40);
+		@media (max-width:$pc){
+			 margin-top: toRem(60); 
+		}
+		@media (max-width:$tablet){
+			 margin-top: toRem(50); 
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("margin-top", 40, 30, 0, 768, 380); 
+		}
 	}
 }
 .callback {
