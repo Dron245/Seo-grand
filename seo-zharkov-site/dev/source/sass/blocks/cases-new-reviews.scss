@@ -1,56 +1,275 @@
 .cases {
 
-	&__reviews {
-	}
+	&__reviews {}
 }
+
 .reviews-cases {
+	margin-bottom: toRem(100);
+
+	.seo__text {
+		margin-bottom: toRem(0);
+
+		p {
+			margin-bottom: toRem(0);
+		}
+	}
+
+	@media (max-width:$pc) {
+		margin-bottom: toRem(80);
+		.popular__control {
+			display: none;
+		}
+	}
+
+	@media (max-width:$tablet) {
+		margin-bottom: toRem(70);
+	}
+
+	@media (max-width:$mobile) {
+		@include adaptiveValue("margin-bottom", 60, 50, 0, 768, 380);
+	}
 
 	&__content {
+
+		// display: grid;
+		// grid-template-columns: repeat(4, 1fr);
+		// gap: 40px;
+
+		@media (max-width:$tablet) {
+			margin-right: -39px;
+		}
 	}
 
 	&__item {
+		cursor: pointer;
+		border: 1px solid $color-seryy-01-1;
+		border-radius: 12px;
+		padding: 20px 30px 30px 30px;
+		.case__link {
+			margin-bottom: toRem(25);
+		}
+		.case2__link.button[class] {
+			margin-bottom: 0;
+			width: fit-content;
+			color: $color-belyy;
+
+			&::before {
+				display: none;
+			}
+		}
+		button.case2__link.js-open-modal {
+			@media (max-width:$mobileSmall){
+				 width: auto; 
+			}
+		}
+	}
+
+	&__show-all {
+		&_top {
+			@media (max-width:$mobileSmall){
+				 display: none; 
+			}
+		}
+		&_bottom[class] {
+			display: none;
+			&::before{
+				display: none;
+			}
+			@media (max-width:$mobileSmall){
+				 display: block;
+				 margin-top: toRem(30);
+				 padding: 16px 40px 16px 24px;
+				 width: 170px;
+				 margin-inline: auto;
+				 span {
+					overflow: initial;
+					margin: initial;
+					&::before{
+						right: -24px;
+					}
+				 }
+			}
+			@media (max-width:$mobileXSmall){
+				 width: 100%; 
+			}
+		}
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: toRem(85);
+		@media (max-width: toEm(1060)){
+			  flex-wrap: wrap;
+			  row-gap: toRem(30);
+			  justify-content: space-between;
+		}
+		.seo__text {
+			flex: 0 0 70%;
+			@media (max-width:$pc){
+				 flex: 0 0 49%; 
+			}
+			@media (max-width: toEm(1060)){
+				  flex: 1 0 100%;
+			}
+		}
+		@media (max-width:$pc) {
+			margin-bottom: toRem(55);
+		}
+
+		@media (max-width:$tablet) {
+			margin-bottom: toRem(40);
+		}
+
+		@media (max-width:$mobileXSmall) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__actions {
+		display: flex;
+		gap: toRem(20);
+		@media (max-width: toEm(1060)){
+			width: 100%;
+			  justify-content: space-between;
+			  align-items: center;
+		}
+		.clients__show-all {
+			position: static;
+			max-width: initial;
+			width: auto;
+			margin-left: auto;
+			margin-right: 0;
+			flex: 0 0 auto;
+			padding: 16px toRem(24);
+			padding-right: 44px;
+			@media (max-width:$mobile){
+				  
+			}
+			span {
+				margin-left: initial;
+
+				&::before {
+					right: -20px;
+					// display: none;
+				}
+			}
+		}
 	}
 
 	&__img {
+		position: relative;
+		height: 60px;
+		@media (max-width:$mobile){
+			 height: 50px; 
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: left;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
 	}
 
-	&__body {
-	}
+	&__link {
+		display: none;
+		.arrow-svg {
+			stroke: $color-zelenyy-02;
+		}
+		@media (max-width:$pc) {
+			display: inline-block;
+			border: 1px solid $color-seryy-01-1;
+			border-radius: 8px;
+			padding: 14px 30px 14px 20px;
+			background: $color-belyy;
+			transition: background 0.3s, color 0.3s;
+			display: flex;
+			align-items: center;
+			gap: toRem(15);
 
-	&__button {
-	}
-
-	&__user {
-	}
-
-	&__user-name {
-	}
-
-	&__user-company {
-	}
-}
-.seo {
-
-	&__title {
+			&:hover {
+				background: linear-gradient(132deg, #0dbd86 0%, #099a75 99.06%);
+				.reviews-cases__text {
+					color: $color-belyy;
+				}
+				.arrow-svg {
+					stroke: $color-seryy-01-1;
+				}
+			}
+		}
 	}
 
 	&__text {
+		font-family: 'Manrope-bold';
+		font-size: 14px;
+		line-height: 140%;
+		color: $color-zagolovki;
+		transition: color;
+	}
+
+	&__body {
+		background: $color-seryy-01-2;
+		border-radius: 12px;
+		display: grid;
+		place-items: center;
+		aspect-ratio: 9/12.35;
+
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__button {}
+
+	&__user {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__user-name {
+		font-family: 'Manrope-bold';
+		font-size: 18px;
+		line-height: 140%;
+		color: $color-zagolovki;
+
+		&:not(:last-child) {
+			margin-bottom: toRem(4);
+		}
+	}
+
+	&__user-company {
+		font-size: 14px;
+		line-height: 140%;
+		color: $color-seryy-00;
 	}
 }
+
+.seo {
+
+	&__title {}
+
+	&__text {}
+}
+
 .case {
 
-	&__client-info {
-	}
+	&__client-info {}
 
-	&__link {
-	}
+	&__link {}
 }
+
 .case2 {
 
-	&__link {
-	}
+	&__link {}
 }
-.button {
-}
-.js-open-modal {
-}
+
+.button {}
+
+.js-open-modal {}

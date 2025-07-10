@@ -945,7 +945,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		IMask(element, maskOptions);
 	}
-
+	let asideblogSwiper = null;
+	let careerAsideSwiper = null;
+	let reviewsSwiper = null;
 	//Слайдер на странице "Блоги"
 
 	if (document.querySelector('.posts__slider')) {
@@ -989,8 +991,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// Слайдер на странице "Блог"
-	let asideblogSwiper = null;
-	let careerAsideSwiper = null;
+
 	function initAsideblogSwiper() {
 		const slider = document.querySelector('.asideblog__slider');
 
@@ -1042,6 +1043,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+	// Слайдер на странице "Карьера"
 	function initCareerAsideSwiper() {
 		const slider = document.querySelector('.career-aside__slider');
 
@@ -1080,14 +1082,63 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+	// Слайдер на странице "Кейсы"
+	function initReviewsSwiper() {
+		const slider = document.querySelector('.reviews-cases__content');
+		if (slider) {
+		// if (window.innerWidth <= 1200 && slider && !reviewsSwiper) {
+			 new Swiper('.reviews-cases__content', {
+				observer: true,
+				observeParents: true,
+				// spaceBetween: 20,
+				speed: 800,
+				navigation: {
+					prevEl: '.posts__pagination-item--left',
+					nextEl: '.posts__pagination-item--right',
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1.2,
+						spaceBetween: 15,
+					},
+
+					576: {
+						slidesPerView: 1.95,
+						spaceBetween: 20,
+					},
+					768: {
+						slidesPerView: 2.6,
+						spaceBetween: 20,
+					},
+
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					1360: {
+						slidesPerView: 4,
+						spaceBetween: 40,
+					}
+				},
+			});
+		}
+
+		// if (window.innerWidth > 1200 && reviewsSwiper) {
+		// 	reviewsSwiper.destroy(true, true);
+		// 	reviewsSwiper = null;
+		// }
+	}
+
 	// 👇 Инициализация при загрузке
 	initAsideblogSwiper();
 	initCareerAsideSwiper();
+	initReviewsSwiper();
 	// 👇 И обработка изменения ширины
 	window.addEventListener('resize', () => {
 		setTimeout(() => {
 			initAsideblogSwiper();
 			initCareerAsideSwiper();
+			initReviewsSwiper();
 		}, 200);
 	});
 
@@ -1113,16 +1164,21 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-
 	function documentActions(e) {
 		const targetElement = e.target;
 		console.log(targetElement);
-		
+
 		//страница "Карьера" открыть/закрыть текст вакансии
 		if (targetElement.closest('.vacancy__footer .posts__pagination-item')) {
-			const descriptionBlock = targetElement.closest('.vacancy').querySelector('.vacancy__description');
-			const openBtn = targetElement.closest('.vacancy').querySelector('.posts__pagination-link_open');
-			const closeBtn = targetElement.closest('.vacancy').querySelector('.posts__pagination-link_close');
+			const descriptionBlock = targetElement
+				.closest('.vacancy')
+				.querySelector('.vacancy__description');
+			const openBtn = targetElement
+				.closest('.vacancy')
+				.querySelector('.posts__pagination-link_open');
+			const closeBtn = targetElement
+				.closest('.vacancy')
+				.querySelector('.posts__pagination-link_close');
 
 			const isOpen = descriptionBlock.classList.contains('_description-active');
 
@@ -1155,53 +1211,56 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	//Кейсы. Работа с табами
-	const tabs = document.querySelectorAll('.tabs__element.tab2');
-	const dotsContainer = document.querySelector('.tabs__dots');
-	let dots = [];
-
-	// Генерация точек в зависимости от количества вкладок
-	if (tabs.length && dotsContainer) {
-		dotsContainer.innerHTML = ''; // очищаем старые
-		tabs.forEach((_, i) => {
+	document.querySelectorAll('.cases__item').forEach((caseItem) => {
+		const tabs = caseItem.querySelectorAll('.tabs__element.tab2');
+		const dotsContainer = caseItem.querySelector('.tabs__dots');
+		const nextBtn = caseItem.querySelector('.tabs__next');
+		const prevBtn = caseItem.querySelector('.tabs__prev');
+	
+		if (!tabs.length || !dotsContainer) return;
+	
+		// Создание точек
+		dotsContainer.innerHTML = '';
+		tabs.forEach((tab, i) => {
 			const dot = document.createElement('div');
 			dot.classList.add('tabs__dot');
-			if (tabs[i].classList.contains('active')) {
-				dot.classList.add('active');
-			}
+			if (tab.classList.contains('active')) dot.classList.add('active');
 			dotsContainer.appendChild(dot);
 		});
-	}
-	// Обновляем список точек
-	dots = dotsContainer.querySelectorAll('.tabs__dot');
-	const nextBtn = document.querySelector('.tabs__next');
-	const prevBtn = document.querySelector('.tabs__prev');
-
-	let currentIndex = [...tabs].findIndex(tab => tab.classList.contains('active'));
-
-	function updateTabs(index) {
-		tabs.forEach((tab, i) => {
-			tab.classList.toggle('active', i === index);
+	
+		const dots = dotsContainer.querySelectorAll('.tabs__dot');
+	
+		let currentIndex = Array.from(tabs).findIndex((tab) =>
+			tab.classList.contains('active')
+		);
+	
+		function updateTabs(index) {
+			tabs.forEach((tab, i) => {
+				tab.classList.toggle('active', i === index);
+			});
+			dots.forEach((dot, i) => {
+				dot.classList.toggle('active', i === index);
+			});
+			currentIndex = index;
+		}
+	
+		// Кнопки
+		nextBtn?.addEventListener('click', () => {
+			let nextIndex = (currentIndex + 1) % tabs.length;
+			updateTabs(nextIndex);
 		});
-		dots.forEach((dot, i) => {
-			dot.classList.toggle('active', i === index);
+	
+		prevBtn?.addEventListener('click', () => {
+			let prevIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+			updateTabs(prevIndex);
 		});
-		currentIndex = index;
-	}
-
-	nextBtn?.addEventListener('click', () => {
-		let nextIndex = (currentIndex + 1) % tabs.length;
-		updateTabs(nextIndex);
-	});
-
-	prevBtn?.addEventListener('click', () => {
-		let prevIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-		updateTabs(prevIndex);
-	});
-	// Добавляем обработку клика по точкам
-	dots.forEach((dot, index) => {
-		dot.addEventListener('click', () => {
-			updateTabs(index);
+	
+		// Клики по точкам
+		dots.forEach((dot, index) => {
+			dot.addEventListener('click', () => {
+				updateTabs(index);
+			});
 		});
 	});
+	
 });
