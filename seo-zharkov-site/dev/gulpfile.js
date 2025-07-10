@@ -156,8 +156,10 @@ const server = (done) => {
 	browser.init({
 		server: {
 			baseDir: 'build',
-			index: 'cases.html',
+			index: 'case.html',
 		},
+		host: '192.168.0.59',
+		port: 3000,
 		cors: true,
 		notify: false,
 		ui: false,

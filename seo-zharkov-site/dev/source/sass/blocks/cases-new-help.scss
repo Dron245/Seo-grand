@@ -11,9 +11,12 @@
 	@media (max-width:$tablet){
 		 margin-bottom: toRem(60); 
 	}
+	@media (max-width: toEm(920)){
+		  margin-bottom: toRem(53);
+		  margin-right: -31px;
+	}
 	@media (max-width:$mobile){
-		margin-right: -31px;
-		 @include adaptiveValue("margin-bottom", 60,50,0,768,380); 
+		 @include adaptiveValue("margin-bottom", 53,43,0,768,380); 
 	}
 	&__pcnote {
 		display: flex;
@@ -71,9 +74,16 @@ gap: toRem(12);
 		@media (max-width:$tablet){
 			 margin-top: toRem(50); 
 		}
+		@media (max-width: toEm(920)){
+			padding-bottom: toRem(7);
+			overflow-y: hidden; 
+			overflow-x: auto;
+			&::-webkit-scrollbar {
+				width: 0;
+				height: 0;
+			}
+		}
 		@media (max-width:$mobile){
-				overflow-x: auto;
-				overflow-y: hidden; 
 			 @include adaptiveValue("margin-top", 40, 30, 0, 768, 380); 
 		}
 	}
@@ -81,8 +91,10 @@ gap: toRem(12);
 .callback {
 	.cases-page & {
 		flex: 1;
+		@media (max-width: toEm(920)){
+			flex: 0 0 calc(50% - 26px); 
+		}
 		@media (max-width:$mobile){
-			 flex: 0 0 calc(50% - 20px); 
 		}
 		@media (max-width:$mobileSmall){
 			  flex: 0 0 65%;

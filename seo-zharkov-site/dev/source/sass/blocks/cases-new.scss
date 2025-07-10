@@ -440,12 +440,15 @@
 .form-add {
 	&__inner {
 		.cases-page & {
-			margin-bottom: toRem(70);
+			margin-bottom: toRem(115);
+			@media (max-width:$pc){
+				margin-bottom: toRem(90); 
+			}
 			@media (max-width:$tablet){
-				margin-bottom: toRem(50);
+				margin-bottom: toRem(70);
 			}
 			@media (max-width: $mobileSmall) {
-				@include adaptiveValue("margin-bottom", 40, 30, 0, 576, 380);
+				@include adaptiveValue("margin-bottom", 60, 50, 0, 576, 380);
 			}
 		}
 	}
