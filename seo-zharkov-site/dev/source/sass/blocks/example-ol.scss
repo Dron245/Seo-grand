@@ -1,0 +1,33 @@
+.example {
+
+	&__part {
+	}
+}
+.example-ol {
+
+	&__img {
+	}
+}
+.article-blog {
+
+	&__part {
+
+		&_ol {
+		}
+	}
+
+	&__subsubtitle {
+	}
+
+	&__list {
+
+		&_ol {
+		}
+	}
+
+	&__item {
+	}
+
+	&__text {
+	}
+}

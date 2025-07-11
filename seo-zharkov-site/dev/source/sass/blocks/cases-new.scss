@@ -1,31 +1,31 @@
 .case2 {
-	padding: 20px 30px 30px;
+	padding: 1.25rem 1.875rem 1.875rem;
 	display: grid;
-	grid-template-columns: 400px 1fr;
-	column-gap: 30px;
+	grid-template-columns: 25rem 1fr;
+	column-gap: 1.875rem;
 }
 
 .case2__wrap {
 	grid-column: 1/3;
 	display: grid;
 	grid-template-columns: auto auto;
-	column-gap: 60px;
+	column-gap: 3.75rem;
 	align-items: center;
-	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
 }
 
 .case2__wrap p {
 	padding: 0;
 	margin: 0;
 	color: #0c0e0d;
-	font-size: 15px;
+	font-size: 0.9375rem;
 	line-height: 1.6;
 }
 
 .case2__wrap img {
 	display: block;
-	height: 60px;
-	width: 219px;
+	height: 3.75rem;
+	width: 13.6875rem;
 	object-fit: contain;
 	object-position: left center;
 }
@@ -33,20 +33,20 @@
 .case2__client-link {
 	position: relative;
 	display: inline-block;
-	padding: 8px 16px 8px 40px;
+	padding: 0.5rem 1rem 0.5rem 2.5rem;
 	color: #548271;
-	font-size: 14px;
+	font-size: 0.875rem;
 	background-color: #f2f7f5;
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	transition: all 0.3s ease-in-out;
 }
 
 .case2__client-link::before,
 .company-case__text-wrap a::before,
 .reviews__client-info a.reviews__link::before {
-	left: 17px;
-	width: 16px;
-	height: 16px;
+	left: 1.0625rem;
+	width: 1rem;
+	height: 1rem;
 	background-image: url(//seo-zharkov.ru/assets/img/icon-link.svg);
 }
 
@@ -59,9 +59,9 @@
 	display: block;
 	position: relative;
 	width: 100%;
-	height: 300px;
+	height: 18.75rem;
 	background-color: #f9f9f9;
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	overflow: hidden;
 }
 
@@ -83,8 +83,8 @@
 	align-items: center;
 	top: 50%;
 	left: 50%;
-	width: 52px;
-	height: 52px;
+	width: 3.25rem;
+	height: 3.25rem;
 	transform: translate(-50%, -50%);
 	background-color: #f2f7f5;
 	z-index: 10;
@@ -104,7 +104,7 @@
 }
 
 .case2__tabs .tabs__panel {
-	margin-bottom: 40px;
+	margin-bottom: 2.5rem;
 	.cases-page & {
 		position: relative;
 	}
@@ -112,8 +112,8 @@
 
 .case2__tabs .options__item {
 	position: relative;
-	padding: 16px 16px 16px 45px;
-	font-size: 14px;
+	padding: 1rem 1rem 1rem 2.8125rem;
+	font-size: 0.875rem;
 }
 
 .case2__client-link::before,
@@ -130,10 +130,10 @@
 }
 .tabs__dots {
 	position: absolute;
-	padding: 10px;
-	border-radius: 16px;
+	padding: 0.625rem;
+	border-radius: 1rem;
 	background-color: $color-belyy;
-	bottom: 30px;
+	bottom: 1.875rem;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
@@ -151,8 +151,8 @@
 }
 .tabs__dot {
 	cursor: pointer;
-	width: 15px;
-	height: 15px;
+	width: 0.9375rem;
+	height: 0.9375rem;
 	background-color: $color-seryy-01-1;
 	border-radius: 50%;
 	transition: background-color 0.3s ease-in-out;
@@ -161,9 +161,9 @@
 	}
 }
 .case2__tabs .options__item::before {
-	left: 15px;
-	width: 20px;
-	height: 20px;
+	left: 0.9375rem;
+	width: 1.25rem;
+	height: 1.25rem;
 	z-index: 10;
 }
 
@@ -188,15 +188,15 @@
 }
 
 .case2__info {
-	padding-top: 10px;
+	padding-top: 0.625rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 }
 
 .case2__link.button {
-	padding: 19px 24px;
-	font-size: 13px;
+	padding: 1.1875rem 1.5rem;
+	font-size: 0.8125rem;
 	margin-top: auto;
 	cursor: pointer;
 	.cases-page & {
@@ -220,10 +220,10 @@
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	width: 44px;
-	height: 44px;
+	width: 2.75rem;
+	height: 2.75rem;
 	background-color: #f2f7f5;
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	z-index: 100;
 	transition: all 0.4s ease-in-out;
 	cursor: pointer;
@@ -248,13 +248,13 @@
 
 .tabs__btn.back {
 	position: absolute;
-	top: 130px;
+	top: 8.125rem;
 	left: 0;
 }
 
 .tabs__btn.forward {
 	position: absolute;
-	top: 130px;
+	top: 8.125rem;
 	right: 0;
 }
 
@@ -262,18 +262,18 @@
 	position: relative;
 }
 
-@media (min-width: 1650px) {
+@media (min-width: 103.125rem) {
 	.letters__slider {
-		padding-bottom: 60px;
+		padding-bottom: 3.75rem;
 	}
 }
 
 .tabs__btn.forward {
-	right: 15px;
+	right: 0.9375rem;
 }
 
 .tabs__btn.back {
-	left: 15px;
+	left: 0.9375rem;
 }
 
 .cases-page .forward {
@@ -286,7 +286,7 @@
 
 	.blogs__category {
 		@media (max-width: $mobileSmall) {
-			margin-right: -31px;
+			margin-right: -1.9375rem;
 		}
 	}
 	.form-add__description {
@@ -316,7 +316,7 @@
 			@include adaptiveValue("margin-top", 50, 40, 0, 1360, 576);
 		}
 		@media (max-width: $mobileXSmall) {
-			margin-top: 30px;
+			margin-top: 1.875rem;
 		}
 		margin-bottom: toRem(70);
 		display: grid;
@@ -348,7 +348,7 @@
 		display: none;
 	}
 }
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
 
 	.case2:hover .case__overlay {
 		 .cases-page & {
@@ -358,17 +358,17 @@
 
 }
 .case2:hover .case__overlay { 
-	@media (max-width:1630px){
+	@media (max-width:101.875rem){
 		opacity: 1;
-		max-height: 900px;
+		max-height: 56.25rem;
 		transition: all .5s ease-in-out
 	}
 }
 
 .cases {
 	&__item {
-		border: 1px solid #e4eeea;
-		border-radius: 12px;
+		border: 0.0625rem solid #e4eeea;
+		border-radius: 0.75rem;
 	}
 }
 .case2 {
@@ -383,7 +383,7 @@
 			 cursor: pointer; 
 		}
 		@media (max-width: $mobileSmall) {
-			padding: 20px;
+			padding: 1.25rem;
 		}
 	}
 	&__wrap {
@@ -455,7 +455,7 @@
 
 	&__wrap {
 		.cases-page & {
-			padding: 30px;
+			padding: 1.875rem;
 		}
 	}
 

@@ -33,18 +33,18 @@
 
 		// display: grid;
 		// grid-template-columns: repeat(4, 1fr);
-		// gap: 40px;
+		// gap: 2.5rem;
 
 		@media (max-width:$tablet) {
-			margin-right: -39px;
+			margin-right: -2.4375rem;
 		}
 	}
 
 	&__item {
 		cursor: pointer;
-		border: 1px solid $color-seryy-01-1;
-		border-radius: 12px;
-		padding: 20px 30px 30px 30px;
+		border: 0.0625rem solid $color-seryy-01-1;
+		border-radius: 0.75rem;
+		padding: 1.25rem 1.875rem 1.875rem 1.875rem;
 		.case__link {
 			margin-bottom: toRem(25);
 		}
@@ -69,7 +69,7 @@
 		&_top[class].clients__show-all {
 			@media (min-width: toEm(992.02)){
 				  
-				margin-right: 20px;
+				margin-right: 1.25rem;
 			}
 			@media (max-width:$mobileSmall){
 				 display: none; 
@@ -83,14 +83,14 @@
 			@media (max-width:$mobileSmall){
 				 display: block;
 				 margin-top: toRem(30);
-				 padding: 16px 40px 16px 24px;
-				 width: 170px;
+				 padding: 1rem 2.5rem 1rem 1.5rem;
+				 width: 10.625rem;
 				 margin-inline: auto;
 				 span {
 					overflow: initial;
 					margin: initial;
 					&::before{
-						right: -24px;
+						right: -1.5rem;
 					}
 				 }
 			}
@@ -140,8 +140,8 @@
 			  align-items: center;
 		}
 		.posts__pagination-item {
-			width: 52px;
-			height: 52px;
+			width: 3.25rem;
+			height: 3.25rem;
 			background-color: $color-seryy-01-2;
 			border: none;
 		}
@@ -154,8 +154,8 @@
 			margin-left: auto;
 			margin-right: 0;
 			flex: 0 0 auto;
-			padding: 16px toRem(24);
-			padding-right: 44px;
+			padding: 1rem toRem(24);
+			padding-right: 2.75rem;
 			@media (max-width:$mobile){
 				  
 			}
@@ -163,7 +163,7 @@
 				margin-left: initial;
 				line-height: 1.4;
 				&::before {
-					right: -20px;
+					right: -1.25rem;
 					// display: none;
 				}
 			}
@@ -172,9 +172,9 @@
 
 	&__img {
 		position: relative;
-		height: 60px;
+		height: 3.75rem;
 		@media (max-width:$mobile){
-			 height: 50px; 
+			 height: 3.125rem; 
 		}
 		img {
 			position: absolute;
@@ -197,9 +197,9 @@
 		}
 		@media (max-width:$pc) {
 			display: inline-block;
-			border: 1px solid $color-seryy-01-1;
-			border-radius: 8px;
-			padding: 14px 30px 14px 20px;
+			border: 0.0625rem solid $color-seryy-01-1;
+			border-radius: 0.5rem;
+			padding: 0.875rem 1.875rem 0.875rem 1.25rem;
 			background: $color-belyy;
 			transition: background 0.3s, color 0.3s;
 			display: flex;
@@ -220,7 +220,7 @@
 
 	&__text {
 		font-family: 'Manrope-bold';
-		font-size: 14px;
+		font-size: 0.875rem;
 		line-height: 140%;
 		color: $color-zagolovki;
 		transition: color;
@@ -228,7 +228,7 @@
 
 	&__body {
 		background: $color-seryy-01-2;
-		border-radius: 12px;
+		border-radius: 0.75rem;
 		display: grid;
 		place-items: center;
 		aspect-ratio: 9/12.35;
@@ -248,7 +248,7 @@
 
 	&__user-name {
 		font-family: 'Manrope-bold';
-		font-size: 18px;
+		font-size: 1.125rem;
 		line-height: 140%;
 		color: $color-zagolovki;
 
@@ -258,7 +258,7 @@
 	}
 
 	&__user-company {
-		font-size: 14px;
+		font-size: 0.875rem;
 		line-height: 140%;
 		color: $color-seryy-00;
 	}

@@ -1,0 +1,117 @@
+.example {
+
+	.blog__content {
+		margin-top: toRem(100);
+	}
+}
+
+.main {
+}
+.anpia {
+}
+.example {
+}
+.cases-page {
+
+		&__content {
+		}
+}
+.container {
+}
+.blogs {
+
+		&__top {
+		}
+
+		&__page {
+		}
+
+		&__category {
+			.example & {
+				position: fixed;
+    top: 90px;
+	 background-color: $color-belyy;
+			}
+		}
+
+		&__category-list {
+		}
+
+		&__category-item {
+		}
+
+		&__category-link {
+		}
+}
+.page-top {
+
+		&__item {
+
+			&_active {
+			}
+		}
+}
+
+
+.blog {
+
+	&__content {
+	}
+
+	&__article {
+	}
+}
+.example {
+
+	&__wrapper {
+	}
+
+	&__main {
+	}
+
+	&__title {
+	}
+}
+.article-blog {
+}
+.main-example {
+
+	&__top {
+	}
+
+	&__img {
+	}
+
+	&__bottom {
+	}
+
+	&__content {
+	}
+}
+.blogs {
+
+	&__title {
+	}
+}
+.case {
+
+	&__wrap {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__item--yandex {
+	}
+
+	&__orders {
+	}
+
+	&__link {
+	}
+}
+
+

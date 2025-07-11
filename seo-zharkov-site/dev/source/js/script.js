@@ -1086,8 +1086,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	function initReviewsSwiper() {
 		const slider = document.querySelector('.reviews-cases__content');
 		if (slider) {
-		// if (window.innerWidth <= 1200 && slider && !reviewsSwiper) {
-			 new Swiper('.reviews-cases__content', {
+			// if (window.innerWidth <= 1200 && slider && !reviewsSwiper) {
+			new Swiper('.reviews-cases__content', {
 				observer: true,
 				observeParents: true,
 				// spaceBetween: 20,
@@ -1118,27 +1118,65 @@ document.addEventListener('DOMContentLoaded', function () {
 					1360: {
 						slidesPerView: 4,
 						spaceBetween: 37,
-					}
+					},
 				},
 			});
 		}
+	}
 
-		// if (window.innerWidth > 1200 && reviewsSwiper) {
-		// 	reviewsSwiper.destroy(true, true);
-		// 	reviewsSwiper = null;
-		// }
+	// Слайдер на странице "Кейс"
+	function initCaseSwiper() {
+		const slider = document.querySelector('.example__slider');
+		if (slider) {
+			// if (window.innerWidth <= 1200 && slider && !reviewsSwiper) {
+			new Swiper('.example__slider', {
+				observer: true,
+				observeParents: true,
+				// spaceBetween: 20,
+				speed: 800,
+				navigation: {
+					prevEl: '.posts__pagination-item--left',
+					nextEl: '.posts__pagination-item--right',
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1.2,
+						spaceBetween: 10,
+					},
+
+					480: {
+						slidesPerView: 1.9,
+						spaceBetween: 10,
+					},
+					676: {
+						slidesPerView: 2.5,
+						spaceBetween: 20,
+					},
+					868: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1092: {
+						slidesPerView: 2,
+						spaceBetween: 30,
+					},
+				},
+			});
+		}
 	}
 
 	// 👇 Инициализация при загрузке
 	initAsideblogSwiper();
 	initCareerAsideSwiper();
 	initReviewsSwiper();
+	initCaseSwiper();
 	// 👇 И обработка изменения ширины
 	window.addEventListener('resize', () => {
 		setTimeout(() => {
 			initAsideblogSwiper();
 			initCareerAsideSwiper();
-			initReviewsSwiper();
+			// initReviewsSwiper();
+			// initCaseSwiper();
 		}, 200);
 	});
 
@@ -1209,6 +1247,34 @@ document.addEventListener('DOMContentLoaded', function () {
 				document.body.classList.remove('modal-open'); // 🔓 возвращаем прокрутку
 			}
 		}
+
+		// Плавный скролл по якорным ссылкам
+		if (
+			targetElement.closest('.blogs__category-item') &&
+			document.querySelector('.example')
+		) {
+			const categoryItem = targetElement.closest('.blogs__category-item');
+			const link = categoryItem.querySelector('.blogs__category-link');
+
+			if (link && link.getAttribute('href')?.startsWith('#')) {
+				e.preventDefault();
+
+				const targetId = link.getAttribute('href');
+				const scrollTarget = document.querySelector(targetId);
+
+				if (scrollTarget) {
+					const headerOffset = 180; // при фиксированном меню
+					const elementPosition = scrollTarget.getBoundingClientRect().top;
+					const offsetPosition =
+						elementPosition + window.scrollY - headerOffset;
+
+					window.scrollTo({
+						top: offsetPosition,
+						behavior: 'smooth',
+					});
+				}
+			}
+		}
 	}
 
 	document.querySelectorAll('.cases__item').forEach((caseItem) => {
@@ -1216,9 +1282,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		const dotsContainer = caseItem.querySelector('.tabs__dots');
 		const nextBtn = caseItem.querySelector('.tabs__next');
 		const prevBtn = caseItem.querySelector('.tabs__prev');
-	
+
 		if (!tabs.length || !dotsContainer) return;
-	
+
 		// Создание точек
 		dotsContainer.innerHTML = '';
 		tabs.forEach((tab, i) => {
@@ -1227,13 +1293,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (tab.classList.contains('active')) dot.classList.add('active');
 			dotsContainer.appendChild(dot);
 		});
-	
+
 		const dots = dotsContainer.querySelectorAll('.tabs__dot');
-	
+
 		let currentIndex = Array.from(tabs).findIndex((tab) =>
 			tab.classList.contains('active')
 		);
-	
+
 		function updateTabs(index) {
 			tabs.forEach((tab, i) => {
 				tab.classList.toggle('active', i === index);
@@ -1243,18 +1309,18 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 			currentIndex = index;
 		}
-	
+
 		// Кнопки
 		nextBtn?.addEventListener('click', () => {
 			let nextIndex = (currentIndex + 1) % tabs.length;
 			updateTabs(nextIndex);
 		});
-	
+
 		prevBtn?.addEventListener('click', () => {
 			let prevIndex = (currentIndex - 1 + tabs.length) % tabs.length;
 			updateTabs(prevIndex);
 		});
-	
+
 		// Клики по точкам
 		dots.forEach((dot, index) => {
 			dot.addEventListener('click', () => {
@@ -1262,5 +1328,4 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		});
 	});
-	
 });

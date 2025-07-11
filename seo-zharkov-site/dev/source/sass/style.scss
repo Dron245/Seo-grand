@@ -60,9 +60,25 @@
 @import "blocks/blog-article.scss";
 @import "blocks/blog-comments.scss";
 @import "blocks/blog-aside.scss";
+
+//Карьера
 @import "blocks/career-main.scss";
 @import "blocks/career-aside.scss";
+
+//Резюме модальное окно
 @import "blocks/resume-modal.scss";
+
+//Кейсы
 @import "blocks/cases-new.scss";
 @import "blocks/cases-new-help.scss";
 @import "blocks/cases-new-reviews.scss";
+
+//Кейс
+@import "blocks/example-main.scss";
+@import "blocks/example-aside.scss";
+@import "blocks/example-ul.scss";
+@import "blocks/example-ol.scss";
+@import "blocks/example-result.scss";
+@import "blocks/example-tab.scss";
+@import "blocks/example-table.scss";
+@import "blocks/example-other.scss";
