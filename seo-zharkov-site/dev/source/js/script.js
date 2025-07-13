@@ -1267,9 +1267,10 @@ document.addEventListener('DOMContentLoaded', function () {
 					const elementPosition = scrollTarget.getBoundingClientRect().top;
 					const offsetPosition =
 						elementPosition + window.scrollY - headerOffset;
-
+					console.log(offsetPosition);
+					
 					window.scrollTo({
-						top: offsetPosition,
+						top: offsetPosition - 80,
 						behavior: 'smooth',
 					});
 				}
