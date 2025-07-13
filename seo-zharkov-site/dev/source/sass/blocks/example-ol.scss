@@ -4,7 +4,7 @@
 	}
 }
 .example-ol {
-
+	margin-top: toRem(50);
 	&__img {
 	}
 }
@@ -13,10 +13,18 @@
 	&__part {
 
 		&_ol {
+			.example-ol & {
+				margin: 0;
+				border: none;
+				padding: 0;
+			}
 		}
 	}
 
 	&__subsubtitle {
+		.example-ol & {
+			font-size: toRem(20);
+		}
 	}
 
 	&__list {

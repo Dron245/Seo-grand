@@ -14,5 +14,12 @@
 	}
 
 	&__text {
+		.example-result & {
+			padding-left: toRem(25);
+			border-left: 0.25rem solid $color-zelenyy-03;
+			@media (max-width:$mobileXSmall){
+				 font-size: toRem(16); 
+			}
+		}
 	}
 }

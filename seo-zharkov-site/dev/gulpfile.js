@@ -158,7 +158,7 @@ const server = (done) => {
 			baseDir: 'build',
 			index: 'case.html',
 		},
-		// host: '192.168.0.59',
+		host: '192.168.0.59',
 		// host: '10.52.47.10',
 		port: 3000,
 		cors: true,

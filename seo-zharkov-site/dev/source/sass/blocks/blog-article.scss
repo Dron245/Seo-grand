@@ -70,6 +70,9 @@
 				 margin-bottom: toRem(15); 
 			}
 		}
+		@media (max-width:$mobileXSmall){
+			 font-size: toRem(15); 
+		}
 	}
 
 	&__subtitle {

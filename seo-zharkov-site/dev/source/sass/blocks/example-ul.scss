@@ -3,9 +3,24 @@
 	&__part {
 	}
 }
-.example-ul {
+.example-ul, .example-ol {
+	display: flex;
+	align-items: flex-start;
+	gap: toRem(25);
+	padding-block: toRem(30);
+	border-bottom: 0.0625rem dashed $color-seryy-01-1;
+border-top: 0.0625rem dashed $color-seryy-01-1;
+margin-block: toRem(50);
+@media (max-width:$tablet){
+	
+	@include adaptiveValue("margin-block", 40, 30,0,992,380);
+}
 
-	&__bottom {
+	&__bottom, .example-ol__img {
+		flex: 0 0 3.75rem;
+		@media (max-width:$mobileSmall){
+			display: none; 
+		}
 	}
 
 	&__img {
@@ -23,12 +38,21 @@
 	}
 
 	&__list-wrap {
+		.example-ul &{
+			border: none;
+			padding: 0;
+
+		}
 	}
 
 	&__subsubtitle {
 	}
 
 	&__list {
+		.example-ul &{
+			flex: 1;
+			column-count: 1;
+		}
 	}
 
 	&__item {
