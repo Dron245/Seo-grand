@@ -1,6 +1,16 @@
 .example {
 
 	&__part {
+		&#example-summary {
+			.article-blog__part {
+				@media (max-width:$tablet){
+					 margin-bottom: toRem(50);
+				}
+				@media (max-width:$mobileSmall){
+					 margin-bottom: toRem(40); 
+				}
+			}
+		}
 	}
 }
 .example-ul, .example-ol {

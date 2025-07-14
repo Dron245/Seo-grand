@@ -947,7 +947,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 	let asideblogSwiper = null;
 	let careerAsideSwiper = null;
-	let reviewsSwiper = null;
+	
 	//Слайдер на странице "Блоги"
 
 	if (document.querySelector('.posts__slider')) {
@@ -1248,6 +1248,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		}
 
+		if (targetElement.closest('.options__header')) {
+			targetElement.closest('.select').classList.toggle('is-active')
+		}
 		// Плавный скролл по якорным ссылкам
 		if (
 			targetElement.closest('.blogs__category-item') &&

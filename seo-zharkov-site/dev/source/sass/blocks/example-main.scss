@@ -17,8 +17,12 @@
 			display: grid;
 			grid-template-columns: 1fr 20.9375rem;
 			@media (max-width: $pc) {
-				grid-template-columns: 1fr;
+				// grid-template-columns: 1fr;
 				row-gap: toRem(40);
+				display: block;
+				& > *:not(:last-child) {
+					margin-bottom: toRem(20);
+				}
 			}
 
 			@media (max-width: toEm(476.02)) {
