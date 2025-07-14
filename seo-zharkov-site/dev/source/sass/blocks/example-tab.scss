@@ -175,12 +175,29 @@
 .articles {
 
 	&__panels {
+		.example-tab & {
+			@media (max-width:$pc){
+		margin-right: -31px; 
+	}
+	@media (max-width:$tablet){
+		margin-right: -39px;
+	}
+	@media (max-width:$mobile){
+		margin-right: -33px; 
+	}
+	@media (max-width:$mobileSmall){
+		margin-right: -20px; 
+	}
+		}
 	}
 }
 .container {
 }
 .article {
 	.example-tab & {
+		img {
+			width: 100%;
+		}
 		padding-top: toRem(0);
 		@media (max-width:$mobile){
 			max-height: 400px;

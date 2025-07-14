@@ -113,6 +113,7 @@ button {
 			z-index: 1;
 			opacity: 0;
 			transition: opacity 0.5s;
+			border-radius: 8px;
 			background: linear-gradient(108deg, #d3ff74 23.5%, #ade33b 100%);
 		}
 		&:hover:after {

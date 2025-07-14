@@ -4,7 +4,9 @@
 		margin-top: toRem(100);
 	}
 }
-
+.example-header {
+	
+}
 .main {
 }
 .anpia {
@@ -25,7 +27,7 @@
 				}
 			}
 
-			@media (max-width: toEm(476.02)) {
+			@media (max-width: toEm(710)) {
 				display: block;
 				& > *:not(:last-child) {
 					@include adaptiveValue("margin-bottom", 30, 20, 0, 576, 380);
@@ -59,27 +61,30 @@
 
 	&__category {
 		.example & {
-			transition: top 0.3s ease 0s;
+			transition: top 0.3s ease 0s, background-color 0.7s ease 0s, box-shadow 0.7s ease 0s;
 
 			z-index: 1000;
-			@media (max-width: toEm(476.02)) {
+			@media (max-width: toEm(710)) {
 				margin-right: -1.25rem;
 			}
 		}
 		.header_colored + .example & {
-			@media (min-width: toEm(476.02)) {
+			@media (min-width: toEm(710)) {
 				position: fixed;
 				top: 5rem;
 				box-shadow: 0 0 1.875rem 0 rgba(72, 80, 91, 0.1);
-				background: $color-belyy;
+				background-color: $color-belyy;
 				padding-block: 1.25rem;
 				width: 100%;
 				left: 96px;
 				@media (max-width:103.125rem){
-					 left: 66px; 
+					 left: 4.125rem; 
 				}
 				@media (max-width:$pc){
 					 left: 0; 
+				}
+				@media (max-width:$mobileSmall){
+					 top: 62px; 
 				}
 				& .blogs__category-list {
 					padding-left: toRem(30);
@@ -236,7 +241,7 @@
 						height: 100%;
 						object-fit: cover;
 					}
-					@media (max-width: toEm(476.02)) {
+					@media (max-width: toEm(710)) {
 						aspect-ratio: 340/240;
 					}
 				}

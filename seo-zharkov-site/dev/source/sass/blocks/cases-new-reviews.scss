@@ -196,13 +196,13 @@
 			stroke: $color-zelenyy-02;
 		}
 		@media (max-width:$pc) {
-			display: inline-block;
+			display: inline-flex;
+			}
 			border: 0.0625rem solid $color-seryy-01-1;
 			border-radius: 0.5rem;
 			padding: 0.875rem 1.875rem 0.875rem 1.25rem;
 			background: $color-belyy;
 			transition: background 0.3s, color 0.3s;
-			display: flex;
 			align-items: center;
 			gap: toRem(15);
 
@@ -215,7 +215,7 @@
 					stroke: $color-seryy-01-1;
 				}
 			}
-		}
+		
 	}
 
 	&__text {

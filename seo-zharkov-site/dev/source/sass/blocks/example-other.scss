@@ -1,38 +1,90 @@
 .cases-page {
-
 	&__body {
+		&.example__other {
+			display: block;
+		}
 	}
 }
 .example {
-
+	
 	&__other {
+		
+		@include adaptiveValue("margin-block", 100, 50, 0, 1460, 380);
 	}
 
 	&__slider {
+		overflow: hidden;
+		@media (max-width:$pc){
+		margin-right: -31px; 
+	}
+	@media (max-width:$tablet){
+		margin-right: -39px;
+	}
+	@media (max-width:$mobile){
+		margin-right: -33px; 
+	}
+	@media (max-width:$mobileSmall){
+		margin-right: -20px; 
+	}
 	}
 }
 .asideblog {
-
 	&__top {
+		.example__other & {
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+			margin-right: 0;
+			gap: toRem(0);
+			@include adaptiveValue("margin-bottom", 65, 30, 0, 1460, 380);
+			@media (max-width:$mobile){
+				 justify-content: center;
+			}
+		}
 	}
 }
-.article-blog {
 
-	&__subtitle {
+.article-blog {
+}
+.cases__title {
+	.example__other & {
+		padding-right: 8px;
+		padding: 0;
+		margin: 0;
 	}
 }
 .clients {
-
-	&__show-all {
+	&__show-all[class] {
+		.example__other[class] & {
+			padding-block: 17.2px;
+			@media (min-width:toEm(768.02)){
+				  &.reviews-cases__show-all_bottom {
+					display: none;
+				  }
+			}
+			@media (min-width: toEm(992.02)) {
+				display: block;
+				margin-right: 1.5625rem;
+			}
+			@media (max-width: $mobileSmall) {
+				// display: none;
+			}
+		}
+		
 	}
 }
 .popular {
-
 	&__control {
+		.example__other & {
+			display: flex;
+			gap: toRem(25);
+			@media (max-width:$tablet){
+				display: none;
+			}
+		}
 	}
 }
 .posts {
-
 	&__pagination-item {
 	}
 
@@ -50,7 +102,6 @@
 .swiper-wrapper {
 }
 .cases {
-
 	&__item {
 	}
 
@@ -63,7 +114,6 @@
 .swiper-slide {
 }
 .case2 {
-
 	&__wrap {
 	}
 
@@ -89,7 +139,6 @@
 	}
 }
 .tabs {
-
 	&__list {
 	}
 
@@ -118,7 +167,6 @@
 	}
 }
 .options {
-
 	&__list {
 	}
 
@@ -159,7 +207,6 @@
 .back {
 }
 .case {
-
 	&__list {
 	}
 

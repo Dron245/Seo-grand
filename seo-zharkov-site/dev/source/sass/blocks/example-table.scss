@@ -63,6 +63,9 @@
 		background: $color-zelenyy-01;
 		border-radius: 2px;
 	}
+	@media (max-width:$pc){
+		margin-right: -31px; 
+	}
 	@media (max-width:$tablet){
 		margin-right: -39px;
 	}

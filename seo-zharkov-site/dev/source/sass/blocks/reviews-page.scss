@@ -8,9 +8,23 @@
 		}
 
 		&__top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		}
 
 		&__full {
+			margin-bottom: toRem(100);
+			@media (max-width:$pc){
+				 margin-bottom: toRem(80);
+			}
+			@media (max-width:$tablet){
+				 margin-bottom: toRem(50);
+			}
+			@media (max-width:$mobileSmall){
+				 margin-bottom: toRem(30); 
+			}
+
 		}
 }
 .container {
@@ -24,6 +38,9 @@
 		}
 
 		&__title {
+			.reviews-page & {
+				margin-bottom: 0;
+			}
 		}
 
 		&__form {
@@ -40,9 +57,13 @@
 .reviews-cases {
 
 		&__actions {
+			
 		}
 
 		&__link {
+.reviews-page & {
+				display: inline-flex;
+			}
 		}
 
 		&__text {
@@ -74,6 +95,10 @@
 .cases-page {
 
 		&__body {
+			.reviews-page & {
+				grid-template-columns: repeat(4, 1fr);
+				margin-bottom: 0;
+			}
 		}
 
 		&__help {
