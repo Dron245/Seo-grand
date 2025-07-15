@@ -39,7 +39,7 @@
 			}
 		}
 		.callback__list {
-			column-gap: toRem(20);
+			// column-gap: toRem(20);
 		}
 		@media (max-width:75rem){
 			flex-direction: row;

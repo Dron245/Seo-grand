@@ -286,8 +286,23 @@
 
 	.blogs__category {
 		@media (max-width: $mobileSmall) {
-			margin-right: -1.9375rem;
+			// margin-right: -1.9375rem;
 		}
+		@media (max-width:84.9988rem) {
+		margin-right: -1.9375rem;
+	}
+
+	@media (max-width:$tablet) {
+		margin-right: -2.4375rem;
+	}
+
+	@media (max-width:$mobile) {
+		margin-right: -2.0625rem;
+	}
+
+	@media (max-width:$mobileSmall) {
+		margin-right: -1.25rem;
+	}
 	}
 	.form-add__description {
 		text-align: left;

@@ -1,9 +1,21 @@
 .example {
-	margin-bottom: toRem(110);
+	@media (min-width:toEm(1360.02)) {
+		margin-bottom: toRem(110);
+	}
+	@media (max-width:$pc){
+		 margin-bottom: toRem(90); 
+	}
+	@media (max-width:$mobileSmall){
+		 margin-bottom: toRem(60); 
+	}
+	@media (max-width:$mobileXSmall){
+		 margin-bottom: toRem(0); 
+	}
 	.blog__content {
 		margin-top: toRem(100);
 	}
 }
+
 .example-header {
 	
 }
@@ -18,6 +30,9 @@
 		.example & {
 			display: grid;
 			grid-template-columns: 1fr 20.9375rem;
+			@media (min-width:85.0012rem) and (max-width:98.125rem){
+				  grid-template-columns: 75% 20.9375rem;
+			}
 			@media (max-width: $pc) {
 				// grid-template-columns: 1fr;
 				row-gap: toRem(40);
@@ -76,7 +91,7 @@
 				background-color: $color-belyy;
 				padding-block: 1.25rem;
 				width: 100%;
-				left: 96px;
+				left: 6rem;
 				@media (max-width:103.125rem){
 					 left: 4.125rem; 
 				}
@@ -84,7 +99,7 @@
 					 left: 0; 
 				}
 				@media (max-width:$mobileSmall){
-					 top: 62px; 
+					 top: 3.875rem; 
 				}
 				& .blogs__category-list {
 					padding-left: toRem(30);
@@ -101,6 +116,9 @@
 				flex-wrap: wrap;
 				justify-content: center;
 			}
+		}
+		@media (max-width: toEm(476)){
+			  justify-content: flex-start;
 		}
 	}
 
@@ -226,6 +244,8 @@
 			gap: toRem(30);
 		}
 		.main-example__img {
+			border-radius: 0.75rem;
+			overflow: hidden;
 			@media (min-width: 85.0012rem) {
 				flex: 0 1;
 				@include adaptiveValue("flex-basis", 710, 690, 0, 1460, 1360);

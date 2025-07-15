@@ -19,11 +19,11 @@
 		 @include adaptiveValue("margin-bottom", 53,43,0,768,380); 
 	}
 	@media (max-width:84.9988rem) {
-		margin-right: -1.9375rem;
+		// margin-right: -1.9375rem;
 	}
 
 	@media (max-width:$tablet) {
-		margin-right: -2.4375rem;
+		// margin-right: -2.4375rem;
 	}
 
 	@media (max-width:$mobile) {
@@ -87,7 +87,10 @@ gap: toRem(12);
 		margin-top: toRem(70);
 		display: flex;
 		// flex-wrap: wrap;
-		@include adaptiveValue("gap",40 ,30,0,1920,1360);
+		@media (min-width:toEm(1360.02)){
+			@include adaptiveValue("gap",40 ,30,0,1920,1360);
+		}
+		@include adaptiveValue("gap",30 ,20,0,1360,768);
 		.cases-page & {
 			flex-direction: row;
 		}
@@ -148,6 +151,11 @@ gap: toRem(12);
 			display: none;
 			@media (max-width:100rem){
 				display: flex; 
+		  }
+		  @media (max-width: toEm(576)){
+			  .callback__item {
+				//   margin-right: 0;
+			  }
 		  }
 		}
 	}

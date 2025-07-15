@@ -36,8 +36,23 @@
 		// gap: 2.5rem;
 
 		@media (max-width:$tablet) {
-			margin-right: -2.4375rem;
+			// margin-right: -2.4375rem;
 		}
+		@media (max-width:84.9988rem) {
+		margin-right: -1.9375rem;
+	}
+
+	@media (max-width:$tablet) {
+		margin-right: -2.4375rem;
+	}
+
+	@media (max-width:$mobile) {
+		margin-right: -2.0625rem;
+	}
+
+	@media (max-width:$mobileSmall) {
+		margin-right: -1.25rem;
+	}
 	}
 
 	&__item {
@@ -97,7 +112,7 @@
 					}
 				 }
 			}
-			@media (max-width:$mobileXSmall){
+			@media (max-width:24.0625rem){
 				 width: 100%; 
 			}
 		}
@@ -137,6 +152,11 @@
 	&__actions {
 		display: flex;
 		gap: toRem(20);
+		.cases-page & {
+			@media (max-width:$mobileSmall){
+				 justify-content: center; 
+			}
+		}
 		@media (max-width: toEm(1060)){
 			width: 100%;
 			  justify-content: space-between;

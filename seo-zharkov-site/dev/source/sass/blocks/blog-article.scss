@@ -21,7 +21,7 @@
 			}
 			margin-top: toRem(60);
 			padding: 2.5rem;
-			border: 1px dashed $color-seryy-01-1;
+			border: 0.0625rem dashed $color-seryy-01-1;
 			border-radius: 0.75rem;
 			@media (max-width:$tablet){
 				margin-top: toRem(50);
@@ -97,7 +97,7 @@
 		@media (max-width: toEm(700)){
 			  flex-direction: column;
 		}
-		@media (max-width:385px){
+		@media (max-width:24.0625rem){
 			padding: 1.25rem; 
 		}
 	}

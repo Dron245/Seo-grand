@@ -33,7 +33,7 @@ button.button {
 	&__content {
 		@media (min-width:$pc){
 			display: grid;
-			grid-template-columns: auto 335px;
+			grid-template-columns: auto 20.9375rem;
 			gap: toRem(40);
 			  
 		}
@@ -64,11 +64,15 @@ button.button {
 }
 
 .cost-cell {
+	position: relative;
 	font-size: 1.25rem;
 		line-height: 100%;
 		color: #f36515;
 		font-family: "Unbounded-Bold";
 		span {
+			.blog & {
+				position: absolute;
+			}
 			font-size: toRem(13);
 			font-family: 'Manrope1';
 		}
