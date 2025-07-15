@@ -45,6 +45,9 @@
 		border: 0.0625rem solid $color-seryy-01-1;
 		border-radius: 0.75rem;
 		padding: 1.25rem 1.875rem 1.875rem 1.875rem;
+		@media (max-width:$mobileSmall){
+			padding: 1.25rem; 
+	  }
 		.case__link {
 			margin-bottom: toRem(25);
 		}
@@ -232,7 +235,15 @@
 		display: grid;
 		place-items: center;
 		aspect-ratio: 9/12.35;
-
+		@media (max-width:$tablet){
+			aspect-ratio: 310/374;
+		}
+		@media (max-width:$mobileSmall){
+			 aspect-ratio: 200/244; 
+		}
+		@media (max-width:$mobileXSmall){
+			 aspect-ratio: 300/244; 
+		}
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}

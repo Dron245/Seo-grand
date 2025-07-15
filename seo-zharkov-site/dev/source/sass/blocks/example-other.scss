@@ -15,16 +15,16 @@
 	&__slider {
 		overflow: hidden;
 		@media (max-width:$pc){
-		margin-right: -31px; 
+		margin-right: -1.9375rem; 
 	}
 	@media (max-width:$tablet){
-		margin-right: -39px;
+		margin-right: -2.4375rem;
 	}
 	@media (max-width:$mobile){
-		margin-right: -33px; 
+		margin-right: -2.0625rem; 
 	}
 	@media (max-width:$mobileSmall){
-		margin-right: -20px; 
+		margin-right: -1.25rem; 
 	}
 	}
 }
@@ -48,7 +48,7 @@
 }
 .cases__title {
 	.example__other & {
-		padding-right: 8px;
+		padding-right: 0.5rem;
 		padding: 0;
 		margin: 0;
 	}
@@ -56,7 +56,7 @@
 .clients {
 	&__show-all[class] {
 		.example__other[class] & {
-			padding-block: 17.2px;
+			padding-block: 1.075rem;
 			@media (min-width:toEm(768.02)){
 				  &.reviews-cases__show-all_bottom {
 					display: none;

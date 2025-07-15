@@ -1,402 +1,461 @@
-.main {
-}
-.anpia {
-}
+.main {}
+
+.anpia {}
+
 .reviews-page {
 
-		&__content {
+	&__content {}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width:$mobile) {
+			flex-direction: column;
+			@include adaptiveValue("row-gap", 30, 20, 0, 768, 380);
+		}
+	}
+
+	&__other-l {
+		flex: 0 0 45%;
+
+		@media (max-width:$tablet) {
+			flex: 0 0 55%;
 		}
 
-		&__top {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+		@media (max-width:$mobile) {
+			flex: 0 0 100%;
+			text-align: center;
+		}
+	}
+
+	&__full {
+		margin-bottom: toRem(100);
+
+		@media (max-width:$pc) {
+			margin-bottom: toRem(80);
 		}
 
-		&__full {
-			margin-bottom: toRem(100);
-			@media (max-width:$pc){
-				 margin-bottom: toRem(80);
-			}
-			@media (max-width:$tablet){
-				 margin-bottom: toRem(50);
-			}
-			@media (max-width:$mobileSmall){
-				 margin-bottom: toRem(30); 
-			}
-
+		@media (max-width:$tablet) {
+			margin-bottom: toRem(50);
 		}
+
+		@media (max-width:$mobileSmall) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__text {
+		font-size: toRem(15);
+		margin-top: toRem(15);
+	}
 }
-.container {
-}
+
+.container {}
+
 .blogs {
 
-		&__top {
-		}
+	&__top {}
 
-		&__page {
-		}
+	&__page {}
 
-		&__title {
-			.reviews-page & {
-				margin-bottom: 0;
-			}
+	&__title {
+		.reviews-page & {
+			margin-bottom: 0;
 		}
+	}
 
-		&__form {
-		}
+	&__form {}
 }
+
 .page-top {
 
-		&__item {
+	&__item {
 
-			&_active {
-			}
-		}
+		&_active {}
+	}
 }
+
 .reviews-cases {
 
-		&__actions {
-			
-		}
+	&__actions {
+		.reviews-page & {
+			justify-content: center;
 
-		&__link {
-.reviews-page & {
-				display: inline-flex;
+			@media (max-width:$mobile) {
+				@include adaptiveValue("gap", 10, 6, 0, 768, 380);
+			}
+		}
+	}
+
+	&__link {
+		.reviews-page & {
+			display: inline-flex;
+
+			@media (max-width:$mobile) {
+				padding: 10px 23px 10px 15px;
+			}
+		}
+	}
+
+	&__show-all {
+		&_top {
+			.reviews-page & {
+				align-self: initial;
+
+				@media (max-width:$mobile) {
+					display: none;
+				}
 			}
 		}
 
-		&__text {
+		&_bottom {
+			.reviews-page & {
+				@media (max-width:$mobile) {
+					display: block;
+					margin-top: toRem(20);
+				}
+			}
 		}
+	}
 
-		&__item {
-		}
+	&__text {}
 
-		&__img {
+	&__item {
+		&_text {
+			display: flex;
+			flex-direction: column;
+			.reviews-cases__img,
+			.reviews-cases__user-company,
+			.case2__link {
+				display: none;
+			}
+			.reviews-cases__user {
+				margin-top: auto;
+			}
+			.case__link {
+				order: 3;
+				margin-bottom: toRem(0);
+			}
+			.reviews-cases__body {
+				aspect-ratio: initial;
+				background-color: initial;
+				img {
+					max-height: initial;
+				}
+			}
 		}
+	}
 
-		&__body {
-		}
+	&__img {}
 
-		&__button {
-		}
+	&__body {}
 
-		&__user {
-		}
+	&__button {}
 
-		&__user-name {
-		}
+	&__user {}
 
-		&__user-company {
-		}
+	&__user-name {}
+
+	&__user-company {}
 }
-.arrow-svg {
-}
+
+.arrow-svg {}
+
 .cases-page {
 
-		&__body {
-			.reviews-page & {
-				grid-template-columns: repeat(4, 1fr);
-				margin-bottom: 0;
+	&__body {
+		.reviews-page & {
+			grid-template-columns: repeat(4, 1fr);
+			margin-bottom: 0;
+			gap: toRem(40);
+
+			@media (max-width:$pc) {
+				grid-template-columns: repeat(3, 1fr);
+				gap: toRem(30);
+			}
+
+			@media (max-width:$mobile) {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			@media (max-width:28.125rem) {
+				grid-template-columns: 1fr;
+				gap: toRem(20);
 			}
 		}
+	}
 
-		&__help {
+	&__help {
+		.reviews-page & {
+			margin-top: toRem(80);
+
+			@media (max-width:$pc) {
+				margin-top: toRem(70);
+			}
+
+			@media (max-width:$tablet) {
+				margin-top: toRem(60);
+			}
+
+			@media (max-width:$mobileXSmall) {
+				margin-top: toRem(50);
+			}
 		}
+	}
 }
-.swiper-slide {
-}
+
+.swiper-slide {}
+
 .case {
 
-		&__link {
-		}
+	&__link {}
 
-		&__list {
-		}
+	&__list {}
 
-		&__item {
-		}
+	&__item {}
 
-		&__item--yandex {
-		}
+	&__item--yandex {}
 
-		&__orders {
-		}
+	&__orders {}
 
-		&__overlay {
-		}
+	&__overlay {}
 
-		&__overlay-wrap {
-		}
+	&__overlay-wrap {}
 
-		&__overlay-wrap--goggle {
-		}
+	&__overlay-wrap--goggle {}
 
-		&__img {
-		}
+	&__img {}
 
-		&__overlay-link {
-		}
+	&__overlay-link {}
 
-		&__overlay-wrap--yandex {
-		}
+	&__overlay-wrap--yandex {}
 
-		&__overlay-link--yandex {
-		}
+	&__overlay-link--yandex {}
 }
+
 .case2 {
 
-		&__link {
-		}
+	&__link {}
 
-		&__wrap {
-		}
+	&__wrap {}
 
-		&__client-link {
-		}
+	&__client-link {}
 
-		&__tabs {
-		}
+	&__tabs {}
 
-		&__img-wrap {
-		}
+	&__img-wrap {}
 
-		&__img {
-		}
+	&__img {}
 
-		&__img-link {
-		}
+	&__img-link {}
 
-		&__info {
-		}
+	&__info {}
 }
-.button {
-}
-.js-open-modal {
-}
+
+.button {}
+
+.js-open-modal {}
+
 .posts {
 
-		&__pagination {
-		}
+	&__pagination {}
 
-		&__pagination-list {
-		}
+	&__pagination-list {}
 
-		&__pagination-item {
+	&__pagination-item {
 
-			&_active {
-			}
+		&_active {}
 
-			&_more {
-			}
-		}
+		&_more {}
+	}
 
-		&__pagination-item--left {
-		}
+	&__pagination-item--left {}
 
-		&__pagination-link {
-		}
+	&__pagination-link {}
 
-		&__pagination-item--right {
-		}
+	&__pagination-item--right {}
 }
-.dots {
-}
+
+.dots {}
+
 .example {
 
-		&__other {
-		}
+	&__other {}
 
-		&__slider {
-		}
+	&__slider {}
 }
+
 .asideblog {
 
-		&__top {
+	&__top {
+		.reviews-page & {
+			align-items: flex-end;
 		}
+	}
 }
+
 .article-blog {
 
-		&__subtitle {
-		}
+	&__subtitle {}
 }
+
 .clients {
 
-		&__show-all {
-		}
+	&__show-all {}
 }
+
 .popular {
 
-		&__control {
-		}
+	&__control {}
 }
-.swiper-wrapper {
-}
+
+.swiper-wrapper {}
+
 .cases {
 
-		&__item {
-		}
+	&__title {
+		.reviews-page & {
+			@media (max-width:$tablet) {
+				text-align: left;
+			}
 
-		&__slider3 {
+			@media (max-width:$mobile) {
+				text-align: center;
+			}
 		}
+	}
 
-		&__slide3 {
-		}
+	&__item {}
+
+	&__slider3 {}
+
+	&__slide3 {}
 }
+
 .tabs {
 
-		&__list {
-		}
+	&__list {}
 
-		&__panel {
-		}
+	&__panel {}
 
-		&__element {
-		}
+	&__element {}
 
-		&__dots {
-		}
+	&__dots {}
 
-		&__dot {
-		}
+	&__dot {}
 
-		&__btns {
-		}
+	&__btns {}
 
-		&__next {
-		}
+	&__next {}
 
-		&__btn {
-		}
+	&__btn {}
 
-		&__prev {
-		}
+	&__prev {}
 }
+
 .options {
 
-		&__list {
-		}
+	&__list {}
 
-		&__item {
-		}
+	&__item {}
 
-		&__item--google {
-		}
+	&__item--google {}
 
-		&__item--yandex {
-		}
+	&__item--yandex {}
 
-		&__item--traffic {
-		}
+	&__item--traffic {}
 }
-.tab {
-}
-.active {
-}
-.tab2 {
-}
-.swiper {
-}
-.swiper-initialized {
-}
-.swiper-horizontal {
-}
-.swiper-backface-hidden {
-}
-.swiper-wrapper-wrap {
-}
-.swiper-slide-active {
-}
-.swiper-notification {
-}
-.forward {
-}
-.back {
-}
+
+.tab {}
+
+.active {}
+
+.tab2 {}
+
+.swiper {}
+
+.swiper-initialized {}
+
+.swiper-horizontal {}
+
+.swiper-backface-hidden {}
+
+.swiper-wrapper-wrap {}
+
+.swiper-slide-active {}
+
+.swiper-notification {}
+
+.forward {}
+
+.back {}
+
 .help-cases {
 
-		&__pcnote {
-		}
+	&__pcnote {}
 
-		&__link {
+	&__link {
 
-			&_tg {
-			}
+		&_tg {}
 
-			&_whatsApp {
-			}
-		}
+		&_whatsApp {}
+	}
 
-		&__img {
-		}
+	&__img {}
 }
+
 .seo {
 
-		&__title {
-		}
+	&__title {}
 
-		&__text {
-		}
+	&__text {}
 }
+
 .career-aside {
 
-		&__list {
-		}
+	&__list {}
 }
+
 .callback {
 
-		&__wrap {
-		}
+	&__wrap {}
 
-		&__text {
-		}
+	&__text {}
 
-		&__img-wrap {
-		}
+	&__img-wrap {}
 
-		&__img {
-		}
+	&__img {}
 
-		&__icon {
-		}
+	&__icon {}
 
-		&__list {
-		}
+	&__list {}
 
-		&__list--circle {
-		}
+	&__list--circle {}
 
-		&__item {
-		}
+	&__item {}
 
-		&__link {
-		}
+	&__link {}
 
-		&__link--circle {
-		}
+	&__link--circle {}
 
-		&__link--telegram {
-		}
+	&__link--telegram {}
 
-		&__link--whatsapp {
-		}
+	&__link--whatsapp {}
 
-		&__link--vk {
-		}
+	&__link--vk {}
 }
 
-.form-callback {
-}
-.visually-hidden {
-}
+.form-callback {}
+
+.visually-hidden {}
+
 .callback-form {
 
-		&__wrap {
-		}
+	&__wrap {}
 
-		&__title {
-		}
+	&__title {}
 
-		&__close-btn {
-		}
+	&__close-btn {}
 }

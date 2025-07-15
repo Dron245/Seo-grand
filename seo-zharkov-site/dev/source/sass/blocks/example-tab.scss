@@ -4,37 +4,41 @@
 
 .seo__options.is-active .options__icon {
 	position: absolute;
-	right: 25.5px;
+	right: 1.5938rem;
 	transition: all .3s;
 	transform: rotate(-180deg);
 	background-color: #fff
 }
+
 .example {
 
-	&__part {
-	}
+	&__part {}
 
-	&__title {
-		
-	}
+	&__title {}
 }
+
 .example-tab {
 	margin-top: toRem(70);
+
 	.seo.tabs {
 		padding: 0;
 	}
-	@media (max-width:$tablet){
+
+	@media (max-width:$tablet) {
 		margin-top: toRem(60);
 	}
 
 	&__title {
-		@include adaptiveValue("font-size", 32, 24,0,1360,380);
-		@media (min-width:toEm(380.02)){
-			@include adaptiveValue("margin-bottom", 40, 30,0,1360, 768);
+		@include adaptiveValue("font-size", 32, 24, 0, 1360, 380);
+
+		@media (min-width:toEm(380.02)) {
+			@include adaptiveValue("margin-bottom", 40, 30, 0, 1360, 768);
 		}
-		@media (max-width:$mobileXSmall){
-			 margin-bottom: toRem(20); 
+
+		@media (max-width:$mobileXSmall) {
+			margin-bottom: toRem(20);
 		}
+
 		color: $color-zagolovki;
 		font-family: 'Unbounded-medium';
 		// font-size: toRem(32);
@@ -46,54 +50,53 @@
 		// }
 	}
 }
+
 .seo {
 
-	&__articles {
-	}
+	&__articles {}
 
-	&__options {
-	}
+	&__options {}
 }
+
 .tabs {
 
-	&__list {
-	}
+	&__list {}
 
-	&__panel {
-	}
+	&__panel {}
 
-	&__element {
-	}
+	&__element {}
 }
+
 .options {
 	.example-tab & {
-		@media (min-width:toEm(380.02)){
-		  
-			@include adaptiveValue("margin-bottom", 40, 30,0,1360, 768);
+		@media (min-width:toEm(380.02)) {
+
+			@include adaptiveValue("margin-bottom", 40, 30, 0, 1360, 768);
 		}
-		@media (max-width:$mobileXSmall){
-			 margin-bottom: toRem(20); 
+
+		@media (max-width:$mobileXSmall) {
+			margin-bottom: toRem(20);
 		}
+
 		padding-inline: 0;
 	}
-	&__list {
-		
-	}
+
+	&__list {}
 
 	&__item {
 		.example-tab[class] & {
 			align-items: center;
 			margin-bottom: toRem(0);
 			gap: toRem(10);
-			
+
 		}
-		&.active {
-			
-		}
+
+		&.active {}
+
 		&.active span {
 			.example-tab[class] & {
 				// color: $color-belyy;
-				
+
 			}
 		}
 	}
@@ -104,52 +107,53 @@
 				top: 100%;
 			}
 		}
-		
+
 	}
 
 	&__current {
 		.example-tab & {
-			br {display: none;}
+			br {
+				display: none;
+			}
 		}
 	}
 
-	&__icon {
-	}
+	&__icon {}
 
 	&__wrap {
 		.example-tab & {
 			& .options__item {
-				@media (max-width:$mobileSmall){
+				@media (max-width:$mobileSmall) {
 					margin-right: 0;
-					padding: 0 15px 0 0;
-					margin-bottom: 12px !important;
+					padding: 0 0.9375rem 0 0;
+					margin-bottom: 0.75rem !important;
 					// border-radius: 0;
 					// border: 0;
 					font-family: "Manrope";
-					font-size: 15px;
+					font-size: 0.9375rem;
 					color: #5c6361;
 				}
 			}
 		}
-		
+
 	}
 
 	&__item--select {
 		.example-tab[class] &.options__item {
-		margin-bottom: toRem(0);
+			margin-bottom: toRem(0);
 		}
 	}
 }
-.options--seo {
-	
-}
-.active {
-}
+
+.options--seo {}
+
+.active {}
+
 .buttons-tabexample {
 
 	&__img {
 		img {
-			transform: translateY(3px);
+			transform: translateY(0.1875rem);
 		}
 	}
 
@@ -165,68 +169,79 @@
 		}
 	}
 }
+
 .clients {
 
-	&__panels {
-	}
+	&__panels {}
 }
-.select {
-}
+
+.select {}
+
 .articles {
 
 	&__panels {
 		.example-tab & {
-			@media (max-width:$pc){
-		margin-right: -31px; 
-	}
-	@media (max-width:$tablet){
-		margin-right: -39px;
-	}
-	@media (max-width:$mobile){
-		margin-right: -33px; 
-	}
-	@media (max-width:$mobileSmall){
-		margin-right: -20px; 
-	}
+			@media (max-width:$pc) {
+				margin-right: -1.9375rem;
+			}
+
+			@media (max-width:$tablet) {
+				margin-right: -2.4375rem;
+			}
+
+			@media (max-width:$mobile) {
+				margin-right: -2.0625rem;
+			}
+
+			@media (max-width:$mobileSmall) {
+				margin-right: -1.25rem;
+			}
 		}
 	}
 }
-.container {
-}
+
+.container {}
+
 .article {
 	.example-tab & {
 		img {
 			width: 100%;
 		}
+
 		padding-top: toRem(0);
-		@media (max-width:$mobile){
-			max-height: 400px;
+
+		@media (max-width:$mobile) {
+			max-height: 25rem;
 			overflow: auto;
-			scrollbar-width: thin; 
-			scrollbar-color: $color-zelenyy-01 transparent; 
-			 &::-webkit-scrollbar {
+			scrollbar-width: thin;
+			scrollbar-color: $color-zelenyy-01 transparent;
+
+			&::-webkit-scrollbar {
 				height: toRem(6);
 				width: toRem(6);
-			 }
-			 &::-webkit-scrollbar-track {
+			}
+
+			&::-webkit-scrollbar-track {
 				// background: $color-belyy;
-				border-radius: 2px;
-			 }
-			 &::-webkit-scrollbar-thumb {
+				border-radius: 0.125rem;
+			}
+
+			&::-webkit-scrollbar-thumb {
 				background: $color-zelenyy-01;
-				border-radius: 2px;
-			 }
-			 
+				border-radius: 0.125rem;
+			}
+
 		}
 	}
 }
 
 .article img {
 	.example-tab & {
-	margin: 0;
-	@media (max-width:$mobile){
-		 max-width: initial;
-		 height: initial; 
-	}
+		margin: 0;
+
+		@media (max-width:$mobile) {
+			max-width: initial;
+			height: initial;
+		}
 	}
 }
