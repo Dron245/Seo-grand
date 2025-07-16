@@ -126,7 +126,9 @@
 				@media (max-width:$mobileSmall) {
 					margin-right: 0;
 					padding: 0 0.9375rem 0 0;
-					margin-bottom: 0.75rem !important;
+					&:not(:last-child) {
+						margin-bottom: 0.75rem !important;
+					}
 					// border-radius: 0;
 					// border: 0;
 					font-family: "Manrope";
