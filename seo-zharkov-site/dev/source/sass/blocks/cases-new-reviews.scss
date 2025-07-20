@@ -1,8 +1,3 @@
-.cases {
-
-	&__reviews {}
-}
-
 .reviews-cases {
 	margin-bottom: toRem(100);
 
@@ -14,45 +9,38 @@
 		}
 	}
 
-	@media (max-width:$pc) {
+	@media (max-width: $pc) {
 		margin-bottom: toRem(80);
 		.popular__control {
 			display: none;
 		}
 	}
 
-	@media (max-width:$tablet) {
+	@media (max-width: $tablet) {
 		margin-bottom: toRem(70);
 	}
 
-	@media (max-width:$mobile) {
+	@media (max-width: $mobile) {
 		@include adaptiveValue("margin-bottom", 60, 50, 0, 768, 380);
 	}
 
 	&__content {
 
-		// display: grid;
-		// grid-template-columns: repeat(4, 1fr);
-		// gap: 2.5rem;
-
-		@media (max-width:$tablet) {
-			// margin-right: -2.4375rem;
+		@media (max-width: 84.9988rem) {
+			// margin-right: -1.9375rem;
 		}
-		@media (max-width:84.9988rem) {
-		margin-right: -1.9375rem;
-	}
 
-	@media (max-width:$tablet) {
-		margin-right: -2.4375rem;
-	}
+		@media (max-width: 61.9988rem) {
+			margin-right: -2.4375rem;
+		}
 
-	@media (max-width:$mobile) {
-		margin-right: -2.0625rem;
-	}
+		@media (max-width: $mobile) {
+			margin-right: -2.0625rem;
+		}
 
-	@media (max-width:$mobileSmall) {
-		margin-right: -1.25rem;
-	}
+		@media (max-width: $mobileSmall) {
+			margin-right: -1.25rem;
+		}
 	}
 
 	&__item {
@@ -60,9 +48,9 @@
 		border: 0.0625rem solid $color-seryy-01-1;
 		border-radius: 0.75rem;
 		padding: 1.25rem 1.875rem 1.875rem 1.875rem;
-		@media (max-width:$mobileSmall){
-			padding: 1.25rem; 
-	  }
+		@media (max-width: $mobileSmall) {
+			padding: 1.25rem;
+		}
 		.case__link {
 			margin-bottom: toRem(25);
 		}
@@ -76,8 +64,8 @@
 			}
 		}
 		button.case2__link.js-open-modal {
-			@media (max-width:$mobileSmall){
-				 width: auto; 
+			@media (max-width: $mobileSmall) {
+				width: auto;
 			}
 		}
 	}
@@ -85,35 +73,34 @@
 	&__show-all {
 		line-height: 1.4;
 		&_top[class].clients__show-all {
-			@media (min-width: toEm(992.02)){
-				  
+			@media (min-width: toEm(992.02)) {
 				margin-right: 1.25rem;
 			}
-			@media (max-width:$mobileSmall){
-				 display: none; 
+			@media (max-width: $mobile) {
+				display: none;
 			}
 		}
 		&_bottom[class] {
 			display: none;
-			&::before{
+			&::before {
 				display: none;
 			}
-			@media (max-width:$mobileSmall){
-				 display: block;
-				 margin-top: toRem(30);
-				 padding: 1rem 2.5rem 1rem 1.5rem;
-				 width: 10.625rem;
-				 margin-inline: auto;
-				 span {
+			@media (max-width: $mobile) {
+				display: block;
+				margin-top: toRem(30);
+				padding: 1rem 2.5rem 1rem 1.5rem;
+				width: 10.625rem;
+				margin-inline: auto;
+				span {
 					overflow: initial;
 					margin: initial;
-					&::before{
+					&::before {
 						right: -1.5rem;
 					}
-				 }
+				}
 			}
-			@media (max-width:24.0625rem){
-				 width: 100%; 
+			@media (max-width: 24.0625rem) {
+				width: 100%;
 			}
 		}
 	}
@@ -122,29 +109,29 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		margin-bottom: toRem(85);
-		@media (max-width: toEm(1060)){
-			  flex-wrap: wrap;
-			  row-gap: toRem(30);
-			  justify-content: space-between;
+		@media (max-width: toEm(1060)) {
+			flex-wrap: wrap;
+			row-gap: toRem(30);
+			justify-content: space-between;
 		}
 		.seo__text {
 			flex: 0 0 70%;
-			@media (max-width:$pc){
-				 flex: 0 0 49%; 
+			@media (max-width: $pc) {
+				flex: 0 0 49%;
 			}
-			@media (max-width: toEm(1060)){
-				  flex: 1 0 100%;
+			@media (max-width: toEm(1060)) {
+				flex: 1 0 100%;
 			}
 		}
-		@media (max-width:$pc) {
+		@media (max-width: $pc) {
 			margin-bottom: toRem(55);
 		}
 
-		@media (max-width:$tablet) {
+		@media (max-width: $tablet) {
 			margin-bottom: toRem(40);
 		}
 
-		@media (max-width:$mobileXSmall) {
+		@media (max-width: $mobileXSmall) {
 			margin-bottom: toRem(30);
 		}
 	}
@@ -153,14 +140,14 @@
 		display: flex;
 		gap: toRem(20);
 		.cases-page & {
-			@media (max-width:$mobileSmall){
-				 justify-content: center; 
+			@media (max-width: $mobile) {
+				justify-content: center;
 			}
 		}
-		@media (max-width: toEm(1060)){
+		@media (max-width: toEm(1060)) {
 			width: 100%;
-			  justify-content: space-between;
-			  align-items: center;
+			justify-content: space-between;
+			align-items: center;
 		}
 		.posts__pagination-item {
 			width: 3.25rem;
@@ -179,8 +166,7 @@
 			flex: 0 0 auto;
 			padding: 1rem toRem(24);
 			padding-right: 2.75rem;
-			@media (max-width:$mobile){
-				  
+			@media (max-width: $mobile) {
 			}
 			span {
 				margin-left: initial;
@@ -196,8 +182,8 @@
 	&__img {
 		position: relative;
 		height: 3.75rem;
-		@media (max-width:$mobile){
-			 height: 3.125rem; 
+		@media (max-width: $mobile) {
+			height: 3.125rem;
 		}
 		img {
 			position: absolute;
@@ -218,31 +204,29 @@
 		.arrow-svg {
 			stroke: $color-zelenyy-02;
 		}
-		@media (max-width:$pc) {
+		@media (max-width: $pc) {
 			display: inline-flex;
-			}
-			border: 0.0625rem solid $color-seryy-01-1;
-			border-radius: 0.5rem;
-			padding: 0.875rem 1.875rem 0.875rem 1.25rem;
-			background: $color-belyy;
-			transition: background 0.3s, color 0.3s;
-			align-items: center;
-			gap: toRem(15);
+		}
+		border: 0.0625rem solid $color-seryy-01-1;
+		border-radius: 0.5rem;
+		padding: 0.875rem 1.875rem 0.875rem 1.25rem;
+		background: $color-belyy;
+		align-items: center;
+		gap: toRem(15);
 
-			&:hover {
-				background: linear-gradient(132deg, #0dbd86 0%, #099a75 99.06%);
-				.reviews-cases__text {
-					color: $color-belyy;
-				}
-				.arrow-svg {
-					stroke: $color-seryy-01-1;
-				}
+		&:hover {
+			background: linear-gradient(132deg, #0dbd86 0%, #099a75 99.06%);
+			.reviews-cases__text {
+				color: $color-belyy;
 			}
-		
+			.arrow-svg {
+				stroke: $color-seryy-01-1;
+			}
+		}
 	}
 
 	&__text {
-		font-family: 'Manrope-bold';
+		font-family: "Manrope-bold";
 		font-size: 0.875rem;
 		line-height: 140%;
 		color: $color-zagolovki;
@@ -255,21 +239,20 @@
 		display: grid;
 		place-items: center;
 		aspect-ratio: 9/12.35;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			aspect-ratio: 310/374;
 		}
-		@media (max-width:$mobileSmall){
-			 aspect-ratio: 200/244; 
+		@media (max-width: $mobileSmall) {
+			aspect-ratio: 200/244;
 		}
-		@media (max-width:$mobileXSmall){
-			 aspect-ratio: 300/244; 
+		@media (max-width: $mobileXSmall) {
+			aspect-ratio: 300/244;
 		}
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}
 	}
 
-	&__button {}
 
 	&__user {
 		&:not(:last-child) {
@@ -278,7 +261,7 @@
 	}
 
 	&__user-name {
-		font-family: 'Manrope-bold';
+		font-family: "Manrope-bold";
 		font-size: 1.125rem;
 		line-height: 140%;
 		color: $color-zagolovki;
@@ -294,26 +277,3 @@
 		color: $color-seryy-00;
 	}
 }
-
-.seo {
-
-	&__title {}
-
-	&__text {}
-}
-
-.case {
-
-	&__client-info {}
-
-	&__link {}
-}
-
-.case2 {
-
-	&__link {}
-}
-
-.button {}
-
-.js-open-modal {}

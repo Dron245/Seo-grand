@@ -1,35 +1,29 @@
 .blogs {
-
+	.leaders__img-wrap {
+		all: unset;
+	}
 	&__posts {
 		margin-top: 3.75rem;
-		// margin-bottom: 6.25rem;
-		@media (max-width:$pc){
-			 margin-top: 3.125rem; 
+		@media (max-width: $pc) {
+			margin-top: 3.125rem;
 		}
-		@media (max-width:$mobile){	 
-			margin-top: 2.5rem; 
+		@media (max-width: $mobile) {
+			margin-top: 2.5rem;
 		}
-		@media (max-width:$mobileSmall){
-			margin-top: 1.875rem; 
+		@media (max-width: $mobileSmall) {
+			margin-top: 1.875rem;
 		}
 	}
-}
 
-.posts {
-	
-	&__slider {
-		overflow-x: clip;
-		overflow-y: visible;
-	}
 	&__list {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 2.5rem;
-		
+
 		@media (max-width: $pc) {
 			grid-template-columns: 1fr 1fr;
 			gap: 1.875rem;
-			@include adaptiveValue("gap", 30, 20,0,576,380);
+			@include adaptiveValue("gap", 30, 20, 0, 576, 380);
 		}
 
 		@media (max-width: 43.75rem) {
@@ -40,41 +34,43 @@
 			gap: toRem(0);
 		}
 	}
+}
 
+.posts {
 	&__slider {
+		overflow-x: clip;
+		overflow-y: visible;
 	}
-	&__post {}
 
 	&__pagination {
 		margin-top: 3.75rem;
 		display: flex;
 		gap: 0.9375rem;
-		@media (max-width:$pc){
-			 margin-top: 3.125rem; 
+		@media (max-width: $pc) {
+			margin-top: 3.125rem;
 		}
-		@media (max-width:$tablet){	 
-			margin-top: 2.5rem; 
+		@media (max-width: $tablet) {
+			margin-top: 2.5rem;
 			flex-wrap: wrap;
 		}
-		@media (max-width:$mobile){
-			margin-top: 1.875rem; 
+		@media (max-width: $mobile) {
+			margin-top: 1.875rem;
 		}
 	}
 
 	&__pagination-list {
 		display: inline-flex;
-		@media (min-width:$mobile){
+		@media (min-width: $mobile) {
 			gap: 0.9375rem;
-			  
 		}
-		
-		@media (max-width:$tablet){
+
+		@media (max-width: $tablet) {
 			display: flex;
 			width: 100%;
-			justify-content: space-between; 
+			justify-content: space-between;
 		}
-		@media (max-width: toEm(380)){
-			  justify-content: initial;
+		@media (max-width: toEm(380)) {
+			justify-content: initial;
 		}
 	}
 
@@ -89,15 +85,15 @@
 		flex: 0 0 3.5rem;
 		height: 3.5rem;
 		// aspect-ratio: 1/1;
-		transition: background .3s;
+		transition: background 0.3s;
 		position: relative;
 		overflow: hidden;
 		&:has(a) a {
 			display: flex;
 			align-items: center;
 		}
-		&::after{
-			content:'';
+		&::after {
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -106,56 +102,56 @@
 			background: linear-gradient(105deg, #c4f756 16.45%, #9ed42a 100%);
 			z-index: 1;
 			opacity: 0;
-			transition: opacity .5s;
+			transition: opacity 0.5s;
 		}
-		@media (max-width: toEm(700)){
-			  &:nth-last-child(2), &:nth-last-child(3) {
-				  display: none;
-			  }
+		@media (max-width: toEm(700)) {
+			&:nth-last-child(2),
+			&:nth-last-child(3) {
+				display: none;
+			}
 		}
-		@media (max-width: 32.5rem){
-			 &:nth-last-child(4), &:nth-last-child(5) {
-				  display: none;
-			 } 
+		@media (max-width: 32.5rem) {
+			&:nth-last-child(4),
+			&:nth-last-child(5) {
+				display: none;
+			}
 		}
-		@media (max-width:$mobileSmall){
+		@media (max-width: $mobileSmall) {
 			width: 2.875rem;
 			flex: 0 0 2.875rem;
-			height: 2.875rem; 
+			height: 2.875rem;
 		}
-		@media (max-width: toEm(700)){
-			  width: toRem(46);
-			  height: toRem(46);
-			  flex: 0 0 toRem(46);
+		@media (max-width: toEm(700)) {
+			width: toRem(46);
+			height: toRem(46);
+			flex: 0 0 toRem(46);
 		}
-		@media (max-width: toEm(380)){
-			  &:not(:last-child) {
-				@include adaptiveValue("margin-right", 12.8,1,0,380,320); 
-			  }
+		@media (max-width: toEm(380)) {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-right", 12.8, 1, 0, 380, 320);
+			}
 		}
 		&_more {
 			display: flex;
-		align-items: center;
-		gap: 0.9375rem;
-		flex: 0 0 auto;
-		width: auto;
-		// aspect-ratio: initial;
-		padding-inline: 1.875rem;
-		@media (max-width:$tablet){
-			width: 100%;
-			// flex: 1 1 100%;
-			// height: 3.5rem;
-			justify-content: center;
+			align-items: center;
+			gap: 0.9375rem;
+			flex: 0 0 auto;
+			width: auto;
+			padding-inline: 1.875rem;
+			@media (max-width: $tablet) {
+				width: 100%;
+				justify-content: center;
+			}
+			&:hover {
+				& .dots {
+					stroke: $color-zagolovki;
+				}
+			}
 		}
-		&:hover{
-			& .dots {
-				stroke: $color-zagolovki;
-		}
-		}}
 		&:not(.posts__pagination-item_active):hover:after {
 			opacity: 1;
 		}
-		&:hover{
+		&:hover {
 			border: none;
 			& .posts__pagination-link {
 				color: $color-zagolovki;
@@ -174,12 +170,8 @@
 		}
 	}
 
-	&__pagination-item--left {
-		
-	}
-
 	&__pagination-link[class] {
-		font-family: 'Manrope-medium';
+		font-family: "Manrope-medium";
 		font-size: 0.875rem;
 		line-height: 160%;
 		text-align: center;
@@ -189,31 +181,28 @@
 	}
 
 	&__pagination-item--right {
-		 .posts__pagination-link {
+		.posts__pagination-link {
 			transform: rotate(180deg);
 		}
 	}
-	
 }
-
-.container {}
 
 .post {
 	background: $color-belyy;
 	border: 0.0625rem solid $color-seryy-01-1;
 	border-radius: 0.75rem;
 	padding: 1.875rem;
-	@include adaptiveValue("padding", 30, 20,0,576,380);
-	transition: box-shadow .3s linear;
-	&:hover{
-		box-shadow: 0 1.875rem 1.875rem -0.75rem rgba(72, 80, 91, .07);
+	@include adaptiveValue("padding", 30, 20, 0, 576, 380);
+	transition: box-shadow 0.3s linear;
+	&:hover {
+		box-shadow: 0 1.875rem 1.875rem -0.75rem rgba(72, 80, 91, 0.07);
 	}
 	&__header {
 		margin-bottom: 1.5625rem;
 		display: flex;
 		align-items: center;
 		column-gap: 1.25rem;
-
+		cursor: pointer;
 		&:not(:last-child) {
 			margin-bottom: 1.5625rem;
 		}
@@ -226,12 +215,15 @@
 	&__user-info {
 		display: grid;
 		row-gap: 0.25rem;
+		&:has(.post__role) {
+			position: relative;
+		}
 	}
 
 	&__username {
 		font-family: "Manrope-bold";
 		color: $color-zagolovki;
-		transition: color .3s linear;
+		transition: color 0.3s linear;
 
 		&:hover {
 			color: $color-zelenyy-01;
@@ -266,8 +258,8 @@
 		background: $color-seryy-01-2;
 		position: relative;
 		overflow: hidden;
-		&::after{
-			content:'';
+		&::after {
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -276,13 +268,13 @@
 			background: linear-gradient(105deg, #c4f756 16.45%, #9ed42a 100%);
 			z-index: 1;
 			opacity: 0;
-			transition: opacity .5s;
+			transition: opacity 0.5s;
 		}
 
 		&:hover:after {
 			opacity: 1;
 		}
-		&:hover{
+		&:hover {
 			& .post__category-link[class] {
 				color: $color-zagolovki;
 			}
@@ -293,20 +285,19 @@
 		position: relative;
 		z-index: 2;
 		font-size: 0.75rem;
-		font-family: 'Manrope-medium';
+		font-family: "Manrope-medium";
 		letter-spacing: 0.02em;
 		color: $color-seryy-01;
-		transition: color .3s linear;
+		transition: color 0.3s linear;
 	}
 
 	&__title-link {
-		
 		font-size: 1.125rem;
-		font-family: 'Manrope-bold';
+		font-family: "Manrope-bold";
 		color: $color-zagolovki;
 		display: inline-block;
-		transition: color .3s linear;
-		&:hover{
+		transition: color 0.3s linear;
+		&:hover {
 			color: $color-zelenyy-01;
 		}
 		&:not(:last-child) {
@@ -319,16 +310,17 @@
 		line-height: 160%;
 		color: $color-kontent;
 		display: -webkit-box;
-  -webkit-line-clamp: 4;       /* Максимум 3 строки */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+		-webkit-line-clamp: 4; /* Максимум 3 строки */
+		line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	&__footer {
 		display: flex;
 		gap: 1.875rem;
-		align-items: center
+		align-items: center;
 	}
 
 	&__avatar-mini {
@@ -346,7 +338,7 @@
 				left: (#{($i - 1) * 1.25}rem);
 			}
 
-			&:nth-child(n+4) {
+			&:nth-child(n + 4) {
 				display: none;
 			}
 		}
@@ -369,7 +361,7 @@
 
 		span {
 			font-size: 0.875rem;
-			font-family: 'Manrope-medium';
+			font-family: "Manrope-medium";
 			color: $color-seryy-01;
 		}
 	}
@@ -379,7 +371,7 @@
 		align-items: center;
 
 		& svg path {
-			transition: stroke .3s;
+			transition: stroke 0.3s;
 		}
 
 		&:hover {

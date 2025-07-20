@@ -1,20 +1,13 @@
 .seo__options.is-active .options__wrap {
-	display: block
+	display: block;
 }
 
 .seo__options.is-active .options__icon {
 	position: absolute;
 	right: 1.5938rem;
-	transition: all .3s;
+	transition: all 0.3s;
 	transform: rotate(-180deg);
-	background-color: #fff
-}
-
-.example {
-
-	&__part {}
-
-	&__title {}
+	background-color: #fff;
 }
 
 .example-tab {
@@ -24,80 +17,44 @@
 		padding: 0;
 	}
 
-	@media (max-width:$tablet) {
+	@media (max-width: $tablet) {
 		margin-top: toRem(60);
 	}
 
 	&__title {
 		@include adaptiveValue("font-size", 32, 24, 0, 1360, 380);
 
-		@media (min-width:toEm(380.02)) {
+		@media (min-width: toEm(380.02)) {
 			@include adaptiveValue("margin-bottom", 40, 30, 0, 1360, 768);
 		}
 
-		@media (max-width:$mobileXSmall) {
+		@media (max-width: $mobileXSmall) {
 			margin-bottom: toRem(20);
 		}
 
 		color: $color-zagolovki;
-		font-family: 'Unbounded-medium';
-		// font-size: toRem(32);
-		// @media (max-width:$mobile){
-		// 	 font-size: toRem(30); 
-		// }
-		// @media (max-width:$mobileSmall){
-		// 	 font-size: toRem(24); 
-		// }
+		font-family: "Unbounded-medium";
 	}
-}
-
-.seo {
-
-	&__articles {}
-
-	&__options {}
-}
-
-.tabs {
-
-	&__list {}
-
-	&__panel {}
-
-	&__element {}
 }
 
 .options {
 	.example-tab & {
-		@media (min-width:toEm(380.02)) {
-
+		@media (min-width: toEm(380.02)) {
 			@include adaptiveValue("margin-bottom", 40, 30, 0, 1360, 768);
 		}
 
-		@media (max-width:$mobileXSmall) {
+		@media (max-width: $mobileXSmall) {
 			margin-bottom: toRem(20);
 		}
 
 		padding-inline: 0;
 	}
 
-	&__list {}
-
 	&__item {
 		.example-tab[class] & {
 			align-items: center;
 			margin-bottom: toRem(0);
 			gap: toRem(10);
-
-		}
-
-		&.active {}
-
-		&.active span {
-			.example-tab[class] & {
-				// color: $color-belyy;
-
-			}
 		}
 	}
 
@@ -107,7 +64,6 @@
 				top: 100%;
 			}
 		}
-
 	}
 
 	&__current {
@@ -118,12 +74,10 @@
 		}
 	}
 
-	&__icon {}
-
 	&__wrap {
 		.example-tab & {
 			& .options__item {
-				@media (max-width:$mobileSmall) {
+				@media (max-width: $mobileSmall) {
 					margin-right: 0;
 					padding: 0 0.9375rem 0 0;
 					&:not(:last-child) {
@@ -137,7 +91,6 @@
 				}
 			}
 		}
-
 	}
 
 	&__item--select {
@@ -147,12 +100,7 @@
 	}
 }
 
-.options--seo {}
-
-.active {}
-
 .buttons-tabexample {
-
 	&__img {
 		img {
 			transform: translateY(0.1875rem);
@@ -172,37 +120,27 @@
 	}
 }
 
-.clients {
-
-	&__panels {}
-}
-
-.select {}
-
 .articles {
-
 	&__panels {
 		.example-tab & {
-			@media (max-width:$pc) {
+			@media (max-width: $pc) {
 				margin-right: -1.9375rem;
 			}
 
-			@media (max-width:$tablet) {
+			@media (max-width: $tablet) {
 				margin-right: -2.4375rem;
 			}
 
-			@media (max-width:$mobile) {
+			@media (max-width: $mobile) {
 				margin-right: -2.0625rem;
 			}
 
-			@media (max-width:$mobileSmall) {
+			@media (max-width: $mobileSmall) {
 				margin-right: -1.25rem;
 			}
 		}
 	}
 }
-
-.container {}
 
 .article {
 	.example-tab & {
@@ -212,7 +150,7 @@
 
 		padding-top: toRem(0);
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			max-height: 25rem;
 			overflow: auto;
 			scrollbar-width: thin;
@@ -224,7 +162,6 @@
 			}
 
 			&::-webkit-scrollbar-track {
-				// background: $color-belyy;
 				border-radius: 0.125rem;
 			}
 
@@ -232,7 +169,6 @@
 				background: $color-zelenyy-01;
 				border-radius: 0.125rem;
 			}
-
 		}
 	}
 }
@@ -241,7 +177,7 @@
 	.example-tab & {
 		margin: 0;
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			max-width: initial;
 			height: initial;
 		}

@@ -1,7 +1,3 @@
-.blog {
-	&__main {
-	}
-}
 .main-blog {
 	margin-top: 3.75rem;
 	margin-bottom: 3.75rem;
@@ -10,20 +6,20 @@
 	@media (max-width: $pc) {
 		gap: 1.875rem;
 	}
-	@media (max-width:$tablet){
+	@media (max-width: $tablet) {
 		flex-direction: column;
 		margin-bottom: toRem(40);
 	}
-	@media (max-width:$mobile){
-		 margin-top: 2.5rem;
+	@media (max-width: $mobile) {
+		margin-top: 2.5rem;
 	}
-	@media (max-width:36rem){
-		 margin-top: 1.875rem;
-		 margin-bottom: toRem(30);
+	@media (max-width: 36rem) {
+		margin-top: 1.875rem;
+		margin-bottom: toRem(30);
 	}
 	&__baner {
 		flex: 0 0 calc(1085 / 1460 * 100%);
-		
+
 		background: url("../img/blog/main.jpg") center / cover no-repeat;
 		background-position: center;
 		border-radius: 0.75rem;
@@ -33,26 +29,25 @@
 		position: relative;
 		overflow: hidden;
 		svg {
-				stroke: $color-zelenyy;
-			}
+			stroke: $color-zelenyy;
+		}
 		@media (max-width: $pc) {
 			flex: 0 0 calc(770 / 1170 * 100%);
 		}
-		@include adaptiveValue("min-height", 400, 380,0,992,768);
-		@media (max-width:$tablet){
+		@include adaptiveValue("min-height", 400, 380, 0, 992, 768);
+		@media (max-width: $tablet) {
 		}
-		@media (max-width:$mobile){
-			 padding: 1.875rem; 
+		@media (max-width: $mobile) {
+			padding: 1.875rem;
 		}
-		@media (max-width:$mobileSmall){
-			 padding: 1.25rem; 
+		@media (max-width: $mobileSmall) {
+			padding: 1.25rem;
 		}
 		&::after {
 			content: "";
 			position: absolute;
 			inset: 0;
 			background: linear-gradient(180deg, rgba(54, 78, 69, 0.5) 0%, #364e45 100%);
-			
 		}
 	}
 
@@ -65,15 +60,14 @@
 		font-weight: 500;
 		font-size: 1.75rem;
 		font-family: "Unbounded-regular";
-		// line-height: 2.625rem;
 		line-height: 150%;
 		color: $color-belyy;
 		&:not(:last-child) {
 			margin-bottom: toRem(15);
 		}
-		@media (max-width:$mobileSmall){
-			 font-size: toRem(24);
-			 line-height: 1.4;
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(24);
+			line-height: 1.4;
 		}
 	}
 
@@ -82,69 +76,46 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
 		}
-		@media (max-width:$mobileSmall){
-			 font-size: toRem(15);
-			 &:not(:last-child) {margin-bottom: toRem(20);}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(15);
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
 		}
-	}
-
-	&__actions {
 	}
 
 	&__aside {
-		// padding: 1.875rem;
 		& .post__img {
-			@media (max-width:$mobileSmall){
-				 width: toRem(44);
+			@media (max-width: $mobileSmall) {
+				width: toRem(44);
 			}
 		}
 	}
 }
-.container {
-}
+
 .post {
-	&__reaction-counts {
-	}
-
-	&__actions {
-	}
-
-	&__button {
-	}
-
 	&__title-link {
 		.blog & {
 			margin-bottom: 0.9375rem;
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				font-size: toRem(16);
 			}
-			@media (max-width:$mobile){
+			@media (max-width: $mobile) {
 				.slider {
-
 					white-space: nowrap;
 					overflow: hidden;
 					/* max-width: -webkit-fill-available; */
 					text-overflow: ellipsis;
-					width: 100%; 
+					width: 100%;
 				}
 			}
-			@media (max-width:$mobileSmall){
-				 margin-bottom: toRem(10);
+			@media (max-width: $mobileSmall) {
+				margin-bottom: toRem(10);
 			}
 		}
 	}
-
-	&__user-info {
-	}
-
-	&__username {
-	}
-
-	&__role {
-	}
 }
-.icon-w20 {
-}
+
 .form-add {
 	&__inner {
 		.blog & {
@@ -155,8 +126,8 @@
 	&__wrap {
 		.blog & {
 			padding: 1.875rem;
-			@media (max-width:$mobile){
-				 padding: 1.25rem; 
+			@media (max-width: $mobile) {
+				padding: 1.25rem;
 			}
 		}
 	}
@@ -165,7 +136,7 @@
 		.blog & {
 			margin-bottom: 3.3125rem;
 			font-size: toRem(15);
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				text-align: left;
 				margin-bottom: toRem(20);
 			}

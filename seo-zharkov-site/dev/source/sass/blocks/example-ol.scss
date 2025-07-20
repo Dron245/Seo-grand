@@ -1,17 +1,8 @@
-.example {
-
-	&__part {
-	}
-}
 .example-ol {
 	margin-top: toRem(50);
-	&__img {
-	}
 }
 .article-blog {
-
 	&__part {
-
 		&_ol {
 			.example-ol & {
 				margin: 0;
@@ -25,17 +16,5 @@
 		.example-ol & {
 			font-size: toRem(20);
 		}
-	}
-
-	&__list {
-
-		&_ol {
-		}
-	}
-
-	&__item {
-	}
-
-	&__text {
 	}
 }

@@ -15,11 +15,11 @@ button {
 .blogs {
 	&__top {
 		margin-top: 1.5rem;
-		@media (max-width:$pc){
-			 margin-top: toRem(30); 
+		@media (max-width: $pc) {
+			margin-top: toRem(30);
 		}
-		@media (max-width: toEm(576)){
-			  padding-right: 0;
+		@media (max-width: toEm(576)) {
+			padding-right: 0;
 		}
 	}
 
@@ -28,11 +28,11 @@ button {
 		column-gap: 0.3125rem;
 		align-items: center;
 		margin-bottom: 2.5rem;
-		@media (max-width:$mobile){
-			 justify-content: center; 
+		@media (max-width: $mobile) {
+			justify-content: center;
 		}
-		@media (max-width:$mobileSmall){
-			 margin-bottom: 1.875rem; 
+		@media (max-width: $mobileSmall) {
+			margin-bottom: 1.875rem;
 		}
 	}
 
@@ -41,15 +41,14 @@ button {
 		font-size: 2.25rem;
 		line-height: 150%;
 		color: $color-zagolovki;
-		@media (max-width:$pc){
-			font-size: 2rem; 
+		@media (max-width: $pc) {
+			font-size: 2rem;
 		}
 		@media (max-width: $mobile) {
 			font-size: 1.875rem;
-			
 		}
-		@media (max-width:$mobileSmall){
-			font-size: 1.75rem; 
+		@media (max-width: $mobileSmall) {
+			font-size: 1.75rem;
 		}
 		&:not(:last-child) {
 			margin-bottom: 2.5rem;
@@ -59,14 +58,10 @@ button {
 			@media (max-width: $mobile) {
 				text-align: center;
 			}
-			@media (max-width:$mobileSmall){
-				margin-bottom: 1.25rem; 
+			@media (max-width: $mobileSmall) {
+				margin-bottom: 1.25rem;
 			}
 		}
-	}
-
-	&__category {
-		
 	}
 
 	&__category-list {
@@ -77,15 +72,15 @@ button {
 		.example & {
 			justify-content: center;
 		}
-		@media (min-width:toEm(576.02)) and (max-width:$mobile) {
+		@media (min-width: toEm(576.02)) and (max-width: $mobile) {
 			justify-content: center;
 		}
-		@media (max-width: toEm(576)){
-			 flex-wrap: nowrap;
-			 overflow-x: scroll;
-			 &::-webkit-scrollbar {
-				 display: none;
-			 }
+		@media (max-width: toEm(576)) {
+			flex-wrap: nowrap;
+			overflow-x: scroll;
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 	}
 
@@ -94,17 +89,16 @@ button {
 		border-radius: 0.5rem;
 		padding: 0.8rem 1.5rem;
 		background-color: $color-seryy-01-2;
-		transition: background 0.3s;
 		position: relative;
 		overflow: hidden;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			padding: 0.5625rem 1.25rem;
 		}
-		@media (max-width:$mobile){
-			padding: 0.4375rem 1rem; 
+		@media (max-width: $mobile) {
+			padding: 0.4375rem 1rem;
 		}
-		@media (max-width: toEm(576)){
-			  overflow: initial;
+		@media (max-width: toEm(576)) {
+			overflow: initial;
 		}
 		&::after {
 			content: "";
@@ -127,13 +121,6 @@ button {
 				color: $color-zagolovki;
 			}
 		}
-		&._active {
-			& .blogs__category-link {
-				// color: $color-zagolovki;
-			}
-
-			// background: linear-gradient(108deg, #d3ff74 23.5%, #ade33b 100%);
-		}
 	}
 
 	&__category-link[class] {
@@ -146,8 +133,8 @@ button {
 		transition: color 0.3s;
 		position: relative;
 		z-index: 2;
-		@media (max-width: toEm(576)){
-			  white-space: nowrap;
+		@media (max-width: toEm(576)) {
+			white-space: nowrap;
 		}
 	}
 }

@@ -1,70 +1,50 @@
 .example {
-
 	&__part {
 		&#example-summary {
 			.article-blog__part {
-				@media (max-width:$tablet){
-					 margin-bottom: toRem(50);
+				@media (max-width: $tablet) {
+					margin-bottom: toRem(50);
 				}
-				@media (max-width:$mobileSmall){
-					 margin-bottom: toRem(40); 
+				@media (max-width: $mobileSmall) {
+					margin-bottom: toRem(40);
 				}
 			}
 		}
 	}
 }
-.example-ul, .example-ol {
+.example-ul,
+.example-ol {
 	display: flex;
 	align-items: flex-start;
 	gap: toRem(25);
 	padding-block: toRem(30);
 	border-bottom: 0.0625rem dashed $color-seryy-01-1;
-border-top: 0.0625rem dashed $color-seryy-01-1;
-margin-block: toRem(50);
-@media (max-width:$tablet){
-	
-	@include adaptiveValue("margin-block", 40, 30,0,992,380);
-}
-
-	&__bottom, .example-ol__img {
-		flex: 0 0 3.75rem;
-		@media (max-width:$mobileSmall){
-			display: none; 
-		}
+	border-top: 0.0625rem dashed $color-seryy-01-1;
+	margin-block: toRem(50);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("margin-block", 40, 30, 0, 992, 380);
 	}
 
-	&__img {
+	&__bottom,
+	.example-ol__img {
+		flex: 0 0 3.75rem;
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
 	}
 }
 .article-blog {
-
-	&__part {
-	}
-
-	&__subtitle {
-	}
-
-	&__text {
-	}
-
 	&__list-wrap {
-		.example-ul &{
+		.example-ul & {
 			border: none;
 			padding: 0;
-
 		}
-	}
-
-	&__subsubtitle {
 	}
 
 	&__list {
-		.example-ul &{
+		.example-ul & {
 			flex: 1;
 			column-count: 1;
 		}
-	}
-
-	&__item {
 	}
 }

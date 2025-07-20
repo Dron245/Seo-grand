@@ -1,29 +1,23 @@
-.blog {
-	&__aside {
-	}
-}
-.asideblog {
-}
 .example {
 	&__aside {
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-right: 0;
 		}
 		.article-blog__subtitle {
 			font-size: toRem(28);
 			margin-bottom: toRem(35);
-			@media (max-width:$pc){
-				 margin-bottom: toRem(50);
-				 font-size: toRem(32);
+			@media (max-width: $pc) {
+				margin-bottom: toRem(50);
+				font-size: toRem(32);
 			}
-			@media (max-width:$tablet){
-				 margin-bottom: toRem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: toRem(40);
 			}
-			@media (max-width:$mobileSmall){
-				 font-size: toRem(30); 
+			@media (max-width: $mobileSmall) {
+				font-size: toRem(30);
 			}
-			@media (max-width:$mobileXSmall){
-				 margin-bottom: toRem(30); 
+			@media (max-width: $mobileXSmall) {
+				margin-bottom: toRem(30);
 			}
 		}
 	}
@@ -32,19 +26,19 @@
 	.example & {
 		&:not(:last-child) {
 			margin-bottom: toRem(45);
-			@media (max-width:$tablet){
-				 margin-bottom: toRem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: toRem(40);
 			}
-			@media (max-width:$mobileSmall){
-				 margin-bottom: toRem(30); 
+			@media (max-width: $mobileSmall) {
+				margin-bottom: toRem(30);
 			}
 		}
 	}
 	&__wrap {
 		.example__aside & {
 			grid-template-columns: 1fr;
-			@media (max-width:$pc){
-				 padding: 1.25rem; 
+			@media (max-width: $pc) {
+				padding: 1.25rem;
 			}
 		}
 	}
@@ -53,19 +47,19 @@
 		.example & {
 			display: block;
 			margin-bottom: 0;
-			@media (max-width:$pc){
-				 display: flex;
-				 align-items: center;
-				 justify-content: space-between;
-				 max-width: initial;
+			@media (max-width: $pc) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				max-width: initial;
 			}
-			@media (max-width:$mobile){
-				 display: grid;
-				 grid-template-columns: 1fr 1fr;
-				 row-gap: toRem(10);
+			@media (max-width: $mobile) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				row-gap: toRem(10);
 			}
-			@media (max-width: toEm(530)){
-				  grid-template-columns: 1fr;
+			@media (max-width: toEm(530)) {
+				grid-template-columns: 1fr;
 			}
 		}
 	}
@@ -76,38 +70,32 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
-			@media (max-width:$pc){
-				 margin-bottom: toRem(0); 
+			@media (max-width: $pc) {
+				margin-bottom: toRem(0);
 			}
 		}
 	}
 
 	&__img {
 		.example__aside & {
-			@media (max-width:$pc){
-				 flex: 0 0 3.375rem; 
+			@media (max-width: $pc) {
+				flex: 0 0 3.375rem;
 			}
 		}
 	}
 
-	&__profile-icon {
-	}
-
-	&__user-info {
-	}
-
 	&__username {
 		.example__aside & {
-			@media (max-width:$pc){
-				 font-size: toRem(14); 
+			@media (max-width: $pc) {
+				font-size: toRem(14);
 			}
 		}
 	}
 
 	&__role {
 		.example__aside & {
-			@media (max-width:$pc){
-				 font-size: toRem(13); 
+			@media (max-width: $pc) {
+				font-size: toRem(13);
 			}
 		}
 	}
@@ -119,30 +107,30 @@
 			grid-template-columns: 1fr;
 			gap: toRem(20);
 			margin-bottom: 0;
-			@media (max-width:$pc){
-				 grid-template-columns: 1fr 1fr 1fr 1fr;
-				 align-items: stretch;
-				 gap: toRem(15);
+			@media (max-width: $pc) {
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				align-items: stretch;
+				gap: toRem(15);
 			}
-			@media (max-width: toEm(1260)){
-				  grid-template-columns: 1fr 1fr;
-				  @media (max-width: toEm(530)){
-					  grid-template-columns: 1fr;
-					  gap: toRem(10);
-				  }
-				  &>:nth-child(2){
-					@media (min-width:toEm(530.02)){
+			@media (max-width: toEm(1260)) {
+				grid-template-columns: 1fr 1fr;
+				@media (max-width: toEm(530)) {
+					grid-template-columns: 1fr;
+					gap: toRem(10);
+				}
+				& > :nth-child(2) {
+					@media (min-width: toEm(530.02)) {
 						grid-row: 2/3;
 						grid-column: 2/3;
 					}
-				  }
+				}
 			}
 		}
 	}
 
 	&__item {
-		@media (max-width:$mobile){
-			 margin-bottom: 0; 
+		@media (max-width: $mobile) {
+			margin-bottom: 0;
 		}
 	}
 
@@ -153,29 +141,29 @@
 			border-radius: 0.5rem;
 			transition: background-color 0.3s;
 			position: relative;
-			&::before{
-				content:'';
+			&::before {
+				content: "";
 				position: absolute;
 				left: 0;
 				top: 0;
 				width: 100%;
 				height: 100%;
-				background: linear-gradient(108deg, #d3ff74 23.5%, #ade33b 100%);;
+				background: linear-gradient(108deg, #d3ff74 23.5%, #ade33b 100%);
 				border-radius: 0.5rem;
 				z-index: -1;
 				opacity: 0;
 				transition: opacity 0.3s;
 			}
-			&:hover{
-				&:before{
+			&:hover {
+				&:before {
 					opacity: 1;
 				}
-				span{
+				span {
 					color: $color-zagolovki;
 				}
 				.icon-w20 {
-				stroke: $color-zagolovki;
-			}
+					stroke: $color-zagolovki;
+				}
 			}
 			span {
 				margin-left: 0.75rem;
@@ -186,18 +174,6 @@
 				transition: color 0.3s;
 				white-space: nowrap;
 			}
-			
 		}
 	}
-
-	&__link--telegram {
-	}
-
-	&__link--whatsapp {
-	}
-
-	&__link--vk {
-	}
-}
-.icon-w20 {
 }

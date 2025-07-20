@@ -1,9 +1,5 @@
 .example {
 
-	&__part {}
-
-	&__title {}
-
 	&__subtitle {
 		font-weight: 500;
 		font-size: 1.5rem;
@@ -11,11 +7,11 @@
 		color: $color-zelenyy-01;
 		font-family: "Unbounded-semibold";
 		margin-bottom: toRem(50);
-		@media (max-width:$mobile){
-			 margin-bottom: toRem(30); 
+		@media (max-width: $mobile) {
+			margin-bottom: toRem(30);
 		}
-		@media (max-width:$mobileSmall){
-			 font-size: toRem(18); 
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(18);
 		}
 	}
 }
@@ -23,8 +19,8 @@
 .example-tab__title {
 	.example-table & {
 		margin-bottom: toRem(20);
-		@media (max-width:$mobile){
-			 margin-bottom: toRem(10); 
+		@media (max-width: $mobile) {
+			margin-bottom: toRem(10);
 		}
 	}
 }
@@ -32,16 +28,13 @@
 .example-table {
 	margin-block: toRem(70);
 
-	@media (max-width:$mobile) {
+	@media (max-width: $mobile) {
 		margin-block: toRem(50);
 	}
 
-	@media (max-width:$mobileSmall) {
+	@media (max-width: $mobileSmall) {
 		margin-block: toRem(40);
 	}
-	
-
-	&__content {}
 }
 
 .table-example {
@@ -63,26 +56,25 @@
 		background: $color-zelenyy-01;
 		border-radius: 0.125rem;
 	}
-	@media (max-width:$pc){
-		margin-right: -1.9375rem; 
+	@media (max-width: $pc) {
+		margin-right: -1.9375rem;
 	}
-	@media (max-width:$tablet){
+	@media (max-width: $tablet) {
 		margin-right: -2.4375rem;
 	}
-	@media (max-width:$mobile){
-		margin-right: -2.0625rem; 
+	@media (max-width: $mobile) {
+		margin-right: -2.0625rem;
 	}
-	@media (max-width:$mobileSmall){
-		margin-right: -1.25rem; 
+	@media (max-width: $mobileSmall) {
+		margin-right: -1.25rem;
 	}
 	&__row {
 		width: fit-content;
 		display: grid;
 		grid-template-columns: 11.25rem 6.875rem 6.875rem 7.75rem 9rem 8.875rem 6.5rem 10.6875rem;
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			grid-template-columns: 8.75rem 6.875rem 6.875rem 7.75rem 9rem 8.875rem 6.5rem 10.6875rem;
-
 		}
 
 		&:nth-child(even) {
@@ -92,8 +84,8 @@
 		&:nth-child(odd) {
 			background: $color-seryy-01-2;
 			border-radius: 1rem;
-			@media (max-width:$mobile){
-				 border-radius: 0.5rem; 
+			@media (max-width: $mobile) {
+				border-radius: 0.5rem;
 			}
 		}
 
@@ -118,8 +110,8 @@
 			font-family: "Manrope-bold";
 			line-height: 1.5;
 			height: 4.5rem;
-			@media (max-width:$mobile){
-				 height: 3.5rem; 
+			@media (max-width: $mobile) {
+				height: 3.5rem;
 			}
 			.table-example__cell {
 				padding-block: 0;
@@ -127,15 +119,13 @@
 		}
 	}
 
-
-
 	&__cell {
 		padding: 1.5rem toRem(20);
 		align-self: center;
 		text-align: center;
 		color: $color-zagolovki;
-		@media (max-width:$mobile){
-			padding: 1rem 1.25rem; 
+		@media (max-width: $mobile) {
+			padding: 1rem 1.25rem;
 		}
 	}
 }

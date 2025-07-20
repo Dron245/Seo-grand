@@ -1,24 +1,10 @@
-.example {
-
-	&__part {
-	}
-}
-.example-result {
-}
 .article-blog {
-
-	&__part {
-	}
-
-	&__subtitle {
-	}
-
 	&__text {
 		.example-result & {
 			padding-left: toRem(25);
 			border-left: 0.25rem solid $color-zelenyy-03;
-			@media (max-width:$mobileXSmall){
-				 font-size: toRem(16); 
+			@media (max-width: $mobileXSmall) {
+				font-size: toRem(16);
 			}
 		}
 	}

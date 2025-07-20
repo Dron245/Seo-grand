@@ -1,23 +1,22 @@
 .blogs {
-
 	&__popular {
 		@include adaptiveValue("margin-top", 100, 80, 0, 1920, 1360);
-		
+
 		@media (max-width: toEm(768)) {
 			padding-right: 0;
 		}
 
 		margin-bottom: 5rem;
 
-		@media (max-width:$tablet) {
+		@media (max-width: $tablet) {
 			margin-bottom: 4.375rem;
 		}
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			margin-bottom: 3.75rem;
 		}
 
-		@media (max-width:36rem) {
+		@media (max-width: 36rem) {
 			margin-bottom: 3.125rem;
 			margin-top: toRem(60);
 		}
@@ -35,54 +34,35 @@
 		align-items: center;
 		margin-bottom: 70px;
 
-		@media (max-width:$pc) {
+		@media (max-width: $pc) {
 			margin-bottom: 60px;
 		}
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			margin-bottom: 40px;
 			justify-content: center;
 		}
 
-		@media (max-width:$mobileSmall) {
+		@media (max-width: $mobileSmall) {
 			margin-bottom: 30px;
 		}
 	}
 
-	// .posts__list {
-	// 	@media (max-width:$pc){
-	// 		 grid-template-columns: 1fr 1fr; 
-	// 	}
-	// 	@media (max-width: toEm(700)){
-	// 		  grid-template-columns: initial;
-	// 		  display: flex;
-	// 	}
-	// 	@media (max-width:$mobileSmall){
-	// 		 column-gap: toRem(10); 
-	// 	}
-	// }
 	&__control {
 		display: flex;
 		column-gap: 20px;
 
-		@media (max-width:$mobile) {
+		@media (max-width: $mobile) {
 			display: none;
 		}
 	}
-
-	&__title {}
-
-	&__list {}
 }
 
 .popular .blogs__title {
 	margin-bottom: 0;
 }
 
-.container {}
-
 .posts {
-
 	&__post {
 		@media (max-width: toEm(700)) {
 			flex: 0 0 330px;
@@ -91,7 +71,6 @@
 }
 
 .post {
-
 	&__header {
 		.popular & {
 			&:not(:last-child) {
@@ -106,10 +85,6 @@
 		}
 	}
 
-	&__profile-icon {}
-
-	&__user-info {}
-
 	&__username {
 		.popular & {
 			font-size: 14px;
@@ -122,15 +97,14 @@
 		}
 	}
 
-	&__content {}
-
 	&__title-link {
 		.popular & {
 			font-size: 16px;
 
-			&+.post__text {
+			& + .post__text {
 				display: -webkit-box;
 				-webkit-line-clamp: 3;
+				line-clamp: 3;
 			}
 		}
 	}
@@ -165,18 +139,6 @@
 			width: 34px;
 		}
 	}
-
-	&__avatar-icon {}
-
-	&__reaction-counts {}
-
-	&__likes {}
-
-	&__views {}
-
-	&__reply {}
-
-	&__reply-button {}
 }
 
 .comments-post {
@@ -199,5 +161,3 @@
 		}
 	}
 }
-
-.button {}

@@ -1,13 +1,5 @@
-.blog {
-
-	&__aside {
-		
-	}
-}
-.asideblog {
-}
 .career-aside {
-	margin-top: toRem(26);
+	margin-top: toRem(56);
 	@media (max-width:$tablet){
 		margin-right: 0;
 	}
@@ -33,14 +25,10 @@
 		.callback__text {
 			margin-bottom: toRem(30);
 			@media (max-width:75rem){
-				//  flex-direction: column;
-				//  align-items: flex-start;
 				 row-gap: toRem(15); 
 			}
 		}
-		.callback__list {
-			// column-gap: toRem(20);
-		}
+		
 		@media (max-width:75rem){
 			flex-direction: row;
 		}
@@ -74,48 +62,5 @@
 		&::before{
 			bottom: -0.3125rem;
 		}
-		@media (min-width:toEm(1200.02)){
-			  
-			&:not(:last-child) {margin-bottom: toRem(40);}
-		}
-	}
-	&__wrap {
-	}
-
-	&__text {
-	}
-
-	&__img-wrap {
-	}
-
-	&__img {
-	}
-
-	&__list {
-		
-	}
-
-	&__list--circle {
-	}
-
-	&__item {
-	}
-
-	&__link {
-	}
-
-	&__link--circle {
-	}
-
-	&__link--telegram {
-	}
-
-	&__icon {
-	}
-
-	&__link--whatsapp {
-	}
-
-	&__link--vk {
 	}
 }

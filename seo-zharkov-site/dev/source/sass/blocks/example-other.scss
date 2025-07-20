@@ -6,26 +6,24 @@
 	}
 }
 .example {
-	
 	&__other {
-		
 		@include adaptiveValue("margin-block", 100, 50, 0, 1460, 380);
 	}
 
 	&__slider {
 		overflow: hidden;
-		@media (max-width:$pc){
-		margin-right: -1.9375rem; 
-	}
-	@media (max-width:$tablet){
-		margin-right: -2.4375rem;
-	}
-	@media (max-width:$mobile){
-		margin-right: -2.0625rem; 
-	}
-	@media (max-width:$mobileSmall){
-		margin-right: -1.25rem; 
-	}
+		@media (max-width: $pc) {
+			margin-right: -1.9375rem;
+		}
+		@media (max-width: $tablet) {
+			margin-right: -2.4375rem;
+		}
+		@media (max-width: $mobile) {
+			margin-right: -2.0625rem;
+		}
+		@media (max-width: $mobileSmall) {
+			margin-right: -1.25rem;
+		}
 	}
 }
 .asideblog {
@@ -37,15 +35,13 @@
 			margin-right: 0;
 			gap: toRem(0);
 			@include adaptiveValue("margin-bottom", 65, 30, 0, 1460, 380);
-			@media (max-width:$mobile){
-				 justify-content: center;
+			@media (max-width: $mobile) {
+				justify-content: center;
 			}
 		}
 	}
 }
 
-.article-blog {
-}
 .cases__title {
 	.example__other & {
 		padding-right: 0.5rem;
@@ -57,20 +53,16 @@
 	&__show-all[class] {
 		.example__other[class] & {
 			padding-block: 1.075rem;
-			@media (min-width:toEm(768.02)){
-				  &.reviews-cases__show-all_bottom {
+			@media (min-width: toEm(768.02)) {
+				&.reviews-cases__show-all_bottom {
 					display: none;
-				  }
+				}
 			}
 			@media (min-width: toEm(992.02)) {
 				display: block;
 				margin-right: 1.5625rem;
 			}
-			@media (max-width: $mobileSmall) {
-				// display: none;
-			}
 		}
-		
 	}
 }
 .popular {
@@ -78,169 +70,9 @@
 		.example__other & {
 			display: flex;
 			gap: toRem(25);
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				display: none;
 			}
 		}
 	}
-}
-.posts {
-	&__pagination-item {
-	}
-
-	&__pagination-item--left {
-	}
-
-	&__pagination-link {
-	}
-
-	&__pagination-item--right {
-	}
-}
-.arrow-svg {
-}
-.swiper-wrapper {
-}
-.cases {
-	&__item {
-	}
-
-	&__slider3 {
-	}
-
-	&__slide3 {
-	}
-}
-.swiper-slide {
-}
-.case2 {
-	&__wrap {
-	}
-
-	&__client-link {
-	}
-
-	&__tabs {
-	}
-
-	&__img-wrap {
-	}
-
-	&__img {
-	}
-
-	&__img-link {
-	}
-
-	&__info {
-	}
-
-	&__link {
-	}
-}
-.tabs {
-	&__list {
-	}
-
-	&__panel {
-	}
-
-	&__element {
-	}
-
-	&__dots {
-	}
-
-	&__dot {
-	}
-
-	&__btns {
-	}
-
-	&__next {
-	}
-
-	&__btn {
-	}
-
-	&__prev {
-	}
-}
-.options {
-	&__list {
-	}
-
-	&__item {
-	}
-
-	&__item--google {
-	}
-
-	&__item--yandex {
-	}
-
-	&__item--traffic {
-	}
-}
-.tab {
-}
-.active {
-}
-.tab2 {
-}
-.swiper {
-}
-.swiper-initialized {
-}
-.swiper-horizontal {
-}
-.swiper-backface-hidden {
-}
-.swiper-wrapper-wrap {
-}
-.swiper-slide-active {
-}
-.swiper-notification {
-}
-.forward {
-}
-.back {
-}
-.case {
-	&__list {
-	}
-
-	&__item {
-	}
-
-	&__item--yandex {
-	}
-
-	&__orders {
-	}
-
-	&__overlay {
-	}
-
-	&__overlay-wrap {
-	}
-
-	&__overlay-wrap--goggle {
-	}
-
-	&__img {
-	}
-
-	&__overlay-link {
-	}
-
-	&__overlay-wrap--yandex {
-	}
-
-	&__overlay-link--yandex {
-	}
-}
-.button {
-}
-.js-open-modal {
 }

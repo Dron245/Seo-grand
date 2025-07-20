@@ -281,45 +281,41 @@
 }
 
 .cases-page {
-	&__content {
-	}
-
 	.blogs__category {
 		@media (max-width: $mobileSmall) {
 			// margin-right: -1.9375rem;
 		}
-		@media (max-width:84.9988rem) {
-		margin-right: -1.9375rem;
-	}
+		@media (max-width: 84.9988rem) {
+			margin-right: -1.9375rem;
+		}
 
-	@media (max-width:$tablet) {
-		margin-right: -2.4375rem;
-	}
+		@media (max-width: $tablet) {
+			margin-right: -2.4375rem;
+		}
 
-	@media (max-width:$mobile) {
-		margin-right: -2.0625rem;
-	}
+		@media (max-width: $mobile) {
+			margin-right: -2.0625rem;
+		}
 
-	@media (max-width:$mobileSmall) {
-		margin-right: -1.25rem;
-	}
+		@media (max-width: $mobileSmall) {
+			margin-right: -1.25rem;
+		}
 	}
 	.form-add__description {
 		text-align: left;
 	}
 	&__full {
 		margin-bottom: toRem(80);
-		@media (max-width:$pc){
-			  
+		@media (max-width: $pc) {
 			margin-bottom: toRem(70);
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("margin-bottom", 60, 40,0,768,380); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("margin-bottom", 60, 40, 0, 768, 380);
 		}
 		.cases-page__body {
 			margin-bottom: toRem(54);
-			@media (max-width:$mobile){
-				 @include adaptiveValue("margin-bottom", 40, 30,0,768,380); 
+			@media (max-width: $mobile) {
+				@include adaptiveValue("margin-bottom", 40, 30, 0, 768, 380);
 			}
 		}
 	}
@@ -343,8 +339,8 @@
 		@media (max-width: $tablet) {
 			gap: toRem(30);
 			margin-bottom: toRem(50);
-			@media (max-width:$mobileSmall){
-				 gap: toRem(20); 
+			@media (max-width: $mobileSmall) {
+				gap: toRem(20);
 			}
 		}
 		@media (max-width: $mobile) {
@@ -357,26 +353,23 @@
 	}
 }
 
-
-@media (min-width:toEm(1630)){
+@media (min-width: toEm(1630)) {
 	.cases-page .case__overlay {
 		display: none;
 	}
 }
 @media (min-width: 62rem) {
-
 	.case2:hover .case__overlay {
-		 .cases-page & {
-			 max-height: fit-content;
-		 }
+		.cases-page & {
+			max-height: fit-content;
+		}
 	}
-
 }
-.case2:hover .case__overlay { 
-	@media (max-width:101.875rem){
+.case2:hover .case__overlay {
+	@media (max-width: 101.875rem) {
 		opacity: 1;
 		max-height: 56.25rem;
-		transition: all .5s ease-in-out
+		transition: all 0.5s ease-in-out;
 	}
 }
 
@@ -389,13 +382,13 @@
 .case2 {
 	.cases-page & {
 		position: relative;
-		
+
 		@media (max-width: toEm(1630)) {
 			grid-template-columns: 1fr;
 			column-gap: toRem(0);
 		}
-		@media (max-width:$pc){
-			 cursor: pointer; 
+		@media (max-width: $pc) {
+			cursor: pointer;
 		}
 		@media (max-width: $mobileSmall) {
 			padding: 1.25rem;
@@ -409,9 +402,6 @@
 				}
 			}
 		}
-	}
-
-	&__client-link {
 	}
 
 	&__tabs {
@@ -448,18 +438,14 @@
 	}
 }
 
-.main-blog {
-	&__aside {
-	}
-}
 .form-add {
 	&__inner {
 		.cases-page & {
 			margin-bottom: toRem(115);
-			@media (max-width:$pc){
-				margin-bottom: toRem(90); 
+			@media (max-width: $pc) {
+				margin-bottom: toRem(90);
 			}
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				margin-bottom: toRem(70);
 			}
 			@media (max-width: $mobileSmall) {
@@ -486,52 +472,4 @@
 			margin-bottom: toRem(0);
 		}
 	}
-
-	&__img {
-	}
-
-	&__profile-icon {
-	}
-
-	&__user-info {
-	}
-
-	&__username {
-	}
-
-	&__role {
-	}
-}
-
-.posts {
-	&__pagination {
-		.cases-page & {
-			margin-top: toRem(0);
-			margin-bottom: toRem(60);
-		}
-	}
-
-	&__pagination-list {
-	}
-
-	&__pagination-item {
-		&_active {
-		}
-
-		&_more {
-		}
-	}
-
-	&__pagination-item--left {
-	}
-
-	&__pagination-link {
-	}
-
-	&__pagination-item--right {
-	}
-}
-.arrow-svg {
-}
-.dots {
 }

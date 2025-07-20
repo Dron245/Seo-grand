@@ -31,49 +31,50 @@ button.button {
 
 .blog {
 	&__content {
-		@media (min-width:$pc){
+		@media (min-width: 85.0012rem) {
 			display: grid;
 			grid-template-columns: auto 20.9375rem;
 			gap: toRem(40);
-			  
 		}
 		margin-bottom: toRem(110);
-		@media (max-width:$pc){
+		@media (max-width: $pc) {
 			margin-bottom: toRem(80);
 			& > *:not(:last-child) {
 				margin-bottom: toRem(80);
-				@media (max-width:$mobile){
-					 margin-bottom: toRem(60); 
+				@media (max-width: $mobile) {
+					margin-bottom: toRem(60);
 				}
-				@media (max-width:$mobileSmall){
-					 margin-bottom: toRem(50); 
+				@media (max-width: $mobileSmall) {
+					margin-bottom: toRem(50);
 				}
 			}
-			//  grid-template-columns: 1fr;
 		}
-		@include adaptiveValue("margin-bottom", 70, 50,0,768,380);
-	}
-
-	&__article {
+		@include adaptiveValue("margin-bottom", 70, 50, 0, 768, 380);
 	}
 
 	&__comments {
 		grid-row: 2/3;
 	}
-	
 }
 
 .cost-cell {
 	position: relative;
 	font-size: 1.25rem;
-		line-height: 100%;
-		color: #f36515;
-		font-family: "Unbounded-Bold";
-		span {
-			.blog & {
-				position: absolute;
-			}
-			font-size: toRem(13);
-			font-family: 'Manrope1';
+	line-height: 100%;
+	color: #f36515;
+	font-family: "Unbounded-Bold";
+	span {
+		.blog & {
+			position: absolute;
 		}
+		font-size: toRem(13);
+		font-family: "Manrope1";
+	}
+}
+
+
+// Для анимации
+.blog__aside,
+.form-add, h1, h2 {
+	opacity: 0;
 }

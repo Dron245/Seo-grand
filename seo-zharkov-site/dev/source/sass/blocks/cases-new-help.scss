@@ -1,68 +1,55 @@
-.cases-page {
-
-	&__help {
-	}
-}
 .help-cases {
 	margin-bottom: toRem(100);
-	@media (max-width:$pc){
-		 margin-bottom: toRem(80); 
+	@media (max-width: $pc) {
+		margin-bottom: toRem(80);
 	}
-	@media (max-width:$tablet){
-		 margin-bottom: toRem(60); 
+	@media (max-width: $tablet) {
+		margin-bottom: toRem(60);
 	}
-	@media (max-width: toEm(920)){
-		  margin-bottom: toRem(53);
-		//   margin-right: -1.9375rem;
+	@media (max-width: toEm(920)) {
+		margin-bottom: toRem(53);
 	}
-	@media (max-width:$mobile){
-		 @include adaptiveValue("margin-bottom", 53,43,0,768,380); 
-	}
-	@media (max-width:84.9988rem) {
-		// margin-right: -1.9375rem;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("margin-bottom", 53, 43, 0, 768, 380);
 	}
 
-	@media (max-width:$tablet) {
-		// margin-right: -2.4375rem;
-	}
-
-	@media (max-width:$mobile) {
+	@media (max-width: $mobile) {
 		margin-right: -2.0625rem;
 	}
 
-	@media (max-width:$mobileSmall) {
+	@media (max-width: $mobileSmall) {
 		margin-right: -1.25rem;
 	}
 	&__pcnote {
 		display: flex;
 		gap: toRem(15);
-		@media (max-width:100rem){
-			 display: none; 
+		@media (max-width: 100rem) {
+			display: none;
 		}
 	}
 
 	&__link {
 		color: $color-belyy;
 		border-radius: 0.5rem;
-padding: 0.625rem 1.875rem 0.625rem 1.5rem;
-display: flex;
-align-items: center;
-gap: toRem(12);
+		padding: 0.625rem 1.875rem 0.625rem 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: toRem(12);
 
-.callback__text {
-	margin-bottom: toRem(0);
-	transition: background-color 0.3s;
-}
+		.callback__text {
+			margin-bottom: toRem(0);
+			transition: background-color 0.3s;
+		}
 		&_tg {
 			background-color: #08c;
-			&:hover{
-				background-color: #0AA1EC;
+			&:hover {
+				background-color: #0aa1ec;
 			}
 		}
 
 		&_whatsApp {
 			background-color: #48c95f;
-			&:hover{
+			&:hover {
 				background-color: #63e77a;
 			}
 		}
@@ -73,111 +60,71 @@ gap: toRem(12);
 		flex: 0 0 1.5rem;
 	}
 }
-.seo {
 
-	&__title {
-	}
-
-	&__text {
-	}
-}
 .career-aside {
-
 	&__list {
-		margin-top: toRem(70);
-		display: flex;
-		// flex-wrap: wrap;
-		@media (min-width:toEm(1360.02)){
-			@include adaptiveValue("gap",40 ,30,0,1920,1360);
+		@media (min-width: toEm(1360.02)) {
+			  row-gap: toRem(40);
 		}
-		@include adaptiveValue("gap",30 ,20,0,1360,768);
+
+		.help-cases & {
+			margin-top: toRem(70);
+			display: flex;
+			@media (max-width: $pc) {
+				margin-top: toRem(60);
+			}
+			@media (max-width: $tablet) {
+				margin-top: toRem(50);
+			}
+			@media (min-width: toEm(1360.02)) {
+				@include adaptiveValue("gap", 40, 30, 0, 1920, 1360);
+			}
+			@include adaptiveValue("gap", 30, 20, 0, 1360, 768);
+		}
 		.cases-page & {
 			flex-direction: row;
 		}
-		@media (max-width:$pc){
-			 margin-top: toRem(60); 
-		}
-		@media (max-width:$tablet){
-			 margin-top: toRem(50); 
-		}
-		@media (max-width: toEm(920)){
+
+		@media (max-width: toEm(920)) {
 			padding-bottom: toRem(7);
-			overflow-y: hidden; 
+			overflow-y: hidden;
 			overflow-x: auto;
 			&::-webkit-scrollbar {
 				width: 0;
 				height: 0;
 			}
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("margin-top", 40, 30, 0, 768, 380); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("margin-top", 40, 30, 0, 768, 380);
 		}
 	}
 }
 .callback {
 	.cases-page & {
 		flex: 1;
-		@media (max-width: toEm(920)){
-			flex: 0 0 calc(50% - 1.625rem); 
+		@media (max-width: toEm(920)) {
+			flex: 0 0 calc(50% - 1.625rem);
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 		}
-		@media (max-width:$mobileSmall){
-			  flex: 0 0 65%;
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 65%;
 		}
-	}
-	&__wrap {
 	}
 
 	&__text {
 		.cases-page & {
 			line-height: 1.3;
 			font-size: toRem(14);
-
 		}
-	}
-
-	&__img-wrap {
-	}
-
-	&__img {
-	}
-
-	&__icon {
 	}
 
 	&__list {
 		.cases-page & {
 			display: none;
-			@media (max-width:100rem){
-				display: flex; 
-		  }
-		  @media (max-width: toEm(576)){
-			  .callback__item {
-				//   margin-right: 0;
-			  }
-		  }
+			@media (max-width: 100rem) {
+				display: flex;
+			}
 		}
-	}
-
-	&__list--circle {
-	}
-
-	&__item {
-	}
-
-	&__link {
-	}
-
-	&__link--circle {
-	}
-
-	&__link--telegram {
-	}
-
-	&__link--whatsapp {
-	}
-
-	&__link--vk {
 	}
 }
