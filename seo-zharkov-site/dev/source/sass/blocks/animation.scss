@@ -1,0 +1,33 @@
+// Главная, карточки предложений
+.card__price {
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: white;
+		transform: translateX(0%);
+		transition: transform 1.2s ease-out;
+		z-index: 1;
+
+		&.revial-price {
+			transform: translateX(100%);
+		}
+	}
+}
+
+.tariffs__card{
+	opacity: 0;
+}
+.card__note,
+.card__list,
+.card__seo,
+.card__order {
+	opacity: 0;
+	transform: translateY(20px);
+}
