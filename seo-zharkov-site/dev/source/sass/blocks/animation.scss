@@ -14,10 +14,9 @@
 		transform: translateX(0%);
 		transition: transform 1.2s ease-out;
 		z-index: 1;
-
-		&.revial-price {
-			transform: translateX(100%);
-		}
+	}
+	&.revial-price:after {
+		transform: translateX(100%);
 	}
 }
 
