@@ -2,6 +2,9 @@
 	.leaders__img-wrap {
 		all: unset;
 	}
+	.leaders__text {
+		all: unset;
+	}
 	&__posts {
 		margin-top: 3.75rem;
 		@media (max-width: $pc) {

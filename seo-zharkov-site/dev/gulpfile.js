@@ -156,7 +156,7 @@ const server = (done) => {
 	browser.init({
 		server: {
 			baseDir: 'build',
-			index: 'index.html',
+			index: 'blog.html',
 		},
 		// host: '192.168.0.59',
 		// host: '10.52.47.10',

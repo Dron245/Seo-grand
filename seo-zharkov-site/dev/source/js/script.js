@@ -1451,11 +1451,11 @@ document.addEventListener('DOMContentLoaded', function () {
 									};
 						
 									showElement(note, 0);
-									showElement(list, 200);
-									showElement(seo, 400);
-									showElement(order, 600);
+									showElement(list, 100);
+									showElement(seo, 200);
+									showElement(order, 300);
 						
-								}, index * delayStep + 600); // +600 мс — окончание анимации ::after
+								}, index * delayStep + 300); // +600 мс — окончание анимации ::after
 							}
 						});
 	
@@ -1480,10 +1480,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			{ opacity: 1, transform: 'translateY(0px)' },
 		],
 		{
-			duration: 2000,
+			duration: 1000,
 			easing: 'ease-out',
 			fill: 'forwards',
 		},
-		200 // задержка между карточками
+		150 // задержка между карточками
 	);
 });
