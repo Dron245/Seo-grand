@@ -1,0 +1,473 @@
+.main {
+}
+.anpia {
+}
+.clients-page {
+
+		&__wrapper {
+			margin-top: toRem(60);
+		}
+
+		&__content {
+			display: grid;
+			gap: toRem(40);
+			grid-template-columns: 1fr 1fr;
+			@media (max-width:$pc){
+				 gap: toRem(30); 
+			}
+		}
+
+		&__item {
+			overflow: hidden;
+		}
+
+		&__top {
+			border-radius: 12px 12px 0 0;
+		}
+
+		&__bottom {
+			padding: 30px;
+			border-radius: 0 0 12px 12px;
+			border: 1px solid $color-seryy-01-1;
+			border-top: none;
+			@media (max-width:$tablet){
+				padding: 24px;
+			}
+		}
+
+		&__img {
+			position: relative;
+			aspect-ratio: 710/200;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				max-width: initial;
+			}
+		}
+
+		&__footer {
+			display: flex;
+			align-items: center;
+			justify-content:space-between;
+			margin-top: toRem(25);
+		}
+}
+.reviews-page {
+
+		&__content {
+		}
+
+		&__other-l {
+		}
+
+		&__text {
+		}
+}
+.container {
+}
+.blogs {
+
+		&__top {
+		}
+
+		&__page {
+		}
+
+		&__title {
+		}
+
+		&__category {
+		}
+
+		&__category-list {
+		}
+
+		&__category-item {
+		}
+
+		&__category-link {
+		}
+
+		&__form {
+		}
+}
+.page-top {
+
+		&__item {
+
+			&_active {
+			}
+		}
+}
+
+.case {
+
+		&__top-mobile {
+			.clients-page__item & {
+				display: grid;
+				grid-template-columns: auto 180px;
+				gap: toRem(20);
+				padding-bottom: toRem(0);
+				&:not(:last-child) {margin-bottom: toRem(25);}
+			}
+		}
+
+		&__link {
+			.clients-page__item & {
+				grid-column: 1/3;
+				max-width: fit-content;
+				margin-bottom: toRem(0);
+			}
+		}
+
+		&__list {
+			.clients-page__item & {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				column-gap: toRem(20);
+			}
+		}
+
+		&__item {
+			.clients-page__item & {
+				padding-block: toRem(15);
+				&:nth-child(1), &:nth-child(2) {
+					border-top: 1.5px dashed #e4eeea;
+				}
+				margin-bottom: toRem(0);
+				p:last-child {
+					margin-bottom: toRem(0);
+				}
+			}
+		}
+
+		&__item--yandex {
+		}
+
+		&__orders {
+		}
+
+		&__overlay {
+		}
+
+		&__overlay-wrap {
+		}
+
+		&__overlay-wrap--goggle {
+		}
+
+		&__img {
+		}
+
+		&__overlay-link {
+		}
+
+		&__overlay-wrap--yandex {
+		}
+
+		&__overlay-link--yandex {
+		}
+}
+.article-blog {
+
+		&__subtitle {
+			.clients-page__item & {
+				margin-bottom: 0;
+			}
+		}
+}
+.main-example {
+
+		&__img {
+			&_brand {
+				.clients-page__item & {
+					padding: toRem(16) toRem(20);
+				}
+			}
+		}
+}
+.callback {
+
+		&__text {
+			.clients-page__item & {
+				margin-bottom: toRem(0);
+			}
+		}
+
+		&__img-wrap {
+		}
+
+		&__img {
+		}
+}
+.button {
+}
+.posts {
+
+		&__pagination {
+		}
+
+		&__pagination-list {
+		}
+
+		&__pagination-item {
+
+			&_active {
+			}
+
+			&_more {
+			}
+		}
+
+		&__pagination-item--left {
+		}
+
+		&__pagination-link {
+		}
+
+		&__pagination-item--right {
+		}
+}
+.arrow-svg {
+}
+.dots {
+}
+.cases-page {
+
+		&__body {
+		}
+}
+.example {
+
+		&__other {
+		}
+
+		&__slider {
+		}
+}
+.asideblog {
+
+		&__top {
+		}
+}
+.reviews-cases {
+
+		&__actions {
+		}
+
+		&__show-all {
+
+			&_top {
+			}
+
+			&_bottom {
+			}
+		}
+}
+.cases {
+
+		&__title {
+		}
+
+		&__item {
+		}
+
+		&__slider3 {
+		}
+
+		&__slide3 {
+		}
+}
+.clients {
+
+		&__show-all {
+		}
+}
+.popular {
+
+		&__control {
+		}
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.case2 {
+
+		&__wrap {
+		}
+
+		&__client-link {
+		}
+
+		&__tabs {
+		}
+
+		&__img-wrap {
+		}
+
+		&__img {
+		}
+
+		&__img-link {
+		}
+
+		&__info {
+		}
+
+		&__link {
+		}
+}
+.tabs {
+
+		&__list {
+		}
+
+		&__panel {
+		}
+
+		&__element {
+		}
+
+		&__dots {
+		}
+
+		&__dot {
+		}
+
+		&__btns {
+		}
+
+		&__next {
+		}
+
+		&__btn {
+		}
+
+		&__prev {
+		}
+}
+.options {
+
+		&__list {
+		}
+
+		&__item {
+		}
+
+		&__item--google {
+		}
+
+		&__item--yandex {
+		}
+
+		&__item--traffic {
+		}
+}
+.tab {
+}
+.active {
+}
+.tab2 {
+}
+.swiper {
+}
+.swiper-initialized {
+}
+.swiper-horizontal {
+}
+.swiper-backface-hidden {
+}
+.swiper-wrapper-wrap {
+}
+.swiper-slide-active {
+}
+.swiper-notification {
+}
+.forward {
+}
+.back {
+}
+.js-open-modal {
+}
+.form-add {
+
+		&__sites {
+		}
+
+		&__inner {
+		}
+
+		&__wrap {
+		}
+
+		&__title {
+		}
+
+		&__description {
+		}
+
+		&__form {
+		}
+
+		&__section {
+		}
+
+		&__section--name {
+		}
+
+		&__label {
+		}
+
+		&__text {
+		}
+
+		&__user {
+		}
+
+		&__text--name {
+		}
+
+		&__section--tel {
+		}
+
+		&__text--tel {
+		}
+
+		&__section--site {
+		}
+
+		&__text--site {
+		}
+
+		&__section--checkbox {
+		}
+
+		&__checkbox {
+		}
+
+		&__label--checkbox {
+		}
+
+		&__send {
+		}
+}
+.form-callback {
+}
+.visually-hidden {
+}
+.callback-form {
+
+		&__wrap {
+		}
+
+		&__title {
+		}
+
+		&__close-btn {
+		}
+}

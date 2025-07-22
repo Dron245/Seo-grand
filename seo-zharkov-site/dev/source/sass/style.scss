@@ -45,6 +45,8 @@
 @import "blocks/requisites.scss";
 @import "blocks/modal-link.scss";
 
+//стили с текущего проекта из dev tools
+@import "blocks/s-saita.scss";
 @import "mixins";
 @import "variables-anpia.scss";
 @import "common.scss";
@@ -85,6 +87,12 @@
 
 //Отзывы
 @import "blocks/reviews-page.scss";
+
+//Клиенты
+@import "blocks/clients-page.scss";
+
+//Партнёры
+@import "blocks/partners.scss";
 
 //Анимации старого кода
 @import "blocks/animation.scss";

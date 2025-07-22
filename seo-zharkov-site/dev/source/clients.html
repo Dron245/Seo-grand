@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+		/>
+		<meta name="robots" content="noindex, nofollow" />
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+		<link href="css/style.min.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="./img/favicon.ico" />
+		<title>Клиенты</title>
+	</head>
+	<body class="main-page">
+		<header class="header">
+			<div class="header__container container">
+				<nav class="main-nav">
+					<a href="./index.html" class="main-nav__logo">
+						<svg
+							class="main-nav__img"
+							xmlns="http://www.w3.org/2000/svg"
+							width="128"
+							height="40"
+						>
+							<!--<use id="u2" href="#icon-logo"></use>-->
+							<use id="u2" href="img/sprite.svg#icon-logo"></use>
+						</svg>
+					</a>
+					<div class="main-nav__wrap-list">
+						<div class="main-nav__inner">
+							<ul class="main-nav__list">
+								<li class="main-nav__item">
+									<a data-modal="13" class="main-nav__link js-open-modal"
+										>Кейсы</a
+									>
+								</li>
+								<li class="main-nav__item">
+									<a data-modal="13" class="main-nav__link js-open-modal"
+										>Блог</a
+									>
+								</li>
+								<li class="main-nav__item">
+									<a data-modal="13" class="main-nav__link js-open-modal"
+										>Клиенты</a
+									>
+								</li>
+								<li class="main-nav__item">
+									<a data-modal="13" class="main-nav__link js-open-modal"
+										>Партнеры</a
+									>
+								</li>
+								<li class="main-nav__item">
+									<a data-modal="13" class="main-nav__link js-open-modal"
+										>Отзывы</a
+									>
+								</li>
+								<li class="main-nav__item">
+									<a data-modal="13" class="main-nav__link js-open-modal"
+										>Карьера</a
+									>
+								</li>
+								<li class="main-nav__item">
+									<a href="/kontakty" class="main-nav__link">Контакты</a>
+								</li>
+							</ul>
+							<ul class="main-nav__socials">
+								<li class="main-nav__socials-item">
+									<a
+										href="https://t.me/+79216449944"
+										class="main-nav__socials-link"
+									>
+										<svg
+											class="main-nav__icon main-nav__icon--telegram"
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+										>
+											<use href="img/sprite.svg#icon-telegram"></use>
+										</svg>
+										<span>Telegram</span>
+									</a>
+								</li>
+								<li class="main-nav__socials-item">
+									<a
+										href="https://wa.me/79216449944"
+										class="main-nav__socials-link"
+									>
+										<svg
+											class="main-nav__icon main-nav__icon--whatsapp"
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+										>
+											<use href="img/sprite.svg#icon-whatsapp"></use>
+										</svg>
+										<span>Whatsapp</span>
+									</a>
+								</li>
+								<li class="main-nav__socials-item">
+									<a
+										href="https://vk.com/seo_zharkov"
+										class="main-nav__socials-link"
+									>
+										<svg
+											class="main-nav__icon main-nav__icon--vk"
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+										>
+											<use href="img/sprite.svg#icon-vk"></use>
+										</svg>
+										<span>Вконтакте</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-nav__toggles">
+						<button class="main-nav__btn main-nav__toggle-left" type="button">
+							<span class="visually-hidden">Открыть меню</span>
+							<svg
+								class="main-nav__icon"
+								xmlns="http://www.w3.org/2000/svg"
+								width="20.12"
+								height="20.12"
+							>
+								<use href="img/sprite.svg#icon-toggle"></use>
+							</svg>
+							<span class="main-nav__icon-cross">
+								<span class="main-nav__toggle-inner"
+									><span class="main-nav__toggle-bar"></span
+								></span>
+							</span>
+							<!--<svg class="main-nav__icon-cross" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+                <use href="img/sprite.svg#icon-cross2"></use>
+              </svg>-->
+						</button>
+						<button class="main-nav__btn main-nav__toggle" type="button">
+							<span class="visually-hidden">Открыть меню</span>
+							<span class="main-nav__toggle-inner">
+								<span class="main-nav__toggle-bar"></span>
+							</span>
+						</button>
+						<a
+							data-modal="1"
+							class="main-nav__btn main-nav__callback-tel js-open-modal"
+						>
+							<svg
+								class="main-nav__icon-mobile"
+								xmlns="http://www.w3.org/2000/svg"
+								width="20.12"
+								height="20.12"
+							>
+								<use href="img/sprite.svg#icon-phone"></use>
+							</svg>
+							<svg
+								class="main-nav__icon-desktop"
+								xmlns="http://www.w3.org/2000/svg"
+								width="20.12"
+								height="20.12"
+							>
+								<use href="img/sprite.svg#icon-phone-desktop"></use>
+							</svg>
+							<div class="main-nav__callback-text">
+								<span>+7 (921) 644-99-44</span>
+								<span>Заказать звонок</span>
+							</div>
+						</a>
+					</div>
+					<div class="main-nav__left">
+						<div class="main-nav__wrap-left">
+							<ul class="main-nav__list-left">
+								<li class="main-nav__item-left">
+									<a data-modal="13" class="js-open-modal">
+										<svg
+											class="main-nav__item-icon"
+											xmlns="http://www.w3.org/2000/svg"
+											width="32"
+											height="32"
+										>
+											<use href="img/sprite.svg#icon-menu1"></use>
+										</svg>
+										<span>SEO продвижение</span>
+									</a>
+								</li>
+								<li class="main-nav__item-left">
+									<a data-modal="13" class="js-open-modal">
+										<svg
+											class="main-nav__item-icon main-nav__item-icon--stroke"
+											xmlns="http://www.w3.org/2000/svg"
+											width="32"
+											height="32"
+										>
+											<use href="img/sprite.svg#icon-menu2"></use>
+										</svg>
+										<span>Поисковые системы</span>
+									</a>
+								</li>
+								<li class="main-nav__item-left">
+									<a data-modal="13" class="js-open-modal">
+										<svg
+											class="main-nav__item-icon main-nav__item-icon--stroke"
+											xmlns="http://www.w3.org/2000/svg"
+											width="32"
+											height="32"
+										>
+											<use href="img/sprite.svg#icon-menu3"></use>
+										</svg>
+										<span>Оптимизация сайта</span>
+									</a>
+								</li>
+								<li class="main-nav__item-left">
+									<a data-modal="13" class="js-open-modal">
+										<svg
+											class="main-nav__item-icon"
+											xmlns="http://www.w3.org/2000/svg"
+											width="32"
+											height="32"
+										>
+											<use href="img/sprite.svg#icon-menu4"></use>
+										</svg>
+										<span>Регионы</span>
+									</a>
+								</li>
+								<li class="main-nav__item-left">
+									<a data-modal="13" class="js-open-modal">
+										<svg
+											class="main-nav__item-icon main-nav__item-icon--stroke"
+											xmlns="http://www.w3.org/2000/svg"
+											width="32"
+											height="32"
+										>
+											<use href="img/sprite.svg#icon-menu5"></use>
+										</svg>
+										<span>Методы продвижения</span>
+									</a>
+								</li>
+								<li class="main-nav__item-left">
+									<a data-modal="13" class="js-open-modal">
+										<svg
+											class="main-nav__item-icon main-nav__item-icon--stroke"
+											xmlns="http://www.w3.org/2000/svg"
+											width="32"
+											height="32"
+										>
+											<use href="img/sprite.svg#icon-menu6"></use>
+										</svg>
+										<span>Аудит сайта</span>
+									</a>
+								</li>
+								<!--<li class="main-nav__item-left main-nav__item-left--dots">
+                  <a href="#">
+                    <svg class="main-nav__item-icon main-nav__item-icon--stroke" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                      <use href="img/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </a>  
+                </li>-->
+							</ul>
+						</div>
+						<ul class="main-nav__socials main-nav__socials--main">
+							<li class="main-nav__socials-item">
+								<a
+									href="https://t.me/+79216449944"
+									class="main-nav__socials-link"
+									target="_blank"
+								>
+									<svg
+										class="main-nav__icon main-nav__icon--telegram"
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+									>
+										<use href="img/sprite.svg#icon-telegram"></use>
+									</svg>
+									<span>Telegram</span>
+								</a>
+							</li>
+							<li class="main-nav__socials-item">
+								<a
+									href="https://wa.me/79216449944"
+									class="main-nav__socials-link"
+									target="_blank"
+								>
+									<svg
+										class="main-nav__icon main-nav__icon--whatsapp"
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+									>
+										<use href="img/sprite.svg#icon-whatsapp"></use>
+									</svg>
+									<span>Whatsapp</span>
+								</a>
+							</li>
+							<li class="main-nav__socials-item">
+								<a
+									href="https://vk.com/seo_zharkov"
+									class="main-nav__socials-link"
+									target="_blank"
+								>
+									<svg
+										class="main-nav__icon main-nav__icon--vk"
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+									>
+										<use href="img/sprite.svg#icon-vk"></use>
+									</svg>
+									<span>Вконтакте</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main class="main anpia clients-page">
+			<div class="reviews-page__content container">
+				<section class="blogs__top">
+					<div class="blogs__page page-top">
+						<a href="index.html" class="page-top__item">Главная</a>
+						<a href="index.html" class="page-top__item">При наведении</a>
+						<a href="#" class="page-top__item page-top__item_active">Блог</a>
+					</div>
+					<h1 class="blogs__title">Клиенты</h1>
+					<div class="blogs__category">
+						<ul class="blogs__category-list">
+							<li class="blogs__category-item _active">
+								<a href="#" class="blogs__category-link">Медицина</a>
+							</li>
+							<li class="blogs__category-item">
+								<a href="#" class="blogs__category-link">Промышленность</a>
+							</li>
+							<li class="blogs__category-item">
+								<a href="#" class="blogs__category-link">Строительство</a>
+							</li>
+							<li class="blogs__category-item">
+								<a href="#" class="blogs__category-link">Логистика</a>
+							</li>
+							<li class="blogs__category-item">
+								<a href="#" class="blogs__category-link">Магазины</a>
+							</li>
+							<li class="blogs__category-item">
+								<a href="#" class="blogs__category-link">Услуги</a>
+							</li>
+							<li class="blogs__category-item">
+								<a href="#" class="blogs__category-link">Доставка</a>
+							</li>
+							<li class="blogs__category-item">
+								<a href="#" class="blogs__category-link">Еще таб или тег</a>
+							</li>
+							<li class="blogs__category-item">
+								<a href="#" class="blogs__category-link">ТИ еще какой-то тег</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="clients-page__wrapper">
+					<div class="clients-page__content">
+						<article class="clients-page__item">
+							<div class="clients-page__top">
+								<div class="clients-page__img">
+									<img src="img/clients/reso.png" alt="Ресо" />
+								</div>
+							</div>
+							<div class="clients-page__bottom">
+								<div class="case__top-mobile case__client-info">
+									<h2 class="article-blog__subtitle">
+										Медицина, уход и здоровое питание
+									</h2>
+									<div class="main-example__img main-example__img_brand">
+										<img src="img/clients/reso-logo.png" alt="Ресо" />
+									</div>
+									<a class="case__link" href="#" target="_blank"
+										><span>ссылка на сайт.рф</span></a
+									>
+								</div>
+								<ul class="case__list">
+									<li class="case__item case__item--yandex">
+										<p>Яндекс</p>
+										<div>
+											<p><span>+70</span> ТОП-3</p>
+											<p><span>+320</span> ТОП-10</p>
+										</div>
+									</li>
+									<li class="case__item">
+										<p>Google</p>
+										<div>
+											<p><span>+99</span> ТОП-3</p>
+											<p><span>+418</span> ТОП-10</p>
+										</div>
+									</li>
+									<li class="case__item">
+										<p>Трафик</p>
+										<div>
+											<p><span>+34000</span> переходов в месяц</p>
+										</div>
+									</li>
+									<li class="case__item case__orders">
+										<p>Заявок<span>+237%</span></p>
+									</di>
+								</ul>
+								<div class="clients-page__footer">
+									<div class="callback__text">
+										<div class="callback__img-wrap">
+											<img
+												class="callback__img"
+												src="./img/blogs/avatar1.png"
+												width="64"
+												height="64"
+												alt=""
+											/>
+										</div>
+										<div>
+											<p>Анатолий Лунгин</p>
+											<p>Директор ООО «Ресо-Мед»</p>
+										</div>
+									</div>
+									<a class="case__link button">Смотреть кейс</a>
+								</div>
+							</div>
+						</article>
+
+					</div>
+					<div class="posts__pagination">
+						<ul class="posts__pagination-list">
+							<li class="posts__pagination-item posts__pagination-item--left">
+								<a href="#" class="posts__pagination-link">
+									<svg class="arrow-svg">
+										<use href="img/sprite.svg#arrow-right"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="posts__pagination-item">
+								<a href="#" class="posts__pagination-link">1 </a>
+							</li>
+							<li class="posts__pagination-item">
+								<a href="#" class="posts__pagination-link">2</a>
+							</li>
+							<li class="posts__pagination-item posts__pagination-item_active">
+								<a href="#" class="posts__pagination-link">3</a>
+							</li>
+							<li class="posts__pagination-item">
+								<a href="#" class="posts__pagination-link">4</a>
+							</li>
+							<li class="posts__pagination-item">
+								<a href="#" class="posts__pagination-link">5</a>
+							</li>
+							<li class="posts__pagination-item">
+								<a href="#" class="posts__pagination-link">...</a>
+							</li>
+							<li class="posts__pagination-item">
+								<a href="#" class="posts__pagination-link">24</a>
+							</li>
+							<li class="posts__pagination-item">
+								<a href="#" class="posts__pagination-link">25</a>
+							</li>
+							<li class="posts__pagination-item posts__pagination-item--right">
+								<a href="#" class="posts__pagination-link">
+									<svg class="arrow-svg">
+										<use href="img/sprite.svg#arrow-right"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<button
+							type="button"
+							class="posts__pagination-item posts__pagination-item_more"
+						>
+							<svg class="dots">
+								<use href="img/sprite.svg#dots"></use>
+							</svg>
+
+							<a href="#" class="posts__pagination-link"
+								><span>Показать ещё</span></a
+							>
+						</button>
+					</div>
+				</div>
+
+				<section class="cases-page cases-page__body example__other">
+					<div class="asideblog__top reviews-cases__actions">
+						<div class="reviews-page__other-l">
+							<h2 class="cases__title">Наши <span>кейсы</span></h2>
+							<p class="reviews-page__text">
+								За более чем 10 лет работы у нас накопились сотни кейсов по SEO
+								продвижению сайтов среди которых вы точно найдете кейс
+								релевантный вашему запросу.
+							</p>
+						</div>
+						<a class="clients__show-all reviews-cases__show-all_top"
+							><span>Смотреть все кейсы</span></a
+						>
+						<div class="popular__control">
+							<button
+								class="posts__pagination-item posts__pagination-item--left"
+							>
+								<div class="posts__pagination-link">
+									<svg class="arrow-svg">
+										<use href="img/sprite.svg#arrow-right"></use>
+									</svg>
+								</div>
+							</button>
+							<button
+								class="posts__pagination-item posts__pagination-item--right"
+							>
+								<div class="posts__pagination-link">
+									<svg class="arrow-svg">
+										<use href="img/sprite.svg#arrow-right"></use>
+									</svg>
+								</div>
+							</button>
+						</div>
+					</div>
+					<div class="example__slider">
+						<div class="swiper-wrapper">
+							<div class="cases__item swiper-slide">
+								<article class="case2">
+									<div class="case2__wrap">
+										<div>
+											<img
+												decoding="async"
+												src="https://seo-zharkov.ru/wp-content/uploads/2024/10/partner-logo1.svg"
+												width="200"
+												height="43"
+												alt=""
+											/>
+											<a
+												class="case2__client-link"
+												rel="noindex"
+												href="https://aloeapteka.ru/"
+												target="_blank"
+												><span>https://aloeapteka.ru/</span>
+											</a>
+										</div>
+										<p>
+											+8523 продажи в месяц и многократный рост в выручке на
+											заявках с SEO для аптечной сети за 10 месяцев продвижения
+										</p>
+									</div>
+									<div class="case2__tabs">
+										<section class="tabs" data-tabs="">
+											<section class="options">
+												<ul class="options__list tabs__list" data-tabs-nav="">
+													<li
+														class="options__item options__item--google tab active"
+														data-index="0"
+													>
+														<span>Google</span>
+													</li>
+													<li
+														class="options__item options__item--yandex tab"
+														data-index="1"
+													>
+														<span>Яндекс</span>
+													</li>
+													<li
+														class="options__item options__item--traffic tab"
+														data-index="2"
+													>
+														<span>Трафик</span>
+													</li>
+												</ul>
+											</section>
+											<section class="tabs__panel" data-tabs-list="">
+												<div class="tabs__element tab2 active">
+													<!--<a data-modal="18" class="button js-open-modal">АКТИВНЫЙ</a> -->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-798884d42839d68e"
+															aria-live="polite"
+														>
+															<div
+																class="cases__slide3 swiper-slide swiper-slide-active"
+																role="group"
+																aria-label="1 / 1"
+																style="width: 400px"
+															>
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-g.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-g.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__element tab2">
+													<!--ВТОРОЙ ТАБ -->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-55fc4438369f2ac10"
+															aria-live="polite"
+															style="transition-duration: 0ms"
+														>
+															<div class="cases__slide3 swiper-slide">
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-ja.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-ja.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__element tab2">
+													<!--ТРЕТИЙ ТАБ-->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-dac6968d6b371148"
+															aria-live="polite"
+															style="transition-duration: 0ms"
+														>
+															<div class="cases__slide3 swiper-slide">
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/jmpoxgiu4ki.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/jmpoxgiu4ki.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__dots">
+													<div class="tabs__dot active"></div>
+													<div class="tabs__dot"></div>
+													<div class="tabs__dot"></div>
+												</div>
+											</section>
+											<div class="tabs__btns">
+												<div class="tabs__next tabs__btn forward">
+													<svg class="arrow-svg">
+														<use href="img/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="tabs__prev tabs__btn back">
+													<svg class="arrow-svg">
+														<use href="img/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</section>
+									</div>
+									<div class="case2__info">
+										<ul class="case__list">
+											<li class="case__item case__item--yandex">
+												<p>Яндекс</p>
+												<div>
+													<p><span>+194</span> ТОП-3</p>
+													<p><span>+3 185</span> ТОП-10</p>
+												</div>
+											</li>
+											<li class="case__item">
+												<p>Google</p>
+												<div>
+													<p><span>+1 404</span> ТОП-3</p>
+													<p><span>+4 369</span> ТОП-10</p>
+												</div>
+											</li>
+											<li class="case__item">
+												<p>Трафик</p>
+												<div>
+													<p><span>+86%</span> визитов в месяц</p>
+												</div>
+											</li>
+										</ul>
+										<div class="case__orders">
+											<p>Заявок<span>+8 523</span></p>
+										</div>
+										<a data-modal="13" class="case2__link button"
+											>Смотреть кейс</a
+										>
+									</div>
+									<div class="case__overlay">
+										<div class="case__overlay-wrap case__overlay-wrap--goggle">
+											<img
+												decoding="async"
+												class="case__img"
+												src="img/case1.jpg"
+												alt="кейсы"
+											/>
+											<a
+												data-modal="14"
+												href="#"
+												class="case__overlay-link button js-open-modal"
+											>
+												<svg class="arrow-svg">
+													<use href="img/sprite.svg#icon-position"></use>
+												</svg>
+												<span>Открыть позиции</span>
+											</a>
+										</div>
+										<div class="case__overlay-wrap case__overlay-wrap--yandex">
+											<img
+												decoding="async"
+												class="case__img"
+												src="img/case1.jpg"
+												alt="кейсы"
+											/>
+											<a
+												data-modal="14"
+												href="#"
+												class="case__overlay-link case__overlay-link--yandex button js-open-modal"
+											>
+												<svg class="arrow-svg">
+													<use href="img/sprite.svg#icon-position"></use>
+												</svg>
+												<span>Открыть трафик</span>
+											</a>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="cases__item swiper-slide">
+								<article class="case2">
+									<div class="case2__wrap">
+										<div>
+											<img
+												decoding="async"
+												src="https://seo-zharkov.ru/wp-content/uploads/2024/10/partner-logo1.svg"
+												width="200"
+												height="43"
+												alt=""
+											/>
+											<a
+												class="case2__client-link"
+												rel="noindex"
+												href="https://aloeapteka.ru/"
+												target="_blank"
+												><span>https://aloeapteka.ru/</span>
+											</a>
+										</div>
+										<p>
+											+8523 продажи в месяц и многократный рост в выручке на
+											заявках с SEO для аптечной сети за 10 месяцев продвижения
+										</p>
+									</div>
+									<div class="case2__tabs">
+										<section class="tabs" data-tabs="">
+											<section class="options">
+												<ul class="options__list tabs__list" data-tabs-nav="">
+													<li
+														class="options__item options__item--google tab active"
+														data-index="0"
+													>
+														<span>Google</span>
+													</li>
+													<li
+														class="options__item options__item--yandex tab"
+														data-index="1"
+													>
+														<span>Яндекс</span>
+													</li>
+													<li
+														class="options__item options__item--traffic tab"
+														data-index="2"
+													>
+														<span>Трафик</span>
+													</li>
+												</ul>
+											</section>
+											<section class="tabs__panel" data-tabs-list="">
+												<div class="tabs__element tab2 active">
+													<!--<a data-modal="18" class="button js-open-modal">АКТИВНЫЙ</a> -->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-798884d42839d68e"
+															aria-live="polite"
+														>
+															<div
+																class="cases__slide3 swiper-slide swiper-slide-active"
+																role="group"
+																aria-label="1 / 1"
+																style="width: 400px"
+															>
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-g.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-g.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__element tab2">
+													<!--ВТОРОЙ ТАБ -->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-55fc4438369f2ac10"
+															aria-live="polite"
+															style="transition-duration: 0ms"
+														>
+															<div class="cases__slide3 swiper-slide">
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-ja.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-ja.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__element tab2">
+													<!--ТРЕТИЙ ТАБ-->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-dac6968d6b371148"
+															aria-live="polite"
+															style="transition-duration: 0ms"
+														>
+															<div class="cases__slide3 swiper-slide">
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/jmpoxgiu4ki.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/jmpoxgiu4ki.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__dots">
+													<div class="tabs__dot active"></div>
+													<div class="tabs__dot"></div>
+													<div class="tabs__dot"></div>
+												</div>
+											</section>
+											<div class="tabs__btns">
+												<div class="tabs__next tabs__btn forward">
+													<svg class="arrow-svg">
+														<use href="img/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="tabs__prev tabs__btn back">
+													<svg class="arrow-svg">
+														<use href="img/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</section>
+									</div>
+									<div class="case2__info">
+										<ul class="case__list">
+											<li class="case__item case__item--yandex">
+												<p>Яндекс</p>
+												<div>
+													<p><span>+194</span> ТОП-3</p>
+													<p><span>+3 185</span> ТОП-10</p>
+												</div>
+											</li>
+											<li class="case__item">
+												<p>Google</p>
+												<div>
+													<p><span>+1 404</span> ТОП-3</p>
+													<p><span>+4 369</span> ТОП-10</p>
+												</div>
+											</li>
+											<li class="case__item">
+												<p>Трафик</p>
+												<div>
+													<p><span>+86%</span> визитов в месяц</p>
+												</div>
+											</li>
+										</ul>
+										<div class="case__orders">
+											<p>Заявок<span>+8 523</span></p>
+										</div>
+										<a data-modal="13" class="case2__link button"
+											>Смотреть кейс</a
+										>
+									</div>
+									<div class="case__overlay">
+										<div class="case__overlay-wrap case__overlay-wrap--goggle">
+											<img
+												decoding="async"
+												class="case__img"
+												src="img/case1.jpg"
+												alt="кейсы"
+											/>
+											<a
+												data-modal="14"
+												href="#"
+												class="case__overlay-link button js-open-modal"
+											>
+												<svg class="arrow-svg">
+													<use href="img/sprite.svg#icon-position"></use>
+												</svg>
+												<span>Открыть позиции</span>
+											</a>
+										</div>
+										<div class="case__overlay-wrap case__overlay-wrap--yandex">
+											<img
+												decoding="async"
+												class="case__img"
+												src="img/case1.jpg"
+												alt="кейсы"
+											/>
+											<a
+												data-modal="14"
+												href="#"
+												class="case__overlay-link case__overlay-link--yandex button js-open-modal"
+											>
+												<svg class="arrow-svg">
+													<use href="img/sprite.svg#icon-position"></use>
+												</svg>
+												<span>Открыть трафик</span>
+											</a>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="cases__item swiper-slide">
+								<article class="case2">
+									<div class="case2__wrap">
+										<div>
+											<img
+												decoding="async"
+												src="https://seo-zharkov.ru/wp-content/uploads/2024/10/partner-logo1.svg"
+												width="200"
+												height="43"
+												alt=""
+											/>
+											<a
+												class="case2__client-link"
+												rel="noindex"
+												href="https://aloeapteka.ru/"
+												target="_blank"
+												><span>https://aloeapteka.ru/</span>
+											</a>
+										</div>
+										<p>
+											+8523 продажи в месяц и многократный рост в выручке на
+											заявках с SEO для аптечной сети за 10 месяцев продвижения
+										</p>
+									</div>
+									<div class="case2__tabs">
+										<section class="tabs" data-tabs="">
+											<section class="options">
+												<ul class="options__list tabs__list" data-tabs-nav="">
+													<li
+														class="options__item options__item--google tab active"
+														data-index="0"
+													>
+														<span>Google</span>
+													</li>
+													<li
+														class="options__item options__item--yandex tab"
+														data-index="1"
+													>
+														<span>Яндекс</span>
+													</li>
+													<li
+														class="options__item options__item--traffic tab"
+														data-index="2"
+													>
+														<span>Трафик</span>
+													</li>
+												</ul>
+											</section>
+											<section class="tabs__panel" data-tabs-list="">
+												<div class="tabs__element tab2 active">
+													<!--<a data-modal="18" class="button js-open-modal">АКТИВНЫЙ</a> -->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-798884d42839d68e"
+															aria-live="polite"
+														>
+															<div
+																class="cases__slide3 swiper-slide swiper-slide-active"
+																role="group"
+																aria-label="1 / 1"
+																style="width: 400px"
+															>
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-g.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-g.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__element tab2">
+													<!--ВТОРОЙ ТАБ -->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-55fc4438369f2ac10"
+															aria-live="polite"
+															style="transition-duration: 0ms"
+														>
+															<div class="cases__slide3 swiper-slide">
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-ja.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/aloje-ja.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__element tab2">
+													<!--ТРЕТИЙ ТАБ-->
+													<div
+														class="cases__slider3 swiper swiper-initialized swiper-horizontal"
+													>
+														<div
+															class="swiper-wrapper swiper-wrapper-wrap"
+															id="swiper-wrapper-dac6968d6b371148"
+															aria-live="polite"
+															style="transition-duration: 0ms"
+														>
+															<div class="cases__slide3 swiper-slide">
+																<div class="case2__img-wrap">
+																	<img
+																		decoding="async"
+																		class="case2__img"
+																		src="https://seo-zharkov.ru/wp-content/uploads/2024/10/jmpoxgiu4ki.jpg"
+																		width="960"
+																		height="560"
+																		alt=""
+																	/>
+																	<a
+																		class="case2__img-link"
+																		data-fancybox=""
+																		href="https://seo-zharkov.ru/wp-content/uploads/2024/10/jmpoxgiu4ki.jpg"
+																		style="opacity: 0"
+																	>
+																		<svg class="arrow-svg">
+																			<use
+																				href="img/sprite.svg#icon-search"
+																			></use>
+																		</svg>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<span
+															class="swiper-notification"
+															aria-live="assertive"
+															aria-atomic="true"
+														></span>
+													</div>
+												</div>
+												<div class="tabs__dots">
+													<div class="tabs__dot active"></div>
+													<div class="tabs__dot"></div>
+													<div class="tabs__dot"></div>
+												</div>
+											</section>
+											<div class="tabs__btns">
+												<div class="tabs__next tabs__btn forward">
+													<svg class="arrow-svg">
+														<use href="img/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+												<div class="tabs__prev tabs__btn back">
+													<svg class="arrow-svg">
+														<use href="img/sprite.svg#arrow-right"></use>
+													</svg>
+												</div>
+											</div>
+										</section>
+									</div>
+									<div class="case2__info">
+										<ul class="case__list">
+											<li class="case__item case__item--yandex">
+												<p>Яндекс</p>
+												<div>
+													<p><span>+194</span> ТОП-3</p>
+													<p><span>+3 185</span> ТОП-10</p>
+												</div>
+											</li>
+											<li class="case__item">
+												<p>Google</p>
+												<div>
+													<p><span>+1 404</span> ТОП-3</p>
+													<p><span>+4 369</span> ТОП-10</p>
+												</div>
+											</li>
+											<li class="case__item">
+												<p>Трафик</p>
+												<div>
+													<p><span>+86%</span> визитов в месяц</p>
+												</div>
+											</li>
+										</ul>
+										<div class="case__orders">
+											<p>Заявок<span>+8 523</span></p>
+										</div>
+										<a data-modal="13" class="case2__link button"
+											>Смотреть кейс</a
+										>
+									</div>
+									<div class="case__overlay">
+										<div class="case__overlay-wrap case__overlay-wrap--goggle">
+											<img
+												decoding="async"
+												class="case__img"
+												src="img/case1.jpg"
+												alt="кейсы"
+											/>
+											<a
+												data-modal="14"
+												href="#"
+												class="case__overlay-link button js-open-modal"
+											>
+												<svg class="arrow-svg">
+													<use href="img/sprite.svg#icon-position"></use>
+												</svg>
+												<span>Открыть позиции</span>
+											</a>
+										</div>
+										<div class="case__overlay-wrap case__overlay-wrap--yandex">
+											<img
+												decoding="async"
+												class="case__img"
+												src="img/case1.jpg"
+												alt="кейсы"
+											/>
+											<a
+												data-modal="14"
+												href="#"
+												class="case__overlay-link case__overlay-link--yandex button js-open-modal"
+											>
+												<svg class="arrow-svg">
+													<use href="img/sprite.svg#icon-position"></use>
+												</svg>
+												<span>Открыть трафик</span>
+											</a>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<a
+						class="clients__show-all reviews-cases__show-all reviews-cases__show-all_bottom"
+						><span>Все кейсы</span></a
+					>
+				</section>
+
+				<section class="blogs__form form-add form-add__sites">
+					<div class="form-add__inner form-callback">
+						<div class="form-add__wrap">
+							<h2 class="form-add__title">
+								Готовы <span>занять 1 место</span> в поиске?
+							</h2>
+							<p class="form-add__description">
+								Оставьте заявку и мы свяжемся с Вами в течении часа.
+							</p>
+							<form class="form-add__form" action="#">
+								<input type="hidden" name="formName" value="1 место" />
+								<div class="form-add__section form-add__section--name">
+									<label
+										class="form-add__label visually-hidden"
+										for="name_field3"
+										>Имя</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__text--name"
+										type="text"
+										autocomplete="name"
+										name="name"
+										id="name_field3"
+										placeholder="Имя"
+										required=""
+									/>
+								</div>
+								<div class="form-add__section form-add__section--tel">
+									<label
+										class="form-add__label visually-hidden"
+										for="phone_field3"
+										>Телефон</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__text--tel"
+										type="tel"
+										name="phone"
+										autocomplete="tel"
+										id="phone_field3"
+										placeholder="Телефон"
+										required=""
+									/>
+								</div>
+								<div class="form-add__section form-add__section--site">
+									<label
+										class="form-add__label visually-hidden"
+										for="site_field"
+										>Ссылка на сайт.ру</label
+									>
+									<input
+										class="form-add__text form-add__user form-add__text--site"
+										name="site"
+										id="site_field"
+										placeholder="Ссылка на сайт.ру...*"
+										required=""
+									/>
+								</div>
+								<div class="form-add__section form-add__section--checkbox">
+									<input
+										class="form-add__checkbox"
+										id="checkbox-tariff-field"
+										type="checkbox"
+										name="agreement"
+										required=""
+									/>
+									<label
+										class="form-add__label form-add__label--checkbox"
+										for="checkbox-tariff-field"
+									>
+										Нажимая кнопку, вы даете согласие на
+										<a href="#">обработку ваших персональных данных</a>
+									</label>
+								</div>
+								<button class="form-add__send button" type="submit">
+									Проконсультироваться
+								</button>
+							</form>
+						</div>
+						<section class="callback-form">
+							<div class="callback-form__wrap">
+								<div>
+									<p class="callback-form__title">
+										Заявка <span>успешно отправлена!</span>
+									</p>
+									<p>
+										Наши специалисты свяжутся с Вами в течении 30 минут!
+										Спасибо, что выбрали нас!
+									</p>
+								</div>
+								<button class="callback-form__close-btn" type="button">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+									>
+										<use href="img/sprite.svg#icon-cross-modal"></use>
+									</svg>
+								</button>
+							</div>
+						</section>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__lists">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal">Кейсы</a>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal">Блог</a>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal"
+									>Клиенты</a
+								>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal"
+									>Партнеры</a
+								>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal">Отзывы</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link js-open-modal">Карьера</a>
+							</li>
+							<li class="footer__item">
+								<a href="/kontakty" class="footer__link">Контакты</a>
+							</li>
+						</ul>
+						<ul class="footer__list footer__list--seo">
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal"
+									>SEO продвижение</a
+								>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link">Поисковые системы</a>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal"
+									>Оптимизация сайта</a
+								>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal"
+									>Методы продвижения</a
+								>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal"
+									>Регионы</a
+								>
+							</li>
+							<li class="footer__item">
+								<a data-modal="13" class="footer__link js-open-modal"
+									>Аудит сайта</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__wrap">
+						<div class="footer__callback">
+							<a href="tel:+79216449944" class="footer__callback-link"
+								>+7 (921) 644-99-44</a
+							>
+							<a data-modal="1" class="footer__callback-btn js-open-modal">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+									<use href="img/sprite.svg#icon-phone-desktop"></use>
+								</svg>
+								<span>Заказать звонок</span>
+							</a>
+						</div>
+						<div class="footer__list-wrap">
+							<div class="footer__socials">
+								<p>Мессенджеры</p>
+								<ul class="socials">
+									<li class="socials__item">
+										<a
+											href="https://t.me/+79216449944"
+											class="socials__link socials__link--telegram"
+											target="_blank"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+											>
+												<use href="img/sprite.svg#icon-telegram2"></use>
+											</svg>
+											<span class="visually-hidden">Мы в Телеграм</span>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a
+											href="https://wa.me/79216449944"
+											class="socials__link socials__link--whatsapp"
+											target="_blank"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+											>
+												<use href="img/sprite.svg#icon-whatsapp2"></use>
+											</svg>
+											<span class="visually-hidden">Мы в whatsapp</span>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a
+											href="https://vk.com/seo_zharkov"
+											class="socials__link socials__link--vk"
+											target="_blank"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+											>
+												<use href="img/sprite.svg#icon-vk2"></use>
+											</svg>
+											<span class="visually-hidden">Мы в вконтакте</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__info">
+								<p>ИП Жарков Василий Владимирович</p>
+								<p>ИНН: 510706625702</p>
+								<p>ОГРНИП: 316519000057196</p>
+							</div>
+						</div>
+						<ul class="footer__contacts-list">
+							<li class="footer__contacts-item footer__contacts-item--email">
+								<span>Наша почта</span>
+								<a class="footer__email-link" href="mailto:sale@seo-zharkov.ru"
+									>sale@seo-zharkov.ru</a
+								>
+							</li>
+							<li class="footer__contacts-item footer__contacts-item--time">
+								<span>График работы</span>
+								<p>Пн.-Пт.: с 10:00 до 19:00</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__text">
+						<p>SEO агентство полного цикла</p>
+						<p>Согласие на обработку персональных данных</p>
+						<p>Не является публичной офертой</p>
+						<p>© 2016-2024 Zharkov Seo Agency</p>
+					</div>
+					<div class="footer__img-wrap">
+						<img src="img/zharkov-logo.svg" alt="" width="146" height="46" />
+					</div>
+					<div class="footer__data">
+						<p>ИП Жарков Василий Владимирович</p>
+						<p>ИНН: 510706625702</p>
+						<p>ОГРНИП: 316519000057196</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/imask"></script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

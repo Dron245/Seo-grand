@@ -1320,6 +1320,37 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.documentElement.classList.add('example-header');
 	}
 
+	// Страница "Партнёры"
+
+	//поиск последнего элемента в строке
+	const grid = document.querySelector('.partners__list');
+	const items = [...grid.children];
+	const columnCount =
+		getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+
+	items.forEach((item, i) => {
+		if ((i + 1) % columnCount === 0 || i === items.length - 1) {
+			item.classList.add('last-in-row');
+		}
+	});
+
+	//Плавное возвращение границ
+	const itemsPartners = document.querySelectorAll('.partners__item');
+
+	itemsPartners.forEach((item) => {
+		let timeout;
+
+		item.addEventListener('mouseenter', () => {
+			clearTimeout(timeout); // отменяем отложенное снятие, если мышь вернулась
+			item.classList.add('_hover');
+		});
+
+		item.addEventListener('mouseleave', () => {
+			timeout = setTimeout(() => {
+				item.classList.remove('_hover');
+			}, 300); // 0.3 секунды
+		});
+	});
 	//Анимации
 	// Универсальный обработчик анимаций
 	const animateOnScroll = (element, keyframes, options, nextDelay = 0) => {
@@ -1412,7 +1443,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	) => {
 		const wrapper = document.querySelector(wrapperSelector);
 		if (!wrapper) return;
-	
+
 		const observer = new IntersectionObserver(
 			(entries, observer) => {
 				entries.forEach((entry) => {
@@ -1424,51 +1455,50 @@ document.addEventListener('DOMContentLoaded', function () {
 								...options,
 								delay: index * delayStep,
 							});
-							
+
 							// Анимация плашки цены
 							const price = card.querySelector('.card__price');
 							if (price) {
 								price.classList.remove('revial-price');
-						
+
 								setTimeout(() => {
 									price.classList.add('revial-price');
-						
+
 									// Появление следующих блоков по каскаду
 									const note = card.querySelector('.card__note');
 									const list = card.querySelector('.card__list');
 									const seo = card.querySelector('.card__seo');
 									const order = card.querySelector('.card__order');
-						
+
 									const showElement = (el, delay) => {
 										if (!el) return;
 										el.style.opacity = 0;
 										el.style.transform = 'translateY(20px)';
-										el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+										el.style.transition =
+											'opacity 0.6s ease, transform 0.6s ease';
 										setTimeout(() => {
 											el.style.opacity = 1;
 											el.style.transform = 'translateY(0)';
 										}, delay);
 									};
-						
+
 									showElement(note, 0);
 									showElement(list, 100);
 									showElement(seo, 200);
 									showElement(order, 300);
-						
 								}, index * delayStep + 300); // +600 мс — окончание анимации ::after
 							}
 						});
-	
+
 						observer.unobserve(wrapper);
 					}
 				});
 			},
 			{ threshold: 0.2 }
 		);
-	
+
 		observer.observe(wrapper);
 	};
-	
 
 	// Вызов анимации карточек тарифов
 	animateCardsCascade(
