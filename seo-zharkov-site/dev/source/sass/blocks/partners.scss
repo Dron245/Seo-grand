@@ -8,11 +8,11 @@
 		display: grid;
 		grid-template-columns: repeat(5, 292px);
 
-		@media (max-width:$pc) {
+		@media (max-width: $pc) {
 			grid-template-columns: repeat(4, 292px);
 		}
 
-		@media (max-width:$tablet) {
+		@media (max-width: $tablet) {
 			gap: toRem(30);
 		}
 	}
@@ -22,12 +22,14 @@
 		position: relative;
 		cursor: pointer;
 		background-color: #fff;
-		transition: width .3s linear, transform .3s linear;
+		transition:
+			width 0.3s linear,
+			transform 0.3s linear;
 		z-index: 1;
-		@media (min-width:992.02px){
+		@media (min-width: 992.02px) {
 			height: 292px;
 			width: 292px;
-			&:hover[class]{
+			&:hover[class] {
 				width: calc(2 * 292px);
 				&.last-in-row {
 					transform: translateX(-292px);
@@ -56,7 +58,7 @@
 			border-top-right-radius: 12px;
 		}
 
-		@media (min-width:toEm(1360.02)) {
+		@media (min-width: toEm(1360.02)) {
 			padding: 30px;
 
 			&:first-child {
@@ -80,12 +82,12 @@
 				border-right: none;
 			}
 
-			&:nth-child(n+6) {
+			&:nth-child(n + 6) {
 				border-top: none;
 			}
 		}
 
-		@media (min-width:992.02px) and (max-width:1360px) {
+		@media (min-width: 992.02px) and (max-width: 1360px) {
 			&:nth-child(4) {
 				border-top-right-radius: 12px;
 			}
@@ -99,37 +101,67 @@
 				border-right: none;
 			}
 
-			&:nth-child(n+5) {
+			&:nth-child(n + 5) {
 				border-top: none;
 			}
 		}
 
-		@media (max-width:$tablet) {
+		@media (max-width: $tablet) {
 			border-radius: 12px;
 		}
 	}
 
-	&__img {
+	&__img-wrapper {
 		position: absolute;
+		display: flex;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		img {
-			max-width: initial;
+		max-width: initial;
+		width: 192px;
+		transition: all 0.3s linear;
+		.partners__item:hover & {
+			top: 30px;
+			left: 30px;
+			width: 180px;
+			height: 70px;
+			transform: initial;
+			padding: 20px 16px;
+			border: 1px solid $color-seryy-01-1;
+			border-radius: 12px;
+		}
+	}
+	&__img {
+		// position: absolute;
+		width: 100%;
+		.partners__item:hover & {
+			width: 74%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			object-fit: cover;
+			translate: -50% -50%;
 		}
 	}
 
 	&__info {
 		position: absolute;
 		opacity: 0;
+		bottom: 30px;
+		left: 30px;
+		right: 30px;
 		p {
-			&:not(:last-child) {margin-bottom: toRem(25);}
+			&:not(:last-child) {
+				margin-bottom: toRem(45);
+			}
+		}
+		.partners__item:hover & {
+			opacity: 1;
 		}
 	}
 }
 
 .case {
-
 	&__client-info {
 		.partners__item & {
 			margin-bottom: 0;
@@ -139,6 +171,7 @@
 	&__link {
 		.partners__item & {
 			margin-bottom: 0;
+			width: fit-content;
 		}
 	}
 }
