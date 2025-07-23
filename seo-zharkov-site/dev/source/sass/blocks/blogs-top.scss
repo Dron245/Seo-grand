@@ -36,6 +36,11 @@ button {
 		}
 	}
 
+	&__category {
+		@media (max-width:$mobileSmall){
+			margin-right: -1.25rem; 
+		}
+	}
 	&__title {
 		font-family: "Unbounded-semibold";
 		font-size: 2.25rem;

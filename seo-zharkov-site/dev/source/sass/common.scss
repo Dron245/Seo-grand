@@ -72,9 +72,14 @@ button.button {
 	}
 }
 
+.anpia .callback__text {
+	max-width: initial;
+	margin: initial;
+}
 
 // Для анимации
 .blog__aside,
 .form-add, h1, h2 {
 	opacity: 0;
 }
+
