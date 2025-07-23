@@ -1,5 +1,8 @@
 .career-aside {
 	margin-top: toRem(56);
+	& .callback__list[class] {
+			column-gap: toRem(20);
+		}
 	@media (max-width:$tablet){
 		margin-right: 0;
 	}
@@ -12,6 +15,7 @@
 	&__list {
 		margin-top: toRem(55);
 		flex-direction: column;
+		
 		@media (max-width:$tablet){
 			margin-top: toRem(50);
 		}
@@ -21,6 +25,9 @@
 		
 		.swiper-slide {
 			transform: none !important;
+			@media (min-width:toEm(1200.02)) and (max-width:toEm(1360)){
+				  &:not(:last-child) {margin-bottom: toRem(40);}
+			}
 		 }
 		.callback__text {
 			margin-bottom: toRem(30);

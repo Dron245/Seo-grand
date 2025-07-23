@@ -17,6 +17,9 @@
 			grid-template-columns: 1fr 1fr;
 			gap: toRem(30);
 		}
+		@media (max-width:650px){
+			grid-template-columns: 1fr; 
+		}
 	}
 
 	&__item {
@@ -24,8 +27,8 @@
 		cursor: pointer;
 		background-color: $color-belyy;
 		padding: 30px;
-		
-		@media (min-width:toEm(1230.02)) {
+
+		@media (min-width: toEm(1230.02)) {
 			position: relative;
 			transition:
 				width 0.3s ease-in-out,
@@ -56,7 +59,8 @@
 				border-bottom-right-radius: 12px;
 			}
 
-			&.last-in-row {}
+			&.last-in-row {
+			}
 
 			height: 292px;
 			width: 292px;
@@ -75,7 +79,6 @@
 				z-index: 2;
 				border-right: 1px solid $color-seryy-01-1;
 			}
-
 
 			//работа с границами
 
@@ -113,7 +116,7 @@
 
 			//убираю двойные бордеры
 
-			&:not(:nth-child(5n+1)),
+			&:not(:nth-child(5n + 1)),
 			:not(:first-child) {
 				border-left: none;
 			}
@@ -138,7 +141,7 @@
 
 			//убираю двойные бордеры
 
-			&:not(:nth-child(4n+1)),
+			&:not(:nth-child(4n + 1)),
 			:not(:first-child) {
 				border-left: none;
 			}
@@ -151,12 +154,13 @@
 		@media (max-width: 1230px) {
 			border-radius: 12px;
 		}
+		@media (max-width: toEm(500)){
+			  padding: 20px;
+		}
 	}
 
 	&__img-wrapper {
-		@media (min-width:toEm(1230.02)) {
-
-
+		@media (min-width: toEm(1230.02)) {
 			position: absolute;
 			background-color: #fff;
 			z-index: 2;
@@ -166,7 +170,8 @@
 			transform: translate(-50%, -50%);
 			max-width: initial;
 			width: 192px;
-			transition: top 0.3s linear,
+			transition:
+				top 0.3s linear,
 				left 0.3s linear,
 				width 0.3s linear,
 				height 0.3s linear,
@@ -183,11 +188,23 @@
 				border-radius: 12px;
 			}
 		}
+		@media (max-width: toEm(1230.02)) {
+			position: relative;
+			width: 180px;
+			height: 70px;
+			transform: initial;
+			padding: 20px 20px;
+			border: 1px solid #e4eeea;
+			border-radius: 12px;
+			&:not(:last-child) {margin-bottom: toRem(30);}
+		}
+		@media (max-width: toEm(500)){
+			  &:not(:last-child) {margin-bottom: toRem(20);}
+		}
 	}
 
 	&__img {
-		@media (min-width:toEm(1230.02)) {
-
+		@media (min-width: toEm(1230.02)) {
 			width: 100%;
 
 			.partners__item:hover & {
@@ -199,17 +216,37 @@
 				translate: -50% -50%;
 			}
 		}
+		@media (max-width: toEm(1230.02)) {
+			width: 74%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				object-fit: cover;
+				translate: -50% -50%;
+		}
+	}
+
+	&__button {
+		@media (min-width:toEm(1230.02)) {
+			  display: none;
+		}
+		margin-top: toRem(50);
+		margin-inline: auto;
+		width: auto;
+		@media (max-width:$mobileSmall){
+			 width: 100%; 
+		}
 	}
 
 	&__info {
-		@media (min-width:toEm(1230.02)) {
+		@media (min-width: toEm(1230.02)) {
 			position: absolute;
 			opacity: 0;
 			bottom: 30px;
 			left: 30px;
 			right: 30px;
 			transition: opacity 0.3s linear;
-
+			
 			p {
 				width: 480px;
 				.last-in-row & {
@@ -224,6 +261,16 @@
 			.partners__item:hover & {
 				opacity: 1;
 			}
+		}
+		@media (max-width: toEm(1230.02)) {
+			  p {
+				margin-bottom: toRem(25);
+			  }
+		}
+		@media (max-width: toEm(500)){
+			  p {
+				margin-bottom: toRem(20);
+			  }
 		}
 	}
 }
