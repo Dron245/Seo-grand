@@ -32,6 +32,8 @@
 
 	&__item {
 		overflow: hidden;
+		display: flex;
+		flex-direction: column;
 
 		@media (max-width:$mobile) {
 			border-radius: 0.75rem 0.75rem 0 0;
@@ -43,6 +45,9 @@
 		border-radius: 0 0 0.75rem 0.75rem;
 		border: 0.0625rem solid $color-seryy-01-1;
 		border-top: none;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
 
 		@media (max-width:$tablet) {
 			padding: 1.5rem;
@@ -81,7 +86,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: toRem(25);
+		padding-top: toRem(25);
+		margin-top: auto;
 
 		@media (max-width: toEm(1260)) and (min-width: toEm(768.02)) {
 			flex-direction: column;
