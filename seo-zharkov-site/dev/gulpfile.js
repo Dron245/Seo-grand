@@ -76,7 +76,14 @@ const scripts = () => {
 				'source/js/vendor/jquery-3.7.1.min.js',
 				'source/js/vendor/swiper.js',
 				'source/js/vendor/jquery.fancybox.min.js',
-				'source/js/*.js',
+				// 'source/js/*.js',
+				'source/js/s-deistvuuhego-sita.js',
+				'source/js/functions.js',
+				'source/js/i-mask.js',         // сначала маска
+				'source/js/sliders.js',
+				'source/js/click.js',
+				'source/js/animations.js',
+				'source/js/script.js',         // потом основной код
 			])
 			.pipe(concat('main.min.js'))
 			//.pipe(terser())
@@ -156,7 +163,7 @@ const server = (done) => {
 	browser.init({
 		server: {
 			baseDir: 'build',
-			index: 'partners.html',
+			index: 'career.html',
 		},
 		// host: '192.168.0.59',
 		// host: '10.52.47.10',
@@ -179,7 +186,7 @@ const reload = (done) => {
 
 const watcher = () => {
 	gulp.watch('source/sass/**/*.scss', gulp.series(styles, reload));
-	gulp.watch('source/js/script.js', gulp.series(scripts, reload));
+	gulp.watch('source/js/*.js', gulp.series(scripts, reload));
 	gulp.watch('source/*.html', gulp.series(html, reload));
 };
 
