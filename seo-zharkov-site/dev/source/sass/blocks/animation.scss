@@ -31,14 +31,21 @@
 .tariffs__card,
 .cases__slide,
 .cases__slide2,
-.options .options__item,
+.options--seo .options__item,
 .team__item {
 	opacity: 0;
 	transform: translateY(50px);
 }
 
+.options--seo {
+	height: auto;
+}
+.options--seo .options__item[class] {
+	// margin-bottom: toRem(0);
+}
 .seo .options.options--seo {
-	padding-top: toRem(20);
+	padding-top: 25px;
+	// margin-top: -30px;
 	// overflow: visible;
 	// overflow-x: initial !important;
 	// overflow-y: visible;
