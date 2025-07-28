@@ -82,6 +82,19 @@ document.addEventListener("DOMContentLoaded", function () {
 			.forEach((el) => animateOnScroll(el, keyframes, options, nextDelay));
 	});
 
+
+	const optionsSection = document.querySelector('.seo .options.options--seo');
+
+if (optionsSection) {
+	// Устанавливаем плавный переход
+	optionsSection.style.transition = 'padding-top 0.6s ease';
+
+	// Таймер после завершения анимации карточек (время в мс)
+	setTimeout(() => {
+		optionsSection.style.paddingTop = '0px';
+	}, 1000); // 600 мс — это время после "подпрыгивания" карточек
+}
+
 	// Анимация карточек тарифов по каскаду
 	const animateCardsCascade = (
 		wrapperSelector,

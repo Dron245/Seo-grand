@@ -2,6 +2,9 @@
 	.leaders__img-wrap {
 		all: unset;
 	}
+	.leaders__text {
+		all: unset;
+	}
 	@media (min-width: toEm(1360.02)) {
 		margin-bottom: toRem(110);
 	}

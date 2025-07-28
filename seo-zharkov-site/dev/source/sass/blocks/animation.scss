@@ -20,13 +20,28 @@
 	}
 }
 
-.tariffs__card{
-	opacity: 0;
-}
 .card__note,
 .card__list,
 .card__seo,
 .card__order {
 	opacity: 0;
 	transform: translateY(20px);
+}
+
+.tariffs__card,
+.cases__slide,
+.cases__slide2,
+.options .options__item,
+.team__item {
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+.seo .options.options--seo {
+	padding-top: toRem(20);
+	// overflow: visible;
+	// overflow-x: initial !important;
+	// overflow-y: visible;
+	// height: auto;
+	// scrollbar-width: initial;
 }
