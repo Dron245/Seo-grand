@@ -1,4 +1,4 @@
-"use strict";
+/*"use strict";
 document.addEventListener("DOMContentLoaded", function () {
 	//Анимации - мой код Пядышев
 	// Универсальный обработчик анимаций
@@ -197,4 +197,4 @@ if (optionsSection) {
 
 	// Анимация блока "Команда"
 	runCascade(".team__list", ".team__item");
-});
+});*/
