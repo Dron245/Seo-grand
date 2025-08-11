@@ -1043,11 +1043,11 @@
                         }, {
                             searchControlProvider: "yandex#search"
                         });
-                        var s = new ymaps.Placemark(i, {}, {
-                            iconLayout: "default#image",
-                            iconImageHref: "".concat(l(252))
-                        });
-                        a.geoObjects.add(s)
+                        // var s = new ymaps.Placemark(i, {}, {
+                        //     iconLayout: "default#image",
+                        //     iconImageHref: "".concat(l(252))
+                        // });
+                        // a.geoObjects.add(s)
                     }))
                 }))
             }
