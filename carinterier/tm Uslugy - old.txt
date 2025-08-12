@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="[[++cultureKey]]">
+  <head>
+     [[$head]]
+  </head>
+  <body class="">
+      [[$header]]
+      <section class="mh-85 my-2 my-md-5 py-2 px-md-2 px-md-4">
+         <div class="container-fluid">
+               <div class="row">
+                  {if is_desktop() || is_tablet()} 
+                   <div class="col-12 col-md-2 order-2 order-lg-1">
+                       <aside id="content_leftmenu" class="my-4 left_menu">
+                        <a href="remont-salona/sidenija/" class="link_dark lh_120 ft_1 ft_semi">Ремонт сидений и окраска кожи</a> 
+                       [[pdoField? &id=`[[*id]]` &top=`1` &field=`id` &toPlaceholder=`prnt`]]
+                         [[pdoMenu?
+                            &parents=`[[+prnt]]`
+                            &displayStart=`1`
+                            &level=`1`
+                            &hideSubMenus=`1`
+                            &tplStart=`@INLINE <p [[+classes]]>[[+menutitle]]</h4>[[+wrapper]]`
+                            &outerClass=`nav flex-column nav-pills mt-2`
+                            &innerClass=`nav flex-column nav-pills mt-2`
+                            &rowClass=`nav-item mb-2 lh_120 ft_1 ft_semi`
+                            &tpl=`@INLINE <li [[+classes]]><a href="[[+link]]" class="link_dark" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+                            &tplParentRow=`@INLINE <li class="mt-3 [[+classnames]]"><a href="[[+link]]" class="ft_semi link_dark mb-2" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+                        ]]
+                       </aside>
+                   </div><!--/left_side--->
+                  {/if}
+                   <div class="col-12 col-md-10 order-1 order-lg-2">
+                        <h1 class="h2 {if is_desktop() || is_tablet()}ft_semi lh_1{/if}">[[*longtitle:default=`[[*pagetitle]]`]]</h1>
+                        <div class="d-flex flex-column mb-3 {if is_desktop() || is_tablet()} {/if}"> [[$crumbs]]</div>
+                        {if $_modx->resource.pro_gallery && $_modx->resource.id != 14}
+                                   [[!getImageList?
+                                        &tvname=`pro_gallery`
+                                        &tpl=`pro_gallery_tpl`
+                                        &toPlaceholder=`gallery`
+                                      ]]
+                                       
+                                {if is_desktop() || is_tablet()}
+                                   <div id="content_gallery" class="content_gallery my-3">
+                                     [[+gallery]]
+                                   </div>
+                               {elseif is_mobile()}
+                                    <div id="content_gallery_mob" class="content_gallery my-3">
+                                     [[+gallery]]
+                                   </div>
+                                {/if}
+                        {/if}
+                        
+                        {if $_modx->resource.content?}{/if}
+                            <div class="page_content mb-4">
+                                <div class="">[[*content]]</div>
+                                
+                                [[-$uslugy_table]]
+                            </div>
+                        
+   
+                   </div><!--/right_side--->
+               </div><!--/row--->
+           
+         </div><!--/cont--> 
+      </section>
+    [[$request_modal]]  
+	  [[$footer]]
+    [[$js]]
+      
+	</body>
+</html>
+
+
+

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="[[++cultureKey]]">
+<head>
+  [[$head]]
+  <style>
+      html {
+          overflow-x: hidden;
+      }
+      .mh-85 {
+          min-height: initial;
+      }
+      .landing-page__title {
+          text-align: center;
+          font-size: 2rem;
+      }
+      .landing-review,
+      .landing-constructor,
+      .landing-advantage2,
+      .landing-offer,
+      .question-answer,
+      .landing-bottom-offer {
+          padding-top: 10px;
+          padding-bottom: 10px;
+      }
+      .landing-offer {
+          padding-top: 50px;
+          padding-bottom: 50px;
+      }
+      .landing-advantage {
+          padding-bottom: 50px;
+      }
+      .order-kovr__auto {
+          display: block !important;
+      }
+      /* First slider */
+      .landing-main-slider {
+          position: relative;
+      }
+      .landing-main-slider__text {
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          z-index: 3;
+          transform: translateY(-50%);
+          width: 70%;
+          height: auto;
+          color: white;
+      }
+      .landing-main-slider__title2 {
+          font-size: 1.7rem;
+      }
+      @media (max-width: 769px) {
+          .landing-main-slider__text {
+              width: 100%;
+          }
+          .landing-main-slider__title {
+              font-size: 1.8rem;
+          }
+          .landing-main-slider__title2 {
+              font-size: 1.5rem;
+          }
+          .landing-first .item {
+              height: 400px;
+          }
+      }
+      @media (max-width: 480px) {
+          .landing-main-slider__title {
+              font-size: 1.4rem;
+          }
+          .landing-main-slider__title2 {
+              font-size: 1.25rem;
+          }
+      }
+      .landing-main-slider__title,
+      .landing-main-slider__title2 {
+          margin-bottom: 20px;
+      }
+      .landing-main-slider__title {
+          font-weight: bold;
+      }
+      .landing-first {
+          position: relative;
+          z-index: 1;
+      }
+      .landing-first .owl-stage-outer::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          /*background: rgba(0,0,0,.55);*/
+          pointer-events: none;
+      }
+      .landing-first .item {
+          height: 500px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+      }
+      /* Advantage */
+      .landing-advantage__title {
+          margin-bottom: 0;
+          font-size: 120%;
+          font-weight: bold;
+      }
+      .landing-page__breadcrumb {
+          display: flex;
+          justify-content: center;
+      }
+      .landing-advantage__descr {
+          margin: 20px 0;
+      }
+      .landing-advantage__img {
+          max-width: 90%;
+          display: block;
+          margin: 0 auto 10px auto;
+      }
+      img.landing-advantage__img {
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+      }
+      svg.landing-advantage__img {
+          max-width: 150px;
+          fill: #dc3545;
+      }
+      /* Constructor */
+      .landing-constructor {
+          background: #EFEFEF;
+      }
+      .landing-constructor img {
+          width: 150px;
+          max-width: 100%;
+      }
+      .landing-constructor__nav {
+          display: flex;
+      }
+      .landing-constructor__nav ul {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0;
+          cursor: pointer;
+      }
+      .landing-constructor__point {
+          margin-right: 20px;
+          margin-bottom: 10px;
+          padding: 10px 20px;
+          background: #FFFFFF;
+          border: 1px solid #989898;
+          border-radius: 15px;
+          color: #212529;
+          text-align: center;
+          font-weight: bold;
+          list-style-type: none;
+          font-family: Montserrat-SemiBold;
+      }
+      .landing-constructor__point.active {
+          border-color: #DC3545;
+      }
+      .landing-constructor__slide {
+          display: none;
+      }
+      .landing-constructor__slide.active {
+          display: block;
+      }
+      .landing-constructor__img {}
+      @media (min-width: 769px) {
+          .landing-constructor__info {
+              padding-left: 60px;
+          }
+      }
+      .green-c,
+      .red-c {
+          position: relative;
+      }
+      .green-c::before,
+      .red-c::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: -20px;
+          -webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+      }
+      .green-c::before {
+          background: #49CF67;
+      }
+      .red-c::before {
+          background: #FE4242;
+      }
+      .landing-constructor__title {
+          font-size: 130%;
+          font-family: Montserrat-SemiBold;
+      }
+      .landing-constructor__text {
+          margin-bottom: 15px;
+      }
+      .landing-constructor__descr p,
+      .landing-constructor__text p {
+          margin: 0;
+      }
+      .landing-constructor__descr {}
+      .landing-constructor__descr > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 12px 0;
+      }
+      .landing-price {
+
+      }
+      .landing-price span {
+          display: block;
+          font-size: 140%;
+          font-family: Montserrat-SemiBold;
+      }
+
+      /*landing-advantage2*/
+      .landing-page__title {
+          margin-bottom: 30px;
+      }
+      .landing-advantage2__img {
+          max-width: 100%;
+          margin-bottom: 30px;
+      }
+      .landing-advantage2__title {
+          margin-bottom: 10px;
+          font-family: Montserrat-SemiBold;
+          font-size: 130%;
+      }
+      .landing-advantage2__good ul,
+      .landing-advantage2__bad ul {
+          padding: 0;
+      }
+      .landing-advantage2__good li,
+      .landing-advantage2__bad li {
+          list-style-type: none;
+      }
+      .landing-advantage2__good li::before,
+      .landing-advantage2__bad li::before {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin-right: 10px;
+          border-radius: 10px;
+      }
+      .landing-advantage2__good li::before {
+          background: #49CF67;
+      }
+      .landing-advantage2__bad li::before {
+          background: #F80000;
+      }
+      .detailing-advantage2 .col-md-4 {
+          margin-bottom: 40px;
+          text-align: center;
+      }
+      .detailing-advantage2 img {
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+      }
+
+      /* offer */
+      .landing-offer__title {
+          font-family: Montserrat-SemiBold;
+          font-weight: bold;
+      }
+      /* .landing-review */
+      .landing-review {
+          padding-left: 30px;
+          padding-right: 30px;
+      }
+      .landing-review .the-prev {
+          left: -36px;
+      }
+      .landing-review .the-next {
+          right: -36px;
+      }
+      /* question-answer */
+      .question-answer button {
+          white-space: initial;
+      }
+      /**/
+      .landing-bottom-offer {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+      }
+      /* @media (min-width: 770px) {
+         .landing-price-table {
+           width: 100%;
+           table-layout: fixed;
+         }
+       }
+       @media (max-width: 769px) {
+         .wr-landing-price-table {
+           overflow-x: auto;
+         }
+         .landing-price-table td {
+           min-width: 180px;
+         }
+       }
+       .landing-price-table {
+
+         max-width: 100%;
+         margin: 0 auto;
+       }
+       .landing-price-table p {
+         margin: 0;
+       }
+       .landing-price-table tr:first-child {
+         background: #dc3545;
+         color: white;
+         font-size: 120%;
+       }
+       .landing-price-table td:first-child {}
+       .landing-price-table td {
+         padding: 10px;
+
+         font-weight: bold;
+         border-bottom: 1px solid #dc3545;
+       }*/
+  </style>
+  [[$landing-style]]
+</head>
+<body>
+[[$header]]
+<section class="my-2 my-md-5 py-2 px-md-2 px-md-4">
+  <div class="container-fluid">
+    <div class="row">
+      {if is_desktop() || is_tablet()}
+      <div class="col-12 col-md-2 order-2 order-lg-1">
+        <aside id="content_leftmenu" class="my-4 left_menu">
+          [[pdoField? &id=`[[*id]]` &top=`1` &field=`id` &toPlaceholder=`prnt`]]
+          [[pdoMenu?
+          &parents=`[[+prnt]]`
+          &displayStart=`1`
+          &level=`1`
+          &hideSubMenus=`1`
+          &tplStart=`@INLINE <p [[+classes]]>[[+menutitle]]</h4>[[+wrapper]]`
+          &outerClass=`nav flex-column nav-pills`
+          &innerClass=`nav flex-column nav-pills mt-2`
+          &rowClass=`nav-item mb-2 lh_120 ft_1 ft_semi`
+          &tpl=`@INLINE <li [[+classes]]><a href="[[+link]]" class="link_dark" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+          &tplParentRow=`@INLINE <li class="mt-3 [[+classnames]]"><a href="[[+link]]" class="ft_semi link_dark mb-2" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+          ]]
+        </aside>
+      </div><!--/left_side--->
+      {/if}
+      <div class="col-12 col-md-10 order-1 order-lg-2">
+
+        <h1 class="landing-main-slider__title">[[*pagetitle]]</h1>
+        <h2 class="landing-main-slider__title2">[[*landing-h2]]</h2>
+        <a href="#landing-advantage" class="btn btn-danger jq-link">Подробнее</a>
+        <h3 class="landing-main-slider__title3">[[*landing-h3]]</h3>
+
+        <div class="mt-4 row">
+          [[!getImageList?
+          &tvname=`slider-landing`
+          &tpl=`slider_landing_tpl`
+          ]]
+        </div>
+
+
+        <!-- Первая секция -->
+        [[- <section class="landing-main-slider">
+        <div class="landing-main-slider__text">
+          <h1 class="landing-main-slider__title">[[*pagetitle]]</h1>
+          <h2 class="landing-main-slider__title2">[[*landing-h2]]</h2>
+          <a href="#landing-advantage" class="btn btn-danger jq-link">Подробнее</a>
+          <h3 class="landing-main-slider__title3">[[*landing-h3]]</h3>
+        </div>
+        <div class="landing-first owl-carousel">
+          [[-!getImageList?
+          &tvname=`slider-landing`
+          &tpl=`slider-landing`
+          ]]
+        </div>
+      </section>  ]]
+      </div><!--/right_side--->
+    </div><!--/row--->
+  </div>
+</section>
+
+<section class="the-slider-3-1 my-5">
+  <div class="container">
+    <h4 class="text-md-center">Наши проекты</h4>
+    <div id="product_gallery" class="row justify-content-center">
+      [[!getImageList? &tpl=`mg_project_item_col_tpl` &tvname=`mt_text`]]
+    </div>
+  </div>
+</section>
+
+<!-- Преимущества -->
+<section id="landing-advantage" class="container landing-advantage">
+  <h2 class="landing-page__title ft_semi">[[*advantage-title]]</h2>
+  <div class="landing-page__breadcrumb">[[$crumbs]]</div>
+  <div class="landing-advantage__descr">
+    [[*advantage-text]]
+  </div>
+  <div class="row">
+    [[!getImageList?
+    &tvname=`advantage-list`
+    &tpl=`@CODE:
+    <div class="col-md-4">
+      <img src="[[+advantage-item-img]]" alt="" class="landing-advantage__img">
+      <p class="landing-advantage__title">[[+advantage-item-title]]</p>
+      <p class="landing-advantage__text">[[+advantage-item-text]]</p>
+    </div>`
+    ]]
+  </div>
+</section>
+
+<!-- Форма для заказа -->
+<section class="landing-constructor- my-5">
+  <div class="container">
+    [[!getImageList?
+    &tvname=`calc`
+    &tpl=`calc_tpl`
+    ]]
+    [[$form_zakaz_k1]]
+  </div>
+</section>
+
+<!-- Преимущества 2 -->
+<section class="container-fluid container landing-advantage2 detailing-advantage2">
+  <h2 class="landing-page__title ft_semi">[[*advantage-title2]]</h2>
+  <div class="row">
+    [[!getImageList?
+    &tvname=`advantage-list2`
+    &tpl=`@CODE:
+    <div class="col-md-4">
+      <img src="[[+advantage2-item-img]]" alt="[[+advantage2-item-title]]" class="landing-advantage__img">
+      <p class="landing-advantage__title">[[+advantage2-item-title]]</p>
+      <div>[[+advantage2-item-text]]</div>
+    </div>`
+    ]]
+  </div>
+</section>
+
+<!-- Оффер -->
+<section class="bg_txt_white landing-offer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="landing-offer__title">[[*offer-title-1]]</h2>
+        <!--<h3>[[*offer-title-2]]</h3>-->
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-danger landing-offer__button" data-page="Форма ИП. [[*pagetitle]]">Получить</button>
+      </div>
+    </div>
+    [[$form_zakaz_k1]]
+  </div>
+</section>
+
+<!-- Инфа о компании -->
+<section class="features_list my-5">
+  <h2 class="landing-page__title ft_semi">О студии автоинтерьера Carinterier</h2>
+  <div class="container-fluid">
+    <div class="row">
+      [[!getImageList?
+      &docid=`283`
+      &tvname=`mt_text`
+      &tpl=`feature_v3_tpl`
+      &limit=`4`
+      &sort=``
+      ]]
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8">
+        [[*content]]
+      </div>
+      <div class="col-md-4 mt-4 mt-md-0">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Примеры работ -->
+<section class="the-our-projects px-md-3 my-md-5">
+  <div class="container-fluid px-4">
+    <h2 class="text-center ft_semi my-4">Наши работы</h2>
+    <div class="row justify-content-center">
+      [[!getImageList?
+      &tvname=`works`
+      &tpl=`@CODE:
+      <div class="col-md-4 mb-4"><img src="[[+work-img]]"></div>`
+      ]]
+    </div>
+    [[-
+    <section class="the-slider-3-1-main my-2 my-md-4">
+      <div class="owl-3-1-main owl-carousel">
+        [[-!getImageList?
+        &tvname=`works`
+        &tpl=`@CODE:
+        <div><img src="[[+work-img]]"></div>`
+        ]]
+      </div>
+
+      <div id="carousel-custom-dots-3-1-main" class="owl-dots mt-md-3">
+      </div>
+    </section>
+    ]]
+  </div>
+</section>
+
+<!-- Отзывы -->
+<section class="container-fluid landing-review">
+  <h2 class="landing-page__title ft_semi">Отзывы</h2>
+  <div class="container-fluid px-4">
+    <div class="landing-review-carusel- owl-carousel-">
+      [[!getImageList?
+      &tvname=`reviews`
+      &tpl=`reviews`
+      ]]
+    </div>
+  </div>
+</section>
+
+
+<!-- Вопрос-ответ -->
+<div class="container question-answer" id="accordion">
+  <h2 class="landing-page__title ft_semi">Вопрос-ответ</h2>
+  [[!getImageList?
+  &tvname=`faq`
+  &tpl=`faq`
+  ]]
+</div>
+
+
+[[$form_zakaz_bottom_kovr]]
+
+[[$request_modal]]
+[[$footer]]
+[[$js]]
+
+</body>
+</html>
